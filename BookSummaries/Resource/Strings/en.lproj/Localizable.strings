@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  BookSummaries
+
+  Created by Андрей Чернышев on 05.07.2022.
+  
+*/
+
+// MARK: General
+"Cancel" = "Cancel";
+"Continue" = "Continue";
+"Next" = "Next";
+
+// MARK: ImagePicker
+"ImagePicker.TakePhoto" = "Take photo";
+"ImagePicker.CameraRoll" = "Camera roll";
+"ImagePicker.PhotoLibrary" = "Photo library";
