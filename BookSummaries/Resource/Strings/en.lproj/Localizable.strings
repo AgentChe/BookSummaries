@@ -31,3 +31,6 @@
 "Main.ForYou" = "For you";
 "Main.Library" = "Library";
 "Main.Explore" = "Explore";
+
+// MARK: ForYou
+"ForYou.Title" = "For you ";

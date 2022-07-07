@@ -32,6 +32,12 @@
 		DE06C66628769EE2009866FC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C66528769EE2009866FC /* MainView.swift */; };
 		DE06C66928769EF2009866FC /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C66828769EF2009866FC /* TabItemView.swift */; };
 		DE06C66B28769EF9009866FC /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C66A28769EF9009866FC /* TabView.swift */; };
+		DE06C66E2876A5C5009866FC /* BookImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C66D2876A5C5009866FC /* BookImageView.swift */; };
+		DE06C6722876D0E1009866FC /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6712876D0E1009866FC /* ForYouViewController.swift */; };
+		DE06C6742876D0E8009866FC /* ForYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6732876D0E8009866FC /* ForYouView.swift */; };
+		DE06C6762876D0EE009866FC /* ForYouViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6752876D0EE009866FC /* ForYouViewModel.swift */; };
+		DE06C67D2876D6DB009866FC /* ForYouTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C67C2876D6DB009866FC /* ForYouTableView.swift */; };
+		DE06C67F2876D79D009866FC /* ForYouTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C67E2876D79D009866FC /* ForYouTableElement.swift */; };
 		DEFF6199287473F500FE863E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6198287473F500FE863E /* AppDelegate.swift */; };
 		DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF619A287473F500FE863E /* SceneDelegate.swift */; };
 		DEFF61A2287473F600FE863E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEFF61A1287473F600FE863E /* Assets.xcassets */; };
@@ -48,7 +54,6 @@
 		DEFF61D4287479A900FE863E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61C7287479A900FE863E /* NavigationController.swift */; };
 		DEFF61D5287479A900FE863E /* TapAreaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61C8287479A900FE863E /* TapAreaButton.swift */; };
 		DEFF61D7287479A900FE863E /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61CA287479A900FE863E /* PaddingLabel.swift */; };
-		DEFF61D9287479A900FE863E /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61CC287479A900FE863E /* GradientButton.swift */; };
 		DEFF61DA287479A900FE863E /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61CD287479A900FE863E /* CircleView.swift */; };
 		DEFF61DB287479A900FE863E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61CE287479A900FE863E /* GradientView.swift */; };
 		DEFF61E5287479AD00FE863E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61DE287479AD00FE863E /* UIColorExtension.swift */; };
@@ -118,6 +123,12 @@
 		DE06C66528769EE2009866FC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DE06C66828769EF2009866FC /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		DE06C66A28769EF9009866FC /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		DE06C66D2876A5C5009866FC /* BookImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookImageView.swift; sourceTree = "<group>"; };
+		DE06C6712876D0E1009866FC /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
+		DE06C6732876D0E8009866FC /* ForYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouView.swift; sourceTree = "<group>"; };
+		DE06C6752876D0EE009866FC /* ForYouViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewModel.swift; sourceTree = "<group>"; };
+		DE06C67C2876D6DB009866FC /* ForYouTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouTableView.swift; sourceTree = "<group>"; };
+		DE06C67E2876D79D009866FC /* ForYouTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouTableElement.swift; sourceTree = "<group>"; };
 		DEFF6195287473F500FE863E /* BookSummaries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSummaries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFF6198287473F500FE863E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEFF619A287473F500FE863E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,7 +147,6 @@
 		DEFF61C7287479A900FE863E /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		DEFF61C8287479A900FE863E /* TapAreaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapAreaButton.swift; sourceTree = "<group>"; };
 		DEFF61CA287479A900FE863E /* PaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
-		DEFF61CC287479A900FE863E /* GradientButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		DEFF61CD287479A900FE863E /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		DEFF61CE287479A900FE863E /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		DEFF61DE287479AD00FE863E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -303,6 +313,42 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DE06C66F2876D0CF009866FC /* ForYou */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C6702876D0D6009866FC /* ForYou */,
+			);
+			path = ForYou;
+			sourceTree = "<group>";
+		};
+		DE06C6702876D0D6009866FC /* ForYou */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C6772876D561009866FC /* Views */,
+				DE06C6712876D0E1009866FC /* ForYouViewController.swift */,
+				DE06C6752876D0EE009866FC /* ForYouViewModel.swift */,
+				DE06C6732876D0E8009866FC /* ForYouView.swift */,
+			);
+			path = ForYou;
+			sourceTree = "<group>";
+		};
+		DE06C6772876D561009866FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C67B2876D6BA009866FC /* TableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE06C67B2876D6BA009866FC /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C67C2876D6DB009866FC /* ForYouTableView.swift */,
+				DE06C67E2876D79D009866FC /* ForYouTableElement.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		DEFF618C287473F500FE863E = {
 			isa = PBXGroup;
 			children = (
@@ -399,10 +445,10 @@
 				DEFF61C5287479A900FE863E /* NavigationController */,
 				DEFF61C8287479A900FE863E /* TapAreaButton.swift */,
 				DEFF61CA287479A900FE863E /* PaddingLabel.swift */,
-				DEFF61CC287479A900FE863E /* GradientButton.swift */,
 				DEFF61CD287479A900FE863E /* CircleView.swift */,
 				DEFF61CE287479A900FE863E /* GradientView.swift */,
 				DE06C654287499B2009866FC /* Spinner.swift */,
+				DE06C66D2876A5C5009866FC /* BookImageView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -559,6 +605,7 @@
 		DEFF623628747E4B00FE863E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE06C66F2876D0CF009866FC /* ForYou */,
 				DE06C66028769EC2009866FC /* Main */,
 				DE06C64F287498FE009866FC /* TryAgain */,
 				DEFF62372874813800FE863E /* Splash */,
@@ -704,12 +751,15 @@
 				DEFF61D3287479A900FE863E /* NavigationControllerSettings.swift in Sources */,
 				DE06C64A287498C5009866FC /* SplashReceiptValidationObserver.swift in Sources */,
 				DEFF61D2287479A900FE863E /* Toast.swift in Sources */,
+				DE06C66E2876A5C5009866FC /* BookImageView.swift in Sources */,
 				DEFF61EB287479AD00FE863E /* StringExtension.swift in Sources */,
 				DEFF61DB287479A900FE863E /* GradientView.swift in Sources */,
 				DE06C66428769EDB009866FC /* MainViewCoordinator.swift in Sources */,
 				DEFF620F28747C2B00FE863E /* PushNotificationsManager.swift in Sources */,
+				DE06C6742876D0E8009866FC /* ForYouView.swift in Sources */,
 				DE06C66928769EF2009866FC /* TabItemView.swift in Sources */,
 				DE06C66628769EE2009866FC /* MainView.swift in Sources */,
+				DE06C6762876D0EE009866FC /* ForYouViewModel.swift in Sources */,
 				DEFF622F28747E0B00FE863E /* ProductPrice.swift in Sources */,
 				DEFF6199287473F500FE863E /* AppDelegate.swift in Sources */,
 				DEFF621528747C2B00FE863E /* ScreenSize.swift in Sources */,
@@ -718,12 +768,12 @@
 				DEFF620E28747C2B00FE863E /* RestAPITransport.swift in Sources */,
 				DEFF623428747E0B00FE863E /* Session.swift in Sources */,
 				DEFF620928747C2B00FE863E /* RxActivityIndicator.swift in Sources */,
-				DEFF61D9287479A900FE863E /* GradientButton.swift in Sources */,
 				DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */,
 				DEFF623228747E0B00FE863E /* IAPError.swift in Sources */,
 				DEFF620B28747C2B00FE863E /* DefaultRequestWrapper.swift in Sources */,
 				DEFF61D7287479A900FE863E /* PaddingLabel.swift in Sources */,
 				DE06C655287499B2009866FC /* Spinner.swift in Sources */,
+				DE06C67F2876D79D009866FC /* ForYouTableElement.swift in Sources */,
 				DEFF61BA2874798B00FE863E /* AmplitudeManager.swift in Sources */,
 				DEFF621128747C2B00FE863E /* PushNotificationsModel.swift in Sources */,
 				DE06C65B2874A152009866FC /* SyncTokensRequest.swift in Sources */,
@@ -746,6 +796,7 @@
 				DEFF61BF2874799A00FE863E /* Appearance.swift in Sources */,
 				DEFF620A28747C2B00FE863E /* UIViewRxExtension.swift in Sources */,
 				DEFF61ED287479B900FE863E /* GlobalDefinitions.swift in Sources */,
+				DE06C67D2876D6DB009866FC /* ForYouTableView.swift in Sources */,
 				DEFF623028747E0B00FE863E /* IAPActionResult.swift in Sources */,
 				DEFF621628747C2B00FE863E /* ObservableRetrySingle.swift in Sources */,
 				DE06C64C287498CD009866FC /* SplashActivity.swift in Sources */,
@@ -757,6 +808,7 @@
 				DEFF621928747C2B00FE863E /* SignError.swift in Sources */,
 				DEFF61D0287479A900FE863E /* ImagePicker.swift in Sources */,
 				DE06C65D2874A180009866FC /* ProfileManager.swift in Sources */,
+				DE06C6722876D0E1009866FC /* ForYouViewController.swift in Sources */,
 				DEFF61BD2874798B00FE863E /* FacebookManager.swift in Sources */,
 				DEFF620C28747C2B00FE863E /* XORRequestWrapper.swift in Sources */,
 				DE06C66228769ED1009866FC /* MainViewController.swift in Sources */,
