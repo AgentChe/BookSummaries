@@ -15,3 +15,19 @@
 "ImagePicker.TakePhoto" = "Take photo";
 "ImagePicker.CameraRoll" = "Camera roll";
 "ImagePicker.PhotoLibrary" = "Photo library";
+
+// MARK: TryAgain
+"TryAgain.Title" = "We've encountered a problem\nduring a request";
+"TryAgain.SubTitle" = "If there’s a connection issue on your side try one more time. If the connection is fine and the error keeps on repeating please get in touch with the support";
+"TryAgain.Button" = "Try again";
+"TryAgain.Contact" = "Contact the support";
+
+// MARK: Splash
+"Splash.Preloader1" = "Checking your account...";
+"Splash.Preloader2" = "Syncing the question bank...";
+"Splash.Preloader3" = "Setting up your account...";
+
+// MARK: Main
+"Main.ForYou" = "For you";
+"Main.Library" = "Library";
+"Main.Explore" = "Explore";

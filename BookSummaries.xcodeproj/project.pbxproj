@@ -17,6 +17,21 @@
 		DE06C64528748764009866FC /* PlusJakartaSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE06C63B28748692009866FC /* PlusJakartaSans-Medium.ttf */; };
 		DE06C64628748764009866FC /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE06C63A2874868D009866FC /* PlusJakartaSans-SemiBold.ttf */; };
 		DE06C64728748764009866FC /* PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE06C63928748689009866FC /* PlusJakartaSans-Regular.ttf */; };
+		DE06C64A287498C5009866FC /* SplashReceiptValidationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C649287498C5009866FC /* SplashReceiptValidationObserver.swift */; };
+		DE06C64C287498CD009866FC /* SplashActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C64B287498CD009866FC /* SplashActivity.swift */; };
+		DE06C64E287498D4009866FC /* SplashSDKInitialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C64D287498D4009866FC /* SplashSDKInitialize.swift */; };
+		DE06C6512874993E009866FC /* TryAgainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6502874993E009866FC /* TryAgainViewController.swift */; };
+		DE06C65328749945009866FC /* TryAgainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C65228749945009866FC /* TryAgainView.swift */; };
+		DE06C655287499B2009866FC /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C654287499B2009866FC /* Spinner.swift */; };
+		DE06C6592874A116009866FC /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6582874A116009866FC /* LoginRequest.swift */; };
+		DE06C65B2874A152009866FC /* SyncTokensRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C65A2874A152009866FC /* SyncTokensRequest.swift */; };
+		DE06C65D2874A180009866FC /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C65C2874A180009866FC /* ProfileManager.swift */; };
+		DE06C65F28769D9F009866FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE06C65E28769D9F009866FC /* GoogleService-Info.plist */; };
+		DE06C66228769ED1009866FC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C66128769ED1009866FC /* MainViewController.swift */; };
+		DE06C66428769EDB009866FC /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C66328769EDB009866FC /* MainViewCoordinator.swift */; };
+		DE06C66628769EE2009866FC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C66528769EE2009866FC /* MainView.swift */; };
+		DE06C66928769EF2009866FC /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C66828769EF2009866FC /* TabItemView.swift */; };
+		DE06C66B28769EF9009866FC /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C66A28769EF9009866FC /* TabView.swift */; };
 		DEFF6199287473F500FE863E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6198287473F500FE863E /* AppDelegate.swift */; };
 		DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF619A287473F500FE863E /* SceneDelegate.swift */; };
 		DEFF61A2287473F600FE863E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEFF61A1287473F600FE863E /* Assets.xcassets */; };
@@ -88,6 +103,21 @@
 		DE06C63D2874872B009866FC /* Merriweather-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Black.ttf"; sourceTree = "<group>"; };
 		DE06C63E2874872E009866FC /* Merriweather-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Bold.ttf"; sourceTree = "<group>"; };
 		DE06C63F28748733009866FC /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Regular.ttf"; sourceTree = "<group>"; };
+		DE06C649287498C5009866FC /* SplashReceiptValidationObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashReceiptValidationObserver.swift; sourceTree = "<group>"; };
+		DE06C64B287498CD009866FC /* SplashActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashActivity.swift; sourceTree = "<group>"; };
+		DE06C64D287498D4009866FC /* SplashSDKInitialize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashSDKInitialize.swift; sourceTree = "<group>"; };
+		DE06C6502874993E009866FC /* TryAgainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryAgainViewController.swift; sourceTree = "<group>"; };
+		DE06C65228749945009866FC /* TryAgainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryAgainView.swift; sourceTree = "<group>"; };
+		DE06C654287499B2009866FC /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		DE06C6582874A116009866FC /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		DE06C65A2874A152009866FC /* SyncTokensRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncTokensRequest.swift; sourceTree = "<group>"; };
+		DE06C65C2874A180009866FC /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		DE06C65E28769D9F009866FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DE06C66128769ED1009866FC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DE06C66328769EDB009866FC /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
+		DE06C66528769EE2009866FC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DE06C66828769EF2009866FC /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
+		DE06C66A28769EF9009866FC /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		DEFF6195287473F500FE863E /* BookSummaries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSummaries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFF6198287473F500FE863E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEFF619A287473F500FE863E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -216,6 +246,63 @@
 			path = Merriweather;
 			sourceTree = "<group>";
 		};
+		DE06C648287498B6009866FC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C649287498C5009866FC /* SplashReceiptValidationObserver.swift */,
+				DE06C64B287498CD009866FC /* SplashActivity.swift */,
+				DE06C64D287498D4009866FC /* SplashSDKInitialize.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DE06C64F287498FE009866FC /* TryAgain */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C6502874993E009866FC /* TryAgainViewController.swift */,
+				DE06C65228749945009866FC /* TryAgainView.swift */,
+			);
+			path = TryAgain;
+			sourceTree = "<group>";
+		};
+		DE06C6562874A0F6009866FC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C6572874A10F009866FC /* Request */,
+				DE06C65C2874A180009866FC /* ProfileManager.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DE06C6572874A10F009866FC /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C6582874A116009866FC /* LoginRequest.swift */,
+				DE06C65A2874A152009866FC /* SyncTokensRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DE06C66028769EC2009866FC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C66728769EE6009866FC /* Views */,
+				DE06C66128769ED1009866FC /* MainViewController.swift */,
+				DE06C66328769EDB009866FC /* MainViewCoordinator.swift */,
+				DE06C66528769EE2009866FC /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DE06C66728769EE6009866FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C66828769EF2009866FC /* TabItemView.swift */,
+				DE06C66A28769EF9009866FC /* TabView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		DEFF618C287473F500FE863E = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +338,7 @@
 				DEFF61A1287473F600FE863E /* Assets.xcassets */,
 				DEFF61A3287473F600FE863E /* LaunchScreen.storyboard */,
 				DEFF61A6287473F600FE863E /* Info.plist */,
+				DE06C65E28769D9F009866FC /* GoogleService-Info.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -314,6 +402,7 @@
 				DEFF61CC287479A900FE863E /* GradientButton.swift */,
 				DEFF61CD287479A900FE863E /* CircleView.swift */,
 				DEFF61CE287479A900FE863E /* GradientView.swift */,
+				DE06C654287499B2009866FC /* Spinner.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -405,6 +494,7 @@
 		DEFF621D28747DA000FE863E /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DE06C6562874A0F6009866FC /* Profile */,
 				DEFF621E28747E0B00FE863E /* Purchase */,
 				DEFF622828747E0B00FE863E /* Session */,
 			);
@@ -469,6 +559,8 @@
 		DEFF623628747E4B00FE863E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE06C66028769EC2009866FC /* Main */,
+				DE06C64F287498FE009866FC /* TryAgain */,
 				DEFF62372874813800FE863E /* Splash */,
 			);
 			path = Presentation;
@@ -477,6 +569,7 @@
 		DEFF62372874813800FE863E /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				DE06C648287498B6009866FC /* Utils */,
 				DEFF623A2874814D00FE863E /* SplashViewController.swift */,
 				DEFF623E287481A400FE863E /* SplashViewModel.swift */,
 				DEFF623C2874819B00FE863E /* SplashView.swift */,
@@ -549,6 +642,7 @@
 				DE06C64528748764009866FC /* PlusJakartaSans-Medium.ttf in Resources */,
 				DE06C64628748764009866FC /* PlusJakartaSans-SemiBold.ttf in Resources */,
 				DE06C64728748764009866FC /* PlusJakartaSans-Regular.ttf in Resources */,
+				DE06C65F28769D9F009866FC /* GoogleService-Info.plist in Resources */,
 				DE06C6402874875D009866FC /* Merriweather-Black.ttf in Resources */,
 				DE06C6412874875D009866FC /* Merriweather-Bold.ttf in Resources */,
 				DE06C6422874875D009866FC /* Merriweather-Regular.ttf in Resources */,
@@ -608,13 +702,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEFF61D3287479A900FE863E /* NavigationControllerSettings.swift in Sources */,
+				DE06C64A287498C5009866FC /* SplashReceiptValidationObserver.swift in Sources */,
 				DEFF61D2287479A900FE863E /* Toast.swift in Sources */,
 				DEFF61EB287479AD00FE863E /* StringExtension.swift in Sources */,
 				DEFF61DB287479A900FE863E /* GradientView.swift in Sources */,
+				DE06C66428769EDB009866FC /* MainViewCoordinator.swift in Sources */,
 				DEFF620F28747C2B00FE863E /* PushNotificationsManager.swift in Sources */,
+				DE06C66928769EF2009866FC /* TabItemView.swift in Sources */,
+				DE06C66628769EE2009866FC /* MainView.swift in Sources */,
 				DEFF622F28747E0B00FE863E /* ProductPrice.swift in Sources */,
 				DEFF6199287473F500FE863E /* AppDelegate.swift in Sources */,
 				DEFF621528747C2B00FE863E /* ScreenSize.swift in Sources */,
+				DE06C6512874993E009866FC /* TryAgainViewController.swift in Sources */,
 				DEFF61D1287479A900FE863E /* PaginatedDataLoader.swift in Sources */,
 				DEFF620E28747C2B00FE863E /* RestAPITransport.swift in Sources */,
 				DEFF623428747E0B00FE863E /* Session.swift in Sources */,
@@ -624,8 +723,10 @@
 				DEFF623228747E0B00FE863E /* IAPError.swift in Sources */,
 				DEFF620B28747C2B00FE863E /* DefaultRequestWrapper.swift in Sources */,
 				DEFF61D7287479A900FE863E /* PaddingLabel.swift in Sources */,
+				DE06C655287499B2009866FC /* Spinner.swift in Sources */,
 				DEFF61BA2874798B00FE863E /* AmplitudeManager.swift in Sources */,
 				DEFF621128747C2B00FE863E /* PushNotificationsModel.swift in Sources */,
+				DE06C65B2874A152009866FC /* SyncTokensRequest.swift in Sources */,
 				DEFF623B2874814D00FE863E /* SplashViewController.swift in Sources */,
 				DEFF621428747C2B00FE863E /* TextAttributes.swift in Sources */,
 				DEFF623D2874819B00FE863E /* SplashView.swift in Sources */,
@@ -633,29 +734,36 @@
 				DEFF621A28747C2B00FE863E /* NetworkError.swift in Sources */,
 				DEFF61E5287479AD00FE863E /* UIColorExtension.swift in Sources */,
 				DEFF621228747C2B00FE863E /* Scalable.swift in Sources */,
+				DE06C64E287498D4009866FC /* SplashSDKInitialize.swift in Sources */,
 				DEFF61D4287479A900FE863E /* NavigationController.swift in Sources */,
 				DEFF622E28747E0B00FE863E /* PurchaseValidationObserver.swift in Sources */,
 				DEFF61D5287479A900FE863E /* TapAreaButton.swift in Sources */,
 				DEFF623328747E0B00FE863E /* IAPErrorHelper.swift in Sources */,
 				DEFF61DA287479A900FE863E /* CircleView.swift in Sources */,
 				DEFF621828747C2B00FE863E /* Fonts.swift in Sources */,
+				DE06C65328749945009866FC /* TryAgainView.swift in Sources */,
 				DEFF61BC2874798B00FE863E /* FirebaseManager.swift in Sources */,
 				DEFF61BF2874799A00FE863E /* Appearance.swift in Sources */,
 				DEFF620A28747C2B00FE863E /* UIViewRxExtension.swift in Sources */,
 				DEFF61ED287479B900FE863E /* GlobalDefinitions.swift in Sources */,
 				DEFF623028747E0B00FE863E /* IAPActionResult.swift in Sources */,
 				DEFF621628747C2B00FE863E /* ObservableRetrySingle.swift in Sources */,
+				DE06C64C287498CD009866FC /* SplashActivity.swift in Sources */,
 				DEFF61E9287479AD00FE863E /* ObservableAndSingleExtension.swift in Sources */,
 				DEFF623F287481A400FE863E /* SplashViewModel.swift in Sources */,
 				DEFF620D28747C2B00FE863E /* APIRequestBody.swift in Sources */,
 				DEFF621B28747C2B00FE863E /* ContentError.swift in Sources */,
+				DE06C6592874A116009866FC /* LoginRequest.swift in Sources */,
 				DEFF621928747C2B00FE863E /* SignError.swift in Sources */,
 				DEFF61D0287479A900FE863E /* ImagePicker.swift in Sources */,
+				DE06C65D2874A180009866FC /* ProfileManager.swift in Sources */,
 				DEFF61BD2874798B00FE863E /* FacebookManager.swift in Sources */,
 				DEFF620C28747C2B00FE863E /* XORRequestWrapper.swift in Sources */,
+				DE06C66228769ED1009866FC /* MainViewController.swift in Sources */,
 				DEFF621C28747C2B00FE863E /* Weak.swift in Sources */,
 				DEFF621028747C2B00FE863E /* PushNotificationsAuthorizationStatus.swift in Sources */,
 				DEFF622D28747E0B00FE863E /* IAPManager.swift in Sources */,
+				DE06C66B28769EF9009866FC /* TabView.swift in Sources */,
 				DEFF623128747E0B00FE863E /* IAPProduct.swift in Sources */,
 				DEFF621328747C2B00FE863E /* NumberLaunches.swift in Sources */,
 				DEFF61B92874798B00FE863E /* BranchManager.swift in Sources */,

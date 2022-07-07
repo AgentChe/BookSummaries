@@ -6,6 +6,9 @@
 //
 
 final class GlobalDefinitions {
+    static let domain = ""
+    static let apiKey = ""
+    
     static let otterScaleHost = ""
     static let otterScaleApiKey = ""
     
