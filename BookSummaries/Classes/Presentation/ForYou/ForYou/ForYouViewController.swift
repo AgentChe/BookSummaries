@@ -41,6 +41,8 @@ final class ForYouViewController: UIViewController {
                 base.setup(elements: elements)
             })
             .disposed(by: disposeBag)
+        
+        mainView.tableView.mainDelegate = self
     }
 }
 
@@ -48,6 +50,29 @@ final class ForYouViewController: UIViewController {
 extension ForYouViewController {
     static func make() -> ForYouViewController {
         ForYouViewController()
+    }
+}
+
+// MARK: ForYouTableDelegate
+extension ForYouViewController: ForYouTableDelegate {
+    func forYouTableDidTapped(book: Book) {
+        print("book: \(book.name)")
+    }
+    
+    func forYouTableDidTapped(challenge: Challenge) {
+        print("challenge: \(challenge.name)")
+    }
+    
+    func forYouTableDidTappedRanking() {
+        print("ranking")
+    }
+    
+    func forYouTableDidTapped(category: Category) {
+        print("category: \(category.name)")
+    }
+    
+    func forYouTableDidTappedNewReleases() {
+        print("new releases")
     }
 }
 

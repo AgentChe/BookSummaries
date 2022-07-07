@@ -7,7 +7,17 @@
 
 import UIKit
 
+protocol ForYouTableDelegate: AnyObject {
+    func forYouTableDidTapped(book: Book)
+    func forYouTableDidTapped(challenge: Challenge)
+    func forYouTableDidTappedRanking()
+    func forYouTableDidTapped(category: Category)
+    func forYouTableDidTappedNewReleases()
+}
+
 final class ForYouTableView: UITableView {
+    weak var mainDelegate: ForYouTableDelegate?
+    
     private lazy var elements = [ForYouTableElement]()
     
     override init(frame: CGRect, style: UITableView.Style) {
@@ -54,14 +64,14 @@ extension ForYouTableView: UITableViewDataSource {
             return cell
         case .books(let elements):
             let cell = dequeueReusableCell(withIdentifier: String(describing: ForYouBooksCell.self)) as! ForYouBooksCell
-            cell.setup(elements: elements, tapped: { book in
-                
+            cell.setup(elements: elements, tapped: { [weak self] book in
+                self?.mainDelegate?.forYouTableDidTapped(book: book)
             })
             return cell
         case .challenges(let elements):
             let cell = dequeueReusableCell(withIdentifier: String(describing: ForYouChallengesCell.self)) as! ForYouChallengesCell
-            cell.setup(elements: elements, tapped: { challenge in
-                
+            cell.setup(elements: elements, tapped: { [weak self] challenge in
+                self?.mainDelegate?.forYouTableDidTapped(challenge: challenge)
             })
             return cell
         case .rankingTitle(let element), .newReleasesTitle(let element):
@@ -76,8 +86,8 @@ extension ForYouTableView: UITableViewDataSource {
             return dequeueReusableCell(withIdentifier: String(describing: ForYouSeparatorCell.self))!
         case .categories(let elements):
             let cell = dequeueReusableCell(withIdentifier: String(describing: ForYouCategoriesCell.self)) as! ForYouCategoriesCell
-            cell.setup(elements: elements, tapped: { challenge in
-                
+            cell.setup(elements: elements, tapped: { [weak self] category in
+                self?.mainDelegate?.forYouTableDidTapped(category: category)
             })
             return cell
         }
@@ -104,6 +114,21 @@ extension ForYouTableView: UITableViewDelegate {
             return 1.scale
         case .categories:
             return 56.scale
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch elements[indexPath.row] {
+        case .freeBook(let element):
+            mainDelegate?.forYouTableDidTapped(book: element)
+        case .ranking(let element):
+            mainDelegate?.forYouTableDidTapped(book: element.book)
+        case .rankingTitle:
+            mainDelegate?.forYouTableDidTappedRanking()
+        case .newReleasesTitle:
+            mainDelegate?.forYouTableDidTappedNewReleases()
+        default:
+            break
         }
     }
 }
