@@ -34,3 +34,10 @@
 
 // MARK: ForYou
 "ForYou.Title" = "For you ";
+"ForYou.FreeButton.Free" = "FREE BOOK";
+"ForYou.Title.SeeAll" = "See all";
+"ForYou.TodayHotSummaries" = "Today’s hot summaries";
+"ForYou.Challenges" = "Challenges";
+"ForYou.YouMayLike" = "You may like";
+"ForYou.ExploreCategories" = "Explore categories";
+"ForYou.NewReleases" = "New releases";

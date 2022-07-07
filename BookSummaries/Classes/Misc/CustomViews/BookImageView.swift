@@ -33,7 +33,7 @@ final class BookImageView: UIImageView {
 private extension BookImageView {
     func initialize() {
         clipsToBounds = true
-        
+        contentMode = .scaleAspectFill
         layer.cornerRadius = 10.scale
     }
 }

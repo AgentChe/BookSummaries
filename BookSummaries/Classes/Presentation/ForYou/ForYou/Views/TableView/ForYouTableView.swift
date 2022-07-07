@@ -44,6 +44,42 @@ extension ForYouTableView: UITableViewDataSource {
             cell.contentView.backgroundColor = UIColor.clear
             cell.selectionStyle = .none
             return cell
+        case .freeBook(let element):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: ForYouFreeBookCell.self)) as! ForYouFreeBookCell
+            cell.setup(element: element)
+            return cell
+        case .title(let element):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: ForYouTitleCell.self)) as! ForYouTitleCell
+            cell.setup(title: element, seeAllHidden: true)
+            return cell
+        case .books(let elements):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: ForYouBooksCell.self)) as! ForYouBooksCell
+            cell.setup(elements: elements, tapped: { book in
+                
+            })
+            return cell
+        case .challenges(let elements):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: ForYouChallengesCell.self)) as! ForYouChallengesCell
+            cell.setup(elements: elements, tapped: { challenge in
+                
+            })
+            return cell
+        case .rankingTitle(let element), .newReleasesTitle(let element):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: ForYouTitleCell.self)) as! ForYouTitleCell
+            cell.setup(title: element, seeAllHidden: false)
+            return cell
+        case .ranking(let element):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: ForYouRankingCell.self)) as! ForYouRankingCell
+            cell.setup(element: element)
+            return cell
+        case .separator:
+            return dequeueReusableCell(withIdentifier: String(describing: ForYouSeparatorCell.self))!
+        case .categories(let elements):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: ForYouCategoriesCell.self)) as! ForYouCategoriesCell
+            cell.setup(elements: elements, tapped: { challenge in
+                
+            })
+            return cell
         }
     }
 }
@@ -54,6 +90,20 @@ extension ForYouTableView: UITableViewDelegate {
         switch elements[indexPath.row] {
         case .offset(let offset):
             return offset
+        case .freeBook:
+            return 340.scale
+        case .title, .rankingTitle, .newReleasesTitle:
+            return 24.scale
+        case .books:
+            return 245.scale
+        case .challenges:
+            return 284.scale
+        case .ranking:
+            return 78.scale
+        case .separator:
+            return 1.scale
+        case .categories:
+            return 56.scale
         }
     }
 }
@@ -62,6 +112,13 @@ extension ForYouTableView: UITableViewDelegate {
 private extension ForYouTableView {
     func initialize() {
         register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
+        register(ForYouFreeBookCell.self, forCellReuseIdentifier: String(describing: ForYouFreeBookCell.self))
+        register(ForYouTitleCell.self, forCellReuseIdentifier: String(describing: ForYouTitleCell.self))
+        register(ForYouBooksCell.self, forCellReuseIdentifier: String(describing: ForYouBooksCell.self))
+        register(ForYouChallengesCell.self, forCellReuseIdentifier: String(describing: ForYouChallengesCell.self))
+        register(ForYouRankingCell.self, forCellReuseIdentifier: String(describing: ForYouRankingCell.self))
+        register(ForYouSeparatorCell.self, forCellReuseIdentifier: String(describing: ForYouSeparatorCell.self))
+        register(ForYouCategoriesCell.self, forCellReuseIdentifier: String(describing: ForYouCategoriesCell.self))
         
         dataSource = self
         delegate = self
