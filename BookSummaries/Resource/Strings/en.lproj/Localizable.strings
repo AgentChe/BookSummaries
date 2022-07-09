@@ -41,3 +41,9 @@
 "ForYou.YouMayLike" = "You may like";
 "ForYou.ExploreCategories" = "Explore categories";
 "ForYou.NewReleases" = "New releases";
+
+// MARK: Settings
+"Settings.Title" = "Settings";
+"Settings.ContactUs" = "Contact us";
+"Settings.PrivacyPolicy" = "Privacy Policy";
+"Settings.TermsOfUse" = "Terms of Use";

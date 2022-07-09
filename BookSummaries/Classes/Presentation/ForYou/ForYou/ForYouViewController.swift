@@ -42,37 +42,58 @@ final class ForYouViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        mainView.settingsButton.rx.tap
+            .bind(to: Binder(self) { base, void in
+                let vc = SettingsViewController.make()
+                base.navigationController?.pushViewController(vc, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
         mainView.tableView.mainDelegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationController?.navigationBar.isHidden = false
     }
 }
 
 // MARK: Make
 extension ForYouViewController {
     static func make() -> ForYouViewController {
-        ForYouViewController()
+        let vc = ForYouViewController()
+        vc.navigationItem.backButtonTitle = " "
+        return vc
     }
 }
 
 // MARK: ForYouTableDelegate
 extension ForYouViewController: ForYouTableDelegate {
     func forYouTableDidTapped(book: Book) {
-        print("book: \(book.name)")
+        
     }
     
     func forYouTableDidTapped(challenge: Challenge) {
-        print("challenge: \(challenge.name)")
+        
     }
     
     func forYouTableDidTappedRanking() {
-        print("ranking")
+        
     }
     
     func forYouTableDidTapped(category: Category) {
-        print("category: \(category.name)")
+        
     }
     
     func forYouTableDidTappedNewReleases() {
-        print("new releases")
+        
     }
 }
 

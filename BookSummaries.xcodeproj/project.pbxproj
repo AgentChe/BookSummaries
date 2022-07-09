@@ -54,6 +54,13 @@
 		DE06C6A52877536D009866FC /* ForYouCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6A42877536D009866FC /* ForYouCategoriesCell.swift */; };
 		DE06C6A828775386009866FC /* ForYouCategoriesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6A728775386009866FC /* ForYouCategoriesCollectionCell.swift */; };
 		DE06C6AA2877538F009866FC /* ForYouCategoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6A92877538F009866FC /* ForYouCategoriesCollectionView.swift */; };
+		DE06C6AF2879A942009866FC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6AE2879A942009866FC /* SettingsViewController.swift */; };
+		DE06C6B12879A973009866FC /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6B02879A973009866FC /* SettingsViewModel.swift */; };
+		DE06C6B32879A97A009866FC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6B22879A97A009866FC /* SettingsView.swift */; };
+		DE06C6B62879A989009866FC /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6B52879A989009866FC /* SettingsTableView.swift */; };
+		DE06C6B82879A9A3009866FC /* SettingsTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6B72879A9A3009866FC /* SettingsTableElement.swift */; };
+		DE06C6BB2879A9C8009866FC /* SettingsLinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6BA2879A9C8009866FC /* SettingsLinkCell.swift */; };
+		DE06C6BD2879A9D3009866FC /* SettingsSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6BC2879A9D3009866FC /* SettingsSeparatorCell.swift */; };
 		DEFF6199287473F500FE863E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6198287473F500FE863E /* AppDelegate.swift */; };
 		DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF619A287473F500FE863E /* SceneDelegate.swift */; };
 		DEFF61A2287473F600FE863E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEFF61A1287473F600FE863E /* Assets.xcassets */; };
@@ -161,6 +168,13 @@
 		DE06C6A42877536D009866FC /* ForYouCategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouCategoriesCell.swift; sourceTree = "<group>"; };
 		DE06C6A728775386009866FC /* ForYouCategoriesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouCategoriesCollectionCell.swift; sourceTree = "<group>"; };
 		DE06C6A92877538F009866FC /* ForYouCategoriesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouCategoriesCollectionView.swift; sourceTree = "<group>"; };
+		DE06C6AE2879A942009866FC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DE06C6B02879A973009866FC /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		DE06C6B22879A97A009866FC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DE06C6B52879A989009866FC /* SettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableView.swift; sourceTree = "<group>"; };
+		DE06C6B72879A9A3009866FC /* SettingsTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableElement.swift; sourceTree = "<group>"; };
+		DE06C6BA2879A9C8009866FC /* SettingsLinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLinkCell.swift; sourceTree = "<group>"; };
+		DE06C6BC2879A9D3009866FC /* SettingsSeparatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSeparatorCell.swift; sourceTree = "<group>"; };
 		DEFF6195287473F500FE863E /* BookSummaries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSummaries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFF6198287473F500FE863E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEFF619A287473F500FE863E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -348,6 +362,7 @@
 		DE06C66F2876D0CF009866FC /* ForYou */ = {
 			isa = PBXGroup;
 			children = (
+				DE06C6AD2879A937009866FC /* Settings */,
 				DE06C6702876D0D6009866FC /* ForYou */,
 			);
 			path = ForYou;
@@ -481,6 +496,36 @@
 				DE06C6A92877538F009866FC /* ForYouCategoriesCollectionView.swift */,
 			);
 			path = Collection;
+			sourceTree = "<group>";
+		};
+		DE06C6AD2879A937009866FC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C6B42879A97F009866FC /* Views */,
+				DE06C6AE2879A942009866FC /* SettingsViewController.swift */,
+				DE06C6B02879A973009866FC /* SettingsViewModel.swift */,
+				DE06C6B22879A97A009866FC /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		DE06C6B42879A97F009866FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C6B92879A9BA009866FC /* Cells */,
+				DE06C6B52879A989009866FC /* SettingsTableView.swift */,
+				DE06C6B72879A9A3009866FC /* SettingsTableElement.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE06C6B92879A9BA009866FC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C6BA2879A9C8009866FC /* SettingsLinkCell.swift */,
+				DE06C6BC2879A9D3009866FC /* SettingsSeparatorCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		DEFF618C287473F500FE863E = {
@@ -885,6 +930,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEFF61D3287479A900FE863E /* NavigationControllerSettings.swift in Sources */,
+				DE06C6B32879A97A009866FC /* SettingsView.swift in Sources */,
 				DE06C64A287498C5009866FC /* SplashReceiptValidationObserver.swift in Sources */,
 				DEFF61D2287479A900FE863E /* Toast.swift in Sources */,
 				DE06C66E2876A5C5009866FC /* BookImageView.swift in Sources */,
@@ -907,6 +953,7 @@
 				DEFF620E28747C2B00FE863E /* RestAPITransport.swift in Sources */,
 				DEFF623428747E0B00FE863E /* Session.swift in Sources */,
 				DEFF620928747C2B00FE863E /* RxActivityIndicator.swift in Sources */,
+				DE06C6BD2879A9D3009866FC /* SettingsSeparatorCell.swift in Sources */,
 				DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */,
 				DEFF623228747E0B00FE863E /* IAPError.swift in Sources */,
 				DEFF620B28747C2B00FE863E /* DefaultRequestWrapper.swift in Sources */,
@@ -918,6 +965,7 @@
 				DEFF621128747C2B00FE863E /* PushNotificationsModel.swift in Sources */,
 				DE06C65B2874A152009866FC /* SyncTokensRequest.swift in Sources */,
 				DEFF623B2874814D00FE863E /* SplashViewController.swift in Sources */,
+				DE06C6B12879A973009866FC /* SettingsViewModel.swift in Sources */,
 				DEFF621428747C2B00FE863E /* TextAttributes.swift in Sources */,
 				DEFF623D2874819B00FE863E /* SplashView.swift in Sources */,
 				DEFF61E8287479AD00FE863E /* UIDeviceExtension.swift in Sources */,
@@ -937,11 +985,14 @@
 				DEFF61BC2874798B00FE863E /* FirebaseManager.swift in Sources */,
 				DEFF61BF2874799A00FE863E /* Appearance.swift in Sources */,
 				DE06C69C2877149A009866FC /* ForYouChallengesCollectionCell.swift in Sources */,
+				DE06C6B62879A989009866FC /* SettingsTableView.swift in Sources */,
+				DE06C6AF2879A942009866FC /* SettingsViewController.swift in Sources */,
 				DEFF620A28747C2B00FE863E /* UIViewRxExtension.swift in Sources */,
 				DEFF61ED287479B900FE863E /* GlobalDefinitions.swift in Sources */,
 				DE06C67D2876D6DB009866FC /* ForYouTableView.swift in Sources */,
 				DEFF623028747E0B00FE863E /* IAPActionResult.swift in Sources */,
 				DE06C68A28770634009866FC /* ForYouTitleCell.swift in Sources */,
+				DE06C6BB2879A9C8009866FC /* SettingsLinkCell.swift in Sources */,
 				DEFF621628747C2B00FE863E /* ObservableRetrySingle.swift in Sources */,
 				DE06C69628771441009866FC /* Challenge.swift in Sources */,
 				DE06C6882876DB49009866FC /* ForYouFreeBookCell.swift in Sources */,
@@ -968,6 +1019,7 @@
 				DE06C6852876DADF009866FC /* Book.swift in Sources */,
 				DE06C66B28769EF9009866FC /* TabView.swift in Sources */,
 				DEFF623128747E0B00FE863E /* IAPProduct.swift in Sources */,
+				DE06C6B82879A9A3009866FC /* SettingsTableElement.swift in Sources */,
 				DEFF621328747C2B00FE863E /* NumberLaunches.swift in Sources */,
 				DEFF61B92874798B00FE863E /* BranchManager.swift in Sources */,
 				DE06C6A228774C36009866FC /* ForYouSeparatorCell.swift in Sources */,
