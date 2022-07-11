@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ForYouTableDelegate: AnyObject {
-    func forYouTableDidTapped(book: Book)
+    func forYouTableDidTapped(book: BookBrochure)
     func forYouTableDidTapped(challenge: Challenge)
     func forYouTableDidTappedRanking()
     func forYouTableDidTapped(category: Category)

@@ -37,7 +37,7 @@ final class ForYouFreeBookCell: UITableViewCell {
 
 // MARK: Public
 extension ForYouFreeBookCell {
-    func setup(element: Book) {
+    func setup(element: BookBrochure) {
         bookImageView.kf.setImage(with: element.image)
         
         nameLabel.attributedText = element.name

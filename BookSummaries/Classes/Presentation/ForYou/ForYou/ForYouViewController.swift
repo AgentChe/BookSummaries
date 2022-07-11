@@ -76,8 +76,9 @@ extension ForYouViewController {
 
 // MARK: ForYouTableDelegate
 extension ForYouViewController: ForYouTableDelegate {
-    func forYouTableDidTapped(book: Book) {
-        
+    func forYouTableDidTapped(book: BookBrochure) {
+        let vc = BookViewController.make(bookId: book.id)
+        present(vc, animated: true)
     }
     
     func forYouTableDidTapped(challenge: Challenge) {

@@ -9,9 +9,9 @@ import CoreGraphics
 
 enum ForYouTableElement {
     case offset(CGFloat)
-    case freeBook(Book)
+    case freeBook(BookBrochure)
     case title(String)
-    case books([Book])
+    case books([BookBrochure])
     case challenges([Challenge])
     case rankingTitle(String)
     case ranking(ForYouRankingElement)
@@ -22,5 +22,5 @@ enum ForYouTableElement {
 
 struct ForYouRankingElement {
     let number: String
-    let book: Book
+    let book: BookBrochure
 }

@@ -77,7 +77,7 @@ private extension ForYouViewModel {
 
 // MARK: TODO
 private extension ForYouViewModel {
-    static func mockBooks() -> [Book] {
+    static func mockBooks() -> [BookBrochure] {
         [
             mockBook(),
             mockBook(),
@@ -91,23 +91,23 @@ private extension ForYouViewModel {
         ]
     }
     
-    static func mockBook() -> Book {
-        let b1 = Book(id: Int.random(in: 1...100000),
+    static func mockBook() -> BookBrochure {
+        let b1 = BookBrochure(id: Int.random(in: 1...100000),
                       name: "Thinking Fast and Slow",
                       author: "Daniel Kahneman",
                       image: URL(string: "https://artworld.ru/images/cms/content/catalog3/rodriguez_kartina_maslom_sinie_gory_jr220117.jpeg")!)
         
-        let b2 = Book(id: Int.random(in: 1...100000),
+        let b2 = BookBrochure(id: Int.random(in: 1...100000),
                       name: "Be a Free Range Human",
                       author: "Ms. Freacky",
                       image: URL(string: "https://shopudachi.ru/catalog/kartina_po_nomeram_tsvetnoy_mg2054_malenkaya_balerina.html")!)
         
-        let b3 = Book(id: Int.random(in: 1...100000),
+        let b3 = BookBrochure(id: Int.random(in: 1...100000),
                       name: "The Law of Success",
                       author: "Napoleon Hill",
                       image: URL(string: "https://www.theartnewspaper.ru/media/images/2_gWojpO8.width-1290.png")!)
         
-        let b4 = Book(id: Int.random(in: 1...100000),
+        let b4 = BookBrochure(id: Int.random(in: 1...100000),
                       name: "Unlimited Memory",
                       author: "Grandmaster Kevin Horsley",
                       image: URL(string: "https://media.istockphoto.com/photos/the-dog-on-white-background-double-exposure-monochrome-picture-picture-id514111732?s=612x612")!)

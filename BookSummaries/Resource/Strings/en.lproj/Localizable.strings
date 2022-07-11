@@ -47,3 +47,16 @@
 "Settings.ContactUs" = "Contact us";
 "Settings.PrivacyPolicy" = "Privacy Policy";
 "Settings.TermsOfUse" = "Terms of Use";
+
+// MARK: Book
+"Book.ChaptersCount" = "%i chapters";
+"Book.Min" = "%i min";
+"Book.Chapters" = "Chapters";
+"Book.Introduction" = "Introduction";
+"Book.SeeAll" = "See all";
+"Book.WhatAbout?" = "What is it about?";
+"Book.Author" = "Author";
+"Book.SimilarBooks" = "Similar books";
+"Book.ExploreCategories" = "Explore categories";
+"Book.Listen" = "Listen";
+"Book.Read" = "Read";

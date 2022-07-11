@@ -34,7 +34,7 @@ final class ForYouBooksCollectionCell: UICollectionViewCell {
 
 // MARK: Public
 extension ForYouBooksCollectionCell {
-    func setup(element: Book) {
+    func setup(element: BookBrochure) {
         bookImageView.kf.setImage(with: element.image)
         
         nameLabel.attributedText = element.name

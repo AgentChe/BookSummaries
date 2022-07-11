@@ -2,7 +2,7 @@
 //  Book.swift
 //  BookSummaries
 //
-//  Created by Андрей Чернышев on 07.07.2022.
+//  Created by Андрей Чернышев on 11.07.2022.
 //
 
 import Foundation
@@ -10,6 +10,9 @@ import Foundation
 struct Book: Codable, Hashable {
     let id: Int
     let name: String
-    let author: String
     let image: URL
+    let author: String
+    let authorImage: URL
+    let whatAbout: String
+    let chapters: [BookChapter]
 }
