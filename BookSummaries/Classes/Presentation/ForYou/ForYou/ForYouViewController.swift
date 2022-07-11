@@ -90,7 +90,8 @@ extension ForYouViewController: ForYouTableDelegate {
     }
     
     func forYouTableDidTapped(category: Category) {
-        
+        let vc = CategoryViewController.make(category: category)
+        present(vc, animated: true)
     }
     
     func forYouTableDidTappedNewReleases() {

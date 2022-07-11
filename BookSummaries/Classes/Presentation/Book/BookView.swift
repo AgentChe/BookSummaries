@@ -16,6 +16,7 @@ final class BookView: UIView {
     lazy var bottomView = makeBottomView()
     lazy var listenButton = makeListenButton()
     lazy var readButton = makeReadButton()
+    lazy var preloader = makePreloader()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -93,6 +94,11 @@ private extension BookView {
             readButton.heightAnchor.constraint(equalToConstant: 49.scale),
             readButton.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 193.scale),
             readButton.topAnchor.constraint(equalTo: bottomView.topAnchor, constant: 30.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            preloader.centerXAnchor.constraint(equalTo: tableView.centerXAnchor),
+            preloader.centerYAnchor.constraint(equalTo: tableView.centerYAnchor)
         ])
     }
 }
@@ -177,6 +183,13 @@ private extension BookView {
         view.text = "Book.Read".localized
         view.translatesAutoresizingMaskIntoConstraints = false
         bottomView.addSubview(view)
+        return view
+    }
+    
+    func makePreloader() -> Spinner {
+        let view = Spinner(size: CGSize(width: 45.scale, height: 45.scale))
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
         return view
     }
 }

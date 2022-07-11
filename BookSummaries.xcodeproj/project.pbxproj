@@ -83,6 +83,11 @@
 		DE06C6E9287C3A45009866FC /* BookSeeAllCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6E8287C3A45009866FC /* BookSeeAllCell.swift */; };
 		DE06C6EB287C3BCB009866FC /* BookWhatAboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6EA287C3BCB009866FC /* BookWhatAboutCell.swift */; };
 		DE06C6ED287C3C75009866FC /* BookAuthorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6EC287C3C75009866FC /* BookAuthorCell.swift */; };
+		DE06C6F0287C4FFF009866FC /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6EF287C4FFF009866FC /* CategoryViewController.swift */; };
+		DE06C6F2287C5009009866FC /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6F1287C5009009866FC /* CategoryViewModel.swift */; };
+		DE06C6F4287C5010009866FC /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6F3287C5010009866FC /* CategoryView.swift */; };
+		DE06C6F8287C5028009866FC /* CategoryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6F7287C5028009866FC /* CategoryCollectionView.swift */; };
+		DE06C6FC287C50B9009866FC /* CategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6FB287C50B9009866FC /* CategoryCollectionCell.swift */; };
 		DEFF6199287473F500FE863E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6198287473F500FE863E /* AppDelegate.swift */; };
 		DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF619A287473F500FE863E /* SceneDelegate.swift */; };
 		DEFF61A2287473F600FE863E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEFF61A1287473F600FE863E /* Assets.xcassets */; };
@@ -219,6 +224,11 @@
 		DE06C6E8287C3A45009866FC /* BookSeeAllCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSeeAllCell.swift; sourceTree = "<group>"; };
 		DE06C6EA287C3BCB009866FC /* BookWhatAboutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookWhatAboutCell.swift; sourceTree = "<group>"; };
 		DE06C6EC287C3C75009866FC /* BookAuthorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAuthorCell.swift; sourceTree = "<group>"; };
+		DE06C6EF287C4FFF009866FC /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		DE06C6F1287C5009009866FC /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		DE06C6F3287C5010009866FC /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		DE06C6F7287C5028009866FC /* CategoryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionView.swift; sourceTree = "<group>"; };
+		DE06C6FB287C50B9009866FC /* CategoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionCell.swift; sourceTree = "<group>"; };
 		DEFF6195287473F500FE863E /* BookSummaries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSummaries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFF6198287473F500FE863E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEFF619A287473F500FE863E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -625,6 +635,34 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		DE06C6EE287C4FF2009866FC /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C6F5287C5014009866FC /* Views */,
+				DE06C6EF287C4FFF009866FC /* CategoryViewController.swift */,
+				DE06C6F1287C5009009866FC /* CategoryViewModel.swift */,
+				DE06C6F3287C5010009866FC /* CategoryView.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		DE06C6F5287C5014009866FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C6F6287C501B009866FC /* CollectionView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE06C6F6287C501B009866FC /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C6F7287C5028009866FC /* CategoryCollectionView.swift */,
+				DE06C6FB287C50B9009866FC /* CategoryCollectionCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		DEFF618C287473F500FE863E = {
 			isa = PBXGroup;
 			children = (
@@ -883,6 +921,7 @@
 		DEFF623628747E4B00FE863E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE06C6EE287C4FF2009866FC /* Category */,
 				DE06C6C2287C0CA8009866FC /* Book */,
 				DE06C66F2876D0CF009866FC /* ForYou */,
 				DE06C66028769EC2009866FC /* Main */,
@@ -1029,6 +1068,7 @@
 			files = (
 				DE06C6C1287C0B5B009866FC /* BookChapter.swift in Sources */,
 				DEFF61D3287479A900FE863E /* NavigationControllerSettings.swift in Sources */,
+				DE06C6F0287C4FFF009866FC /* CategoryViewController.swift in Sources */,
 				DE06C6B32879A97A009866FC /* SettingsView.swift in Sources */,
 				DE06C64A287498C5009866FC /* SplashReceiptValidationObserver.swift in Sources */,
 				DE06C6E9287C3A45009866FC /* BookSeeAllCell.swift in Sources */,
@@ -1056,8 +1096,10 @@
 				DEFF620928747C2B00FE863E /* RxActivityIndicator.swift in Sources */,
 				DE06C6BD2879A9D3009866FC /* SettingsSeparatorCell.swift in Sources */,
 				DE06C6D7287C2250009866FC /* BookImageCell.swift in Sources */,
+				DE06C6FC287C50B9009866FC /* CategoryCollectionCell.swift in Sources */,
 				DE06C6ED287C3C75009866FC /* BookAuthorCell.swift in Sources */,
 				DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */,
+				DE06C6F8287C5028009866FC /* CategoryCollectionView.swift in Sources */,
 				DE06C6EB287C3BCB009866FC /* BookWhatAboutCell.swift in Sources */,
 				DEFF623228747E0B00FE863E /* IAPError.swift in Sources */,
 				DEFF620B28747C2B00FE863E /* DefaultRequestWrapper.swift in Sources */,
@@ -1078,6 +1120,7 @@
 				DEFF61E8287479AD00FE863E /* UIDeviceExtension.swift in Sources */,
 				DE06C6832876DAC1009866FC /* Category.swift in Sources */,
 				DEFF621A28747C2B00FE863E /* NetworkError.swift in Sources */,
+				DE06C6F2287C5009009866FC /* CategoryViewModel.swift in Sources */,
 				DEFF61E5287479AD00FE863E /* UIColorExtension.swift in Sources */,
 				DEFF621228747C2B00FE863E /* Scalable.swift in Sources */,
 				DE06C64E287498D4009866FC /* SplashSDKInitialize.swift in Sources */,
@@ -1140,6 +1183,7 @@
 				DE06C6B82879A9A3009866FC /* SettingsTableElement.swift in Sources */,
 				DEFF621328747C2B00FE863E /* NumberLaunches.swift in Sources */,
 				DEFF61B92874798B00FE863E /* BranchManager.swift in Sources */,
+				DE06C6F4287C5010009866FC /* CategoryView.swift in Sources */,
 				DE06C6E3287C3242009866FC /* BookIntroductionCell.swift in Sources */,
 				DE06C6A228774C36009866FC /* ForYouSeparatorCell.swift in Sources */,
 				DE06C6C6287C0D81009866FC /* BookViewController.swift in Sources */,

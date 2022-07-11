@@ -9,7 +9,12 @@ import RxSwift
 import RxCocoa
 
 final class BookViewModel {
+    var tryAgain: ((Error) -> (Observable<Void>))?
+    
     lazy var elements = makeElements()
+    lazy var activity = RxActivityIndicator()
+    
+    private lazy var observableRetrySingle = ObservableRetrySingle()
 }
 
 // MARK: Private
