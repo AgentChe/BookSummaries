@@ -33,6 +33,8 @@ final class BookViewController: UIViewController {
                 base.setup(elements: elements)
             })
             .disposed(by: disposeBag)
+        
+        mainView.tableView.mainDelegate = self
     }
 }
 
@@ -42,5 +44,25 @@ extension BookViewController {
         let vc = BookViewController()
         vc.modalPresentationStyle = .fullScreen
         return vc
+    }
+}
+
+// MARK: BookTableDelegate
+extension BookViewController: BookTableDelegate {
+    func bookTableDidTapped(chapter: BookChapter) {
+        
+    }
+    
+    func bookTableDidTappedSeeAll() {
+        
+    }
+    
+    func bookTableDidTapped(book: BookBrochure) {
+        let vc = BookViewController.make(bookId: book.id)
+        present(vc, animated: true)
+    }
+    
+    func bookTableDidTapped(category: Category) {
+        
     }
 }
