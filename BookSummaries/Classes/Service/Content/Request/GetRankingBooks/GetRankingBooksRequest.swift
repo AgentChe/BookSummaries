@@ -10,7 +10,7 @@ import RushSDK
 
 struct GetRankingBooksRequest: APIRequestBody {
     let userToken: String
-    let rankingId: String
+    let rankingId: Int
     
     var url: String {
         GlobalDefinitions.domain + "/api/ranking/books"

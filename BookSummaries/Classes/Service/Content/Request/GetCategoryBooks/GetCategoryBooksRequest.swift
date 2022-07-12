@@ -10,7 +10,7 @@ import RushSDK
 
 struct GetCategoryBooksRequest: APIRequestBody {
     let userToken: String
-    let categoryId: String
+    let categoryId: Int
     
     var url: String {
         GlobalDefinitions.domain + "/api/category/books"
