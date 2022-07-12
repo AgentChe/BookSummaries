@@ -239,30 +239,6 @@
     }
 ]
 
-/api/book/history - возвращает список всех книг для вкладки My history экрана Library
-[
-    {
-        "id": 2,
-        "name": "Unlimited Memory",
-        "author": {
-            "name": "Daniel Kahneman",
-            "photo_url": "full_url_to_image"
-        },
-        "image": "full_url_to_image",
-        "ranking_id": 1
-    },
-    {
-        "id": 3,
-        "name": "The Law of Success",
-        "author": {
-            "name": "Daniel Kahneman",
-            "photo_url": "full_url_to_image"
-        },
-        "image": "full_url_to_image",
-        "ranking_id": 1
-    }
-]
-
 /api/explore - загрузка контента для экрана Explore
 {
     "trending_searches": [

@@ -11,5 +11,5 @@ struct Challenge: Codable, Hashable {
     let id: Int
     let name: String
     let title: String
-    let image: URL
+    let imageUrl: URL
 }

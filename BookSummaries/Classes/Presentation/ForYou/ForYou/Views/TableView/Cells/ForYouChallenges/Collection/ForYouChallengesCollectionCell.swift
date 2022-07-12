@@ -35,7 +35,7 @@ final class ForYouChallengesCollectionCell: UICollectionViewCell {
 // MARK: Public
 extension ForYouChallengesCollectionCell {
     func setup(element: Challenge) {
-        imageView.kf.setImage(with: element.image)
+        imageView.kf.setImage(with: element.imageUrl)
         
         nameLabel.attributedText = element.name
             .attributed(with: TextAttributes()

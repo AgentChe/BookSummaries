@@ -91,6 +91,29 @@
 		DE06C702287DC0EC009866FC /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C701287DC0EC009866FC /* Author.swift */; };
 		DE06C704287DC12C009866FC /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C703287DC12C009866FC /* Ranking.swift */; };
 		DE06C706287DC4C3009866FC /* BookKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C705287DC4C3009866FC /* BookKit.swift */; };
+		DE06C70A287DC6FF009866FC /* GetCategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C709287DC6FF009866FC /* GetCategoriesRequest.swift */; };
+		DE06C70C287DC745009866FC /* GetCategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C70B287DC745009866FC /* GetCategoriesResponse.swift */; };
+		DE06C70F287DC82D009866FC /* GetRankingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C70E287DC82D009866FC /* GetRankingRequest.swift */; };
+		DE06C711287DC87D009866FC /* GetRankingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C710287DC87D009866FC /* GetRankingResponse.swift */; };
+		DE06C714287DC8E7009866FC /* GetBookKitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C713287DC8E7009866FC /* GetBookKitRequest.swift */; };
+		DE06C716287DC91E009866FC /* GetBookKitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C715287DC91E009866FC /* GetBookKitResponse.swift */; };
+		DE06C718287DCEF7009866FC /* ForYouKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C717287DCEF7009866FC /* ForYouKit.swift */; };
+		DE06C71C287DCFDD009866FC /* GetForYouRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C71B287DCFDD009866FC /* GetForYouRequest.swift */; };
+		DE06C71E287DD086009866FC /* GetForYouResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C71D287DD086009866FC /* GetForYouResponse.swift */; };
+		DE06C721287DD345009866FC /* SaveBookRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C720287DD345009866FC /* SaveBookRequest.swift */; };
+		DE06C723287DD354009866FC /* RemoveSavedBookRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C722287DD354009866FC /* RemoveSavedBookRequest.swift */; };
+		DE06C725287DD3EA009866FC /* SaveRemoveBookResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C724287DD3EA009866FC /* SaveRemoveBookResponse.swift */; };
+		DE06C728287DD4C2009866FC /* GetSavedBooksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C727287DD4C2009866FC /* GetSavedBooksRequest.swift */; };
+		DE06C72A287DD4F9009866FC /* GetSavedBooksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C729287DD4F9009866FC /* GetSavedBooksResponse.swift */; };
+		DE06C72F287DD67D009866FC /* ExploreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C72E287DD67D009866FC /* ExploreKit.swift */; };
+		DE06C732287DD6BD009866FC /* GetExploreKitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C731287DD6BD009866FC /* GetExploreKitRequest.swift */; };
+		DE06C734287DD6E0009866FC /* GetExploreKitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C733287DD6E0009866FC /* GetExploreKitResponse.swift */; };
+		DE06C737287DD7BC009866FC /* SearchBooksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C736287DD7BC009866FC /* SearchBooksRequest.swift */; };
+		DE06C739287DD7E4009866FC /* SearchBooksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C738287DD7E4009866FC /* SearchBooksResponse.swift */; };
+		DE06C73C287DD809009866FC /* GetCategoryBooksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C73B287DD809009866FC /* GetCategoryBooksRequest.swift */; };
+		DE06C73E287DD844009866FC /* GetCategoryBooksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C73D287DD844009866FC /* GetCategoryBooksResponse.swift */; };
+		DE06C741287DD86B009866FC /* GetRankingBooksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C740287DD86B009866FC /* GetRankingBooksRequest.swift */; };
+		DE06C743287DD877009866FC /* GetRankingBooksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C742287DD877009866FC /* GetRankingBooksResponse.swift */; };
 		DEFF6199287473F500FE863E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6198287473F500FE863E /* AppDelegate.swift */; };
 		DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF619A287473F500FE863E /* SceneDelegate.swift */; };
 		DEFF61A2287473F600FE863E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEFF61A1287473F600FE863E /* Assets.xcassets */; };
@@ -235,6 +258,29 @@
 		DE06C701287DC0EC009866FC /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		DE06C703287DC12C009866FC /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
 		DE06C705287DC4C3009866FC /* BookKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookKit.swift; sourceTree = "<group>"; };
+		DE06C709287DC6FF009866FC /* GetCategoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCategoriesRequest.swift; sourceTree = "<group>"; };
+		DE06C70B287DC745009866FC /* GetCategoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCategoriesResponse.swift; sourceTree = "<group>"; };
+		DE06C70E287DC82D009866FC /* GetRankingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRankingRequest.swift; sourceTree = "<group>"; };
+		DE06C710287DC87D009866FC /* GetRankingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRankingResponse.swift; sourceTree = "<group>"; };
+		DE06C713287DC8E7009866FC /* GetBookKitRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBookKitRequest.swift; sourceTree = "<group>"; };
+		DE06C715287DC91E009866FC /* GetBookKitResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBookKitResponse.swift; sourceTree = "<group>"; };
+		DE06C717287DCEF7009866FC /* ForYouKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouKit.swift; sourceTree = "<group>"; };
+		DE06C71B287DCFDD009866FC /* GetForYouRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForYouRequest.swift; sourceTree = "<group>"; };
+		DE06C71D287DD086009866FC /* GetForYouResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForYouResponse.swift; sourceTree = "<group>"; };
+		DE06C720287DD345009866FC /* SaveBookRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBookRequest.swift; sourceTree = "<group>"; };
+		DE06C722287DD354009866FC /* RemoveSavedBookRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveSavedBookRequest.swift; sourceTree = "<group>"; };
+		DE06C724287DD3EA009866FC /* SaveRemoveBookResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveRemoveBookResponse.swift; sourceTree = "<group>"; };
+		DE06C727287DD4C2009866FC /* GetSavedBooksRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSavedBooksRequest.swift; sourceTree = "<group>"; };
+		DE06C729287DD4F9009866FC /* GetSavedBooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSavedBooksResponse.swift; sourceTree = "<group>"; };
+		DE06C72E287DD67D009866FC /* ExploreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreKit.swift; sourceTree = "<group>"; };
+		DE06C731287DD6BD009866FC /* GetExploreKitRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExploreKitRequest.swift; sourceTree = "<group>"; };
+		DE06C733287DD6E0009866FC /* GetExploreKitResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExploreKitResponse.swift; sourceTree = "<group>"; };
+		DE06C736287DD7BC009866FC /* SearchBooksRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksRequest.swift; sourceTree = "<group>"; };
+		DE06C738287DD7E4009866FC /* SearchBooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksResponse.swift; sourceTree = "<group>"; };
+		DE06C73B287DD809009866FC /* GetCategoryBooksRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCategoryBooksRequest.swift; sourceTree = "<group>"; };
+		DE06C73D287DD844009866FC /* GetCategoryBooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCategoryBooksResponse.swift; sourceTree = "<group>"; };
+		DE06C740287DD86B009866FC /* GetRankingBooksRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRankingBooksRequest.swift; sourceTree = "<group>"; };
+		DE06C742287DD877009866FC /* GetRankingBooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRankingBooksResponse.swift; sourceTree = "<group>"; };
 		DEFF6195287473F500FE863E /* BookSummaries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSummaries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFF6198287473F500FE863E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEFF619A287473F500FE863E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -461,6 +507,7 @@
 		DE06C6802876DA68009866FC /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				DE06C707287DC6E7009866FC /* Request */,
 				DE06C6812876DA82009866FC /* Models */,
 			);
 			path = Content;
@@ -476,6 +523,9 @@
 				DE06C701287DC0EC009866FC /* Author.swift */,
 				DE06C703287DC12C009866FC /* Ranking.swift */,
 				DE06C705287DC4C3009866FC /* BookKit.swift */,
+				DE06C69528771441009866FC /* Challenge.swift */,
+				DE06C717287DCEF7009866FC /* ForYouKit.swift */,
+				DE06C72E287DD67D009866FC /* ExploreKit.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -510,22 +560,6 @@
 				DE06C68C287709A3009866FC /* ForYouBooksCollectionView.swift */,
 			);
 			path = Collection;
-			sourceTree = "<group>";
-		};
-		DE06C6932877142D009866FC /* Challenge */ = {
-			isa = PBXGroup;
-			children = (
-				DE06C69428771438009866FC /* Models */,
-			);
-			path = Challenge;
-			sourceTree = "<group>";
-		};
-		DE06C69428771438009866FC /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				DE06C69528771441009866FC /* Challenge.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		DE06C6972877146D009866FC /* ForYouChallenges */ = {
@@ -670,6 +704,114 @@
 				DE06C6FB287C50B9009866FC /* CategoryCollectionCell.swift */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		DE06C707287DC6E7009866FC /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C73F287DD85F009866FC /* GetRankingBooks */,
+				DE06C73A287DD7FA009866FC /* GetCategoryBooks */,
+				DE06C735287DD7AD009866FC /* SearchBooks */,
+				DE06C730287DD6AC009866FC /* GetExploreKit */,
+				DE06C726287DD4B4009866FC /* GetSavedBooks */,
+				DE06C71F287DD327009866FC /* SaveRemove */,
+				DE06C719287DCFC1009866FC /* GetForYouKit */,
+				DE06C712287DC8CE009866FC /* GetBookKit */,
+				DE06C70D287DC80F009866FC /* GetRanking */,
+				DE06C708287DC6F3009866FC /* GetCategories */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DE06C708287DC6F3009866FC /* GetCategories */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C709287DC6FF009866FC /* GetCategoriesRequest.swift */,
+				DE06C70B287DC745009866FC /* GetCategoriesResponse.swift */,
+			);
+			path = GetCategories;
+			sourceTree = "<group>";
+		};
+		DE06C70D287DC80F009866FC /* GetRanking */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C70E287DC82D009866FC /* GetRankingRequest.swift */,
+				DE06C710287DC87D009866FC /* GetRankingResponse.swift */,
+			);
+			path = GetRanking;
+			sourceTree = "<group>";
+		};
+		DE06C712287DC8CE009866FC /* GetBookKit */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C713287DC8E7009866FC /* GetBookKitRequest.swift */,
+				DE06C715287DC91E009866FC /* GetBookKitResponse.swift */,
+			);
+			path = GetBookKit;
+			sourceTree = "<group>";
+		};
+		DE06C719287DCFC1009866FC /* GetForYouKit */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C71B287DCFDD009866FC /* GetForYouRequest.swift */,
+				DE06C71D287DD086009866FC /* GetForYouResponse.swift */,
+			);
+			path = GetForYouKit;
+			sourceTree = "<group>";
+		};
+		DE06C71F287DD327009866FC /* SaveRemove */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C720287DD345009866FC /* SaveBookRequest.swift */,
+				DE06C722287DD354009866FC /* RemoveSavedBookRequest.swift */,
+				DE06C724287DD3EA009866FC /* SaveRemoveBookResponse.swift */,
+			);
+			path = SaveRemove;
+			sourceTree = "<group>";
+		};
+		DE06C726287DD4B4009866FC /* GetSavedBooks */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C727287DD4C2009866FC /* GetSavedBooksRequest.swift */,
+				DE06C729287DD4F9009866FC /* GetSavedBooksResponse.swift */,
+			);
+			path = GetSavedBooks;
+			sourceTree = "<group>";
+		};
+		DE06C730287DD6AC009866FC /* GetExploreKit */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C731287DD6BD009866FC /* GetExploreKitRequest.swift */,
+				DE06C733287DD6E0009866FC /* GetExploreKitResponse.swift */,
+			);
+			path = GetExploreKit;
+			sourceTree = "<group>";
+		};
+		DE06C735287DD7AD009866FC /* SearchBooks */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C736287DD7BC009866FC /* SearchBooksRequest.swift */,
+				DE06C738287DD7E4009866FC /* SearchBooksResponse.swift */,
+			);
+			path = SearchBooks;
+			sourceTree = "<group>";
+		};
+		DE06C73A287DD7FA009866FC /* GetCategoryBooks */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C73B287DD809009866FC /* GetCategoryBooksRequest.swift */,
+				DE06C73D287DD844009866FC /* GetCategoryBooksResponse.swift */,
+			);
+			path = GetCategoryBooks;
+			sourceTree = "<group>";
+		};
+		DE06C73F287DD85F009866FC /* GetRankingBooks */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C740287DD86B009866FC /* GetRankingBooksRequest.swift */,
+				DE06C742287DD877009866FC /* GetRankingBooksResponse.swift */,
+			);
+			path = GetRankingBooks;
 			sourceTree = "<group>";
 		};
 		DEFF618C287473F500FE863E = {
@@ -863,7 +1005,6 @@
 		DEFF621D28747DA000FE863E /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				DE06C6932877142D009866FC /* Challenge */,
 				DE06C6802876DA68009866FC /* Content */,
 				DE06C6562874A0F6009866FC /* Profile */,
 				DEFF621E28747E0B00FE863E /* Purchase */,
@@ -1086,10 +1227,12 @@
 				DE06C66E2876A5C5009866FC /* BookImageView.swift in Sources */,
 				DEFF61EB287479AD00FE863E /* StringExtension.swift in Sources */,
 				DEFF61DB287479A900FE863E /* GradientView.swift in Sources */,
+				DE06C725287DD3EA009866FC /* SaveRemoveBookResponse.swift in Sources */,
 				DE06C66428769EDB009866FC /* MainViewCoordinator.swift in Sources */,
 				DEFF620F28747C2B00FE863E /* PushNotificationsManager.swift in Sources */,
 				DE06C6742876D0E8009866FC /* ForYouView.swift in Sources */,
 				DE06C6E7287C3847009866FC /* BookSeparatorCell.swift in Sources */,
+				DE06C714287DC8E7009866FC /* GetBookKitRequest.swift in Sources */,
 				DE06C66928769EF2009866FC /* TabItemView.swift in Sources */,
 				DE06C66628769EE2009866FC /* MainView.swift in Sources */,
 				DE06C6762876D0EE009866FC /* ForYouViewModel.swift in Sources */,
@@ -1103,6 +1246,7 @@
 				DE06C6512874993E009866FC /* TryAgainViewController.swift in Sources */,
 				DEFF61D1287479A900FE863E /* PaginatedDataLoader.swift in Sources */,
 				DEFF620E28747C2B00FE863E /* RestAPITransport.swift in Sources */,
+				DE06C723287DD354009866FC /* RemoveSavedBookRequest.swift in Sources */,
 				DEFF623428747E0B00FE863E /* Session.swift in Sources */,
 				DEFF620928747C2B00FE863E /* RxActivityIndicator.swift in Sources */,
 				DE06C6BD2879A9D3009866FC /* SettingsSeparatorCell.swift in Sources */,
@@ -1122,16 +1266,24 @@
 				DE06C6AA2877538F009866FC /* ForYouCategoriesCollectionView.swift in Sources */,
 				DEFF621128747C2B00FE863E /* PushNotificationsModel.swift in Sources */,
 				DE06C65B2874A152009866FC /* SyncTokensRequest.swift in Sources */,
+				DE06C71E287DD086009866FC /* GetForYouResponse.swift in Sources */,
 				DE06C6D3287C10CE009866FC /* BookNavButton.swift in Sources */,
 				DEFF623B2874814D00FE863E /* SplashViewController.swift in Sources */,
 				DE06C6C8287C0D8C009866FC /* BookViewModel.swift in Sources */,
+				DE06C737287DD7BC009866FC /* SearchBooksRequest.swift in Sources */,
 				DE06C6B12879A973009866FC /* SettingsViewModel.swift in Sources */,
+				DE06C739287DD7E4009866FC /* SearchBooksResponse.swift in Sources */,
+				DE06C741287DD86B009866FC /* GetRankingBooksRequest.swift in Sources */,
 				DEFF621428747C2B00FE863E /* TextAttributes.swift in Sources */,
+				DE06C70C287DC745009866FC /* GetCategoriesResponse.swift in Sources */,
+				DE06C743287DD877009866FC /* GetRankingBooksResponse.swift in Sources */,
 				DEFF623D2874819B00FE863E /* SplashView.swift in Sources */,
 				DEFF61E8287479AD00FE863E /* UIDeviceExtension.swift in Sources */,
 				DE06C6832876DAC1009866FC /* Category.swift in Sources */,
 				DEFF621A28747C2B00FE863E /* NetworkError.swift in Sources */,
 				DE06C6F2287C5009009866FC /* CategoryViewModel.swift in Sources */,
+				DE06C716287DC91E009866FC /* GetBookKitResponse.swift in Sources */,
+				DE06C72F287DD67D009866FC /* ExploreKit.swift in Sources */,
 				DEFF61E5287479AD00FE863E /* UIColorExtension.swift in Sources */,
 				DEFF621228747C2B00FE863E /* Scalable.swift in Sources */,
 				DE06C64E287498D4009866FC /* SplashSDKInitialize.swift in Sources */,
@@ -1139,11 +1291,14 @@
 				DEFF622E28747E0B00FE863E /* PurchaseValidationObserver.swift in Sources */,
 				DEFF61D5287479A900FE863E /* TapAreaButton.swift in Sources */,
 				DEFF623328747E0B00FE863E /* IAPErrorHelper.swift in Sources */,
+				DE06C73E287DD844009866FC /* GetCategoryBooksResponse.swift in Sources */,
 				DEFF61DA287479A900FE863E /* CircleView.swift in Sources */,
+				DE06C718287DCEF7009866FC /* ForYouKit.swift in Sources */,
 				DEFF621828747C2B00FE863E /* Fonts.swift in Sources */,
 				DE06C69E287714A4009866FC /* ForYouChallengesCell.swift in Sources */,
 				DE06C65328749945009866FC /* TryAgainView.swift in Sources */,
 				DE06C6BF287C09E5009866FC /* Book.swift in Sources */,
+				DE06C70F287DC82D009866FC /* GetRankingRequest.swift in Sources */,
 				DE06C6E1287C316E009866FC /* BookTitleCell.swift in Sources */,
 				DE06C6D9287C260C009866FC /* BookProgressCell.swift in Sources */,
 				DEFF61BC2874798B00FE863E /* FirebaseManager.swift in Sources */,
@@ -1153,7 +1308,9 @@
 				DE06C6B62879A989009866FC /* SettingsTableView.swift in Sources */,
 				DE06C6AF2879A942009866FC /* SettingsViewController.swift in Sources */,
 				DEFF620A28747C2B00FE863E /* UIViewRxExtension.swift in Sources */,
+				DE06C728287DD4C2009866FC /* GetSavedBooksRequest.swift in Sources */,
 				DEFF61ED287479B900FE863E /* GlobalDefinitions.swift in Sources */,
+				DE06C721287DD345009866FC /* SaveBookRequest.swift in Sources */,
 				DE06C704287DC12C009866FC /* Ranking.swift in Sources */,
 				DE06C67D2876D6DB009866FC /* ForYouTableView.swift in Sources */,
 				DEFF623028747E0B00FE863E /* IAPActionResult.swift in Sources */,
@@ -1184,23 +1341,30 @@
 				DEFF61BD2874798B00FE863E /* FacebookManager.swift in Sources */,
 				DEFF620C28747C2B00FE863E /* XORRequestWrapper.swift in Sources */,
 				DE06C66228769ED1009866FC /* MainViewController.swift in Sources */,
+				DE06C70A287DC6FF009866FC /* GetCategoriesRequest.swift in Sources */,
 				DEFF621C28747C2B00FE863E /* Weak.swift in Sources */,
 				DEFF621028747C2B00FE863E /* PushNotificationsAuthorizationStatus.swift in Sources */,
 				DE06C6D5287C130D009866FC /* BookActionButton.swift in Sources */,
 				DEFF622D28747E0B00FE863E /* IAPManager.swift in Sources */,
 				DE06C6852876DADF009866FC /* BookCover.swift in Sources */,
 				DE06C66B28769EF9009866FC /* TabView.swift in Sources */,
+				DE06C711287DC87D009866FC /* GetRankingResponse.swift in Sources */,
 				DEFF623128747E0B00FE863E /* IAPProduct.swift in Sources */,
+				DE06C734287DD6E0009866FC /* GetExploreKitResponse.swift in Sources */,
 				DE06C706287DC4C3009866FC /* BookKit.swift in Sources */,
 				DE06C6B82879A9A3009866FC /* SettingsTableElement.swift in Sources */,
 				DEFF621328747C2B00FE863E /* NumberLaunches.swift in Sources */,
 				DEFF61B92874798B00FE863E /* BranchManager.swift in Sources */,
 				DE06C6F4287C5010009866FC /* CategoryView.swift in Sources */,
+				DE06C72A287DD4F9009866FC /* GetSavedBooksResponse.swift in Sources */,
+				DE06C732287DD6BD009866FC /* GetExploreKitRequest.swift in Sources */,
 				DE06C6E3287C3242009866FC /* BookIntroductionCell.swift in Sources */,
 				DE06C6A228774C36009866FC /* ForYouSeparatorCell.swift in Sources */,
 				DE06C6C6287C0D81009866FC /* BookViewController.swift in Sources */,
 				DEFF621728747C2B00FE863E /* XOREncryption.swift in Sources */,
+				DE06C71C287DCFDD009866FC /* GetForYouRequest.swift in Sources */,
 				DEFF623528747E0B00FE863E /* SessionManager.swift in Sources */,
+				DE06C73C287DD809009866FC /* GetCategoryBooksRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
