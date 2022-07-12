@@ -36,7 +36,7 @@ final class ForYouRankingCell: UITableViewCell {
 // MARK: Public
 extension ForYouRankingCell {
     func setup(element: ForYouRankingElement) {
-        bookImageView.kf.setImage(with: element.book.image)
+        bookImageView.kf.setImage(with: element.book.imageUrl)
         
         numberLabel.attributedText = element.number
             .attributed(with: TextAttributes()
@@ -53,7 +53,7 @@ extension ForYouRankingCell {
                             .letterSpacing(-0.17.scale)
                             .lineBreakMode(.byTruncatingTail))
         
-        authorLabel.attributedText = element.book.author
+        authorLabel.attributedText = element.book.author.name
             .attributed(with: TextAttributes()
                             .textColor(Appearance.black.withAlphaComponent(0.5))
                             .font(Fonts.PlusJakartaSans.regular(size: 16.scale))

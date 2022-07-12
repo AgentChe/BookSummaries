@@ -10,7 +10,7 @@ import UIKit
 protocol BookTableDelegate: AnyObject {
     func bookTableDidTapped(chapter: BookChapter)
     func bookTableDidTappedSeeAll()
-    func bookTableDidTapped(book: BookBrochure)
+    func bookTableDidTapped(book: BookCover)
     func bookTableDidTapped(category: Category)
 }
 

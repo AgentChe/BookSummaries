@@ -8,8 +8,8 @@
 import UIKit
 
 final class ForYouBooksCollectionView: UICollectionView {
-    private lazy var elements = [BookBrochure]()
-    private var tapped: ((BookBrochure) -> Void)?
+    private lazy var elements = [BookCover]()
+    private var tapped: ((BookCover) -> Void)?
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -24,7 +24,7 @@ final class ForYouBooksCollectionView: UICollectionView {
 
 // MARK: Public
 extension ForYouBooksCollectionView {
-    func setup(elements: [BookBrochure], tapped: @escaping ((BookBrochure) -> Void)) {
+    func setup(elements: [BookCover], tapped: @escaping ((BookCover) -> Void)) {
         self.elements = elements
         self.tapped = tapped
         

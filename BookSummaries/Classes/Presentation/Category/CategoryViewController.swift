@@ -75,7 +75,7 @@ extension CategoryViewController {
 
 // MARK: CategoryCollectionDelegate
 extension CategoryViewController: CategoryCollectionDelegate {
-    func categoryCollectionTapped(book: BookBrochure) {
+    func categoryCollectionTapped(book: BookCover) {
         let vc = BookViewController.make(bookId: book.id)
         present(vc, animated: true)
     }

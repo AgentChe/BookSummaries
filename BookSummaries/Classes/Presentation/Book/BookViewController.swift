@@ -71,7 +71,7 @@ extension BookViewController: BookTableDelegate {
         
     }
     
-    func bookTableDidTapped(book: BookBrochure) {
+    func bookTableDidTapped(book: BookCover) {
         let vc = BookViewController.make(bookId: book.id)
         present(vc, animated: true)
     }

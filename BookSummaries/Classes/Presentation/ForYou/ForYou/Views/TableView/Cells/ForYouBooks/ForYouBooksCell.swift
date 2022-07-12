@@ -24,7 +24,7 @@ final class ForYouBooksCell: UITableViewCell {
 
 // MARK: Public
 extension ForYouBooksCell {
-    func setup(elements: [BookBrochure], tapped: @escaping ((BookBrochure) -> Void)) {
+    func setup(elements: [BookCover], tapped: @escaping ((BookCover) -> Void)) {
         collectionView.setup(elements: elements, tapped: tapped)
     }
 }

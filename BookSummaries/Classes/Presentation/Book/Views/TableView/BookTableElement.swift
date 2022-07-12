@@ -22,7 +22,7 @@ enum BookTableElement {
     case seeAll
     case whatAbout(String)
     case author(BookAuthorElement)
-    case books([BookBrochure])
+    case books([BookCover])
     case categories([Category])
 }
 

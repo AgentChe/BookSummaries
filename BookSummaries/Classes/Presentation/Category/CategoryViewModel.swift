@@ -19,58 +19,7 @@ final class CategoryViewModel {
 
 // MARK: Private
 private extension CategoryViewModel {
-    func makeElements() -> Driver<[BookBrochure]> {
-        .deferred {
-            .just([
-                .init(id: 1,
-                      name: "The Miracle Morning",
-                      author: "Stephen Guise",
-                      image: URL(string: "https://artworld.ru/images/cms/content/catalog3/rodriguez_kartina_maslom_sinie_gory_jr220117.jpeg")!),
-                .init(id: 1,
-                      name: "The Miracle Morning",
-                      author: "Stephen Guise",
-                      image: URL(string: "https://artworld.ru/images/cms/content/catalog3/rodriguez_kartina_maslom_sinie_gory_jr220117.jpeg")!),
-                .init(id: 1,
-                      name: "The Miracle Morning",
-                      author: "Stephen Guise",
-                      image: URL(string: "https://artworld.ru/images/cms/content/catalog3/rodriguez_kartina_maslom_sinie_gory_jr220117.jpeg")!),
-                .init(id: 1,
-                      name: "The Miracle Morning",
-                      author: "Stephen Guise",
-                      image: URL(string: "https://artworld.ru/images/cms/content/catalog3/rodriguez_kartina_maslom_sinie_gory_jr220117.jpeg")!),
-                .init(id: 1,
-                      name: "The Miracle Morning",
-                      author: "Stephen Guise",
-                      image: URL(string: "https://artworld.ru/images/cms/content/catalog3/rodriguez_kartina_maslom_sinie_gory_jr220117.jpeg")!),
-                .init(id: 1,
-                      name: "The Miracle Morning",
-                      author: "Stephen Guise",
-                      image: URL(string: "https://artworld.ru/images/cms/content/catalog3/rodriguez_kartina_maslom_sinie_gory_jr220117.jpeg")!),
-                .init(id: 1,
-                      name: "The Miracle Morning",
-                      author: "Stephen Guise",
-                      image: URL(string: "https://artworld.ru/images/cms/content/catalog3/rodriguez_kartina_maslom_sinie_gory_jr220117.jpeg")!),
-                .init(id: 1,
-                      name: "The Miracle Morning",
-                      author: "Stephen Guise",
-                      image: URL(string: "https://artworld.ru/images/cms/content/catalog3/rodriguez_kartina_maslom_sinie_gory_jr220117.jpeg")!),
-                .init(id: 1,
-                      name: "The Miracle Morning",
-                      author: "Stephen Guise",
-                      image: URL(string: "https://artworld.ru/images/cms/content/catalog3/rodriguez_kartina_maslom_sinie_gory_jr220117.jpeg")!),
-                .init(id: 1,
-                      name: "The Miracle Morning",
-                      author: "Stephen Guise",
-                      image: URL(string: "https://artworld.ru/images/cms/content/catalog3/rodriguez_kartina_maslom_sinie_gory_jr220117.jpeg")!),
-                .init(id: 1,
-                      name: "The Miracle Morning",
-                      author: "Stephen Guise",
-                      image: URL(string: "https://artworld.ru/images/cms/content/catalog3/rodriguez_kartina_maslom_sinie_gory_jr220117.jpeg")!),
-                .init(id: 1,
-                      name: "The Miracle Morning",
-                      author: "Stephen Guise",
-                      image: URL(string: "https://artworld.ru/images/cms/content/catalog3/rodriguez_kartina_maslom_sinie_gory_jr220117.jpeg")!)
-            ])
-        }
+    func makeElements() -> Driver<[BookCover]> {
+        .never()
     }
 }

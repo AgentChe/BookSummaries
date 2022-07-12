@@ -1,5 +1,5 @@
 //
-//  BookBrochure.swift
+//  BookCover.swift
 //  BookSummaries
 //
 //  Created by Андрей Чернышев on 07.07.2022.
@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct BookBrochure: Codable, Hashable {
+struct BookCover: Codable, Hashable {
     let id: Int
     let name: String
-    let author: String
-    let image: URL
+    let author: Author
+    let imageUrl: URL
+    let rankingId: Int
 }

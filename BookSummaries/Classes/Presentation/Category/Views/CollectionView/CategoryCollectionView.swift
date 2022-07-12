@@ -8,13 +8,13 @@
 import UIKit
 
 protocol CategoryCollectionDelegate: AnyObject {
-    func categoryCollectionTapped(book: BookBrochure)
+    func categoryCollectionTapped(book: BookCover)
 }
 
 final class CategoryCollectionView: UICollectionView {
     weak var mainDelegate: CategoryCollectionDelegate?
     
-    private lazy var elements = [BookBrochure]()
+    private lazy var elements = [BookCover]()
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -29,7 +29,7 @@ final class CategoryCollectionView: UICollectionView {
 
 // MARK: Public
 extension CategoryCollectionView {
-    func setup(elements: [BookBrochure]) {
+    func setup(elements: [BookCover]) {
         self.elements = elements
         
         reloadData()

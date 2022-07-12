@@ -44,7 +44,7 @@ extension ForYouCategoriesCollectionCell {
     }
     
     func setup(element: Category) {
-        imageView.kf.setImage(with: element.image)
+        imageView.kf.setImage(with: element.imageUrl)
         
         nameLabel.attributedText = element.name
             .attributed(with: TextAttributes()

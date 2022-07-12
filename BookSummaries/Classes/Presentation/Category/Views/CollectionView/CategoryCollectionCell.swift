@@ -34,8 +34,8 @@ final class CategoryCollectionCell: UICollectionViewCell {
 
 // MARK: Public
 extension CategoryCollectionCell {
-    func setup(element: BookBrochure) {
-        bookImageView.kf.setImage(with: element.image)
+    func setup(element: BookCover) {
+        bookImageView.kf.setImage(with: element.imageUrl)
         
         nameLabel.attributedText = element.name
             .attributed(with: TextAttributes()
@@ -45,7 +45,7 @@ extension CategoryCollectionCell {
                             .letterSpacing(-0.17.scale)
                             .lineBreakMode(.byTruncatingTail))
         
-        authorLabel.attributedText = element.author
+        authorLabel.attributedText = element.author.name
             .attributed(with: TextAttributes()
                             .textColor(Appearance.black.withAlphaComponent(0.5))
                             .font(Fonts.PlusJakartaSans.regular(size: 16.scale))

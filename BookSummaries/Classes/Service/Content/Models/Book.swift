@@ -10,9 +10,14 @@ import Foundation
 struct Book: Codable, Hashable {
     let id: Int
     let name: String
-    let image: URL
-    let author: String
-    let authorImage: URL
-    let whatAbout: String
+    let imageUrl: URL
+    let author: Author
+    let rankingId: Int
+    let time: Int
+    let audioUrl: URL
+    let shareLink: URL
+    let isSaved: Bool
+    let introduction: BookChapter?
     let chapters: [BookChapter]
+    let whatAbout: String
 }
