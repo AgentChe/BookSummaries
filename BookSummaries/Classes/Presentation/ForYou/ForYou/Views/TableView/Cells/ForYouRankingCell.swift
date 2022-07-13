@@ -35,7 +35,7 @@ final class ForYouRankingCell: UITableViewCell {
 
 // MARK: Public
 extension ForYouRankingCell {
-    func setup(element: ForYouRankingElement) {
+    func setup(element: ForYouRankingBookElement) {
         bookImageView.kf.setImage(with: element.book.imageUrl)
         
         numberLabel.attributedText = element.number

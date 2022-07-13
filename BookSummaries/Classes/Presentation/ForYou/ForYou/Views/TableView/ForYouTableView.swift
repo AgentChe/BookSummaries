@@ -10,9 +10,8 @@ import UIKit
 protocol ForYouTableDelegate: AnyObject {
     func forYouTableDidTapped(book: BookCover)
     func forYouTableDidTapped(challenge: Challenge)
-    func forYouTableDidTappedRanking()
+    func forYouTableDidTapped(ranking: Ranking)
     func forYouTableDidTapped(category: Category)
-    func forYouTableDidTappedNewReleases()
 }
 
 final class ForYouTableView: UITableView {
@@ -74,11 +73,11 @@ extension ForYouTableView: UITableViewDataSource {
                 self?.mainDelegate?.forYouTableDidTapped(challenge: challenge)
             })
             return cell
-        case .rankingTitle(let element), .newReleasesTitle(let element):
+        case .rankingTitle(let element):
             let cell = dequeueReusableCell(withIdentifier: String(describing: ForYouTitleCell.self)) as! ForYouTitleCell
-            cell.setup(title: element, seeAllHidden: false)
+            cell.setup(title: element.name, seeAllHidden: false)
             return cell
-        case .ranking(let element):
+        case .rankingBook(let element):
             let cell = dequeueReusableCell(withIdentifier: String(describing: ForYouRankingCell.self)) as! ForYouRankingCell
             cell.setup(element: element)
             return cell
@@ -102,13 +101,13 @@ extension ForYouTableView: UITableViewDelegate {
             return offset
         case .freeBook:
             return 340.scale
-        case .title, .rankingTitle, .newReleasesTitle:
+        case .title, .rankingTitle:
             return 24.scale
         case .books:
             return 245.scale
         case .challenges:
             return 284.scale
-        case .ranking:
+        case .rankingBook:
             return 78.scale
         case .separator:
             return 1.scale
@@ -121,12 +120,10 @@ extension ForYouTableView: UITableViewDelegate {
         switch elements[indexPath.row] {
         case .freeBook(let element):
             mainDelegate?.forYouTableDidTapped(book: element)
-        case .ranking(let element):
+        case .rankingBook(let element):
             mainDelegate?.forYouTableDidTapped(book: element.book)
-        case .rankingTitle:
-            mainDelegate?.forYouTableDidTappedRanking()
-        case .newReleasesTitle:
-            mainDelegate?.forYouTableDidTappedNewReleases()
+        case .rankingTitle(let element):
+            mainDelegate?.forYouTableDidTapped(ranking: element)
         default:
             break
         }

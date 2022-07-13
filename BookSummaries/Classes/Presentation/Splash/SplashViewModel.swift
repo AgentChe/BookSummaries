@@ -24,6 +24,7 @@ final class SplashViewModel {
     
     private lazy var sessionManager = SessionManager()
     private lazy var profileManager = ProfileManager()
+    private lazy var contentManager = ContentManagerMock() // TODO
     
     private lazy var observableRetrySingle = ObservableRetrySingle()
 }
@@ -103,7 +104,15 @@ private extension SplashViewModel {
     
     func library() -> Observable<Void> {
         func source() -> Single<Void> {
-            .deferred { .just(Void()) }
+            let categories = contentManager
+                .obtainCategories(forceUpdate: true)
+            
+            let ranking = contentManager
+                .obtainRankings(forceUpdate: true)
+            
+            return Single
+                .zip(categories, ranking)
+                .mapToVoid()
         }
         
         func trigger(error: Error) -> Observable<Void> {

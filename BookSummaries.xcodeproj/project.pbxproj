@@ -116,6 +116,8 @@
 		DE06C743287DD877009866FC /* GetRankingBooksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C742287DD877009866FC /* GetRankingBooksResponse.swift */; };
 		DE06C745287DDA38009866FC /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C744287DDA38009866FC /* ContentManager.swift */; };
 		DE06C747287DDF2C009866FC /* ContentMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C746287DDF2C009866FC /* ContentMediator.swift */; };
+		DE06C749287EA2D9009866FC /* ContentManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C748287EA2D9009866FC /* ContentManagerMock.swift */; };
+		DEBF9156287EEBED00F8DC0F /* RankingBooksGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */; };
 		DEFF6199287473F500FE863E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6198287473F500FE863E /* AppDelegate.swift */; };
 		DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF619A287473F500FE863E /* SceneDelegate.swift */; };
 		DEFF61A2287473F600FE863E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEFF61A1287473F600FE863E /* Assets.xcassets */; };
@@ -285,6 +287,8 @@
 		DE06C742287DD877009866FC /* GetRankingBooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRankingBooksResponse.swift; sourceTree = "<group>"; };
 		DE06C744287DDA38009866FC /* ContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
 		DE06C746287DDF2C009866FC /* ContentMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMediator.swift; sourceTree = "<group>"; };
+		DE06C748287EA2D9009866FC /* ContentManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManagerMock.swift; sourceTree = "<group>"; };
+		DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingBooksGroup.swift; sourceTree = "<group>"; };
 		DEFF6195287473F500FE863E /* BookSummaries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSummaries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFF6198287473F500FE863E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEFF619A287473F500FE863E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -515,6 +519,7 @@
 				DE06C6812876DA82009866FC /* Models */,
 				DE06C744287DDA38009866FC /* ContentManager.swift */,
 				DE06C746287DDF2C009866FC /* ContentMediator.swift */,
+				DE06C748287EA2D9009866FC /* ContentManagerMock.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -532,6 +537,7 @@
 				DE06C69528771441009866FC /* Challenge.swift */,
 				DE06C717287DCEF7009866FC /* ForYouKit.swift */,
 				DE06C72E287DD67D009866FC /* ExploreKit.swift */,
+				DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1230,6 +1236,7 @@
 				DE06C64A287498C5009866FC /* SplashReceiptValidationObserver.swift in Sources */,
 				DE06C6E9287C3A45009866FC /* BookSeeAllCell.swift in Sources */,
 				DEFF61D2287479A900FE863E /* Toast.swift in Sources */,
+				DEBF9156287EEBED00F8DC0F /* RankingBooksGroup.swift in Sources */,
 				DE06C66E2876A5C5009866FC /* BookImageView.swift in Sources */,
 				DEFF61EB287479AD00FE863E /* StringExtension.swift in Sources */,
 				DEFF61DB287479A900FE863E /* GradientView.swift in Sources */,
@@ -1329,6 +1336,7 @@
 				DE06C69628771441009866FC /* Challenge.swift in Sources */,
 				DE06C6CA287C0D96009866FC /* BookView.swift in Sources */,
 				DE06C6D0287C0DBF009866FC /* BookTableElement.swift in Sources */,
+				DE06C749287EA2D9009866FC /* ContentManagerMock.swift in Sources */,
 				DE06C6882876DB49009866FC /* ForYouFreeBookCell.swift in Sources */,
 				DE06C64C287498CD009866FC /* SplashActivity.swift in Sources */,
 				DEFF61E9287479AD00FE863E /* ObservableAndSingleExtension.swift in Sources */,

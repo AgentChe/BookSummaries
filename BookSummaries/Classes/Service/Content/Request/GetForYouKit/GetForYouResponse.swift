@@ -13,9 +13,7 @@ final class GetForYouResponse {
             let json = response as? [String: Any],
             let data = json["_data"] as? [String: Any],
             let freeBookJSON = data["free_book"] as? [String: Any],
-            let freeBook = map(coverJSON: freeBookJSON),
-            let rankingJSON = data["ranking"] as? [String: Any],
-            let rankingId = rankingJSON["ranking_id"] as? Int
+            let freeBook = map(coverJSON: freeBookJSON)
         else {
             return nil
         }
@@ -48,23 +46,27 @@ final class GetForYouResponse {
             map(coverJSON: coverJSON)
         }
         
-        let rankingBooksArray = rankingJSON["books"] as? [[String: Any]] ?? []
-        let rankingBooks = rankingBooksArray.compactMap { coverJSON -> BookCover? in
-            map(coverJSON: coverJSON)
-        }
-        
-        let newReleasesArray = data["new_releases"] as? [[String: Any]] ?? []
-        let newReleases = newReleasesArray.compactMap { coverJSON -> BookCover? in
-            map(coverJSON: coverJSON)
+        let rankingArray = data["ranking"] as? [[String: Any]] ?? []
+        let rankings = rankingArray.compactMap { rankingJSON -> RankingBooksGroup? in
+            guard
+                let id = rankingJSON["ranking_id"] as? Int,
+                let booksArray = rankingJSON["books"] as? [[String: Any]]
+            else {
+                return nil
+            }
+            
+            let books = booksArray.compactMap { coverJSON -> BookCover? in
+                map(coverJSON: coverJSON)
+            }
+            
+            return RankingBooksGroup(rankingId: id, books: books)
         }
         
         return ForYouKit(freeBook: freeBook,
                          todaysHotSummaries: todaysHotSummaries,
                          challenges: challenges,
                          youMayLike: youMayLike,
-                         rankingId: rankingId,
-                         rankingBooks: rankingBooks,
-                         newReleases: newReleases)
+                         rankings: rankings)
     }
 }
 

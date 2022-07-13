@@ -10,7 +10,5 @@ struct ForYouKit: Codable, Hashable {
     let todaysHotSummaries: [BookCover]
     let challenges: [Challenge]
     let youMayLike: [BookCover]
-    let rankingId: Int
-    let rankingBooks: [BookCover]
-    let newReleases: [BookCover]
+    let rankings: [RankingBooksGroup]
 }

@@ -11,7 +11,7 @@ import RxSwift
 final class CategoryViewController: UIViewController {
     lazy var mainView = CategoryView(category: category)
     
-    private lazy var viewModel = CategoryViewModel()
+    private lazy var viewModel = CategoryViewModel(categoryId: category.id)
     
     private lazy var disposeBag = DisposeBag()
     

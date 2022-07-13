@@ -13,14 +13,13 @@ enum ForYouTableElement {
     case title(String)
     case books([BookCover])
     case challenges([Challenge])
-    case rankingTitle(String)
-    case ranking(ForYouRankingElement)
+    case rankingTitle(Ranking)
+    case rankingBook(ForYouRankingBookElement)
     case separator
     case categories([Category])
-    case newReleasesTitle(String)
 }
 
-struct ForYouRankingElement {
+struct ForYouRankingBookElement {
     let number: String
     let book: BookCover
 }
