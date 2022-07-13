@@ -139,6 +139,19 @@ extension BookTableView: UITableViewDelegate {
             return UITableView.automaticDimension
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch elements[indexPath.row] {
+        case .introduction(let element):
+            mainDelegate?.bookTableDidTapped(chapter: element)
+        case .chapter(let element):
+            mainDelegate?.bookTableDidTapped(chapter: element.chapter)
+        case .seeAll:
+            mainDelegate?.bookTableDidTappedSeeAll()
+        default:
+            break
+        }
+    }
 }
 
 // MARK: Private

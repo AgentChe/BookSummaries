@@ -33,8 +33,8 @@ final class BookAuthorCell: UITableViewCell {
 
 // MARK: Public
 extension BookAuthorCell {
-    func setup(element: BookAuthorElement) {
-        photoView.kf.setImage(with: element.image)
+    func setup(element: Author) {
+        photoView.kf.setImage(with: element.photoUrl)
         
         let attrs = TextAttributes()
             .textColor(Appearance.black)

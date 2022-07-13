@@ -16,12 +16,12 @@ enum BookTableElement {
     case authorName(String)
     case info(BookInfoElement)
     case title(String)
-    case introduction
+    case introduction(BookChapter)
     case chapter(BookChapterElement)
     case separator
     case seeAll
     case whatAbout(String)
-    case author(BookAuthorElement)
+    case author(Author)
     case books([BookCover])
     case categories([Category])
 }
@@ -34,9 +34,4 @@ struct BookInfoElement {
 struct BookChapterElement {
     let chapter: BookChapter
     let number: String
-}
-
-struct BookAuthorElement {
-    let image: URL
-    let name: String
 }

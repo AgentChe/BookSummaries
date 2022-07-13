@@ -13,7 +13,19 @@ final class BookViewController: UIViewController {
     
     private lazy var disposeBag = DisposeBag()
     
-    private lazy var viewModel = BookViewModel()
+    private lazy var viewModel = BookViewModel(bookId: bookId)
+    
+    private let bookId: Int
+    
+    private init(bookId: Int) {
+        self.bookId = bookId
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func loadView() {
         view = mainView
@@ -42,6 +54,24 @@ final class BookViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        mainView.shareButton.rx.tap
+            .withLatestFrom(viewModel.shareLink)
+            .bind(to: Binder(self) { base, url in
+                base.share(url: url)
+            })
+            .disposed(by: disposeBag)
+        
+        mainView.favoriteButton.rx.tap
+            .withLatestFrom(viewModel.isSavedBook)
+            .bind(to: viewModel.didTapMark)
+            .disposed(by: disposeBag)
+        
+        viewModel.isSavedBook
+            .drive(Binder(self) { base, isSaved in
+                base.update(favorite: isSaved)
+            })
+            .disposed(by: disposeBag)
+        
         viewModel.elements
             .drive(Binder(mainView.tableView) { base, elements in
                 base.setup(elements: elements)
@@ -55,7 +85,7 @@ final class BookViewController: UIViewController {
 // MARK: Make
 extension BookViewController {
     static func make(bookId: Int) -> BookViewController {
-        let vc = BookViewController()
+        let vc = BookViewController(bookId: bookId)
         vc.modalPresentationStyle = .fullScreen
         return vc
     }
@@ -68,7 +98,7 @@ extension BookViewController: BookTableDelegate {
     }
     
     func bookTableDidTappedSeeAll() {
-        
+        viewModel.didTappSeeAll.accept(Void())
     }
     
     func bookTableDidTapped(book: BookCover) {
@@ -84,6 +114,11 @@ extension BookViewController: BookTableDelegate {
 
 // MARK: Private
 private extension BookViewController {
+    func update(favorite: Bool) {
+        let image = UIImage(named: favorite ? "Book.Mark.Check" : "Book.Mark.Uncheck")
+        mainView.favoriteButton.setImage(image, for: .normal)
+    }
+    
     func openError() -> Observable<Void> {
         Observable<Void>
             .create { [weak self] observe in
@@ -102,5 +137,10 @@ private extension BookViewController {
     
     func activity(_ activity: Bool) {
         activity ? mainView.preloader.startAnimating() : mainView.preloader.stopAnimating()
+    }
+    
+    func share(url: URL) {
+        let vc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        present(vc, animated: true)
     }
 }
