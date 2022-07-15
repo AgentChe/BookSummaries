@@ -60,3 +60,6 @@
 "Book.ExploreCategories" = "Explore categories";
 "Book.Listen" = "Listen";
 "Book.Read" = "Read";
+
+// MARK: Reader
+"Reader.MarkAsFinished" = "Mark as finished";

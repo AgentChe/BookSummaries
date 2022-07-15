@@ -54,6 +54,17 @@ final class BookViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        mainView.readButton.rx.tap
+            .bind(to: viewModel.didTapRead)
+            .disposed(by: disposeBag)
+        
+        viewModel.reader
+            .drive(Binder(self) { base, reader in
+                let vc = ReaderViewController.make(book: reader.0, chapter: reader.1)
+                base.present(vc, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
         mainView.shareButton.rx.tap
             .withLatestFrom(viewModel.shareLink)
             .bind(to: Binder(self) { base, url in
@@ -94,11 +105,11 @@ extension BookViewController {
 // MARK: BookTableDelegate
 extension BookViewController: BookTableDelegate {
     func bookTableDidTapped(chapter: BookChapter) {
-        
+        viewModel.didTapChapter.accept(chapter)
     }
     
     func bookTableDidTappedSeeAll() {
-        viewModel.didTappSeeAll.accept(Void())
+        viewModel.didTapSeeAll.accept(Void())
     }
     
     func bookTableDidTapped(book: BookCover) {

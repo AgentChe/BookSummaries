@@ -70,7 +70,7 @@ extension ContentManagerMock {
                         .init(id: 5, name: "Lirika", imageUrl: Self.imageUrls.randomElement()!)
                     ]
                     
-                    let success = [true, true, true, false].randomElement()!
+                    let success = [true, true, true].randomElement()!
 
                     success ? event(.success(array)) : event(.failure(SignError.tokenNotFound))
                 }
@@ -92,7 +92,7 @@ extension ContentManagerMock {
                         .init(id: 6, name: "Bestseller")
                     ]
                     
-                    let success = [true, true, true, false].randomElement()!
+                    let success = [true, true, true].randomElement()!
 
                     success ? event(.success(array)) : event(.failure(SignError.tokenNotFound))
                 }
@@ -105,9 +105,11 @@ extension ContentManagerMock {
         Single<BookKit?>
             .create { event in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                    let chapter = BookChapter(shortDescription: "Self-employment makes a lot more sense when you reaize that there;s no such thing as a secure job anymore",
-                                              title: "Don’t try to be somebody you’re not; be very selective with what to give a fuck about",
-                                              text: Self.chapterText)
+                    func chapter() -> BookChapter {
+                        BookChapter(shortDescription: "Self-employment makes a lot more sense when you reaize that there;s no such thing as a secure job anymore \(Int.random(in: 1...100000000))",
+                                                  title: "Don’t try to be somebody you’re not; be very selective with what to give a fuck about",
+                                                  text: Self.chapterText)
+                    }
                     
                     let book = Book(id: Int.random(in: 1...10),
                                     name: "Unlimited Memory",
@@ -122,13 +124,13 @@ extension ContentManagerMock {
                                     introduction: BookChapter(shortDescription: "",
                                                               title: "Introduction",
                                                               text: Self.chapterText),
-                                    chapters: [chapter, chapter, chapter, chapter, chapter, chapter, chapter, chapter, chapter, chapter, chapter],
+                                    chapters: [chapter(), chapter(), chapter(), chapter(), chapter(), chapter(), chapter(), chapter(), chapter(), chapter(), chapter()],
                                     whatAbout: "Have you ever imagined that you travel into the comic? Who is the main you most want to meet? My favorite hero is such a person!?")
                     
                     let kit = BookKit(book: book,
                                       similarBooks: Self.booksCovers)
                     
-                    let success = [true, true, true, false].randomElement()!
+                    let success = [true, true, true].randomElement()!
 
                     success ? event(.success(kit)) : event(.failure(SignError.tokenNotFound))
                 }
@@ -155,7 +157,7 @@ extension ContentManagerMock {
                                             .init(rankingId: 2, books: Self.booksCovers)
                                         ])
                     
-                    let success = [true, true, true, false].randomElement()!
+                    let success = [true, true, true].randomElement()!
 
                     success ? event(.success(kit)) : event(.failure(SignError.tokenNotFound))
                 }
@@ -168,7 +170,7 @@ extension ContentManagerMock {
         Single<Bool>
             .create { event in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                    let success = [true, true, true, false].randomElement()!
+                    let success = [true, true, true].randomElement()!
 
                     success ? event(.success(true)) : event(.failure(SignError.tokenNotFound))
                 }
@@ -181,7 +183,7 @@ extension ContentManagerMock {
         Single<Bool>
             .create { event in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                    let success = [true, true, true, false].randomElement()!
+                    let success = [true, true, true].randomElement()!
 
                     success ? event(.success(true)) : event(.failure(SignError.tokenNotFound))
                 }

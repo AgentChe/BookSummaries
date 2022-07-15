@@ -11,9 +11,12 @@ import RxCocoa
 final class BookViewModel {
     var tryAgain: ((Error) -> (Observable<Void>))?
     
-    lazy var didTappSeeAll = PublishRelay<Void>()
+    lazy var didTapSeeAll = PublishRelay<Void>()
     lazy var didTapMark = PublishRelay<Bool>()
+    lazy var didTapChapter = PublishRelay<BookChapter>()
+    lazy var didTapRead = PublishRelay<Void>()
     
+    lazy var reader = makeReader()
     lazy var shareLink = makeShareLink()
     lazy var isSavedBook = makeIsSavedBook()
     lazy var elements = makeElements()
@@ -37,6 +40,35 @@ final class BookViewModel {
 
 // MARK: Private
 private extension BookViewModel {
+    func makeReader() -> Driver<(Book, BookChapter)> {
+        let chapter = didTapChapter
+            .withLatestFrom(bookKit) { ($1.book, $0) }
+            .asDriver(onErrorDriveWith: .never())
+        
+        let read = didTapRead
+            .withLatestFrom(bookKit)
+            .withLatestFrom(readingBooks) { bookKit, readingBooks -> (Book, BookChapter)? in
+                let book = bookKit.book
+                let bookChapter: BookChapter?
+                
+                if let lastReadingChapter = readingBooks.first(where: { $0.book.id == book.id }) {
+                    bookChapter = book.chapters[safe: lastReadingChapter.currentChapterIndex] ?? book.chapters.last
+                } else {
+                    bookChapter = book.chapters.first
+                }
+                
+                guard let bookChapter = bookChapter else {
+                    return nil
+                }
+
+                return (book, bookChapter)
+            }
+            .compactMap { $0 }
+            .asDriver(onErrorDriveWith: .never())
+        
+        return Driver.merge(chapter, read)
+    }
+    
     func makeShareLink() -> Driver<URL> {
         bookKit
             .map { $0.book.shareLink }
@@ -90,8 +122,9 @@ private extension BookViewModel {
                 
                 result.append(.bookImage(book.imageUrl))
                 
-                if let readingChapterIndex = readingBooks.first(where: { $0.book.id == book.id })?.currentChapterIndex {
-                    let progress = Float(readingChapterIndex) / Float(book.chapters.count)
+                if !book.chapters.isEmpty, let readingChapter = readingBooks.first(where: { $0.book.id == book.id }) {
+                    let number = readingChapter.currentChapterIndex + 1
+                    let progress = Float(number) / Float(book.chapters.count)
                     result.append(contentsOf: [
                         .offset(36.scale),
                         .progress(progress)
@@ -183,7 +216,7 @@ private extension BookViewModel {
     }
     
     func makeIsShowingAll() -> Driver<Bool> {
-        didTappSeeAll
+        didTapSeeAll
             .map { true }
             .startWith(false)
             .asDriver(onErrorDriveWith: .never())

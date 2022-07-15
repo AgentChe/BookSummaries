@@ -119,6 +119,10 @@
 		DE06C749287EA2D9009866FC /* ContentManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C748287EA2D9009866FC /* ContentManagerMock.swift */; };
 		DEBF9156287EEBED00F8DC0F /* RankingBooksGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */; };
 		DEBF9158288159B200F8DC0F /* BookReadingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */; };
+		DEBF915C2881777100F8DC0F /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF915B2881777100F8DC0F /* ReaderViewController.swift */; };
+		DEBF915E2881777C00F8DC0F /* ReaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF915D2881777C00F8DC0F /* ReaderViewModel.swift */; };
+		DEBF91602881778400F8DC0F /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF915F2881778400F8DC0F /* ReaderView.swift */; };
+		DEBF916328817DE500F8DC0F /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF916228817DE500F8DC0F /* Collection+Extension.swift */; };
 		DEFF6199287473F500FE863E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6198287473F500FE863E /* AppDelegate.swift */; };
 		DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF619A287473F500FE863E /* SceneDelegate.swift */; };
 		DEFF61A2287473F600FE863E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEFF61A1287473F600FE863E /* Assets.xcassets */; };
@@ -137,10 +141,10 @@
 		DEFF61D7287479A900FE863E /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61CA287479A900FE863E /* PaddingLabel.swift */; };
 		DEFF61DA287479A900FE863E /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61CD287479A900FE863E /* CircleView.swift */; };
 		DEFF61DB287479A900FE863E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61CE287479A900FE863E /* GradientView.swift */; };
-		DEFF61E5287479AD00FE863E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61DE287479AD00FE863E /* UIColorExtension.swift */; };
-		DEFF61E8287479AD00FE863E /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61E1287479AD00FE863E /* UIDeviceExtension.swift */; };
-		DEFF61E9287479AD00FE863E /* ObservableAndSingleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61E2287479AD00FE863E /* ObservableAndSingleExtension.swift */; };
-		DEFF61EB287479AD00FE863E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61E4287479AD00FE863E /* StringExtension.swift */; };
+		DEFF61E5287479AD00FE863E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61DE287479AD00FE863E /* UIColor+Extension.swift */; };
+		DEFF61E8287479AD00FE863E /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61E1287479AD00FE863E /* UIDevice+Extension.swift */; };
+		DEFF61E9287479AD00FE863E /* ObservableAndSingle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61E2287479AD00FE863E /* ObservableAndSingle+Extension.swift */; };
+		DEFF61EB287479AD00FE863E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61E4287479AD00FE863E /* String+Extension.swift */; };
 		DEFF61ED287479B900FE863E /* GlobalDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61EC287479B900FE863E /* GlobalDefinitions.swift */; };
 		DEFF620928747C2B00FE863E /* RxActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61EF28747C2B00FE863E /* RxActivityIndicator.swift */; };
 		DEFF620A28747C2B00FE863E /* UIViewRxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61F028747C2B00FE863E /* UIViewRxExtension.swift */; };
@@ -291,6 +295,10 @@
 		DE06C748287EA2D9009866FC /* ContentManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManagerMock.swift; sourceTree = "<group>"; };
 		DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingBooksGroup.swift; sourceTree = "<group>"; };
 		DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReadingProgress.swift; sourceTree = "<group>"; };
+		DEBF915B2881777100F8DC0F /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
+		DEBF915D2881777C00F8DC0F /* ReaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewModel.swift; sourceTree = "<group>"; };
+		DEBF915F2881778400F8DC0F /* ReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
+		DEBF916228817DE500F8DC0F /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		DEFF6195287473F500FE863E /* BookSummaries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSummaries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFF6198287473F500FE863E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEFF619A287473F500FE863E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -311,10 +319,10 @@
 		DEFF61CA287479A900FE863E /* PaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		DEFF61CD287479A900FE863E /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		DEFF61CE287479A900FE863E /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		DEFF61DE287479AD00FE863E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		DEFF61E1287479AD00FE863E /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
-		DEFF61E2287479AD00FE863E /* ObservableAndSingleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableAndSingleExtension.swift; sourceTree = "<group>"; };
-		DEFF61E4287479AD00FE863E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		DEFF61DE287479AD00FE863E /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		DEFF61E1287479AD00FE863E /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		DEFF61E2287479AD00FE863E /* ObservableAndSingle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableAndSingle+Extension.swift"; sourceTree = "<group>"; };
+		DEFF61E4287479AD00FE863E /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		DEFF61EC287479B900FE863E /* GlobalDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalDefinitions.swift; sourceTree = "<group>"; };
 		DEFF61EF28747C2B00FE863E /* RxActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxActivityIndicator.swift; sourceTree = "<group>"; };
 		DEFF61F028747C2B00FE863E /* UIViewRxExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewRxExtension.swift; sourceTree = "<group>"; };
@@ -646,10 +654,8 @@
 		DE06C6C2287C0CA8009866FC /* Book */ = {
 			isa = PBXGroup;
 			children = (
-				DE06C6CB287C0D9C009866FC /* Views */,
-				DE06C6C5287C0D81009866FC /* BookViewController.swift */,
-				DE06C6C7287C0D8C009866FC /* BookViewModel.swift */,
-				DE06C6C9287C0D96009866FC /* BookView.swift */,
+				DEBF915A2881776500F8DC0F /* Reader */,
+				DEBF91592881775A00F8DC0F /* Book */,
 			);
 			path = Book;
 			sourceTree = "<group>";
@@ -829,6 +835,35 @@
 			path = GetRankingBooks;
 			sourceTree = "<group>";
 		};
+		DEBF91592881775A00F8DC0F /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C6CB287C0D9C009866FC /* Views */,
+				DE06C6C5287C0D81009866FC /* BookViewController.swift */,
+				DE06C6C7287C0D8C009866FC /* BookViewModel.swift */,
+				DE06C6C9287C0D96009866FC /* BookView.swift */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
+		DEBF915A2881776500F8DC0F /* Reader */ = {
+			isa = PBXGroup;
+			children = (
+				DEBF91612881778900F8DC0F /* Views */,
+				DEBF915B2881777100F8DC0F /* ReaderViewController.swift */,
+				DEBF915D2881777C00F8DC0F /* ReaderViewModel.swift */,
+				DEBF915F2881778400F8DC0F /* ReaderView.swift */,
+			);
+			path = Reader;
+			sourceTree = "<group>";
+		};
+		DEBF91612881778900F8DC0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		DEFF618C287473F500FE863E = {
 			isa = PBXGroup;
 			children = (
@@ -945,11 +980,12 @@
 		DEFF61DD287479AD00FE863E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				DEFF61DE287479AD00FE863E /* UIColorExtension.swift */,
-				DEFF61E1287479AD00FE863E /* UIDeviceExtension.swift */,
-				DEFF61E2287479AD00FE863E /* ObservableAndSingleExtension.swift */,
+				DEFF61DE287479AD00FE863E /* UIColor+Extension.swift */,
+				DEFF61E1287479AD00FE863E /* UIDevice+Extension.swift */,
+				DEFF61E2287479AD00FE863E /* ObservableAndSingle+Extension.swift */,
 				DEFF61F028747C2B00FE863E /* UIViewRxExtension.swift */,
-				DEFF61E4287479AD00FE863E /* StringExtension.swift */,
+				DEFF61E4287479AD00FE863E /* String+Extension.swift */,
+				DEBF916228817DE500F8DC0F /* Collection+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1241,7 +1277,7 @@
 				DEFF61D2287479A900FE863E /* Toast.swift in Sources */,
 				DEBF9156287EEBED00F8DC0F /* RankingBooksGroup.swift in Sources */,
 				DE06C66E2876A5C5009866FC /* BookImageView.swift in Sources */,
-				DEFF61EB287479AD00FE863E /* StringExtension.swift in Sources */,
+				DEFF61EB287479AD00FE863E /* String+Extension.swift in Sources */,
 				DEFF61DB287479A900FE863E /* GradientView.swift in Sources */,
 				DE06C725287DD3EA009866FC /* SaveRemoveBookResponse.swift in Sources */,
 				DE06C66428769EDB009866FC /* MainViewCoordinator.swift in Sources */,
@@ -1253,6 +1289,7 @@
 				DE06C66928769EF2009866FC /* TabItemView.swift in Sources */,
 				DE06C66628769EE2009866FC /* MainView.swift in Sources */,
 				DE06C6762876D0EE009866FC /* ForYouViewModel.swift in Sources */,
+				DEBF915E2881777C00F8DC0F /* ReaderViewModel.swift in Sources */,
 				DE06C68F287709B3009866FC /* ForYouBooksCollectionCell.swift in Sources */,
 				DEFF622F28747E0B00FE863E /* ProductPrice.swift in Sources */,
 				DEFF6199287473F500FE863E /* AppDelegate.swift in Sources */,
@@ -1296,13 +1333,14 @@
 				DE06C70C287DC745009866FC /* GetCategoriesResponse.swift in Sources */,
 				DE06C743287DD877009866FC /* GetRankingBooksResponse.swift in Sources */,
 				DEFF623D2874819B00FE863E /* SplashView.swift in Sources */,
-				DEFF61E8287479AD00FE863E /* UIDeviceExtension.swift in Sources */,
+				DEFF61E8287479AD00FE863E /* UIDevice+Extension.swift in Sources */,
 				DE06C6832876DAC1009866FC /* Category.swift in Sources */,
 				DEFF621A28747C2B00FE863E /* NetworkError.swift in Sources */,
 				DE06C6F2287C5009009866FC /* CategoryViewModel.swift in Sources */,
 				DE06C716287DC91E009866FC /* GetBookKitResponse.swift in Sources */,
 				DE06C72F287DD67D009866FC /* ExploreKit.swift in Sources */,
-				DEFF61E5287479AD00FE863E /* UIColorExtension.swift in Sources */,
+				DEBF916328817DE500F8DC0F /* Collection+Extension.swift in Sources */,
+				DEFF61E5287479AD00FE863E /* UIColor+Extension.swift in Sources */,
 				DEFF621228747C2B00FE863E /* Scalable.swift in Sources */,
 				DE06C64E287498D4009866FC /* SplashSDKInitialize.swift in Sources */,
 				DEFF61D4287479A900FE863E /* NavigationController.swift in Sources */,
@@ -1311,10 +1349,12 @@
 				DEFF623328747E0B00FE863E /* IAPErrorHelper.swift in Sources */,
 				DE06C73E287DD844009866FC /* GetCategoryBooksResponse.swift in Sources */,
 				DE06C745287DDA38009866FC /* ContentManager.swift in Sources */,
+				DEBF915C2881777100F8DC0F /* ReaderViewController.swift in Sources */,
 				DEFF61DA287479A900FE863E /* CircleView.swift in Sources */,
 				DE06C718287DCEF7009866FC /* ForYouKit.swift in Sources */,
 				DEFF621828747C2B00FE863E /* Fonts.swift in Sources */,
 				DE06C69E287714A4009866FC /* ForYouChallengesCell.swift in Sources */,
+				DEBF91602881778400F8DC0F /* ReaderView.swift in Sources */,
 				DE06C65328749945009866FC /* TryAgainView.swift in Sources */,
 				DE06C6BF287C09E5009866FC /* Book.swift in Sources */,
 				DE06C70F287DC82D009866FC /* GetRankingRequest.swift in Sources */,
@@ -1343,7 +1383,7 @@
 				DE06C749287EA2D9009866FC /* ContentManagerMock.swift in Sources */,
 				DE06C6882876DB49009866FC /* ForYouFreeBookCell.swift in Sources */,
 				DE06C64C287498CD009866FC /* SplashActivity.swift in Sources */,
-				DEFF61E9287479AD00FE863E /* ObservableAndSingleExtension.swift in Sources */,
+				DEFF61E9287479AD00FE863E /* ObservableAndSingle+Extension.swift in Sources */,
 				DEFF623F287481A400FE863E /* SplashViewModel.swift in Sources */,
 				DEFF620D28747C2B00FE863E /* APIRequestBody.swift in Sources */,
 				DEFF621B28747C2B00FE863E /* ContentError.swift in Sources */,
