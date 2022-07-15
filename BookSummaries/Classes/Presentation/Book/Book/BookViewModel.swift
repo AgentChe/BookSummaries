@@ -23,6 +23,7 @@ final class BookViewModel {
     lazy var activity = RxActivityIndicator()
     
     private lazy var isShowingAll = makeIsShowingAll()
+    private lazy var readingProgress = makeReadingProgress()
     private lazy var categories = makeCategories()
     private lazy var bookKit = makeBookKit()
     private lazy var readingBooks = makeReadingBooks()
@@ -114,20 +115,18 @@ private extension BookViewModel {
     
     func makeElements() -> Driver<[BookTableElement]> {
         Driver
-            .combineLatest(categories, bookKit, isShowingAll, readingBooks)
-            .map { categories, bookKit, isShowingAll, readingBooks -> [BookTableElement] in
+            .combineLatest(categories, bookKit, isShowingAll, readingProgress)
+            .map { categories, bookKit, isShowingAll, readingProgress -> [BookTableElement] in
                 var result = [BookTableElement]()
                 
                 let book = bookKit.book
                 
                 result.append(.bookImage(book.imageUrl))
                 
-                if !book.chapters.isEmpty, let readingChapter = readingBooks.first(where: { $0.book.id == book.id }) {
-                    let number = readingChapter.currentChapterIndex + 1
-                    let progress = Float(number) / Float(book.chapters.count)
+                if let readingProgress = readingProgress {
                     result.append(contentsOf: [
                         .offset(36.scale),
-                        .progress(progress)
+                        .progress(readingProgress)
                     ])
                 }
                 
@@ -221,6 +220,26 @@ private extension BookViewModel {
             .startWith(false)
             .asDriver(onErrorDriveWith: .never())
     }
+        
+    func makeReadingProgress() -> Driver<Float?> {
+        Driver
+            .combineLatest(bookKit, readingBooks)
+            .map { bookKit, readingBooks -> Float? in
+                let book = bookKit.book
+                
+                guard
+                    !book.chapters.isEmpty,
+                    let readingBook = readingBooks.first(where: { $0.book.id == book.id })
+                else {
+                    return nil
+                }
+                
+                let number = readingBook.currentChapterIndex + 1
+                let progress = Float(number) / Float(book.chapters.count)
+                
+                return progress
+            }
+    }
     
     func makeCategories() -> Driver<[Category]> {
         contentManager
@@ -264,8 +283,21 @@ private extension BookViewModel {
     }
     
     func makeReadingBooks() -> Driver<[BookReadingProgress]> {
-        contentManager
+        let initial = contentManager
             .obtainReadingBooks()
             .asDriver(onErrorJustReturn: [])
+        
+        let updated = ContentMediator.shared.bookReadingProgressUpdated
+            .flatMapLatest { [weak self] _ -> Driver<[BookReadingProgress]> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                return self.contentManager
+                    .obtainReadingBooks()
+                    .asDriver(onErrorJustReturn: [])
+            }
+        
+        return Driver.merge(initial, updated)
     }
 }

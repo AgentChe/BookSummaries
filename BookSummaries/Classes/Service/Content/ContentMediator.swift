@@ -11,6 +11,7 @@ import RxCocoa
 protocol ContentMediatorDelegate: AnyObject {
     func contentMediatorDidSaved(bookId: Int)
     func contentMediatorDidRemovedSaved(bookId: Int)
+    func contentMediatorDidUpdated(bookReadingProgress: BookReadingProgress)
 }
 
 final class ContentMediator {
@@ -20,6 +21,7 @@ final class ContentMediator {
     
     private lazy var bookIdDidSavedTrigger = PublishRelay<Int>()
     private lazy var bookIdDidRemoveFromSavedTrigger = PublishRelay<Int>()
+    private lazy var bookReadingProgressUpdatedTrigger = PublishRelay<BookReadingProgress>()
     
     private init() {}
 }
@@ -45,6 +47,16 @@ extension ContentMediator {
             self?.bookIdDidRemoveFromSavedTrigger.accept(bookId)
         }
     }
+    
+    func notifyAboutUpdate(bookReadingProgress: BookReadingProgress) {
+        DispatchQueue.main.async { [weak self] in
+            self?.delegates.forEach {
+                $0.weak?.contentMediatorDidUpdated(bookReadingProgress: bookReadingProgress)
+            }
+            
+            self?.bookReadingProgressUpdatedTrigger.accept(bookReadingProgress)
+        }
+    }
 }
 
 // MARK: Public (Triggers)
@@ -55,6 +67,10 @@ extension ContentMediator {
     
     var bookIdDidRemoveFromSaved: Signal<Int> {
         bookIdDidRemoveFromSavedTrigger.asSignal()
+    }
+    
+    var bookReadingProgressUpdated: Signal<BookReadingProgress> {
+        bookReadingProgressUpdatedTrigger.asSignal()
     }
 }
 

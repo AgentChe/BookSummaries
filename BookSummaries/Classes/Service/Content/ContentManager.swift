@@ -194,6 +194,8 @@ extension ContentManager {
                     
                     if let data = try? JSONEncoder().encode(result) {
                         UserDefaults.standard.set(data, forKey: Constants.readingBooksKey)
+                        
+                        ContentMediator.shared.notifyAboutUpdate(bookReadingProgress: bookReadingProgress)
                     }
                     
                     event(.success(Void()))

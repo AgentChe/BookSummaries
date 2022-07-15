@@ -17,6 +17,8 @@ final class ReaderViewModel {
     lazy var text = makeText()
     lazy var isLastChapter = makeIsLastChapter()
     
+    private lazy var contentManager = ContentManagerMock() // TODO
+    
     init(book: Book, startChapter: BookChapter) {
         self.book = BehaviorRelay(value: book)
         self.currentChapter = BehaviorRelay(value: startChapter)
@@ -37,18 +39,27 @@ private extension ReaderViewModel {
                 book.asDriver(),
                 currentChapter.asDriver()
             )
-            .map { book, chapter -> Float in
-                guard !book.chapters.isEmpty else {
-                    return 0
+            .flatMapLatest { [weak self] book, chapter -> Driver<BookReadingProgress> in
+                guard let self = self else {
+                    return .never()
                 }
                 
                 guard let index = book.chapters.firstIndex(of: chapter) else {
-                    return 0
+                    return .never()
                 }
                 
-                let number = index + 1
+                let readingBook = BookReadingProgress(book: book, currentChapterIndex: index)
                 
-                return Float(number) / Float(book.chapters.count)
+                return self.contentManager
+                    .set(bookReadingProgress: readingBook)
+                    .map { readingBook }
+                    .asDriver(onErrorDriveWith: .never())
+            }
+            .map { readingBook -> Float in
+                let number = readingBook.currentChapterIndex + 1
+                let progress = Float(number) / Float(readingBook.book.chapters.count)
+                
+                return progress
             }
     }
     
