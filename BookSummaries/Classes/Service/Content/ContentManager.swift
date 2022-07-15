@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import Foundation
 
 protocol ContentManagerProtocol: AnyObject {
     func obtainCategories(forceUpdate: Bool) -> Single<[Category]>
@@ -19,12 +20,15 @@ protocol ContentManagerProtocol: AnyObject {
     func searchBooks(at: String) -> Single<[BookCover]>
     func obtainCategoryBooksCover(categoryId: Int) -> Single<[BookCover]>
     func obtainRankingBooksCover(rankingId: Int) -> Single<[BookCover]>
+    func obtainReadingBooks() -> Single<[BookReadingProgress]>
+    func set(bookReadingProgress: BookReadingProgress) -> Single<Void>
 }
 
 final class ContentManager: ContentManagerProtocol {
     enum Constants {
         static let categoriesKey = "content_manager_categories_key"
         static let rankingKey = "content_manager_ranking_key"
+        static let readingBooksKey = "content_manager_reading_books_key"
     }
     
     private lazy var defaultRequestWrapper = DefaultRequestWrapper()
@@ -158,6 +162,45 @@ extension ContentManager {
         return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { GetRankingBooksResponse.map(from: $0) }
+    }
+    
+    func obtainReadingBooks() -> Single<[BookReadingProgress]> {
+        Single<[BookReadingProgress]>.create { event in
+            guard
+                let data = UserDefaults.standard.data(forKey: Constants.readingBooksKey),
+                let books = try? JSONDecoder().decode([BookReadingProgress].self, from: data)
+            else {
+                event(.success([]))
+                return Disposables.create()
+            }
+            
+            event(.success(books))
+            
+            return Disposables.create()
+        }
+    }
+    
+    func set(bookReadingProgress: BookReadingProgress) -> Single<Void> {
+        obtainReadingBooks()
+            .flatMap { readingBooks -> Single<Void> in
+                Single<Void>.create { event in
+                    var result = readingBooks
+                    
+                    if let index = result.firstIndex(where: { $0.book.id == bookReadingProgress.book.id }) {
+                        result[index] = bookReadingProgress
+                    } else {
+                        result.append(bookReadingProgress)
+                    }
+                    
+                    if let data = try? JSONEncoder().encode(result) {
+                        UserDefaults.standard.set(data, forKey: Constants.readingBooksKey)
+                    }
+                    
+                    event(.success(Void()))
+                    
+                    return Disposables.create()
+                }
+            }
     }
 }
 

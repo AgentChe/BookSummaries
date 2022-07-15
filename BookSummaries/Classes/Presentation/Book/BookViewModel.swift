@@ -22,6 +22,7 @@ final class BookViewModel {
     private lazy var isShowingAll = makeIsShowingAll()
     private lazy var categories = makeCategories()
     private lazy var bookKit = makeBookKit()
+    private lazy var readingBooks = makeReadingBooks()
     
     private lazy var contentManager = ContentManagerMock() // TODO
     
@@ -81,13 +82,21 @@ private extension BookViewModel {
     
     func makeElements() -> Driver<[BookTableElement]> {
         Driver
-            .combineLatest(categories, bookKit, isShowingAll)
-            .map { categories, bookKit, isShowingAll -> [BookTableElement] in
+            .combineLatest(categories, bookKit, isShowingAll, readingBooks)
+            .map { categories, bookKit, isShowingAll, readingBooks -> [BookTableElement] in
                 var result = [BookTableElement]()
                 
                 let book = bookKit.book
                 
                 result.append(.bookImage(book.imageUrl))
+                
+                if let readingChapterIndex = readingBooks.first(where: { $0.book.id == book.id })?.currentChapterIndex {
+                    let progress = Float(readingChapterIndex) / Float(book.chapters.count)
+                    result.append(contentsOf: [
+                        .offset(36.scale),
+                        .progress(progress)
+                    ])
+                }
                 
                 result.append(contentsOf: [
                     .offset(20.scale),
@@ -219,5 +228,11 @@ private extension BookViewModel {
                     .trackActivity(self.activity)
             }
             .asDriver(onErrorDriveWith: .never())
+    }
+    
+    func makeReadingBooks() -> Driver<[BookReadingProgress]> {
+        contentManager
+            .obtainReadingBooks()
+            .asDriver(onErrorJustReturn: [])
     }
 }

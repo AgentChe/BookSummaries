@@ -10,6 +10,10 @@ import Foundation
 
 // TODO: Удалить после интеграциия с бэком
 final class ContentManagerMock: ContentManagerProtocol {
+    enum Constants {
+        static let readingBooksKey = "content_manager_reading_books_key"
+    }
+    
     static let imageUrls = [
         URL(string: "https://cdn1.ozone.ru/multimedia/1007119597.jpg")!,
         URL(string: "https://s0.rbk.ru/v6_top_pics/media/img/3/16/755954419776163.jpg")!,
@@ -23,25 +27,25 @@ final class ContentManagerMock: ContentManagerProtocol {
     ]
     
     static let booksCovers: [BookCover] = [
-        .init(id: Int.random(in: 1...10000),
+        .init(id: Int.random(in: 1...10),
               name: "Unlimited Memory",
               author: Author(name: "Grandmaster Kevin Horsley",
                              photoUrl: avatarUrls.randomElement()!),
               imageUrl: imageUrls.randomElement()!,
               rankingId: 1),
-        .init(id: Int.random(in: 1...10000),
+        .init(id: Int.random(in: 1...10),
               name: "The Law of Success",
               author: Author(name: "Napoleon Hill",
                              photoUrl: avatarUrls.randomElement()!),
               imageUrl: imageUrls.randomElement()!,
               rankingId: 1),
-        .init(id: Int.random(in: 1...10000),
+        .init(id: Int.random(in: 1...10),
               name: "Breath",
               author: Author(name: "James Nestor",
                              photoUrl: avatarUrls.randomElement()!),
               imageUrl: imageUrls.randomElement()!,
               rankingId: 1),
-        .init(id: Int.random(in: 1...10000),
+        .init(id: Int.random(in: 1...10),
               name: "Unlimited Memory",
               author: Author(name: "Ms. Freacky",
                              photoUrl: avatarUrls.randomElement()!),
@@ -105,7 +109,7 @@ extension ContentManagerMock {
                                               title: "Don’t try to be somebody you’re not; be very selective with what to give a fuck about",
                                               text: Self.chapterText)
                     
-                    let book = Book(id: Int.random(in: 1...1000),
+                    let book = Book(id: Int.random(in: 1...10),
                                     name: "Unlimited Memory",
                                     imageUrl: Self.imageUrls.randomElement()!,
                                     author: Author(name: "Napoleon Hill",
@@ -259,6 +263,45 @@ extension ContentManagerMock {
                 }
                 
                 return Disposables.create()
+            }
+    }
+    
+    func obtainReadingBooks() -> Single<[BookReadingProgress]> {
+        Single<[BookReadingProgress]>.create { event in
+            guard
+                let data = UserDefaults.standard.data(forKey: Constants.readingBooksKey),
+                let books = try? JSONDecoder().decode([BookReadingProgress].self, from: data)
+            else {
+                event(.success([]))
+                return Disposables.create()
+            }
+            
+            event(.success(books))
+            
+            return Disposables.create()
+        }
+    }
+    
+    func set(bookReadingProgress: BookReadingProgress) -> Single<Void> {
+        obtainReadingBooks()
+            .flatMap { readingBooks -> Single<Void> in
+                Single<Void>.create { event in
+                    var result = readingBooks
+                    
+                    if let index = result.firstIndex(where: { $0.book.id == bookReadingProgress.book.id }) {
+                        result[index] = bookReadingProgress
+                    } else {
+                        result.append(bookReadingProgress)
+                    }
+                    
+                    if let data = try? JSONEncoder().encode(result) {
+                        UserDefaults.standard.set(data, forKey: Constants.readingBooksKey)
+                    }
+                    
+                    event(.success(Void()))
+                    
+                    return Disposables.create()
+                }
             }
     }
 }
