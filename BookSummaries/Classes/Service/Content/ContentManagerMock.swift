@@ -108,7 +108,7 @@ extension ContentManagerMock {
                     func chapter() -> BookChapter {
                         BookChapter(shortDescription: "Self-employment makes a lot more sense when you reaize that there;s no such thing as a secure job anymore \(Int.random(in: 1...100000000))",
                                                   title: "Don’t try to be somebody you’re not; be very selective with what to give a fuck about",
-                                                  text: Self.chapterText)
+                                                  text: Self.chapterText + "\(Int.random(in: 1...100000000))")
                     }
                     
                     let book = Book(id: Int.random(in: 1...10),

@@ -63,3 +63,6 @@
 
 // MARK: Reader
 "Reader.MarkAsFinished" = "Mark as finished";
+
+// MARK: Chapters
+"Chapters.Title" = "Chapters";

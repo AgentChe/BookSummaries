@@ -38,6 +38,14 @@ final class ReaderViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        mainView.chaptersButton.rx.tap
+            .withLatestFrom(viewModel.book)
+            .withLatestFrom(viewModel.currentChapter) { ($0, $1) }
+            .bind(to: Binder(self) { base, args in
+                base.open(chapters: args.0.chapters, currentChapter: args.1)
+            })
+            .disposed(by: disposeBag)
+        
         mainView.shareButton.rx.tap
             .withLatestFrom(viewModel.shareLink)
             .bind(to: Binder(self) { base, url in
@@ -78,6 +86,13 @@ extension ReaderViewController {
 private extension ReaderViewController {
     func share(url: URL) {
         let vc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        present(vc, animated: true)
+    }
+    
+    func open(chapters: [BookChapter], currentChapter: BookChapter) {
+        let vc = ChaptersViewController.make(chapters: chapters, selectedChapter: currentChapter) { [weak self] chapter in
+            self?.viewModel.currentChapter.accept(chapter)
+        }
         present(vc, animated: true)
     }
 }
