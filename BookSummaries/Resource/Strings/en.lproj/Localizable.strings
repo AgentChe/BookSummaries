@@ -63,6 +63,7 @@
 
 // MARK: Reader
 "Reader.MarkAsFinished" = "Mark as finished";
+"Reader.TextSize" = "Text size - %i%%";
 
 // MARK: Chapters
 "Chapters.Title" = "Chapters";

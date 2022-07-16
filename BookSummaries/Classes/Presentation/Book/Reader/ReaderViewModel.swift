@@ -11,13 +11,19 @@ import RxCocoa
 final class ReaderViewModel {
     let book: BehaviorRelay<Book>
     let currentChapter: BehaviorRelay<BookChapter>
+    lazy var didTapMinusTextSize = PublishRelay<Void>()
+    lazy var didTapPlusTextSize = PublishRelay<Void>()
     
+    lazy var textSize = makeTextSize()
     lazy var shareLink = makeShareLink()
     lazy var progress = makeProgress()
     lazy var text = makeText()
     lazy var isLastChapter = makeIsLastChapter()
     
+    private lazy var textSizes = makeTextSizes()
+    
     private lazy var contentManager = ContentManagerMock() // TODO
+    private lazy var profileManager = ProfileManager()
     
     init(book: Book, startChapter: BookChapter) {
         self.book = BehaviorRelay(value: book)
@@ -27,6 +33,22 @@ final class ReaderViewModel {
 
 // MARK: Private
 private extension ReaderViewModel {
+    func makeTextSize() -> Driver<TextSize> {
+        let initial = profileManager
+            .obtainTextSize()
+            .asDriver(onErrorDriveWith: .never())
+        
+        let updated = initial.flatMapLatest { [weak self] textSize -> Driver<TextSize> in
+            guard let self = self else {
+                return .never()
+            }
+            
+            return self.makeActionsTextSizeChanged()
+        }
+        
+        return Driver.merge(initial, updated)
+    }
+    
     func makeShareLink() -> Driver<URL> {
         book
             .map { $0.shareLink }
@@ -64,8 +86,9 @@ private extension ReaderViewModel {
     }
     
     func makeText() -> Driver<NSAttributedString> {
-        currentChapter
-            .map { chapter -> NSAttributedString in
+        Driver
+            .combineLatest(currentChapter.asDriver(), textSize)
+            .map { chapter, textSize -> NSAttributedString in
                 let title = chapter.title
                     .attributed(with: TextAttributes()
                                     .textColor(Appearance.black)
@@ -81,8 +104,8 @@ private extension ReaderViewModel {
                 let text = chapter.text
                     .attributed(with: TextAttributes()
                                     .textColor(Appearance.black)
-                                    .font(Fonts.Merriweather.regular(size: 16.scale))
-                                    .lineHeight(25.6.scale)
+                                    .font(Fonts.Merriweather.regular(size: textSize.fontSize))
+                                    .lineHeight(textSize.lineHeight)
                                     .letterSpacing(0.37.scale))
                 
                 let result = NSMutableAttributedString()
@@ -107,5 +130,50 @@ private extension ReaderViewModel {
                 
                 return (book.chapters.count - 1) == index
             }
+    }
+    
+    func makeActionsTextSizeChanged() -> Driver<TextSize> {
+        Observable
+            .merge(
+                didTapMinusTextSize.map { -1 },
+                didTapPlusTextSize.map { 1 }
+            )
+            .withLatestFrom(textSize) { ($0, $1) }
+            .withLatestFrom(textSizes) { ($0.0, $0.1, $1) }
+            .compactMap { coef, currentTextSize, textSizes -> TextSize? in
+                guard let currentIndex = textSizes.firstIndex(of: currentTextSize) else {
+                    return nil
+                }
+                
+                let index = currentIndex + coef
+                
+                guard textSizes.indices.contains(index) else {
+                    return nil
+                }
+                
+                return textSizes[index]
+            }
+            .flatMapLatest { [weak self] textSize -> Single<TextSize> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                return self.profileManager
+                    .set(textSize: textSize)
+                    .map { textSize }
+            }
+            .asDriver(onErrorDriveWith: .never())
+    }
+    
+    func makeTextSizes() -> Driver<[TextSize]> {
+        .deferred {
+            .just([
+                TextSize(percent: 80),
+                TextSize(percent: 90),
+                TextSize(percent: 100),
+                TextSize(percent: 110),
+                TextSize(percent: 120)
+            ])
+        }
     }
 }

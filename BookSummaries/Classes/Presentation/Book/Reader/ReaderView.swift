@@ -17,6 +17,7 @@ final class ReaderView: UIView {
     lazy var shareButton = makeShareButton()
     lazy var markFinishButton = makeMarkFinishButton()
     lazy var progressView = makeProgressView()
+    lazy var textSizeView = makeTextSizeView()
     
     private lazy var scrollViewBottomConstraint = NSLayoutConstraint()
     
@@ -119,6 +120,13 @@ private extension ReaderView {
             progressView.heightAnchor.constraint(equalToConstant: 6.scale),
             progressView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+        
+        NSLayoutConstraint.activate([
+            textSizeView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            textSizeView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            textSizeView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            textSizeView.topAnchor.constraint(equalTo: scrollView.topAnchor)
+        ])
     }
 }
 
@@ -142,7 +150,7 @@ private extension ReaderView {
     
     func makeTextSizeButton() -> TapAreaButton {
         let view = TapAreaButton()
-        view.setImage(UIImage(named: "Reader.TextSize"), for: .normal)
+        view.setImage(UIImage(named: "Reader.TextSize.Hidden"), for: .normal)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
@@ -206,6 +214,14 @@ private extension ReaderView {
         let view = UIProgressView()
         view.trackTintColor = Appearance.secondary5
         view.progressTintColor = Appearance.primaryGreen
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeTextSizeView() -> TextSizeView {
+        let view = TextSizeView()
+        view.backgroundColor = Appearance.black.withAlphaComponent(0.1)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

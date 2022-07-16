@@ -129,6 +129,8 @@
 		DEBF916E2881BC9200F8DC0F /* ChaptersTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF916D2881BC9200F8DC0F /* ChaptersTableView.swift */; };
 		DEBF91702881BC9B00F8DC0F /* ChaptersTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF916F2881BC9B00F8DC0F /* ChaptersTableElement.swift */; };
 		DEBF91782881BDBD00F8DC0F /* ChapterTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91772881BDBD00F8DC0F /* ChapterTableCell.swift */; };
+		DEBF917D2881F22800F8DC0F /* TextSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF917C2881F22800F8DC0F /* TextSize.swift */; };
+		DEBF917F2881F66500F8DC0F /* TextSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF917E2881F66500F8DC0F /* TextSizeView.swift */; };
 		DEFF6199287473F500FE863E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6198287473F500FE863E /* AppDelegate.swift */; };
 		DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF619A287473F500FE863E /* SceneDelegate.swift */; };
 		DEFF61A2287473F600FE863E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEFF61A1287473F600FE863E /* Assets.xcassets */; };
@@ -311,6 +313,8 @@
 		DEBF916D2881BC9200F8DC0F /* ChaptersTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersTableView.swift; sourceTree = "<group>"; };
 		DEBF916F2881BC9B00F8DC0F /* ChaptersTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersTableElement.swift; sourceTree = "<group>"; };
 		DEBF91772881BDBD00F8DC0F /* ChapterTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterTableCell.swift; sourceTree = "<group>"; };
+		DEBF917C2881F22800F8DC0F /* TextSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSize.swift; sourceTree = "<group>"; };
+		DEBF917E2881F66500F8DC0F /* TextSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSizeView.swift; sourceTree = "<group>"; };
 		DEFF6195287473F500FE863E /* BookSummaries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSummaries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFF6198287473F500FE863E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEFF619A287473F500FE863E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -461,6 +465,7 @@
 		DE06C6562874A0F6009866FC /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				DEBF917B2881F21F00F8DC0F /* Models */,
 				DE06C6572874A10F009866FC /* Request */,
 				DE06C65C2874A180009866FC /* ProfileManager.swift */,
 			);
@@ -873,6 +878,7 @@
 		DEBF91612881778900F8DC0F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DEBF917E2881F66500F8DC0F /* TextSizeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -904,6 +910,14 @@
 				DEBF916F2881BC9B00F8DC0F /* ChaptersTableElement.swift */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		DEBF917B2881F21F00F8DC0F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DEBF917C2881F22800F8DC0F /* TextSize.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DEFF618C287473F500FE863E = {
@@ -1329,6 +1343,7 @@
 				DE06C6E7287C3847009866FC /* BookSeparatorCell.swift in Sources */,
 				DE06C714287DC8E7009866FC /* GetBookKitRequest.swift in Sources */,
 				DE06C747287DDF2C009866FC /* ContentMediator.swift in Sources */,
+				DEBF917F2881F66500F8DC0F /* TextSizeView.swift in Sources */,
 				DE06C66928769EF2009866FC /* TabItemView.swift in Sources */,
 				DE06C66628769EE2009866FC /* MainView.swift in Sources */,
 				DE06C6762876D0EE009866FC /* ForYouViewModel.swift in Sources */,
@@ -1351,6 +1366,7 @@
 				DEFF620928747C2B00FE863E /* RxActivityIndicator.swift in Sources */,
 				DE06C6BD2879A9D3009866FC /* SettingsSeparatorCell.swift in Sources */,
 				DE06C6D7287C2250009866FC /* BookImageCell.swift in Sources */,
+				DEBF917D2881F22800F8DC0F /* TextSize.swift in Sources */,
 				DE06C6FC287C50B9009866FC /* CategoryCollectionCell.swift in Sources */,
 				DE06C6ED287C3C75009866FC /* BookAuthorCell.swift in Sources */,
 				DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */,

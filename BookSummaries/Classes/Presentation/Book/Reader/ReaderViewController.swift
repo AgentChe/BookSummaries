@@ -46,10 +46,34 @@ final class ReaderViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        mainView.textSizeView.minusButton.rx.tap
+            .bind(to: viewModel.didTapMinusTextSize)
+            .disposed(by: disposeBag)
+        
+        mainView.textSizeView.plusButton.rx.tap
+            .bind(to: viewModel.didTapPlusTextSize)
+            .disposed(by: disposeBag)
+        
+        viewModel.textSize
+            .drive(Binder(mainView.textSizeView) { base, textSize in
+                base.setup(percent: textSize.percent)
+            })
+            .disposed(by: disposeBag)
+        
         mainView.shareButton.rx.tap
             .withLatestFrom(viewModel.shareLink)
             .bind(to: Binder(self) { base, url in
                 base.share(url: url)
+            })
+            .disposed(by: disposeBag)
+        
+        mainView.textSizeButton.rx.tap
+            .scan(true) { hidden, _ -> Bool in
+                !hidden
+            }
+            .startWith(true)
+            .bind(to: Binder(self) { base, hidden in
+                base.textSize(hidden: hidden)
             })
             .disposed(by: disposeBag)
         
@@ -94,5 +118,11 @@ private extension ReaderViewController {
             self?.viewModel.currentChapter.accept(chapter)
         }
         present(vc, animated: true)
+    }
+    
+    func textSize(hidden: Bool) {
+        mainView.textSizeButton.setImage(UIImage(named: hidden ? "Reader.TextSize.Hidden" : "Reader.TextSize.Open"), for: .normal)
+        
+        mainView.textSizeView.isHidden = hidden
     }
 }
