@@ -131,6 +131,20 @@
 		DEBF91782881BDBD00F8DC0F /* ChapterTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91772881BDBD00F8DC0F /* ChapterTableCell.swift */; };
 		DEBF917D2881F22800F8DC0F /* TextSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF917C2881F22800F8DC0F /* TextSize.swift */; };
 		DEBF917F2881F66500F8DC0F /* TextSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF917E2881F66500F8DC0F /* TextSizeView.swift */; };
+		DEBF91822885792500F8DC0F /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91812885792500F8DC0F /* FeedbackViewController.swift */; };
+		DEBF91842885792D00F8DC0F /* FeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91832885792D00F8DC0F /* FeedbackViewModel.swift */; };
+		DEBF91862885793500F8DC0F /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91852885793500F8DC0F /* FeedbackView.swift */; };
+		DEBF918A2885794A00F8DC0F /* FeedbackTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91892885794A00F8DC0F /* FeedbackTableView.swift */; };
+		DEBF918C2885795300F8DC0F /* FeedbackTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF918B2885795300F8DC0F /* FeedbackTableElement.swift */; };
+		DEBF918F28857F5400F8DC0F /* FeedbackTableBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF918E28857F5400F8DC0F /* FeedbackTableBookCell.swift */; };
+		DEBF91912885842700F8DC0F /* FeedbackTableRatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91902885842700F8DC0F /* FeedbackTableRatingCell.swift */; };
+		DEBF9194288584B700F8DC0F /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9193288584B700F8DC0F /* RatingView.swift */; };
+		DEBF919728858DAA00F8DC0F /* FeedbackTableImproveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF919628858DAA00F8DC0F /* FeedbackTableImproveCell.swift */; };
+		DEBF919928858F7600F8DC0F /* FeedbackImproveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF919828858F7600F8DC0F /* FeedbackImproveButton.swift */; };
+		DEBF919B288590FE00F8DC0F /* FeedbackImprovesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF919A288590FE00F8DC0F /* FeedbackImprovesView.swift */; };
+		DEBF919E2885A25600F8DC0F /* FeedbackTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF919D2885A25600F8DC0F /* FeedbackTextView.swift */; };
+		DEBF91A02885A35900F8DC0F /* FeedbackTableWhatBetterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF919F2885A35900F8DC0F /* FeedbackTableWhatBetterCell.swift */; };
+		DEBF91A22885A65400F8DC0F /* FeedbackTabelWhatLearnCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91A12885A65400F8DC0F /* FeedbackTabelWhatLearnCell.swift */; };
 		DEFF6199287473F500FE863E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6198287473F500FE863E /* AppDelegate.swift */; };
 		DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF619A287473F500FE863E /* SceneDelegate.swift */; };
 		DEFF61A2287473F600FE863E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEFF61A1287473F600FE863E /* Assets.xcassets */; };
@@ -315,6 +329,20 @@
 		DEBF91772881BDBD00F8DC0F /* ChapterTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterTableCell.swift; sourceTree = "<group>"; };
 		DEBF917C2881F22800F8DC0F /* TextSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSize.swift; sourceTree = "<group>"; };
 		DEBF917E2881F66500F8DC0F /* TextSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSizeView.swift; sourceTree = "<group>"; };
+		DEBF91812885792500F8DC0F /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		DEBF91832885792D00F8DC0F /* FeedbackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewModel.swift; sourceTree = "<group>"; };
+		DEBF91852885793500F8DC0F /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		DEBF91892885794A00F8DC0F /* FeedbackTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTableView.swift; sourceTree = "<group>"; };
+		DEBF918B2885795300F8DC0F /* FeedbackTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTableElement.swift; sourceTree = "<group>"; };
+		DEBF918E28857F5400F8DC0F /* FeedbackTableBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTableBookCell.swift; sourceTree = "<group>"; };
+		DEBF91902885842700F8DC0F /* FeedbackTableRatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTableRatingCell.swift; sourceTree = "<group>"; };
+		DEBF9193288584B700F8DC0F /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		DEBF919628858DAA00F8DC0F /* FeedbackTableImproveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTableImproveCell.swift; sourceTree = "<group>"; };
+		DEBF919828858F7600F8DC0F /* FeedbackImproveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackImproveButton.swift; sourceTree = "<group>"; };
+		DEBF919A288590FE00F8DC0F /* FeedbackImprovesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackImprovesView.swift; sourceTree = "<group>"; };
+		DEBF919D2885A25600F8DC0F /* FeedbackTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTextView.swift; sourceTree = "<group>"; };
+		DEBF919F2885A35900F8DC0F /* FeedbackTableWhatBetterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTableWhatBetterCell.swift; sourceTree = "<group>"; };
+		DEBF91A12885A65400F8DC0F /* FeedbackTabelWhatLearnCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTabelWhatLearnCell.swift; sourceTree = "<group>"; };
 		DEFF6195287473F500FE863E /* BookSummaries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSummaries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFF6198287473F500FE863E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEFF619A287473F500FE863E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -671,6 +699,7 @@
 		DE06C6C2287C0CA8009866FC /* Book */ = {
 			isa = PBXGroup;
 			children = (
+				DEBF91802885791600F8DC0F /* Feedback */,
 				DEBF91642881B7F000F8DC0F /* Chapters */,
 				DEBF915A2881776500F8DC0F /* Reader */,
 				DEBF91592881775A00F8DC0F /* Book */,
@@ -918,6 +947,67 @@
 				DEBF917C2881F22800F8DC0F /* TextSize.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DEBF91802885791600F8DC0F /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				DEBF91872885793A00F8DC0F /* Views */,
+				DEBF91812885792500F8DC0F /* FeedbackViewController.swift */,
+				DEBF91832885792D00F8DC0F /* FeedbackViewModel.swift */,
+				DEBF91852885793500F8DC0F /* FeedbackView.swift */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		DEBF91872885793A00F8DC0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DEBF91882885794000F8DC0F /* TableView */,
+				DEBF919D2885A25600F8DC0F /* FeedbackTextView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DEBF91882885794000F8DC0F /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DEBF918D2885795800F8DC0F /* Cells */,
+				DEBF91892885794A00F8DC0F /* FeedbackTableView.swift */,
+				DEBF918B2885795300F8DC0F /* FeedbackTableElement.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DEBF918D2885795800F8DC0F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DEBF919528858D8F00F8DC0F /* Improve */,
+				DEBF9192288584A700F8DC0F /* Rating */,
+				DEBF918E28857F5400F8DC0F /* FeedbackTableBookCell.swift */,
+				DEBF919F2885A35900F8DC0F /* FeedbackTableWhatBetterCell.swift */,
+				DEBF91A12885A65400F8DC0F /* FeedbackTabelWhatLearnCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DEBF9192288584A700F8DC0F /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				DEBF91902885842700F8DC0F /* FeedbackTableRatingCell.swift */,
+				DEBF9193288584B700F8DC0F /* RatingView.swift */,
+			);
+			path = Rating;
+			sourceTree = "<group>";
+		};
+		DEBF919528858D8F00F8DC0F /* Improve */ = {
+			isa = PBXGroup;
+			children = (
+				DEBF919628858DAA00F8DC0F /* FeedbackTableImproveCell.swift */,
+				DEBF919828858F7600F8DC0F /* FeedbackImproveButton.swift */,
+				DEBF919A288590FE00F8DC0F /* FeedbackImprovesView.swift */,
+			);
+			path = Improve;
 			sourceTree = "<group>";
 		};
 		DEFF618C287473F500FE863E = {
@@ -1327,7 +1417,9 @@
 				DE06C6C1287C0B5B009866FC /* BookChapter.swift in Sources */,
 				DEFF61D3287479A900FE863E /* NavigationControllerSettings.swift in Sources */,
 				DE06C6F0287C4FFF009866FC /* CategoryViewController.swift in Sources */,
+				DEBF91A02885A35900F8DC0F /* FeedbackTableWhatBetterCell.swift in Sources */,
 				DEBF91782881BDBD00F8DC0F /* ChapterTableCell.swift in Sources */,
+				DEBF919728858DAA00F8DC0F /* FeedbackTableImproveCell.swift in Sources */,
 				DE06C6B32879A97A009866FC /* SettingsView.swift in Sources */,
 				DE06C64A287498C5009866FC /* SplashReceiptValidationObserver.swift in Sources */,
 				DE06C6E9287C3A45009866FC /* BookSeeAllCell.swift in Sources */,
@@ -1336,7 +1428,10 @@
 				DE06C66E2876A5C5009866FC /* BookImageView.swift in Sources */,
 				DEFF61EB287479AD00FE863E /* String+Extension.swift in Sources */,
 				DEFF61DB287479A900FE863E /* GradientView.swift in Sources */,
+				DEBF918C2885795300F8DC0F /* FeedbackTableElement.swift in Sources */,
 				DE06C725287DD3EA009866FC /* SaveRemoveBookResponse.swift in Sources */,
+				DEBF919E2885A25600F8DC0F /* FeedbackTextView.swift in Sources */,
+				DEBF918F28857F5400F8DC0F /* FeedbackTableBookCell.swift in Sources */,
 				DE06C66428769EDB009866FC /* MainViewCoordinator.swift in Sources */,
 				DEFF620F28747C2B00FE863E /* PushNotificationsManager.swift in Sources */,
 				DE06C6742876D0E8009866FC /* ForYouView.swift in Sources */,
@@ -1401,12 +1496,14 @@
 				DE06C6F2287C5009009866FC /* CategoryViewModel.swift in Sources */,
 				DE06C716287DC91E009866FC /* GetBookKitResponse.swift in Sources */,
 				DE06C72F287DD67D009866FC /* ExploreKit.swift in Sources */,
+				DEBF91862885793500F8DC0F /* FeedbackView.swift in Sources */,
 				DEBF916328817DE500F8DC0F /* Collection+Extension.swift in Sources */,
 				DEFF61E5287479AD00FE863E /* UIColor+Extension.swift in Sources */,
 				DEFF621228747C2B00FE863E /* Scalable.swift in Sources */,
 				DE06C64E287498D4009866FC /* SplashSDKInitialize.swift in Sources */,
 				DEFF61D4287479A900FE863E /* NavigationController.swift in Sources */,
 				DEFF622E28747E0B00FE863E /* PurchaseValidationObserver.swift in Sources */,
+				DEBF91912885842700F8DC0F /* FeedbackTableRatingCell.swift in Sources */,
 				DEFF61D5287479A900FE863E /* TapAreaButton.swift in Sources */,
 				DEFF623328747E0B00FE863E /* IAPErrorHelper.swift in Sources */,
 				DE06C73E287DD844009866FC /* GetCategoryBooksResponse.swift in Sources */,
@@ -1428,6 +1525,7 @@
 				DE06C69C2877149A009866FC /* ForYouChallengesCollectionCell.swift in Sources */,
 				DE06C6DD287C292A009866FC /* BookAuthorNameCell.swift in Sources */,
 				DE06C6B62879A989009866FC /* SettingsTableView.swift in Sources */,
+				DEBF9194288584B700F8DC0F /* RatingView.swift in Sources */,
 				DE06C6AF2879A942009866FC /* SettingsViewController.swift in Sources */,
 				DEFF620A28747C2B00FE863E /* UIViewRxExtension.swift in Sources */,
 				DE06C728287DD4C2009866FC /* GetSavedBooksRequest.swift in Sources */,
@@ -1437,8 +1535,10 @@
 				DE06C67D2876D6DB009866FC /* ForYouTableView.swift in Sources */,
 				DEFF623028747E0B00FE863E /* IAPActionResult.swift in Sources */,
 				DE06C68A28770634009866FC /* ForYouTitleCell.swift in Sources */,
+				DEBF919928858F7600F8DC0F /* FeedbackImproveButton.swift in Sources */,
 				DE06C6BB2879A9C8009866FC /* SettingsLinkCell.swift in Sources */,
 				DEFF621628747C2B00FE863E /* ObservableRetrySingle.swift in Sources */,
+				DEBF919B288590FE00F8DC0F /* FeedbackImprovesView.swift in Sources */,
 				DE06C6DB287C27BE009866FC /* BookNameCell.swift in Sources */,
 				DE06C69628771441009866FC /* Challenge.swift in Sources */,
 				DE06C6CA287C0D96009866FC /* BookView.swift in Sources */,
@@ -1482,13 +1582,17 @@
 				DE06C6F4287C5010009866FC /* CategoryView.swift in Sources */,
 				DE06C72A287DD4F9009866FC /* GetSavedBooksResponse.swift in Sources */,
 				DE06C732287DD6BD009866FC /* GetExploreKitRequest.swift in Sources */,
+				DEBF918A2885794A00F8DC0F /* FeedbackTableView.swift in Sources */,
 				DE06C6E3287C3242009866FC /* BookIntroductionCell.swift in Sources */,
 				DE06C6A228774C36009866FC /* ForYouSeparatorCell.swift in Sources */,
 				DE06C6C6287C0D81009866FC /* BookViewController.swift in Sources */,
 				DEFF621728747C2B00FE863E /* XOREncryption.swift in Sources */,
 				DE06C71C287DCFDD009866FC /* GetForYouRequest.swift in Sources */,
 				DEFF623528747E0B00FE863E /* SessionManager.swift in Sources */,
+				DEBF91842885792D00F8DC0F /* FeedbackViewModel.swift in Sources */,
 				DE06C73C287DD809009866FC /* GetCategoryBooksRequest.swift in Sources */,
+				DEBF91A22885A65400F8DC0F /* FeedbackTabelWhatLearnCell.swift in Sources */,
+				DEBF91822885792500F8DC0F /* FeedbackViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

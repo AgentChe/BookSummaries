@@ -60,6 +60,14 @@ final class ReaderViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        mainView.markFinishButton.rx.tap
+            .withLatestFrom(viewModel.book)
+            .bind(to: Binder(self) { base, book in
+                let vc = FeedbackViewController.make(book: book)
+                base.present(vc, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
         mainView.shareButton.rx.tap
             .withLatestFrom(viewModel.shareLink)
             .bind(to: Binder(self) { base, url in
