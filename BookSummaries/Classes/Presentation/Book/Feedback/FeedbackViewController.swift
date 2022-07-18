@@ -74,6 +74,12 @@ final class FeedbackViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        mainView.rx.keyboardHeight
+            .bind(to: Binder(mainView.tableView) { base, keyboardHeight in
+                base.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight > 0 ? keyboardHeight : 60.scale, right: 0)
+            })
+            .disposed(by: disposeBag)
+        
         addHideKeyboardAction()
         mainView.tableView.mainDelegate = self
     }
