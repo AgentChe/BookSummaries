@@ -360,3 +360,16 @@
         "ranking_id": 1
     }
 ]
+
+/api/feedback - запрос на отправку отзыва
+-> {
+    "book_id": 1,
+    "rating": 5,
+    "improves": [1, 3, 7],
+    "what_better": "text",
+    "what_learn": "text"
+}
+
+<- {
+    "success": true
+}

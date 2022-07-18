@@ -22,6 +22,11 @@ protocol ContentManagerProtocol: AnyObject {
     func obtainRankingBooksCover(rankingId: Int) -> Single<[BookCover]>
     func obtainReadingBooks() -> Single<[BookReadingProgress]>
     func set(bookReadingProgress: BookReadingProgress) -> Single<Void>
+    func feedback(bookId: Int,
+                  rating: Int,
+                  improves: [Int],
+                  whatBetter: String?,
+                  whatLearn: String?) -> Single<Bool>
 }
 
 final class ContentManager: ContentManagerProtocol {
@@ -203,6 +208,27 @@ extension ContentManager {
                     return Disposables.create()
                 }
             }
+    }
+    
+    func feedback(bookId: Int,
+                  rating: Int,
+                  improves: [Int],
+                  whatBetter: String?,
+                  whatLearn: String?) -> Single<Bool> {
+        guard let userToken = sessionManager.getSession()?.userToken else {
+            return .error(SignError.tokenNotFound)
+        }
+        
+        let request = FeedbackRequest(userToken: userToken,
+                                      bookId: bookId,
+                                      rating: rating,
+                                      improves: improves,
+                                      whatBetter: whatBetter,
+                                      whatLearn: whatLearn)
+        
+        return defaultRequestWrapper
+            .callServerApi(requestBody: request)
+            .map { FeedbackResponse.map(from: $0) }
     }
 }
 

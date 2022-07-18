@@ -32,8 +32,32 @@ final class FeedbackViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.tryAgain = { [weak self] error -> Observable<Void> in
+            guard let self = self else {
+                return .never()
+            }
+            
+            return self.openError()
+        }
+        
+        viewModel.activity
+            .drive(Binder(self) { base, activity in
+                base.activity(activity)
+            })
+            .disposed(by: disposeBag)
+        
         mainView.closeButton.rx.tap
             .bind(to: Binder(self) { base, void in
+                base.dismiss(animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        mainView.submitButton.rx.tap
+            .bind(to: viewModel.didTapSubmit)
+            .disposed(by: disposeBag)
+        
+        viewModel.sended
+            .drive(Binder(self) { base, void in
                 base.dismiss(animated: true)
             })
             .disposed(by: disposeBag)
@@ -44,7 +68,14 @@ final class FeedbackViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        viewModel.submitHidden
+            .drive(Binder(mainView.submitButton) { base, hidden in
+                base.isHidden = hidden
+            })
+            .disposed(by: disposeBag)
+        
         addHideKeyboardAction()
+        mainView.tableView.mainDelegate = self
     }
 }
 
@@ -54,6 +85,13 @@ extension FeedbackViewController {
         let vc = FeedbackViewController(book: book)
         vc.modalPresentationStyle = .popover
         return vc
+    }
+}
+
+// MARK: FeedbackTableDelegate
+extension FeedbackViewController: FeedbackTableDelegate {
+    func feedbackTableDidSelectedRating() {
+        viewModel.didSelectRating.accept(Void())
     }
 }
 
@@ -68,5 +106,25 @@ private extension FeedbackViewController {
                 base.mainView.endEditing(true)
             })
             .disposed(by: disposeBag)
+    }
+    
+    func openError() -> Observable<Void> {
+        Observable<Void>
+            .create { [weak self] observe in
+                guard let self = self else {
+                    return Disposables.create()
+                }
+                
+                let vc = TryAgainViewController.make {
+                    observe.onNext(())
+                }
+                self.present(vc, animated: true)
+                
+                return Disposables.create()
+            }
+    }
+    
+    func activity(_ activity: Bool) {
+        activity ? mainView.preloader.startAnimating() : mainView.preloader.stopAnimating()
     }
 }

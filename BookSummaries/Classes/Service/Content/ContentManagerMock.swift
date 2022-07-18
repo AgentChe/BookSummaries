@@ -308,4 +308,21 @@ extension ContentManagerMock {
                 }
             }
     }
+    
+    func feedback(bookId: Int,
+                  rating: Int,
+                  improves: [Int],
+                  whatBetter: String?,
+                  whatLearn: String?) -> Single<Bool> {
+        Single<Bool>
+            .create { event in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                    let success = [true, true, true].randomElement()!
+
+                    success ? event(.success(true)) : event(.failure(SignError.tokenNotFound))
+                }
+                
+                return Disposables.create()
+            }
+    }
 }

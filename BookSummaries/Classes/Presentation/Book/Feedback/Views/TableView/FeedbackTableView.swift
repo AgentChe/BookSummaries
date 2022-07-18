@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol FeedbackTableDelegate: AnyObject {
+    func feedbackTableDidSelectedRating()
+}
+
 final class FeedbackTableView: UITableView {
+    weak var mainDelegate: FeedbackTableDelegate?
+    
     private lazy var elements = [FeedbackTableElement]()
     
     override init(frame: CGRect, style: UITableView.Style) {
@@ -50,8 +56,9 @@ extension FeedbackTableView: UITableViewDataSource {
             return cell
         case .rating(let element):
             let cell = dequeueReusableCell(withIdentifier: String(describing: FeedbackTableRatingCell.self)) as! FeedbackTableRatingCell
-            cell.setup(element: element.rating) { rating in
+            cell.setup(element: element.rating) { [weak self] rating in
                 element.rating = rating
+                self?.mainDelegate?.feedbackTableDidSelectedRating()
             }
             return cell
         case .improves(let element):

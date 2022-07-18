@@ -84,7 +84,7 @@ private extension FeedbackTableBetterCell {
         view.layer.cornerRadius = 20.scale
         view.layer.masksToBounds = true
         view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowOpacity = 0.03
+        view.layer.shadowOpacity = 0.06
         view.layer.shadowOffset = .zero
         view.layer.shadowRadius = 6.scale
         view.translatesAutoresizingMaskIntoConstraints = false
