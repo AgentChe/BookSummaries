@@ -214,7 +214,7 @@ extension ContentManagerMock {
                     let kit = ExploreKit(trendingSearches: Self.booksCovers,
                                          popularRequests: ["Character", "Why does my brain do this", "Wellbeing", "Emotions", "How do I prioritize myself?"])
                     
-                    let success = [true, true, true, false].randomElement()!
+                    let success = [true, true, true].randomElement()!
 
                     success ? event(.success(kit)) : event(.failure(SignError.tokenNotFound))
                 }

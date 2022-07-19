@@ -12,7 +12,7 @@ final class MainViewCoordinator {
     
     lazy var forYouVC = NavigationController(rootViewController: ForYouViewController.make())
     lazy var libraryVC = NavigationController(rootViewController: UIViewController())
-    lazy var exploreVC = NavigationController(rootViewController: UIViewController())
+    lazy var exploreVC = NavigationController(rootViewController: ExploreViewController.make())
     
     private var previousVC: UIViewController?
     
