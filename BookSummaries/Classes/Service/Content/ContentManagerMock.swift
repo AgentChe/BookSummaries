@@ -82,7 +82,7 @@ extension ContentManagerMock {
     func obtainRankings(forceUpdate: Bool) -> Single<[Ranking]> {
         Single<[Ranking]>
             .create { event in
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + (forceUpdate ? 1.5 : 0)) {
                     let array: [Ranking] = [
                         .init(id: 1, name: "Top reads of 2021"),
                         .init(id: 2, name: "Top new releases"),

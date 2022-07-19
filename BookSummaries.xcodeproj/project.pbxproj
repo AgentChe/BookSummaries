@@ -148,6 +148,16 @@
 		DEBF91A52885AFF800F8DC0F /* FeedbackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91A42885AFF800F8DC0F /* FeedbackRequest.swift */; };
 		DEBF91A72885B15C00F8DC0F /* FeedbackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91A62885B15C00F8DC0F /* FeedbackResponse.swift */; };
 		DEBF91AA2885B30400F8DC0F /* FeedbackCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91A92885B30400F8DC0F /* FeedbackCollector.swift */; };
+		DEBF91AD2885DF8800F8DC0F /* RankingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91AC2885DF8800F8DC0F /* RankingsViewController.swift */; };
+		DEBF91AF2885DFA500F8DC0F /* RankingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91AE2885DFA500F8DC0F /* RankingsViewModel.swift */; };
+		DEBF91B12885DFAA00F8DC0F /* RankingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91B02885DFAA00F8DC0F /* RankingsView.swift */; };
+		DEBF91B52886A78000F8DC0F /* RankingsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91B42886A78000F8DC0F /* RankingsCollectionView.swift */; };
+		DEBF91B72886A7B100F8DC0F /* RankingsCollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91B62886A7B100F8DC0F /* RankingsCollectionElement.swift */; };
+		DEBF91B92886A7B800F8DC0F /* RankingsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91B82886A7B800F8DC0F /* RankingsCollectionCell.swift */; };
+		DEBF91BC2886AE7D00F8DC0F /* RBooksTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91BB2886AE7D00F8DC0F /* RBooksTableView.swift */; };
+		DEBF91BE2886AE8900F8DC0F /* RBooksTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91BD2886AE8900F8DC0F /* RBooksTableElement.swift */; };
+		DEBF91C12886AEA400F8DC0F /* RBooksTableBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91C02886AEA400F8DC0F /* RBooksTableBookCell.swift */; };
+		DEBF91C32886AEAF00F8DC0F /* RBooksTableSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91C22886AEAF00F8DC0F /* RBooksTableSeparatorCell.swift */; };
 		DEFF6199287473F500FE863E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6198287473F500FE863E /* AppDelegate.swift */; };
 		DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF619A287473F500FE863E /* SceneDelegate.swift */; };
 		DEFF61A2287473F600FE863E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEFF61A1287473F600FE863E /* Assets.xcassets */; };
@@ -349,6 +359,16 @@
 		DEBF91A42885AFF800F8DC0F /* FeedbackRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackRequest.swift; sourceTree = "<group>"; };
 		DEBF91A62885B15C00F8DC0F /* FeedbackResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackResponse.swift; sourceTree = "<group>"; };
 		DEBF91A92885B30400F8DC0F /* FeedbackCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackCollector.swift; sourceTree = "<group>"; };
+		DEBF91AC2885DF8800F8DC0F /* RankingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsViewController.swift; sourceTree = "<group>"; };
+		DEBF91AE2885DFA500F8DC0F /* RankingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsViewModel.swift; sourceTree = "<group>"; };
+		DEBF91B02885DFAA00F8DC0F /* RankingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsView.swift; sourceTree = "<group>"; };
+		DEBF91B42886A78000F8DC0F /* RankingsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsCollectionView.swift; sourceTree = "<group>"; };
+		DEBF91B62886A7B100F8DC0F /* RankingsCollectionElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsCollectionElement.swift; sourceTree = "<group>"; };
+		DEBF91B82886A7B800F8DC0F /* RankingsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsCollectionCell.swift; sourceTree = "<group>"; };
+		DEBF91BB2886AE7D00F8DC0F /* RBooksTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBooksTableView.swift; sourceTree = "<group>"; };
+		DEBF91BD2886AE8900F8DC0F /* RBooksTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBooksTableElement.swift; sourceTree = "<group>"; };
+		DEBF91C02886AEA400F8DC0F /* RBooksTableBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBooksTableBookCell.swift; sourceTree = "<group>"; };
+		DEBF91C22886AEAF00F8DC0F /* RBooksTableSeparatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBooksTableSeparatorCell.swift; sourceTree = "<group>"; };
 		DEFF6195287473F500FE863E /* BookSummaries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSummaries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFF6198287473F500FE863E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEFF619A287473F500FE863E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1035,6 +1055,55 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		DEBF91AB2885DF7B00F8DC0F /* Rankings */ = {
+			isa = PBXGroup;
+			children = (
+				DEBF91B22885DFB500F8DC0F /* Views */,
+				DEBF91AC2885DF8800F8DC0F /* RankingsViewController.swift */,
+				DEBF91AE2885DFA500F8DC0F /* RankingsViewModel.swift */,
+				DEBF91B02885DFAA00F8DC0F /* RankingsView.swift */,
+			);
+			path = Rankings;
+			sourceTree = "<group>";
+		};
+		DEBF91B22885DFB500F8DC0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DEBF91BA2886AE7100F8DC0F /* TableView */,
+				DEBF91B32885DFB900F8DC0F /* CollectionView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DEBF91B32885DFB900F8DC0F /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				DEBF91B42886A78000F8DC0F /* RankingsCollectionView.swift */,
+				DEBF91B62886A7B100F8DC0F /* RankingsCollectionElement.swift */,
+				DEBF91B82886A7B800F8DC0F /* RankingsCollectionCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		DEBF91BA2886AE7100F8DC0F /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DEBF91BF2886AE9900F8DC0F /* Cells */,
+				DEBF91BB2886AE7D00F8DC0F /* RBooksTableView.swift */,
+				DEBF91BD2886AE8900F8DC0F /* RBooksTableElement.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DEBF91BF2886AE9900F8DC0F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DEBF91C02886AEA400F8DC0F /* RBooksTableBookCell.swift */,
+				DEBF91C22886AEAF00F8DC0F /* RBooksTableSeparatorCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		DEFF618C287473F500FE863E = {
 			isa = PBXGroup;
 			children = (
@@ -1293,6 +1362,7 @@
 		DEFF623628747E4B00FE863E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DEBF91AB2885DF7B00F8DC0F /* Rankings */,
 				DE06C6EE287C4FF2009866FC /* Category */,
 				DE06C6C2287C0CA8009866FC /* Book */,
 				DE06C66F2876D0CF009866FC /* ForYou */,
@@ -1444,6 +1514,7 @@
 				DE06C6F0287C4FFF009866FC /* CategoryViewController.swift in Sources */,
 				DEBF91A02885A35900F8DC0F /* FeedbackTableWhatBetterCell.swift in Sources */,
 				DEBF91782881BDBD00F8DC0F /* ChapterTableCell.swift in Sources */,
+				DEBF91BE2886AE8900F8DC0F /* RBooksTableElement.swift in Sources */,
 				DEBF919728858DAA00F8DC0F /* FeedbackTableImproveCell.swift in Sources */,
 				DE06C6B32879A97A009866FC /* SettingsView.swift in Sources */,
 				DE06C64A287498C5009866FC /* SplashReceiptValidationObserver.swift in Sources */,
@@ -1486,11 +1557,13 @@
 				DEFF620928747C2B00FE863E /* RxActivityIndicator.swift in Sources */,
 				DE06C6BD2879A9D3009866FC /* SettingsSeparatorCell.swift in Sources */,
 				DE06C6D7287C2250009866FC /* BookImageCell.swift in Sources */,
+				DEBF91AD2885DF8800F8DC0F /* RankingsViewController.swift in Sources */,
 				DEBF917D2881F22800F8DC0F /* TextSize.swift in Sources */,
 				DE06C6FC287C50B9009866FC /* CategoryCollectionCell.swift in Sources */,
 				DE06C6ED287C3C75009866FC /* BookAuthorCell.swift in Sources */,
 				DEBF91A52885AFF800F8DC0F /* FeedbackRequest.swift in Sources */,
 				DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */,
+				DEBF91BC2886AE7D00F8DC0F /* RBooksTableView.swift in Sources */,
 				DE06C6F8287C5028009866FC /* CategoryCollectionView.swift in Sources */,
 				DE06C6EB287C3BCB009866FC /* BookWhatAboutCell.swift in Sources */,
 				DEFF623228747E0B00FE863E /* IAPError.swift in Sources */,
@@ -1529,9 +1602,12 @@
 				DEBF91AA2885B30400F8DC0F /* FeedbackCollector.swift in Sources */,
 				DE06C64E287498D4009866FC /* SplashSDKInitialize.swift in Sources */,
 				DEFF61D4287479A900FE863E /* NavigationController.swift in Sources */,
+				DEBF91B52886A78000F8DC0F /* RankingsCollectionView.swift in Sources */,
+				DEBF91AF2885DFA500F8DC0F /* RankingsViewModel.swift in Sources */,
 				DEFF622E28747E0B00FE863E /* PurchaseValidationObserver.swift in Sources */,
 				DEBF91912885842700F8DC0F /* FeedbackTableRatingCell.swift in Sources */,
 				DEBF91A72885B15C00F8DC0F /* FeedbackResponse.swift in Sources */,
+				DEBF91C32886AEAF00F8DC0F /* RBooksTableSeparatorCell.swift in Sources */,
 				DEFF61D5287479A900FE863E /* TapAreaButton.swift in Sources */,
 				DEFF623328747E0B00FE863E /* IAPErrorHelper.swift in Sources */,
 				DE06C73E287DD844009866FC /* GetCategoryBooksResponse.swift in Sources */,
@@ -1539,6 +1615,7 @@
 				DEBF915C2881777100F8DC0F /* ReaderViewController.swift in Sources */,
 				DEFF61DA287479A900FE863E /* CircleView.swift in Sources */,
 				DE06C718287DCEF7009866FC /* ForYouKit.swift in Sources */,
+				DEBF91B12885DFAA00F8DC0F /* RankingsView.swift in Sources */,
 				DEFF621828747C2B00FE863E /* Fonts.swift in Sources */,
 				DE06C69E287714A4009866FC /* ForYouChallengesCell.swift in Sources */,
 				DEBF91602881778400F8DC0F /* ReaderView.swift in Sources */,
@@ -1558,6 +1635,7 @@
 				DEFF620A28747C2B00FE863E /* UIViewRxExtension.swift in Sources */,
 				DE06C728287DD4C2009866FC /* GetSavedBooksRequest.swift in Sources */,
 				DEFF61ED287479B900FE863E /* GlobalDefinitions.swift in Sources */,
+				DEBF91C12886AEA400F8DC0F /* RBooksTableBookCell.swift in Sources */,
 				DE06C721287DD345009866FC /* SaveBookRequest.swift in Sources */,
 				DE06C704287DC12C009866FC /* Ranking.swift in Sources */,
 				DE06C67D2876D6DB009866FC /* ForYouTableView.swift in Sources */,
@@ -1594,6 +1672,7 @@
 				DEFF620C28747C2B00FE863E /* XORRequestWrapper.swift in Sources */,
 				DE06C66228769ED1009866FC /* MainViewController.swift in Sources */,
 				DE06C70A287DC6FF009866FC /* GetCategoriesRequest.swift in Sources */,
+				DEBF91B72886A7B100F8DC0F /* RankingsCollectionElement.swift in Sources */,
 				DEFF621C28747C2B00FE863E /* Weak.swift in Sources */,
 				DEFF621028747C2B00FE863E /* PushNotificationsAuthorizationStatus.swift in Sources */,
 				DE06C6D5287C130D009866FC /* BookActionButton.swift in Sources */,
@@ -1606,6 +1685,7 @@
 				DE06C706287DC4C3009866FC /* BookKit.swift in Sources */,
 				DE06C6B82879A9A3009866FC /* SettingsTableElement.swift in Sources */,
 				DEFF621328747C2B00FE863E /* NumberLaunches.swift in Sources */,
+				DEBF91B92886A7B800F8DC0F /* RankingsCollectionCell.swift in Sources */,
 				DEFF61B92874798B00FE863E /* BranchManager.swift in Sources */,
 				DE06C6F4287C5010009866FC /* CategoryView.swift in Sources */,
 				DE06C72A287DD4F9009866FC /* GetSavedBooksResponse.swift in Sources */,

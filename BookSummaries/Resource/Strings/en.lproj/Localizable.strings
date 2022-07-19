@@ -84,3 +84,6 @@
 "Feedback.WhatLearn" = "What did you learn?";
 "Feedback.WhatLearn.Placeholder" = "List your main takeaways...";
 "Feedback.SubmitFeedback" = "Submit feedback";
+
+// MARK: Ranking
+"Ranking.Title" = "Ranking";
