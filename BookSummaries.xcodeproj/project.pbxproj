@@ -626,13 +626,12 @@
 		DE06C6802876DA68009866FC /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				DE68331C28883C0C00FAEF96 /* DownloadBook */,
 				DE06C707287DC6E7009866FC /* Request */,
 				DE06C6812876DA82009866FC /* Models */,
 				DE06C744287DDA38009866FC /* ContentManager.swift */,
 				DE06C748287EA2D9009866FC /* ContentManagerMock.swift */,
 				DE06C746287DDF2C009866FC /* ContentMediator.swift */,
-				DE6833152887FA9200FAEF96 /* DownloadBookOperation.swift */,
-				DE68331A2888082C00FAEF96 /* DownloadBooksQueue.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -940,6 +939,15 @@
 				DE06C742287DD877009866FC /* GetRankingBooksResponse.swift */,
 			);
 			path = GetRankingBooks;
+			sourceTree = "<group>";
+		};
+		DE68331C28883C0C00FAEF96 /* DownloadBook */ = {
+			isa = PBXGroup;
+			children = (
+				DE6833152887FA9200FAEF96 /* DownloadBookOperation.swift */,
+				DE68331A2888082C00FAEF96 /* DownloadBooksQueue.swift */,
+			);
+			path = DownloadBook;
 			sourceTree = "<group>";
 		};
 		DEBF91592881775A00F8DC0F /* Book */ = {

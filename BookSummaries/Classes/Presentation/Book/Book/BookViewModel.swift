@@ -25,7 +25,7 @@ final class BookViewModel {
     private lazy var isShowingAll = makeIsShowingAll()
     private lazy var readingProgress = makeReadingProgress()
     private lazy var categories = makeCategories()
-    private lazy var bookKit = makeBookKit()
+    lazy var bookKit = makeBookKit()
     private lazy var readingBooks = makeReadingBooks()
     
     private lazy var contentManager = ContentManagerMock() // TODO

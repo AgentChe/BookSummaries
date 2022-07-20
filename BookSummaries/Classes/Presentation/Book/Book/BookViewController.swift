@@ -31,8 +31,19 @@ final class BookViewController: UIViewController {
         view = mainView
     }
     
+    let m = ContentManagerMock()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mainView.downloadButton.rx.tap
+            .withLatestFrom(viewModel.bookKit)
+            .flatMapLatest { kit in
+                self.m
+                    .download(book: kit.book)
+            }
+            .subscribe(onNext: { book in
+                print()
+            })
         
         viewModel.tryAgain = { [weak self] error -> Observable<Void> in
             guard let self = self else {
