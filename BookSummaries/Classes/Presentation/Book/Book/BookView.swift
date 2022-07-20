@@ -9,7 +9,7 @@ import UIKit
 
 final class BookView: UIView {
     lazy var closeButton = makeCloseButton()
-    lazy var downloadButton = makeDownloadButton()
+    lazy var downloadView = makeDownloadView()
     lazy var shareButton = makeShareButton()
     lazy var favoriteButton = makeFavoriteButton()
     lazy var tableView = makeTableView()
@@ -48,10 +48,8 @@ private extension BookView {
         ])
         
         NSLayoutConstraint.activate([
-            downloadButton.widthAnchor.constraint(equalToConstant: 41.scale),
-            downloadButton.heightAnchor.constraint(equalToConstant: 41.scale),
-            downloadButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 212.scale),
-            downloadButton.centerYAnchor.constraint(equalTo: closeButton.centerYAnchor)
+            downloadView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 212.scale),
+            downloadView.centerYAnchor.constraint(equalTo: closeButton.centerYAnchor)
         ])
         
         NSLayoutConstraint.activate([
@@ -71,7 +69,7 @@ private extension BookView {
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: downloadButton.bottomAnchor, constant: 2.scale),
+            tableView.topAnchor.constraint(equalTo: downloadView.bottomAnchor, constant: 2.scale),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
         
@@ -113,10 +111,8 @@ private extension BookView {
         return view
     }
     
-    func makeDownloadButton() -> BookNavButton {
-        let view = BookNavButton()
-        view.backgroundColor = Appearance.secondary5
-        view.iconView.image = UIImage(named: "Book.Download")
+    func makeDownloadView() -> BookDownloadView {
+        let view = BookDownloadView()
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
