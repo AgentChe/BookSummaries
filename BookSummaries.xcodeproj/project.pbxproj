@@ -117,6 +117,9 @@
 		DE06C745287DDA38009866FC /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C744287DDA38009866FC /* ContentManager.swift */; };
 		DE06C747287DDF2C009866FC /* ContentMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C746287DDF2C009866FC /* ContentMediator.swift */; };
 		DE06C749287EA2D9009866FC /* ContentManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C748287EA2D9009866FC /* ContentManagerMock.swift */; };
+		DE6833162887FA9200FAEF96 /* DownloadBookOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833152887FA9200FAEF96 /* DownloadBookOperation.swift */; };
+		DE6833182887FDBB00FAEF96 /* LocalBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833172887FDBA00FAEF96 /* LocalBook.swift */; };
+		DE68331B2888082C00FAEF96 /* DownloadBooksQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68331A2888082C00FAEF96 /* DownloadBooksQueue.swift */; };
 		DEBF9156287EEBED00F8DC0F /* RankingBooksGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */; };
 		DEBF9158288159B200F8DC0F /* BookReadingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */; };
 		DEBF915C2881777100F8DC0F /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF915B2881777100F8DC0F /* ReaderViewController.swift */; };
@@ -340,6 +343,9 @@
 		DE06C744287DDA38009866FC /* ContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
 		DE06C746287DDF2C009866FC /* ContentMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMediator.swift; sourceTree = "<group>"; };
 		DE06C748287EA2D9009866FC /* ContentManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManagerMock.swift; sourceTree = "<group>"; };
+		DE6833152887FA9200FAEF96 /* DownloadBookOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadBookOperation.swift; sourceTree = "<group>"; };
+		DE6833172887FDBA00FAEF96 /* LocalBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBook.swift; sourceTree = "<group>"; };
+		DE68331A2888082C00FAEF96 /* DownloadBooksQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadBooksQueue.swift; sourceTree = "<group>"; };
 		DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingBooksGroup.swift; sourceTree = "<group>"; };
 		DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReadingProgress.swift; sourceTree = "<group>"; };
 		DEBF915B2881777100F8DC0F /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
@@ -623,8 +629,10 @@
 				DE06C707287DC6E7009866FC /* Request */,
 				DE06C6812876DA82009866FC /* Models */,
 				DE06C744287DDA38009866FC /* ContentManager.swift */,
-				DE06C746287DDF2C009866FC /* ContentMediator.swift */,
 				DE06C748287EA2D9009866FC /* ContentManagerMock.swift */,
+				DE06C746287DDF2C009866FC /* ContentMediator.swift */,
+				DE6833152887FA9200FAEF96 /* DownloadBookOperation.swift */,
+				DE68331A2888082C00FAEF96 /* DownloadBooksQueue.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -644,6 +652,7 @@
 				DE06C72E287DD67D009866FC /* ExploreKit.swift */,
 				DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */,
 				DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */,
+				DE6833172887FDBA00FAEF96 /* LocalBook.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1631,6 +1640,7 @@
 				DE06C6BD2879A9D3009866FC /* SettingsSeparatorCell.swift in Sources */,
 				DE06C6D7287C2250009866FC /* BookImageCell.swift in Sources */,
 				DEBF91AD2885DF8800F8DC0F /* RankingsViewController.swift in Sources */,
+				DE6833182887FDBB00FAEF96 /* LocalBook.swift in Sources */,
 				DEBF917D2881F22800F8DC0F /* TextSize.swift in Sources */,
 				DE06C6FC287C50B9009866FC /* CategoryCollectionCell.swift in Sources */,
 				DE06C6ED287C3C75009866FC /* BookAuthorCell.swift in Sources */,
@@ -1644,6 +1654,7 @@
 				DEFF61D7287479A900FE863E /* PaddingLabel.swift in Sources */,
 				DE06C655287499B2009866FC /* Spinner.swift in Sources */,
 				DEBF91702881BC9B00F8DC0F /* ChaptersTableElement.swift in Sources */,
+				DE6833162887FA9200FAEF96 /* DownloadBookOperation.swift in Sources */,
 				DE06C6DF287C2B30009866FC /* BookInfoCell.swift in Sources */,
 				DE06C67F2876D79D009866FC /* ForYouTableElement.swift in Sources */,
 				DEFF61BA2874798B00FE863E /* AmplitudeManager.swift in Sources */,
@@ -1728,6 +1739,7 @@
 				DE06C69628771441009866FC /* Challenge.swift in Sources */,
 				DE06C6CA287C0D96009866FC /* BookView.swift in Sources */,
 				DE06C6D0287C0DBF009866FC /* BookTableElement.swift in Sources */,
+				DE68331B2888082C00FAEF96 /* DownloadBooksQueue.swift in Sources */,
 				DE06C749287EA2D9009866FC /* ContentManagerMock.swift in Sources */,
 				DE06C6882876DB49009866FC /* ForYouFreeBookCell.swift in Sources */,
 				DE06C64C287498CD009866FC /* SplashActivity.swift in Sources */,

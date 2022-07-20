@@ -12,6 +12,7 @@ import Foundation
 final class ContentManagerMock: ContentManagerProtocol {
     enum Constants {
         static let readingBooksKey = "content_manager_reading_books_key"
+        static let downloadBooksKey = "content_manager_download_books_key"
     }
     
     static let imageUrls = [
@@ -320,6 +321,57 @@ extension ContentManagerMock {
                     let success = [true, true, true].randomElement()!
 
                     success ? event(.success(true)) : event(.failure(SignError.tokenNotFound))
+                }
+                
+                return Disposables.create()
+            }
+    }
+    
+    func obtainDownloadBooks() -> Single<[LocalBook]> {
+        Single<[LocalBook]>.create { event in
+            guard
+                let data = UserDefaults.standard.data(forKey: Constants.downloadBooksKey),
+                let books = try? JSONDecoder().decode([LocalBook].self, from: data)
+            else {
+                event(.success([]))
+                return Disposables.create()
+            }
+            
+            event(.success(books))
+            
+            return Disposables.create()
+        }
+    }
+    
+    func download(book: Book) -> Single<LocalBook?> {
+        Single<LocalBook?>
+            .create { event in
+                DownloadBooksQueue.shared.download(book: book) { localBook in
+                    guard let localBook = localBook else {
+                        event(.success(nil))
+                        return
+                    }
+
+                    var books = [LocalBook]()
+                    
+                    if let data = UserDefaults.standard.data(forKey: Constants.downloadBooksKey) {
+                        let decoded = try? JSONDecoder().decode([LocalBook].self, from: data)
+                        books = decoded ?? []
+                    }
+                    
+                    if let index = books.firstIndex(of: localBook) {
+                        books[index] = localBook
+                    } else {
+                        books.append(localBook)
+                    }
+                    
+                    if let data = try? JSONEncoder().encode(books) {
+                        UserDefaults.standard.set(data, forKey: Constants.downloadBooksKey)
+                    }
+                    
+                    ContentMediator.shared.notifyAboutUpdate(bookDownloaded: localBook)
+                    
+                    event(.success(localBook))
                 }
                 
                 return Disposables.create()

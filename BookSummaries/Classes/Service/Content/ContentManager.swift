@@ -27,6 +27,8 @@ protocol ContentManagerProtocol: AnyObject {
                   improves: [Int],
                   whatBetter: String?,
                   whatLearn: String?) -> Single<Bool>
+    func obtainDownloadBooks() -> Single<[LocalBook]>
+    func download(book: Book) -> Single<LocalBook?>
 }
 
 final class ContentManager: ContentManagerProtocol {
@@ -34,6 +36,7 @@ final class ContentManager: ContentManagerProtocol {
         static let categoriesKey = "content_manager_categories_key"
         static let rankingKey = "content_manager_ranking_key"
         static let readingBooksKey = "content_manager_reading_books_key"
+        static let downloadBooksKey = "content_manager_download_books_key"
     }
     
     private lazy var defaultRequestWrapper = DefaultRequestWrapper()
@@ -229,6 +232,57 @@ extension ContentManager {
         return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { FeedbackResponse.map(from: $0) }
+    }
+    
+    func obtainDownloadBooks() -> Single<[LocalBook]> {
+        Single<[LocalBook]>.create { event in
+            guard
+                let data = UserDefaults.standard.data(forKey: Constants.downloadBooksKey),
+                let books = try? JSONDecoder().decode([LocalBook].self, from: data)
+            else {
+                event(.success([]))
+                return Disposables.create()
+            }
+            
+            event(.success(books))
+            
+            return Disposables.create()
+        }
+    }
+    
+    func download(book: Book) -> Single<LocalBook?> {
+        Single<LocalBook?>
+            .create { event in
+                DownloadBooksQueue.shared.download(book: book) { localBook in
+                    guard let localBook = localBook else {
+                        event(.success(nil))
+                        return
+                    }
+
+                    var books = [LocalBook]()
+                    
+                    if let data = UserDefaults.standard.data(forKey: Constants.downloadBooksKey) {
+                        let decoded = try? JSONDecoder().decode([LocalBook].self, from: data)
+                        books = decoded ?? []
+                    }
+                    
+                    if let index = books.firstIndex(of: localBook) {
+                        books[index] = localBook
+                    } else {
+                        books.append(localBook)
+                    }
+                    
+                    if let data = try? JSONEncoder().encode(books) {
+                        UserDefaults.standard.set(data, forKey: Constants.downloadBooksKey)
+                    }
+                    
+                    ContentMediator.shared.notifyAboutUpdate(bookDownloaded: localBook)
+                    
+                    event(.success(localBook))
+                }
+                
+                return Disposables.create()
+            }
     }
 }
 

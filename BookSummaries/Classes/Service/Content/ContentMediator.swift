@@ -12,6 +12,7 @@ protocol ContentMediatorDelegate: AnyObject {
     func contentMediatorDidSaved(bookId: Int)
     func contentMediatorDidRemovedSaved(bookId: Int)
     func contentMediatorDidUpdated(bookReadingProgress: BookReadingProgress)
+    func contentMediatorDidDownloaded(localBook: LocalBook)
 }
 
 final class ContentMediator {
@@ -22,6 +23,7 @@ final class ContentMediator {
     private lazy var bookIdDidSavedTrigger = PublishRelay<Int>()
     private lazy var bookIdDidRemoveFromSavedTrigger = PublishRelay<Int>()
     private lazy var bookReadingProgressUpdatedTrigger = PublishRelay<BookReadingProgress>()
+    private lazy var bookDownloadedTrigger = PublishRelay<LocalBook>()
     
     private init() {}
 }
@@ -57,6 +59,16 @@ extension ContentMediator {
             self?.bookReadingProgressUpdatedTrigger.accept(bookReadingProgress)
         }
     }
+    
+    func notifyAboutUpdate(bookDownloaded: LocalBook) {
+        DispatchQueue.main.async { [weak self] in
+            self?.delegates.forEach {
+                $0.weak?.contentMediatorDidDownloaded(localBook: bookDownloaded)
+            }
+            
+            self?.bookDownloadedTrigger.accept(bookDownloaded)
+        }
+    }
 }
 
 // MARK: Public (Triggers)
@@ -71,6 +83,10 @@ extension ContentMediator {
     
     var bookReadingProgressUpdated: Signal<BookReadingProgress> {
         bookReadingProgressUpdatedTrigger.asSignal()
+    }
+    
+    var bookDownloaded: Signal<LocalBook> {
+        bookDownloadedTrigger.asSignal()
     }
 }
 
