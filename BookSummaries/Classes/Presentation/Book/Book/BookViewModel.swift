@@ -72,7 +72,7 @@ private extension BookViewModel {
                 return Observable<BookDownloadView.State>.create { event in
                     if downloadBooks.contains(where: { $0.original.id == bookId }) {
                         event.onNext(.downloaded)
-                    } else if DownloadBooksQueue.shared.containOperation(with: bookId) {
+                    } else if DownloadBooksQueue.shared.containsOperation(with: bookId) {
                         self.bookDownloadObserver.progress = { book, percent in
                             if book.id == bookId {
                                 event.onNext(.downloading(percent))
@@ -101,16 +101,18 @@ private extension BookViewModel {
         
         let startDownload = didTapStartDownload
             .withLatestFrom(bookKit)
-            .flatMapLatest { [weak self] bookKit -> Single<LocalBook?> in
+            .flatMapLatest { [weak self] bookKit -> Observable<BookDownloadView.State> in
                 guard let self = self else {
                     return .never()
                 }
                 
                 return self.contentManager
                     .download(book: bookKit.book, delegate: self.bookDownloadObserver)
-            }
-            .flatMapLatest { book -> Observable<BookDownloadView.State> in
-                .never()
+                    .asObservable()
+                    .flatMapLatest { book -> Observable<BookDownloadView.State> in
+                        .never()
+                    }
+                    .startWith(.downloading(0))
             }
             .asDriver(onErrorDriveWith: .never())
         
@@ -133,7 +135,16 @@ private extension BookViewModel {
             }
             .asDriver(onErrorDriveWith: .never())
         
-        return Driver.merge(initial, downloaded, startDownload, progressDownload)
+        let stopDownload = didTapStopDownload
+            .withLatestFrom(bookId)
+            .flatMapLatest { bookId -> Single<BookDownloadView.State> in
+                DownloadBooksQueue.shared.removeOperation(for: bookId)
+                
+                return .just(.download)
+            }
+            .asDriver(onErrorDriveWith: .never())
+        
+        return Driver.merge(initial, downloaded, startDownload, progressDownload, stopDownload)
     }
     
     func makeReader() -> Driver<(Book, BookChapter)> {

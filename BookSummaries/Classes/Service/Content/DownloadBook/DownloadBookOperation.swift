@@ -22,6 +22,8 @@ final class DownloadBookOperation: NSObject {
     private var imageCached: Bool?
     private var audioCached: (Bool, URL?)?
     
+    private var downloadTask: URLSessionDownloadTask?
+    
     private var destinationUrl: URL? {
         guard let directoryUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
             return nil
@@ -42,6 +44,10 @@ extension DownloadBookOperation {
         
         cacheBookImage()
         cacheBookAudio()
+    }
+    
+    func stop() {
+        downloadTask?.cancel()
     }
 }
 
@@ -77,8 +83,8 @@ private extension DownloadBookOperation {
         let operationQueue = OperationQueue.main
         let session = URLSession(configuration: configuration, delegate: self, delegateQueue: operationQueue)
             
-        let downloadTask = session.downloadTask(with: book.audioUrl)
-        downloadTask.resume()
+        downloadTask = session.downloadTask(with: book.audioUrl)
+        downloadTask?.resume()
     }
     
     func checkup() {

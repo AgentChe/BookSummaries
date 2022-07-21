@@ -29,11 +29,16 @@ extension DownloadBooksQueue {
         }
     }
     
+    func removeOperation(for bookId: Int) {
+        operations[bookId]?.stop()
+        operations.removeValue(forKey: bookId)
+    }
+    
     func subscribe(book id: Int, on delegate: DownloadBookDelegate) {
         operations.first(where: { $0.key == id })?.value.delegate = delegate
     }
     
-    func containOperation(with bookId: Int) -> Bool {
+    func containsOperation(with bookId: Int) -> Bool {
         operations.contains(where: { $0.key == bookId })
     }
 }
