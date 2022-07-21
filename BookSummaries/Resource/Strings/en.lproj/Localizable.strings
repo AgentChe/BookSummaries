@@ -60,6 +60,7 @@
 "Book.ExploreCategories" = "Explore categories";
 "Book.Listen" = "Listen";
 "Book.Read" = "Read";
+"Book.Download.Alert" = "Don’t close the app until it’s downloaded...";
 
 // MARK: Reader
 "Reader.MarkAsFinished" = "Mark as finished";

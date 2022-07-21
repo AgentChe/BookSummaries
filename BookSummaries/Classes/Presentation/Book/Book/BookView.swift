@@ -12,11 +12,14 @@ final class BookView: UIView {
     lazy var downloadView = makeDownloadView()
     lazy var shareButton = makeShareButton()
     lazy var favoriteButton = makeFavoriteButton()
+    lazy var downloadAlertLabel = makeDownloadAlertLabel()
     lazy var tableView = makeTableView()
     lazy var bottomView = makeBottomView()
     lazy var listenButton = makeListenButton()
     lazy var readButton = makeReadButton()
     lazy var preloader = makePreloader()
+    
+    private lazy var tableViewTopConstraint = NSLayoutConstraint()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,6 +30,19 @@ final class BookView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+// MARK: Public
+extension BookView {
+    func update(bookIsDownloading: Bool) {
+        downloadAlertLabel.isHidden = !bookIsDownloading
+        
+        tableViewTopConstraint.isActive = false
+        tableViewTopConstraint.constant = bookIsDownloading ? 54.scale : 2.scale
+        tableViewTopConstraint.isActive = true
+        
+        layoutIfNeeded()
     }
 }
 
@@ -67,9 +83,15 @@ private extension BookView {
         ])
         
         NSLayoutConstraint.activate([
+            downloadAlertLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            downloadAlertLabel.topAnchor.constraint(equalTo: downloadView.bottomAnchor, constant: 14.scale)
+        ])
+        
+        tableViewTopConstraint = tableView.topAnchor.constraint(equalTo: downloadView.bottomAnchor, constant: 2.scale)
+        NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: downloadView.bottomAnchor, constant: 2.scale),
+            tableViewTopConstraint,
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
         
@@ -131,6 +153,21 @@ private extension BookView {
         let view = BookNavButton()
         view.backgroundColor = Appearance.secondary5
         view.iconView.image = UIImage(named: "Book.Mark.Uncheck")
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeDownloadAlertLabel() -> UILabel {
+        let attrs = TextAttributes()
+            .textColor(Appearance.black.withAlphaComponent(0.5))
+            .font(Fonts.PlusJakartaSans.regular(size: 14.scale))
+            .lineHeight(19.6.scale)
+            .letterSpacing(-0.17.scale)
+            .textAlignment(.center)
+        
+        let view = UILabel()
+        view.attributedText = "Book.Download.Alert".localized.attributed(with: attrs)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

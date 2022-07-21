@@ -18,6 +18,7 @@ final class BookViewModel {
     lazy var didTapStartDownload = PublishRelay<Void>()
     lazy var didTapStopDownload = PublishRelay<Void>()
     
+    lazy var bookIsDownloading = makeBookIsDownloading()
     lazy var downloadState = makeDownloadState()
     lazy var reader = makeReader()
     lazy var shareLink = makeShareLink()
@@ -48,6 +49,18 @@ final class BookViewModel {
 
 // MARK: Private
 private extension BookViewModel {
+    func makeBookIsDownloading() -> Driver<Bool> {
+        downloadState
+            .map { state -> Bool in
+                switch state {
+                case .download, .downloaded:
+                    return false
+                case .downloading:
+                    return true
+                }
+            }
+    }
+    
     func makeDownloadState() -> Driver<BookDownloadView.State> {
         let initial = Observable
             .combineLatest(downloadBooks.asObservable(), bookId)

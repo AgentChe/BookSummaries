@@ -54,6 +54,12 @@ final class BookViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        viewModel.bookIsDownloading
+            .drive(Binder(mainView) { base, isDownloading in
+                base.update(bookIsDownloading: isDownloading)
+            })
+            .disposed(by: disposeBag)
+        
         viewModel.downloadState
             .drive(Binder(mainView.downloadView) { base, state in
                 base.state = state
