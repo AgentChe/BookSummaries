@@ -15,6 +15,8 @@ final class BookViewModel {
     lazy var didTapMark = PublishRelay<Bool>()
     lazy var didTapChapter = PublishRelay<BookChapter>()
     lazy var didTapRead = PublishRelay<Void>()
+    lazy var didTapStartDownload = PublishRelay<Void>()
+    lazy var didTapStopDownload = PublishRelay<Void>()
     
     lazy var reader = makeReader()
     lazy var shareLink = makeShareLink()
@@ -27,8 +29,9 @@ final class BookViewModel {
     private lazy var categories = makeCategories()
     private lazy var bookKit = makeBookKit()
     private lazy var readingBooks = makeReadingBooks()
+    private lazy var currentBookFromCache = makeCurrentBookFromCache()
     
-    private lazy var contentManager = ContentManagerMock() // TODO
+    private lazy var contentManager = ContentManager() // TODO
     
     private lazy var observableRetrySingle = ObservableRetrySingle()
     
@@ -248,8 +251,9 @@ private extension BookViewModel {
     }
     
     func makeBookKit() -> Driver<BookKit> {
-        bookId
-            .flatMapLatest { [weak self] bookId -> Observable<BookKit> in
+        Observable
+            .combineLatest(bookId, currentBookFromCache.asObservable())
+            .flatMapLatest { [weak self] bookId, currentBookFromCache -> Observable<BookKit> in
                 guard let self = self else {
                     return .never()
                 }
@@ -257,12 +261,18 @@ private extension BookViewModel {
                 func source() -> Single<BookKit> {
                     self.contentManager
                         .obtainBookKit(bookId: bookId)
+                        .catchAndReturn(nil)
                         .flatMap { kit -> Single<BookKit> in
-                            guard let kit = kit else {
-                                return .error(ContentError(.notContent))
+                            if let kit = kit {
+                                return .just(kit)
                             }
                             
-                            return .just(kit)
+                            if let currentBookFromCache = currentBookFromCache {
+                                let local = BookKit(book: currentBookFromCache.local, similarBooks: [])
+                                return .just(local)
+                            }
+                            
+                            return .error(ContentError(.notContent))
                         }
                 }
                 
@@ -299,5 +309,21 @@ private extension BookViewModel {
             }
         
         return Driver.merge(initial, updated)
+    }
+    
+    func makeCurrentBookFromCache() -> Driver<LocalBook?> {
+        bookId
+            .flatMapLatest { [weak self] bookId -> Single<LocalBook?> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                return self.contentManager
+                    .obtainDownloadBooks()
+                    .map { books -> LocalBook? in
+                        books.first(where: { $0.original.id == bookId })
+                    }
+            }
+            .asDriver(onErrorDriveWith: .never())
     }
 }

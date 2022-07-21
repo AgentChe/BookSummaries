@@ -122,6 +122,6 @@ extension DownloadBookOperation: URLSessionDownloadDelegate {
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
         let percentDownloaded = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite) * 100
-        
+        print("percentDownloaded: \(percentDownloaded)")
     }
 }

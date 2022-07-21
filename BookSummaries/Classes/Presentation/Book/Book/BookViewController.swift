@@ -127,11 +127,11 @@ extension BookViewController: BookTableDelegate {
 // MARK: BookDownloadViewDelegate
 extension BookViewController: BookDownloadViewDelegate {
     func bookDownloadViewDidDownloadTapped() {
-        
+        viewModel.didTapStartDownload.accept(Void())
     }
     
     func bookDownloadViewDidStopTapped() {
-        
+        viewModel.didTapStopDownload.accept(Void())
     }
 }
 
