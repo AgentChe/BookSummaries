@@ -28,25 +28,25 @@ final class ContentManagerMock: ContentManagerProtocol {
     ]
     
     static let booksCovers: [BookCover] = [
-        .init(id: Int.random(in: 1...10),
+        .init(id: Int.random(in: 1...1),
               name: "Unlimited Memory",
               author: Author(name: "Grandmaster Kevin Horsley",
                              photoUrl: avatarUrls.randomElement()!),
               imageUrl: imageUrls.randomElement()!,
               rankingId: 1),
-        .init(id: Int.random(in: 1...10),
+        .init(id: Int.random(in: 1...1),
               name: "The Law of Success",
               author: Author(name: "Napoleon Hill",
                              photoUrl: avatarUrls.randomElement()!),
               imageUrl: imageUrls.randomElement()!,
               rankingId: 1),
-        .init(id: Int.random(in: 1...10),
+        .init(id: Int.random(in: 1...1),
               name: "Breath",
               author: Author(name: "James Nestor",
                              photoUrl: avatarUrls.randomElement()!),
               imageUrl: imageUrls.randomElement()!,
               rankingId: 1),
-        .init(id: Int.random(in: 1...10),
+        .init(id: Int.random(in: 1...1),
               name: "Unlimited Memory",
               author: Author(name: "Ms. Freacky",
                              photoUrl: avatarUrls.randomElement()!),
@@ -112,7 +112,7 @@ extension ContentManagerMock {
                                                   text: Self.chapterText + "\(Int.random(in: 1...100000000))")
                     }
                     
-                    let book = Book(id: Int.random(in: 1...10),
+                    let book = Book(id: Int.random(in: 1...1),
                                     name: "Unlimited Memory",
                                     imageUrl: Self.imageUrls.randomElement()!,
                                     author: Author(name: "Napoleon Hill",
@@ -343,10 +343,10 @@ extension ContentManagerMock {
         }
     }
     
-    func download(book: Book) -> Single<LocalBook?> {
+    func download(book: Book, delegate: DownloadBookDelegate?) -> Single<LocalBook?> {
         Single<LocalBook?>
             .create { event in
-                DownloadBooksQueue.shared.download(book: book) { localBook in
+                DownloadBooksQueue.shared.download(book: book, delegate: delegate) { localBook in
                     guard let localBook = localBook else {
                         event(.success(nil))
                         return

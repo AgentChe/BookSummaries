@@ -18,6 +18,7 @@ final class BookViewModel {
     lazy var didTapStartDownload = PublishRelay<Void>()
     lazy var didTapStopDownload = PublishRelay<Void>()
     
+    lazy var downloadState = makeDownloadState()
     lazy var reader = makeReader()
     lazy var shareLink = makeShareLink()
     lazy var isSavedBook = makeIsSavedBook()
@@ -30,8 +31,11 @@ final class BookViewModel {
     private lazy var bookKit = makeBookKit()
     private lazy var readingBooks = makeReadingBooks()
     private lazy var currentBookFromCache = makeCurrentBookFromCache()
+    private lazy var downloadBooks = makeDownloadBooks()
     
-    private lazy var contentManager = ContentManager() // TODO
+    private lazy var contentManager = ContentManagerMock() // TODO
+    
+    private lazy var bookDownloadObserver = BookDownloadObserver()
     
     private lazy var observableRetrySingle = ObservableRetrySingle()
     
@@ -44,6 +48,81 @@ final class BookViewModel {
 
 // MARK: Private
 private extension BookViewModel {
+    func makeDownloadState() -> Driver<BookDownloadView.State> {
+        let initial = Observable
+            .combineLatest(downloadBooks.asObservable(), bookId)
+            .flatMap { [weak self] downloadBooks, bookId -> Observable<BookDownloadView.State> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                return Observable<BookDownloadView.State>.create { event in
+                    if downloadBooks.contains(where: { $0.original.id == bookId }) {
+                        event.onNext(.downloaded)
+                    } else if DownloadBooksQueue.shared.containOperation(with: bookId) {
+                        self.bookDownloadObserver.progress = { book, percent in
+                            if book.id == bookId {
+                                event.onNext(.downloading(percent))
+                            }
+                        }
+                        DownloadBooksQueue.shared.subscribe(book: bookId, on: self.bookDownloadObserver)
+                    } else {
+                        event.onNext(.download)
+                    }
+                    
+                    return Disposables.create()
+                }
+            }
+            .asDriver(onErrorDriveWith: .never())
+        
+        let downloaded = ContentMediator.shared.bookDownloaded
+            .withLatestFrom(bookId.asSignal(onErrorSignalWith: .never())) { ($0, $1) }
+            .flatMap { downloadedBook, bookId -> Driver<BookDownloadView.State> in
+                guard downloadedBook.original.id == bookId else {
+                    return .never()
+                }
+                
+                return .just(.downloaded)
+            }
+            .asDriver(onErrorDriveWith: .never())
+        
+        let startDownload = didTapStartDownload
+            .withLatestFrom(bookKit)
+            .flatMapLatest { [weak self] bookKit -> Single<LocalBook?> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                return self.contentManager
+                    .download(book: bookKit.book, delegate: self.bookDownloadObserver)
+            }
+            .flatMapLatest { book -> Observable<BookDownloadView.State> in
+                .never()
+            }
+            .asDriver(onErrorDriveWith: .never())
+        
+        let progressDownload = didTapStartDownload
+            .withLatestFrom(bookId)
+            .flatMapLatest { [weak self] bookId -> Observable<BookDownloadView.State> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                return Observable<BookDownloadView.State>.create { event in
+                    self.bookDownloadObserver.progress = { book, percent in
+                        if book.id == bookId {
+                            event.onNext(.downloading(percent))
+                        }
+                    }
+                    
+                    return Disposables.create()
+                }
+            }
+            .asDriver(onErrorDriveWith: .never())
+        
+        return Driver.merge(initial, downloaded, startDownload, progressDownload)
+    }
+    
     func makeReader() -> Driver<(Book, BookChapter)> {
         let chapter = didTapChapter
             .withLatestFrom(bookKit) { ($1.book, $0) }
@@ -312,18 +391,16 @@ private extension BookViewModel {
     }
     
     func makeCurrentBookFromCache() -> Driver<LocalBook?> {
-        bookId
-            .flatMapLatest { [weak self] bookId -> Single<LocalBook?> in
-                guard let self = self else {
-                    return .never()
-                }
-                
-                return self.contentManager
-                    .obtainDownloadBooks()
-                    .map { books -> LocalBook? in
-                        books.first(where: { $0.original.id == bookId })
-                    }
+        Driver
+            .combineLatest(downloadBooks, bookId.asDriver())
+            .map { downloadBooks, bookId -> LocalBook? in
+                downloadBooks.first(where: { $0.original.id == bookId })
             }
-            .asDriver(onErrorDriveWith: .never())
+    }
+    
+    func makeDownloadBooks() -> Driver<[LocalBook]> {
+        contentManager
+            .obtainDownloadBooks()
+            .asDriver(onErrorJustReturn: [])
     }
 }

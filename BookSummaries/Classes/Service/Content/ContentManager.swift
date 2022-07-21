@@ -28,7 +28,7 @@ protocol ContentManagerProtocol: AnyObject {
                   whatBetter: String?,
                   whatLearn: String?) -> Single<Bool>
     func obtainDownloadBooks() -> Single<[LocalBook]>
-    func download(book: Book) -> Single<LocalBook?>
+    func download(book: Book, delegate: DownloadBookDelegate?) -> Single<LocalBook?>
 }
 
 final class ContentManager: ContentManagerProtocol {
@@ -250,10 +250,10 @@ extension ContentManager {
         }
     }
     
-    func download(book: Book) -> Single<LocalBook?> {
+    func download(book: Book, delegate: DownloadBookDelegate?) -> Single<LocalBook?> {
         Single<LocalBook?>
             .create { event in
-                DownloadBooksQueue.shared.download(book: book) { localBook in
+                DownloadBooksQueue.shared.download(book: book, delegate: delegate) { localBook in
                     guard let localBook = localBook else {
                         event(.success(nil))
                         return

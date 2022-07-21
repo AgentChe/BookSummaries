@@ -15,10 +15,11 @@ final class DownloadBooksQueue {
 
 // MARK: Public
 extension DownloadBooksQueue {
-    func download(book: Book, completion: @escaping ((LocalBook?) -> Void)) {
+    func download(book: Book, delegate: DownloadBookDelegate?, completion: @escaping ((LocalBook?) -> Void)) {
         let key = book.id
         
         let operation = DownloadBookOperation(book: book)
+        operation.delegate = delegate
         operations[key] = operation
         
         operation.download { [weak self] result in
@@ -26,5 +27,13 @@ extension DownloadBooksQueue {
             
             completion(result)
         }
+    }
+    
+    func subscribe(book id: Int, on delegate: DownloadBookDelegate) {
+        operations.first(where: { $0.key == id })?.value.delegate = delegate
+    }
+    
+    func containOperation(with bookId: Int) -> Bool {
+        operations.contains(where: { $0.key == bookId })
     }
 }

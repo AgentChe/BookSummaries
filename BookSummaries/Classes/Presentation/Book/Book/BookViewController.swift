@@ -54,6 +54,12 @@ final class BookViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        viewModel.downloadState
+            .drive(Binder(mainView.downloadView) { base, state in
+                base.state = state
+            })
+            .disposed(by: disposeBag)
+        
         mainView.readButton.rx.tap
             .bind(to: viewModel.didTapRead)
             .disposed(by: disposeBag)

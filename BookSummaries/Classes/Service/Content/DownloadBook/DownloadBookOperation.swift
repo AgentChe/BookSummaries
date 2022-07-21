@@ -9,10 +9,12 @@ import Kingfisher
 import Foundation
 
 protocol DownloadBookDelegate: AnyObject {
-    func downloadBook(percentDownloaded: Float)
+    func download(book: Book, percentDownloaded: Float)
 }
 
 final class DownloadBookOperation: NSObject {
+    weak var delegate: DownloadBookDelegate?
+    
     private let book: Book
     
     private var completion: ((LocalBook?) -> Void)?
@@ -122,6 +124,6 @@ extension DownloadBookOperation: URLSessionDownloadDelegate {
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
         let percentDownloaded = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite) * 100
-        print("percentDownloaded: \(percentDownloaded)")
+        delegate?.download(book: book, percentDownloaded: percentDownloaded)
     }
 }

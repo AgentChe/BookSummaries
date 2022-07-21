@@ -71,6 +71,7 @@ private extension BookDownloadView {
             rectView.isHidden = true
             circleLayer.isHidden = true
             trackLayer.isHidden = true
+            trackLayer.strokeEnd = 0
         case .downloading(let percent):
             backgroundColor = UIColor.clear
             imageView.image = nil
@@ -84,6 +85,7 @@ private extension BookDownloadView {
             rectView.isHidden = true
             circleLayer.isHidden = true
             trackLayer.isHidden = true
+            trackLayer.strokeEnd = 0
         }
     }
     
