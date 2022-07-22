@@ -37,36 +37,36 @@ private extension TryAgainView {
 private extension TryAgainView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: 263.scale),
-            imageView.heightAnchor.constraint(equalToConstant: 284.scale),
+            imageView.widthAnchor.constraint(equalToConstant: 237.scale),
+            imageView.heightAnchor.constraint(equalToConstant: 250.scale),
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 40.scale : 0)
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 124.scale : 40.scale)
         ])
         
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 23.scale : 15.scale)
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 25.scale)
         ])
         
         NSLayoutConstraint.activate([
-            subTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
-            subTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
+            subTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24.scale),
+            subTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24.scale),
             subTitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12.scale)
         ])
         
         NSLayoutConstraint.activate([
-            tryAgainButton.widthAnchor.constraint(equalToConstant: 328.scale),
-            tryAgainButton.heightAnchor.constraint(equalToConstant: 60.scale),
+            tryAgainButton.widthAnchor.constraint(equalToConstant: 305.scale),
+            tryAgainButton.heightAnchor.constraint(equalToConstant: 53.scale),
             tryAgainButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            tryAgainButton.bottomAnchor.constraint(equalTo: contactButton.topAnchor, constant: -15.scale)
+            tryAgainButton.bottomAnchor.constraint(equalTo: contactButton.topAnchor, constant: -16.scale)
         ])
         
         NSLayoutConstraint.activate([
-            contactButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
-            contactButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
-            contactButton.heightAnchor.constraint(equalToConstant: 24.scale),
-            contactButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -44.scale : -25.scale)
+            contactButton.widthAnchor.constraint(equalToConstant: 305.scale),
+            contactButton.heightAnchor.constraint(equalToConstant: 53.scale),
+            contactButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            contactButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -60.scale : -15.scale)
         ])
     }
 }
@@ -85,9 +85,9 @@ private extension TryAgainView {
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
             .textColor(Appearance.black)
-            .font(Fonts.PlusJakartaSans.semiBold(size: ScreenSize.isIphoneXFamily ? 24.scale : 20.scale))
-            .lineHeight(ScreenSize.isIphoneXFamily ? 28.8.scale : 24.8.scale)
-            .letterSpacing(-0.44.scale)
+            .font(Fonts.PlusJakartaSans.bold(size: 20.scale))
+            .lineHeight(24.scale)
+            .letterSpacing(-0.17.scale)
             .textAlignment(.center)
         
         let view = UILabel()
@@ -101,8 +101,9 @@ private extension TryAgainView {
     func makeSubTitleLabel() -> UILabel {
         let attrs = TextAttributes()
             .textColor(Appearance.black.withAlphaComponent(0.5))
-            .font(Fonts.PlusJakartaSans.semiBold(size: ScreenSize.isIphoneXFamily ? 19.scale : 17.scale))
-            .lineHeight(ScreenSize.isIphoneXFamily ? 26.6.scale : 23.6.scale)
+            .font(Fonts.PlusJakartaSans.regular(size: 16.scale))
+            .lineHeight(24.scale)
+            .letterSpacing(-0.17.scale)
             .textAlignment(.center)
         
         let view = UILabel()
@@ -116,7 +117,8 @@ private extension TryAgainView {
     func makeButton() -> UIButton {
         let attrs = TextAttributes()
             .textColor(Appearance.white)
-            .font(Fonts.PlusJakartaSans.semiBold(size: 20.scale))
+            .font(Fonts.PlusJakartaSans.semiBold(size: 16.scale))
+            .letterSpacing(-0.17.scale)
         
         let view = UIButton()
         view.setAttributedTitle("TryAgain.Button".localized.attributed(with: attrs), for: .normal)
@@ -127,14 +129,16 @@ private extension TryAgainView {
         return view
     }
     
-    func makeContactButton() -> TapAreaButton {
+    func makeContactButton() -> UIButton {
         let attrs = TextAttributes()
-            .textColor(Appearance.primaryGreen)
-            .font(Fonts.PlusJakartaSans.semiBold(size: ScreenSize.isIphoneXFamily ? 20.scale : 17.scale))
+            .textColor(Appearance.black)
+            .font(Fonts.PlusJakartaSans.semiBold(size: 16.scale))
+            .letterSpacing(-0.17.scale)
         
-        let view = TapAreaButton()
+        let view = UIButton()
         view.setAttributedTitle("TryAgain.Contact".localized.attributed(with: attrs), for: .normal)
-        view.backgroundColor = UIColor.clear
+        view.layer.cornerRadius = 16.scale
+        view.backgroundColor = Appearance.secondary5
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
