@@ -133,6 +133,9 @@
 		DE68333B288AB41A00FAEF96 /* LibraryFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68333A288AB41A00FAEF96 /* LibraryFilterButton.swift */; };
 		DE68333D288AB5BF00FAEF96 /* LibraryFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68333C288AB5BF00FAEF96 /* LibraryFilterView.swift */; };
 		DE68333F288AB9D200FAEF96 /* LibraryEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68333E288AB9D200FAEF96 /* LibraryEmptyView.swift */; };
+		DE683342288AED9100FAEF96 /* LibraryBookMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE683341288AED9100FAEF96 /* LibraryBookMenuViewController.swift */; };
+		DE683344288AED9900FAEF96 /* LibraryBookMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE683343288AED9900FAEF96 /* LibraryBookMenuView.swift */; };
+		DE683348288AF1BD00FAEF96 /* LBMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE683347288AF1BD00FAEF96 /* LBMButton.swift */; };
 		DEBF9156287EEBED00F8DC0F /* RankingBooksGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */; };
 		DEBF9158288159B200F8DC0F /* BookReadingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */; };
 		DEBF915C2881777100F8DC0F /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF915B2881777100F8DC0F /* ReaderViewController.swift */; };
@@ -372,6 +375,9 @@
 		DE68333A288AB41A00FAEF96 /* LibraryFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryFilterButton.swift; sourceTree = "<group>"; };
 		DE68333C288AB5BF00FAEF96 /* LibraryFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryFilterView.swift; sourceTree = "<group>"; };
 		DE68333E288AB9D200FAEF96 /* LibraryEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryEmptyView.swift; sourceTree = "<group>"; };
+		DE683341288AED9100FAEF96 /* LibraryBookMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBookMenuViewController.swift; sourceTree = "<group>"; };
+		DE683343288AED9900FAEF96 /* LibraryBookMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBookMenuView.swift; sourceTree = "<group>"; };
+		DE683347288AF1BD00FAEF96 /* LBMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBMButton.swift; sourceTree = "<group>"; };
 		DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingBooksGroup.swift; sourceTree = "<group>"; };
 		DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReadingProgress.swift; sourceTree = "<group>"; };
 		DEBF915B2881777100F8DC0F /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
@@ -989,6 +995,7 @@
 		DE683326288AAB4A00FAEF96 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				DE683340288AED7F00FAEF96 /* LibraryBookMenu */,
 				DE68332D288AAE3600FAEF96 /* Library */,
 			);
 			path = Library;
@@ -1041,6 +1048,24 @@
 				DE68333C288AB5BF00FAEF96 /* LibraryFilterView.swift */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		DE683340288AED7F00FAEF96 /* LibraryBookMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DE683346288AF1AF00FAEF96 /* Views */,
+				DE683341288AED9100FAEF96 /* LibraryBookMenuViewController.swift */,
+				DE683343288AED9900FAEF96 /* LibraryBookMenuView.swift */,
+			);
+			path = LibraryBookMenu;
+			sourceTree = "<group>";
+		};
+		DE683346288AF1AF00FAEF96 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE683347288AF1BD00FAEF96 /* LBMButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DEBF91592881775A00F8DC0F /* Book */ = {
@@ -1740,6 +1765,7 @@
 				DE06C723287DD354009866FC /* RemoveSavedBookRequest.swift in Sources */,
 				DEBF91D72886F18D00F8DC0F /* ExploreCollectionSeparatorCell.swift in Sources */,
 				DEBF916A2881B80F00F8DC0F /* ChaptersView.swift in Sources */,
+				DE683342288AED9100FAEF96 /* LibraryBookMenuViewController.swift in Sources */,
 				DEBF9158288159B200F8DC0F /* BookReadingProgress.swift in Sources */,
 				DEBF91DD2886F29D00F8DC0F /* ExploreCollectionBookCell.swift in Sources */,
 				DEFF623428747E0B00FE863E /* Session.swift in Sources */,
@@ -1782,6 +1808,7 @@
 				DEFF621428747C2B00FE863E /* TextAttributes.swift in Sources */,
 				DE06C70C287DC745009866FC /* GetCategoriesResponse.swift in Sources */,
 				DEBF91C62886B6D200F8DC0F /* ExploreViewController.swift in Sources */,
+				DE683344288AED9900FAEF96 /* LibraryBookMenuView.swift in Sources */,
 				DE06C743287DD877009866FC /* GetRankingBooksResponse.swift in Sources */,
 				DEFF623D2874819B00FE863E /* SplashView.swift in Sources */,
 				DEFF61E8287479AD00FE863E /* UIDevice+Extension.swift in Sources */,
@@ -1821,6 +1848,7 @@
 				DE06C65328749945009866FC /* TryAgainView.swift in Sources */,
 				DEBF91DB2886F28F00F8DC0F /* ExploreCollectionCategoriesCell.swift in Sources */,
 				DEBF916E2881BC9200F8DC0F /* ChaptersTableView.swift in Sources */,
+				DE683348288AF1BD00FAEF96 /* LBMButton.swift in Sources */,
 				DE06C6BF287C09E5009866FC /* Book.swift in Sources */,
 				DE06C70F287DC82D009866FC /* GetRankingRequest.swift in Sources */,
 				DE06C6E1287C316E009866FC /* BookTitleCell.swift in Sources */,

@@ -79,7 +79,7 @@ private extension LibraryView {
             .letterSpacing(-1.scale)
         
         let view = UILabel()
-        view.attributedText = "Explore.Title".localized.attributed(with: attrs)
+        view.attributedText = "Library.Title".localized.attributed(with: attrs)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

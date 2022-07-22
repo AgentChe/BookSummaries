@@ -70,7 +70,15 @@ extension LibraryViewController: LibraryTableDelegate {
     }
     
     func libraryTableDidTappedMenu(book: BookCover) {
-        // TODO
+        let vc = LibraryBookMenuViewController.make { [weak self] result in
+            switch result {
+            case .delete:
+                break // TODO
+            case .share:
+                self?.share(url: book.shareLink)
+            }
+        }
+        present(vc, animated: false)
     }
 }
 
@@ -145,5 +153,10 @@ private extension LibraryViewController {
         }
         
         mainView.emptyView.update(at: state)
+    }
+    
+    func share(url: URL) {
+        let vc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        present(vc, animated: true)
     }
 }
