@@ -82,7 +82,9 @@ final class GetBookKitResponse {
                 let authorImageUrl = URL(string: authorImagePath),
                 let imagePath = coverJSON["image"] as? String,
                 let imageUrl = URL(string: imagePath),
-                let rankingId = coverJSON["ranking_id"] as? Int
+                let rankingId = coverJSON["ranking_id"] as? Int,
+                let shareLinkPath = coverJSON["link"] as? String,
+                let shareLink = URL(string: shareLinkPath)
             else {
                 return nil
             }
@@ -94,7 +96,8 @@ final class GetBookKitResponse {
                              name: name,
                              author: author,
                              imageUrl: imageUrl,
-                             rankingId: rankingId)
+                             rankingId: rankingId,
+                             shareLink: shareLink)
         }
         
         return BookKit(book: book,

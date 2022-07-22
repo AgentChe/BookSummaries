@@ -33,25 +33,29 @@ final class ContentManagerMock: ContentManagerProtocol {
               author: Author(name: "Grandmaster Kevin Horsley",
                              photoUrl: avatarUrls.randomElement()!),
               imageUrl: imageUrls.randomElement()!,
-              rankingId: 1),
+              rankingId: 1,
+              shareLink: URL(string: "http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3")!),
         .init(id: Int.random(in: 1...1),
               name: "The Law of Success",
               author: Author(name: "Napoleon Hill",
                              photoUrl: avatarUrls.randomElement()!),
               imageUrl: imageUrls.randomElement()!,
-              rankingId: 1),
+              rankingId: 1,
+              shareLink: URL(string: "http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3")!),
         .init(id: Int.random(in: 1...1),
               name: "Breath",
               author: Author(name: "James Nestor",
                              photoUrl: avatarUrls.randomElement()!),
               imageUrl: imageUrls.randomElement()!,
-              rankingId: 1),
+              rankingId: 1,
+              shareLink: URL(string: "http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3")!),
         .init(id: Int.random(in: 1...1),
               name: "Unlimited Memory",
               author: Author(name: "Ms. Freacky",
                              photoUrl: avatarUrls.randomElement()!),
               imageUrl: imageUrls.randomElement()!,
-              rankingId: 1)
+              rankingId: 1,
+              shareLink: URL(string: "http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3")!)
     ]
     
     static let chapterText = "What most of the self-help advice we get on life does is help us fivate on what we lack. They pinpoint the things we see as our personal pailures and shortcomings and emphasize them for us. If you feel you’re not beautiful enough, you stand in front of the mirror and repeat affirmations that you’re beautiful.\n\nSociety keeps telling us to be more, more, and more positive all the time. And to be positive all the time, we are constantly getting the same message again and again, which is to give a fuck about everything, again and again. Sadly, giving more fuck doesn’t guarantee you to be positive and live a better life.\n\nWhat most of the self-help advice we get on life does is help us fivate on what we lack. They pinpoint the things we see as our personal pailures and shortcomings and emphasize them for us. If you feel you’re not beautiful enough, you stand in front of the mirror and repeat affirmations that you’re beautiful.\n\nSociety keeps telling us to be more, more, and more positive all the time. And to be positive all the time, we are constantly getting the same message again and again, which is to give a fuck about everything, again and again. Sadly, giving more fuck doesn’t guarantee you to be positive and live a better life."

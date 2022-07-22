@@ -34,7 +34,8 @@
             "photo_url": "full_url_to_image"
         },
         "image": "full_url_to_image",
-        "ranking_id": 1
+        "ranking_id": 1,
+        "link": "ссылка для шаринга",
     },
     "todays_hot_summaries": [
         {
@@ -45,7 +46,8 @@
                 "photo_url": "full_url_to_image"
             },
             "image": "full_url_to_image",
-            "ranking_id": 1
+            "ranking_id": 1,
+            "link": "ссылка для шаринга",
         },
         {
             "id": 3,
@@ -55,7 +57,8 @@
                 "photo_url": "full_url_to_image"
             },
             "image": "full_url_to_image",
-            "ranking_id": 1
+            "ranking_id": 1,
+            "link": "ссылка для шаринга",
         }
     ],
     "challenges": [
@@ -81,7 +84,8 @@
                 "photo_url": "full_url_to_image"
             },
             "image": "full_url_to_image",
-            "ranking_id": 1
+            "ranking_id": 1,
+            "link": "ссылка для шаринга",
         },
         {
             "id": 5,
@@ -91,7 +95,8 @@
                 "photo_url": "full_url_to_image"
             },
             "image": "full_url_to_image",
-            "ranking_id": 1
+            "ranking_id": 1,
+            "link": "ссылка для шаринга",
         }
     ],
     "ranking": [
@@ -106,7 +111,8 @@
                         "photo_url": "full_url_to_image"
                     },
                     "image": "full_url_to_image",
-                    "ranking_id": 1
+                    "ranking_id": 1,
+                    "link": "ссылка для шаринга",
                 },
                 {
                     "id": 9,
@@ -116,7 +122,8 @@
                         "photo_url": "full_url_to_image"
                     },
                     "image": "full_url_to_image",
-                    "ranking_id": 1
+                    "ranking_id": 1,
+                    "link": "ссылка для шаринга",
                 }
             ]
         },
@@ -131,7 +138,8 @@
                         "photo_url": "full_url_to_image"
                     },
                     "image": "full_url_to_image",
-                    "ranking_id": 1
+                    "ranking_id": 1,
+                    "link": "ссылка для шаринга",
                 },
                 {
                     "id": 9,
@@ -141,7 +149,8 @@
                         "photo_url": "full_url_to_image"
                     },
                     "image": "full_url_to_image",
-                    "ranking_id": 1
+                    "ranking_id": 1,
+                    "link": "ссылка для шаринга",
                 }
             ]
         }
@@ -187,7 +196,8 @@
                 "photo_url": "full_url_to_image"
             },
             "image": "full_url_to_image",
-            "ranking_id": 1
+            "ranking_id": 1,
+            "link": "ссылка для шаринга",
         },
         {
             "id": 7,
@@ -197,7 +207,8 @@
                 "photo_url": "full_url_to_image"
             },
             "image": "full_url_to_image",
-            "ranking_id": 1
+            "ranking_id": 1,
+            "link": "ссылка для шаринга",
         }
     ]
 }
@@ -230,7 +241,8 @@
             "photo_url": "full_url_to_image"
         },
         "image": "full_url_to_image",
-        "ranking_id": 1
+        "ranking_id": 1,
+        "link": "ссылка для шаринга",
     },
     {
         "id": 3,
@@ -240,7 +252,8 @@
             "photo_url": "full_url_to_image"
         },
         "image": "full_url_to_image",
-        "ranking_id": 1
+        "ranking_id": 1,
+        "link": "ссылка для шаринга",
     }
 ]
 
@@ -255,7 +268,8 @@
                 "photo_url": "full_url_to_image"
             },
             "image": "full_url_to_image",
-            "ranking_id": 1
+            "ranking_id": 1,
+            "link": "ссылка для шаринга",
         },
         {
             "id": 3,
@@ -265,7 +279,8 @@
                 "photo_url": "full_url_to_image"
             },
             "image": "full_url_to_image",
-            "ranking_id": 1
+            "ranking_id": 1,
+            "link": "ссылка для шаринга",
         }
     ],
     "popular_requests": [
@@ -291,7 +306,8 @@
             "photo_url": "full_url_to_image"
         },
         "image": "full_url_to_image",
-        "ranking_id": 1
+        "ranking_id": 1,
+        "link": "ссылка для шаринга",
     },
     {
         "id": 3,
@@ -301,7 +317,8 @@
             "photo_url": "full_url_to_image"
         },
         "image": "full_url_to_image",
-        "ranking_id": 1
+        "ranking_id": 1,
+        "link": "ссылка для шаринга",
     }
 ]
 
@@ -319,7 +336,8 @@
             "photo_url": "full_url_to_image"
         },
         "image": "full_url_to_image",
-        "ranking_id": 1
+        "ranking_id": 1,
+        "link": "ссылка для шаринга",
     },
     {
         "id": 3,
@@ -329,7 +347,8 @@
             "photo_url": "full_url_to_image"
         },
         "image": "full_url_to_image",
-        "ranking_id": 1
+        "ranking_id": 1,
+        "link": "ссылка для шаринга",
     }
 ]
 
@@ -347,7 +366,8 @@
             "photo_url": "full_url_to_image"
         },
         "image": "full_url_to_image",
-        "ranking_id": 1
+        "ranking_id": 1,
+        "link": "ссылка для шаринга",
     },
     {
         "id": 3,
@@ -357,7 +377,8 @@
             "photo_url": "full_url_to_image"
         },
         "image": "full_url_to_image",
-        "ranking_id": 1
+        "ranking_id": 1,
+        "link": "ссылка для шаринга",
     }
 ]
 
