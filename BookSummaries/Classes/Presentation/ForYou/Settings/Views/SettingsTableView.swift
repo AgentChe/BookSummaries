@@ -11,6 +11,7 @@ protocol SettingsTableDelegate: AnyObject {
     func settingsTableDidTappedContactUs()
     func settingsTableDidTappedPrivacyPolicy()
     func settingsTableDidTappedTermsOfUse()
+    func settingsTableDidTappedGetAccess()
 }
 
 final class SettingsTableView: UITableView {
@@ -58,6 +59,8 @@ extension SettingsTableView: UITableViewDataSource {
             return cell
         case .separator:
             return dequeueReusableCell(withIdentifier: String(describing: SettingsSeparatorCell.self))!
+        case .getAccess:
+            return dequeueReusableCell(withIdentifier: String(describing: SettingsGetAccessCell.self))!
         }
     }
 }
@@ -72,6 +75,8 @@ extension SettingsTableView: UITableViewDelegate {
             return 21.scale
         case .separator:
             return 1.scale
+        case .getAccess:
+            return 168.scale
         }
     }
     
@@ -83,6 +88,8 @@ extension SettingsTableView: UITableViewDelegate {
             mainDelegate?.settingsTableDidTappedPrivacyPolicy()
         case .termsOfUser:
             mainDelegate?.settingsTableDidTappedTermsOfUse()
+        case .getAccess:
+            mainDelegate?.settingsTableDidTappedGetAccess()
         default:
             break
         }
@@ -95,6 +102,7 @@ private extension SettingsTableView {
         register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
         register(SettingsLinkCell.self, forCellReuseIdentifier: String(describing: SettingsLinkCell.self))
         register(SettingsSeparatorCell.self, forCellReuseIdentifier: String(describing: SettingsSeparatorCell.self))
+        register(SettingsGetAccessCell.self, forCellReuseIdentifier: String(describing: SettingsGetAccessCell.self))
         
         dataSource = self
         delegate = self

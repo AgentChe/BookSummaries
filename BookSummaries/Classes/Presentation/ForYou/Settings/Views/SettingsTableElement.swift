@@ -13,4 +13,5 @@ enum SettingsTableElement {
     case privacyPolicy(String)
     case termsOfUser(String)
     case separator
+    case getAccess
 }

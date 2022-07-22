@@ -66,4 +66,8 @@ extension SettingsViewController: SettingsTableDelegate {
         
         UIApplication.shared.open(url, options: [:])
     }
+    
+    func settingsTableDidTappedGetAccess() {
+        // TODO: open paygate
+    }
 }

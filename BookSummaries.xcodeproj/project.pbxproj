@@ -122,6 +122,7 @@
 		DE68331B2888082C00FAEF96 /* DownloadBooksQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68331A2888082C00FAEF96 /* DownloadBooksQueue.swift */; };
 		DE68331E2888582300FAEF96 /* BookDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68331D2888582300FAEF96 /* BookDownloadView.swift */; };
 		DE6833232889950400FAEF96 /* BookDownloadObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833222889950400FAEF96 /* BookDownloadObserver.swift */; };
+		DE683325288AA35600FAEF96 /* SettingsGetAccessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE683324288AA35600FAEF96 /* SettingsGetAccessCell.swift */; };
 		DEBF9156287EEBED00F8DC0F /* RankingBooksGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */; };
 		DEBF9158288159B200F8DC0F /* BookReadingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */; };
 		DEBF915C2881777100F8DC0F /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF915B2881777100F8DC0F /* ReaderViewController.swift */; };
@@ -350,6 +351,7 @@
 		DE68331A2888082C00FAEF96 /* DownloadBooksQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadBooksQueue.swift; sourceTree = "<group>"; };
 		DE68331D2888582300FAEF96 /* BookDownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDownloadView.swift; sourceTree = "<group>"; };
 		DE6833222889950400FAEF96 /* BookDownloadObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDownloadObserver.swift; sourceTree = "<group>"; };
+		DE683324288AA35600FAEF96 /* SettingsGetAccessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGetAccessCell.swift; sourceTree = "<group>"; };
 		DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingBooksGroup.swift; sourceTree = "<group>"; };
 		DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReadingProgress.swift; sourceTree = "<group>"; };
 		DEBF915B2881777100F8DC0F /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
@@ -754,6 +756,7 @@
 			children = (
 				DE06C6BA2879A9C8009866FC /* SettingsLinkCell.swift */,
 				DE06C6BC2879A9D3009866FC /* SettingsSeparatorCell.swift */,
+				DE683324288AA35600FAEF96 /* SettingsGetAccessCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1608,6 +1611,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE683325288AA35600FAEF96 /* SettingsGetAccessCell.swift in Sources */,
 				DE06C6C1287C0B5B009866FC /* BookChapter.swift in Sources */,
 				DEFF61D3287479A900FE863E /* NavigationControllerSettings.swift in Sources */,
 				DE06C6F0287C4FFF009866FC /* CategoryViewController.swift in Sources */,
