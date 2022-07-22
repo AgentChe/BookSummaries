@@ -11,7 +11,7 @@ final class MainViewCoordinator {
     weak var parentVC: MainViewController?
     
     lazy var forYouVC = NavigationController(rootViewController: ForYouViewController.make())
-    lazy var libraryVC = NavigationController(rootViewController: UIViewController())
+    lazy var libraryVC = NavigationController(rootViewController: LibraryViewController.make())
     lazy var exploreVC = NavigationController(rootViewController: ExploreViewController.make())
     
     private var previousVC: UIViewController?
