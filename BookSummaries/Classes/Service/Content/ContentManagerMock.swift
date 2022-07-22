@@ -249,7 +249,7 @@ extension ContentManagerMock {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                     let array = Self.booksCovers
                     
-                    let success = [true, true, true, false].randomElement()!
+                    let success = [true, true, true].randomElement()!
 
                     success ? event(.success(array)) : event(.failure(SignError.tokenNotFound))
                 }

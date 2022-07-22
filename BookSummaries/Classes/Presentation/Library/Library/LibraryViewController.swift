@@ -36,7 +36,20 @@ final class LibraryViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        viewModel.elements
+            .drive(Binder(mainView.tableView) { base, elements in
+                base.setup(elements: elements)
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.emptyState
+            .drive(Binder(self) { base, state in
+                base.empty(state: state)
+            })
+            .disposed(by: disposeBag)
+        
         addFilterActions()
+        mainView.tableView.mainDelegate = self
     }
 }
 
@@ -46,6 +59,18 @@ extension LibraryViewController {
         let vc = LibraryViewController()
         vc.navigationItem.backButtonTitle = " "
         return vc
+    }
+}
+
+// MARK: LibraryTableDelegate
+extension LibraryViewController: LibraryTableDelegate {
+    func libraryTableDidTapped(book: BookCover) {
+        let vc = BookViewController.make(bookId: book.id)
+        present(vc, animated: true)
+    }
+    
+    func libraryTableDidTappedMenu(book: BookCover) {
+        // TODO
     }
 }
 
@@ -69,6 +94,23 @@ private extension LibraryViewController {
                 base.viewModel.filter.accept(filter)
             })
             .disposed(by: disposeBag)
+        
+        Observable
+            .merge(
+                mainView.filterView.savedButton.rx.tap
+                    .map { LibraryEmptyView.State.saved },
+                
+                mainView.filterView.historyButton.rx.tap
+                    .map { LibraryEmptyView.State.history },
+                
+                mainView.filterView.downloadedButton.rx.tap
+                    .map { LibraryEmptyView.State.downloaded }
+            )
+            .startWith(.saved)
+            .bind(to: Binder(self) { base, state in
+                base.mainView.emptyView.update(at: state)
+            })
+            .disposed(by: disposeBag)
     }
     
     func openError() -> Observable<Void> {
@@ -88,7 +130,20 @@ private extension LibraryViewController {
     }
     
     func activity(_ activity: Bool) {
-//        mainView.collectionView.isHidden = activity
+        if activity {
+            mainView.emptyView.isHidden = true
+        }
+        mainView.tableView.isHidden = activity
         activity ? mainView.preloader.startAnimating() : mainView.preloader.stopAnimating()
+    }
+    
+    func empty(state: LibraryEmptyView.State?) {
+        mainView.emptyView.isHidden = state == nil
+        
+        guard let state = state else {
+            return
+        }
+        
+        mainView.emptyView.update(at: state)
     }
 }

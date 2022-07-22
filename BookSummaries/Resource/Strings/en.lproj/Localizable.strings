@@ -107,10 +107,8 @@
 "Library.Share" = "Share";
 "Library.Empty.Saved.Title" = "No saved books";
 "Library.Empty.Saved.SubTitle" = "Here will be book summaries\nthat you save";
-"Library.Empty.Saved.Button" = "Discover books";
 "Library.Empty.History.Title" = "Looks empty here";
 "Library.Empty.History.SubTitle" = "Here will be book summaries\nthat you read";
-"Library.Empty.History.Button" = "Discover books";
 "Library.Empty.Downloaded.Title" = "No downloaded books";
 "Library.Empty.Downloaded.SubTitle" = "Here will be book summaries\nthat you download";
-"Library.Empty.Downloaded.Button" = "Discover books";
+"Library.Empty.Button" = "Discover books";

@@ -53,11 +53,9 @@ extension LibraryTableView: UITableViewDataSource {
             return cell
         case .book(let element):
             let cell = dequeueReusableCell(withIdentifier: String(describing: LibraryTableBookCell.self)) as! LibraryTableBookCell
-            cell.setup(element: element, bookTapped: { [weak self] book in
-                self?.mainDelegate?.libraryTableDidTapped(book: book)
-            }, menuTapped: { [weak self] book in
-                self?.mainDelegate?.libraryTableDidTappedMenu(book: book)
-            })
+            cell.setup(element: element) { [weak self] in
+                self?.mainDelegate?.libraryTableDidTappedMenu(book: element.book)
+            }
             return cell
         case .separator:
             return dequeueReusableCell(withIdentifier: String(describing: LibraryTableSeparatorCell.self))!
@@ -76,6 +74,14 @@ extension LibraryTableView: UITableViewDelegate {
         case .separator:
             return 1.scale
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard case let .book(element) = elements[indexPath.row] else {
+            return
+        }
+        
+        mainDelegate?.libraryTableDidTapped(book: element.book)
     }
 }
 

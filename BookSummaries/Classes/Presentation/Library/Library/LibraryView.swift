@@ -12,6 +12,7 @@ final class LibraryView: UIView {
     lazy var filterView = makeFilterView()
     lazy var tableView = makeTableView()
     lazy var preloader = makePreloader()
+    lazy var emptyView = makeEmptyView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -58,6 +59,13 @@ private extension LibraryView {
             preloader.centerXAnchor.constraint(equalTo: tableView.centerXAnchor),
             preloader.centerYAnchor.constraint(equalTo: tableView.centerYAnchor)
         ])
+        
+        NSLayoutConstraint.activate([
+            emptyView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            emptyView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            emptyView.heightAnchor.constraint(equalToConstant: 290.scale),
+            emptyView.topAnchor.constraint(equalTo: filterView.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 108.scale : 60.scale)
+        ])
     }
 }
 
@@ -99,6 +107,14 @@ private extension LibraryView {
     
     func makePreloader() -> Spinner {
         let view = Spinner(size: CGSize(width: 45.scale, height: 45.scale))
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeEmptyView() -> LibraryEmptyView {
+        let view = LibraryEmptyView()
+        view.backgroundColor = UIColor.clear
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
