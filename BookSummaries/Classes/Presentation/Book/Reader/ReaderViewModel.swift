@@ -78,10 +78,7 @@ private extension ReaderViewModel {
                     .asDriver(onErrorDriveWith: .never())
             }
             .map { readingBook -> Float in
-                let number = readingBook.currentChapterIndex + 1
-                let progress = Float(number) / Float(readingBook.book.chapters.count)
-                
-                return progress
+                readingBook.progress
             }
     }
     

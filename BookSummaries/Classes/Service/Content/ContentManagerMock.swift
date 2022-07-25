@@ -13,6 +13,7 @@ final class ContentManagerMock: ContentManagerProtocol {
     enum Constants {
         static let readingBooksKey = "content_manager_reading_books_key"
         static let downloadBooksKey = "content_manager_download_books_key"
+        static let savedBooksKey = "content_manager_saved_books_key"
     }
     
     static let imageUrls = [
@@ -171,26 +172,50 @@ extension ContentManagerMock {
             }
     }
     
-    func save(bookId: Int) -> Single<Bool> {
+    func save(book: BookCover) -> Single<Bool> {
         Single<Bool>
             .create { event in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                    let success = [true, true, true].randomElement()!
-
-                    success ? event(.success(true)) : event(.failure(SignError.tokenNotFound))
+                    var result = [BookCover]()
+                    
+                    if let data = UserDefaults.standard.data(forKey: Constants.savedBooksKey), let books = try? JSONDecoder().decode([BookCover].self, from: data) {
+                        result = books
+                    }
+                    
+                    result.append(book)
+                    
+                    if let data = try? JSONEncoder().encode(result) {
+                        UserDefaults.standard.set(data, forKey: Constants.savedBooksKey)
+                        
+                        ContentMediator.shared.notifyAboutSaved(book: book)
+                    }
+                    
+                    event(.success(true))
                 }
                 
                 return Disposables.create()
             }
     }
     
-    func removeSaved(bookId: Int) -> Single<Bool> {
+    func removeSaved(book: BookCover) -> Single<Bool> {
         Single<Bool>
             .create { event in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                    let success = [true, true, true].randomElement()!
-
-                    success ? event(.success(true)) : event(.failure(SignError.tokenNotFound))
+                    if let data = UserDefaults.standard.data(forKey: Constants.savedBooksKey), let books = try? JSONDecoder().decode([BookCover].self, from: data) {
+                        var copy = books
+                        
+                        if let index = copy.firstIndex(where: { $0.id == book.id }) {
+                            copy.remove(at: index)
+                            
+                            if let result = try? JSONEncoder().encode(copy) {
+                                UserDefaults.standard.set(result, forKey: Constants.savedBooksKey)
+                                
+                                ContentMediator.shared.notifyAboutRemoveSaved(book: book)
+                            }
+                        }
+                    }
+                    
+                    event(.success(true))
                 }
                 
                 return Disposables.create()
@@ -201,11 +226,13 @@ extension ContentManagerMock {
         Single<[BookCover]>
             .create { event in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                    let array = Self.booksCovers
+                    var result = [BookCover]()
                     
-                    let success = [true, true, true, false].randomElement()!
-
-                    success ? event(.success(array)) : event(.failure(SignError.tokenNotFound))
+                    if let data = UserDefaults.standard.data(forKey: Constants.savedBooksKey), let books = try? JSONDecoder().decode([BookCover].self, from: data) {
+                        result = books
+                    }
+                    
+                    event(.success(result))
                 }
                 
                 return Disposables.create()

@@ -64,7 +64,7 @@ extension LibraryTableBookCell {
         
         progressView.isHidden = element.progress == nil
         if let progress = element.progress {
-            progressView.progress = progress / 100
+            progressView.progress = progress
         }
         
         nameLabelTopConstraint.isActive = false

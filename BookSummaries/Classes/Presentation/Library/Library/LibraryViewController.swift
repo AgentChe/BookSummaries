@@ -48,6 +48,12 @@ final class LibraryViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        mainView.emptyView.button.rx.tap
+            .bind(to: Binder(self) { base, void in
+                // TODO: open for you screen
+            })
+            .disposed(by: disposeBag)
+        
         addFilterActions()
         mainView.tableView.mainDelegate = self
     }

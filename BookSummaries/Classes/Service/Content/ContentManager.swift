@@ -13,8 +13,8 @@ protocol ContentManagerProtocol: AnyObject {
     func obtainRankings(forceUpdate: Bool) -> Single<[Ranking]>
     func obtainBookKit(bookId: Int) -> Single<BookKit?>
     func obtainForYouKit() -> Single<ForYouKit?>
-    func save(bookId: Int) -> Single<Bool>
-    func removeSaved(bookId: Int) -> Single<Bool>
+    func save(book: BookCover) -> Single<Bool>
+    func removeSaved(book: BookCover) -> Single<Bool>
     func obtainSavedBooksCover() -> Single<[BookCover]>
     func obtainExploreKit() -> Single<ExploreKit?>
     func searchBooks(at: String) -> Single<[BookCover]>
@@ -78,36 +78,36 @@ extension ContentManager {
             .map { GetForYouResponse.map(from: $0) }
     }
     
-    func save(bookId: Int) -> Single<Bool> {
+    func save(book: BookCover) -> Single<Bool> {
         guard let userToken = sessionManager.getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
         
-        let request = SaveBookRequest(userToken: userToken, bookId: bookId)
+        let request = SaveBookRequest(userToken: userToken, bookId: book.id)
         
         return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { SaveRemoveBookResponse.map(from: $0) }
             .do(onSuccess: { success in
                 if success {
-                    ContentMediator.shared.notifyAboutSaved(bookId: bookId)
+                    ContentMediator.shared.notifyAboutSaved(book: book)
                 }
             })
     }
     
-    func removeSaved(bookId: Int) -> Single<Bool> {
+    func removeSaved(book: BookCover) -> Single<Bool> {
         guard let userToken = sessionManager.getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
         
-        let request = RemoveSavedBookRequest(userToken: userToken, bookId: bookId)
+        let request = RemoveSavedBookRequest(userToken: userToken, bookId: book.id)
         
         return defaultRequestWrapper
             .callServerApi(requestBody: request)
             .map { SaveRemoveBookResponse.map(from: $0) }
             .do(onSuccess: { success in
                 if success {
-                    ContentMediator.shared.notifyAboutRemoveSaved(bookId: bookId)
+                    ContentMediator.shared.notifyAboutRemoveSaved(book: book)
                 }
             })
     }

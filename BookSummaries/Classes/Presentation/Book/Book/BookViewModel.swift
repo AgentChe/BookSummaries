@@ -194,8 +194,8 @@ private extension BookViewModel {
                 
                 func source() -> Single<Bool> {
                     let request = isSaved
-                        ? self.contentManager.removeSaved(bookId: book.id)
-                        : self.contentManager.save(bookId: book.id)
+                    ? self.contentManager.removeSaved(book: BookCover(book: book))
+                        : self.contentManager.save(book: BookCover(book: book))
 
                     return request
                         .map { _ in !isSaved }
@@ -340,10 +340,7 @@ private extension BookViewModel {
                     return nil
                 }
                 
-                let number = readingBook.currentChapterIndex + 1
-                let progress = Float(number) / Float(book.chapters.count)
-                
-                return progress
+                return readingBook.progress
             }
     }
     
@@ -426,5 +423,17 @@ private extension BookViewModel {
         contentManager
             .obtainDownloadBooks()
             .asDriver(onErrorJustReturn: [])
+    }
+}
+
+// MARK: Additional (BookCover)
+private extension BookCover {
+    init(book: Book) {
+        id = book.id
+        name = book.name
+        author = book.author
+        imageUrl = book.imageUrl
+        rankingId = book.rankingId
+        shareLink = book.shareLink
     }
 }

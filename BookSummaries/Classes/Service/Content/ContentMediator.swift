@@ -9,8 +9,8 @@ import RxSwift
 import RxCocoa
 
 protocol ContentMediatorDelegate: AnyObject {
-    func contentMediatorDidSaved(bookId: Int)
-    func contentMediatorDidRemovedSaved(bookId: Int)
+    func contentMediatorDidSaved(book: BookCover)
+    func contentMediatorDidRemovedSaved(book: BookCover)
     func contentMediatorDidUpdated(bookReadingProgress: BookReadingProgress)
     func contentMediatorDidDownloaded(localBook: LocalBook)
 }
@@ -20,8 +20,8 @@ final class ContentMediator {
     
     private var delegates = [Weak<ContentMediatorDelegate>]()
     
-    private lazy var bookIdDidSavedTrigger = PublishRelay<Int>()
-    private lazy var bookIdDidRemoveFromSavedTrigger = PublishRelay<Int>()
+    private lazy var bookDidSavedTrigger = PublishRelay<BookCover>()
+    private lazy var bookDidRemoveFromSavedTrigger = PublishRelay<BookCover>()
     private lazy var bookReadingProgressUpdatedTrigger = PublishRelay<BookReadingProgress>()
     private lazy var bookDownloadedTrigger = PublishRelay<LocalBook>()
     
@@ -30,23 +30,23 @@ final class ContentMediator {
 
 // MARK: Public
 extension ContentMediator {
-    func notifyAboutSaved(bookId: Int) {
+    func notifyAboutSaved(book: BookCover) {
         DispatchQueue.main.async { [weak self] in
             self?.delegates.forEach {
-                $0.weak?.contentMediatorDidSaved(bookId: bookId)
+                $0.weak?.contentMediatorDidSaved(book: book)
             }
             
-            self?.bookIdDidSavedTrigger.accept(bookId)
+            self?.bookDidSavedTrigger.accept(book)
         }
     }
     
-    func notifyAboutRemoveSaved(bookId: Int) {
+    func notifyAboutRemoveSaved(book: BookCover) {
         DispatchQueue.main.async { [weak self] in
             self?.delegates.forEach {
-                $0.weak?.contentMediatorDidRemovedSaved(bookId: bookId)
+                $0.weak?.contentMediatorDidRemovedSaved(book: book)
             }
             
-            self?.bookIdDidRemoveFromSavedTrigger.accept(bookId)
+            self?.bookDidRemoveFromSavedTrigger.accept(book)
         }
     }
     
@@ -73,12 +73,12 @@ extension ContentMediator {
 
 // MARK: Public (Triggers)
 extension ContentMediator {
-    var bookIdDidSaved: Signal<Int> {
-        bookIdDidSavedTrigger.asSignal()
+    var bookDidSaved: Signal<BookCover> {
+        bookDidSavedTrigger.asSignal()
     }
     
-    var bookIdDidRemoveFromSaved: Signal<Int> {
-        bookIdDidRemoveFromSavedTrigger.asSignal()
+    var bookDidRemoveFromSaved: Signal<BookCover> {
+        bookDidRemoveFromSavedTrigger.asSignal()
     }
     
     var bookReadingProgressUpdated: Signal<BookReadingProgress> {
