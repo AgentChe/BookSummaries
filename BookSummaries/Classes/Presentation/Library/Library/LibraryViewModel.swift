@@ -12,6 +12,7 @@ final class LibraryViewModel {
     var tryAgain: ((Error) -> (Observable<Void>))?
     
     lazy var filter = PublishRelay<LibraryFilterView.Filter>()
+    lazy var didTapRemove = PublishRelay<BookCover>()
     
     lazy var elements = makeElements()
     lazy var emptyState = makeEmptyState()
@@ -91,7 +92,11 @@ private extension LibraryViewModel {
     
     func makeSavedBooksElements() -> Driver<[LibraryTableBookElement]> {
         let savedBooks = downloadSavedBooks()
-            .flatMapLatest { books -> Driver<[BookCover]> in
+            .flatMapLatest { [weak self] books -> Driver<[BookCover]> in
+                guard let self = self else {
+                    return .never()
+                }
+                
                 let saved = ContentMediator.shared
                     .bookDidSaved
                     .map { (1, $0) }
@@ -102,8 +107,16 @@ private extension LibraryViewModel {
                     .map { (2, $0) }
                     .asDriver(onErrorDriveWith: .never())
                 
+                let libraryDelete = self.didTapRemove
+                    .flatMapLatest { book -> Single<(Int, BookCover)> in
+                        self.contentManager
+                            .removeSaved(book: book)
+                            .map { success in (2, book) }
+                    }
+                    .asDriver(onErrorDriveWith: .never())
+                
                 return Driver
-                    .merge(saved, removed)
+                    .merge(saved, removed, libraryDelete)
                     .scan(books) { books, args -> [BookCover] in
                         let (action, book) = args
                         
@@ -150,18 +163,41 @@ private extension LibraryViewModel {
             .map { downloadedBooks -> [Book] in
                 downloadedBooks.map { $0.local }
             }
-            .flatMapLatest { downloadedBooks -> Driver<[Book]> in
-                ContentMediator.shared
+            .flatMapLatest { [weak self] downloadedBooks -> Driver<[Book]> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                let download = ContentMediator.shared
                     .bookDownloaded
-                    .map { $0.original }
+                    .map { (1, $0.original) }
                     .asDriver(onErrorDriveWith: .never())
-                    .scan(downloadedBooks) { books, downloadedBook -> [Book] in
+                
+                let libraryDelete = self.didTapRemove
+                    .flatMapLatest { book -> Single<(Int, Book)> in
+                        self.contentManager
+                            .removeDownload(bookId: book.id)
+                            .map { success in (2, Book(id: book.id)) }
+                    }
+                    .asDriver(onErrorDriveWith: .never())
+                
+                return Driver
+                    .merge(download, libraryDelete)
+                    .scan(downloadedBooks) { books, args -> [Book] in
+                        let (action, book) = args
+                        
                         var copy = books
                         
-                        if let index = copy.firstIndex(where: { $0.id == downloadedBook.id }) {
-                            copy[index] = downloadedBook
-                        } else {
-                            copy.append(downloadedBook)
+                        if action == 1 {
+                            if let index = copy.firstIndex(where: { $0.id == book.id }) {
+                                copy[index] = book
+                            } else {
+                                copy.append(book)
+                            }
+                        } else if action == 2 {
+                            if let index = copy.firstIndex(where: { $0.id == book.id }) {
+                                copy.remove(at: index)
+                            }
                         }
                         
                         return copy
@@ -181,17 +217,41 @@ private extension LibraryViewModel {
         contentManager
             .obtainReadingBooks()
             .asDriver(onErrorJustReturn: [])
-            .flatMapLatest { readingBooks -> Driver<[BookReadingProgress]> in
-                ContentMediator.shared
+            .flatMapLatest { [weak self] readingBooks -> Driver<[BookReadingProgress]> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                let updated = ContentMediator.shared
                     .bookReadingProgressUpdated
+                    .map { (1, $0) }
                     .asDriver(onErrorDriveWith: .never())
-                    .scan(readingBooks) { books, updatedBook -> [BookReadingProgress] in
+                
+                let libraryDelete = self.didTapRemove
+                    .flatMapLatest { book -> Single<(Int, BookReadingProgress)> in
+                        self.contentManager
+                            .removeBookProgress(bookId: book.id)
+                            .map { (2, BookReadingProgress(book: Book(id: book.id), currentChapterIndex: 0)) }
+                    }
+                    .asDriver(onErrorDriveWith: .never())
+                
+                return Driver
+                    .merge(updated, libraryDelete)
+                    .scan(readingBooks) { books, args -> [BookReadingProgress] in
+                        let (action, readingBook) = args
+                        
                         var copy = books
                         
-                        if let index = copy.firstIndex(of: updatedBook) {
-                            copy[index] = updatedBook
-                        } else {
-                            copy.append(updatedBook)
+                        if action == 1 {
+                            if let index = copy.firstIndex(where: { $0.book.id == readingBook.book.id }) {
+                                copy[index] = readingBook
+                            } else {
+                                copy.append(readingBook)
+                            }
+                        } else if action == 2 {
+                            if let index = copy.firstIndex(where: { $0.book.id == readingBook.book.id }) {
+                                copy.remove(at: index)
+                            }
                         }
                         
                         return copy
@@ -243,5 +303,23 @@ private extension BookCover {
         imageUrl = book.imageUrl
         rankingId = book.rankingId
         shareLink = book.shareLink
+    }
+}
+
+// MARK: Additional (Book)
+private extension Book {
+    init(id: Int) {
+        self.id = id
+        name = ""
+        imageUrl = URL(string: "www.google.com")!
+        author = Author(name: "", photoUrl: URL(string: "www.google.com")!)
+        rankingId = 0
+        time = 0
+        audioUrl = URL(string: "www.google.com")!
+        shareLink = URL(string: "www.google.com")!
+        isSaved = false
+        introduction = nil
+        chapters = []
+        whatAbout = ""
     }
 }

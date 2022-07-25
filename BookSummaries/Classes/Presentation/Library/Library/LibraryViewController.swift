@@ -91,7 +91,7 @@ extension LibraryViewController: LibraryTableDelegate {
         let vc = LibraryBookMenuViewController.make { [weak self] result in
             switch result {
             case .delete:
-                break // TODO
+                self?.viewModel.didTapRemove.accept(book)
             case .share:
                 self?.share(url: book.shareLink)
             }

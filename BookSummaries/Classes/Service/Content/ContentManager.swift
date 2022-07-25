@@ -22,6 +22,7 @@ protocol ContentManagerProtocol: AnyObject {
     func obtainRankingBooksCover(rankingId: Int) -> Single<[BookCover]>
     func obtainReadingBooks() -> Single<[BookReadingProgress]>
     func set(bookReadingProgress: BookReadingProgress) -> Single<Void>
+    func removeBookProgress(bookId: Int) -> Single<Void>
     func feedback(bookId: Int,
                   rating: Int,
                   improves: [Int],
@@ -29,6 +30,7 @@ protocol ContentManagerProtocol: AnyObject {
                   whatLearn: String?) -> Single<Bool>
     func obtainDownloadBooks() -> Single<[LocalBook]>
     func download(book: Book, delegate: DownloadBookDelegate?) -> Single<LocalBook?>
+    func removeDownload(bookId: Int) -> Single<Void>
 }
 
 final class ContentManager: ContentManagerProtocol {
@@ -213,6 +215,29 @@ extension ContentManager {
             }
     }
     
+    func removeBookProgress(bookId: Int) -> Single<Void> {
+        obtainReadingBooks()
+            .flatMap { readingBooks -> Single<Void> in
+                Single<Void>.create { event in
+                    var result = readingBooks
+                    
+                    if let index = result.firstIndex(where: { $0.book.id == bookId }) {
+                        result.remove(at: index)
+                        
+                        if let data = try? JSONEncoder().encode(result) {
+                            UserDefaults.standard.set(data, forKey: Constants.readingBooksKey)
+                            
+                            ContentMediator.shared.notifyAboutUpdateRemovedProgress(bookId: bookId)
+                        }
+                    }
+                    
+                    event(.success(Void()))
+                    
+                    return Disposables.create()
+                }
+            }
+    }
+    
     func feedback(bookId: Int,
                   rating: Int,
                   improves: [Int],
@@ -282,6 +307,30 @@ extension ContentManager {
                 }
                 
                 return Disposables.create()
+            }
+    }
+    
+    func removeDownload(bookId: Int) -> Single<Void> {
+        obtainDownloadBooks()
+            .flatMap { downloadedBooks -> Single<Void> in
+                Single<Void>
+                    .create { event in
+                        var result = downloadedBooks
+                        
+                        if let index = result.firstIndex(where: { $0.original.id == bookId }) {
+                            result.remove(at: index)
+                            
+                            if let data = try? JSONEncoder().encode(result) {
+                                UserDefaults.standard.set(data, forKey: Constants.downloadBooksKey)
+                                
+                                ContentMediator.shared.notifyAboutRemovedDownload(bookId: bookId)
+                            }
+                        }
+                        
+                        event(.success(Void()))
+                        
+                        return Disposables.create()
+                    }
             }
     }
 }

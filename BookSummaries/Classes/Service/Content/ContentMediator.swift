@@ -12,7 +12,9 @@ protocol ContentMediatorDelegate: AnyObject {
     func contentMediatorDidSaved(book: BookCover)
     func contentMediatorDidRemovedSaved(book: BookCover)
     func contentMediatorDidUpdated(bookReadingProgress: BookReadingProgress)
+    func contentMediatorDidRemovedProgress(bookId: Int)
     func contentMediatorDidDownloaded(localBook: LocalBook)
+    func contentMediatorDidRemovedDownload(bookId: Int)
 }
 
 final class ContentMediator {
@@ -23,7 +25,9 @@ final class ContentMediator {
     private lazy var bookDidSavedTrigger = PublishRelay<BookCover>()
     private lazy var bookDidRemoveFromSavedTrigger = PublishRelay<BookCover>()
     private lazy var bookReadingProgressUpdatedTrigger = PublishRelay<BookReadingProgress>()
+    private lazy var bookDidRemovedProgressTrigger = PublishRelay<Int>()
     private lazy var bookDownloadedTrigger = PublishRelay<LocalBook>()
+    private lazy var bookDidRemovedDownloadTrigger = PublishRelay<Int>()
     
     private init() {}
 }
@@ -60,6 +64,16 @@ extension ContentMediator {
         }
     }
     
+    func notifyAboutUpdateRemovedProgress(bookId: Int) {
+        DispatchQueue.main.async { [weak self] in
+            self?.delegates.forEach {
+                $0.weak?.contentMediatorDidRemovedProgress(bookId: bookId)
+            }
+            
+            self?.bookDidRemovedProgressTrigger.accept(bookId)
+        }
+    }
+    
     func notifyAboutUpdate(bookDownloaded: LocalBook) {
         DispatchQueue.main.async { [weak self] in
             self?.delegates.forEach {
@@ -67,6 +81,16 @@ extension ContentMediator {
             }
             
             self?.bookDownloadedTrigger.accept(bookDownloaded)
+        }
+    }
+    
+    func notifyAboutRemovedDownload(bookId: Int) {
+        DispatchQueue.main.async { [weak self] in
+            self?.delegates.forEach {
+                $0.weak?.contentMediatorDidRemovedDownload(bookId: bookId)
+            }
+            
+            self?.bookDidRemovedDownloadTrigger.accept(bookId)
         }
     }
 }
@@ -85,8 +109,16 @@ extension ContentMediator {
         bookReadingProgressUpdatedTrigger.asSignal()
     }
     
+    var bookDidRemovedProgress: Signal<Int> {
+        bookDidRemovedProgressTrigger.asSignal()
+    }
+    
     var bookDownloaded: Signal<LocalBook> {
         bookDownloadedTrigger.asSignal()
+    }
+    
+    var bookDidRemovedDownload: Signal<Int> {
+        bookDidRemovedDownloadTrigger.asSignal()
     }
 }
 

@@ -341,6 +341,29 @@ extension ContentManagerMock {
             }
     }
     
+    func removeBookProgress(bookId: Int) -> Single<Void> {
+        obtainReadingBooks()
+            .flatMap { readingBooks -> Single<Void> in
+                Single<Void>.create { event in
+                    var result = readingBooks
+                    
+                    if let index = result.firstIndex(where: { $0.book.id == bookId }) {
+                        result.remove(at: index)
+                        
+                        if let data = try? JSONEncoder().encode(result) {
+                            UserDefaults.standard.set(data, forKey: Constants.readingBooksKey)
+                            
+                            ContentMediator.shared.notifyAboutUpdateRemovedProgress(bookId: bookId)
+                        }
+                    }
+                    
+                    event(.success(Void()))
+                    
+                    return Disposables.create()
+                }
+            }
+    }
+    
     func feedback(bookId: Int,
                   rating: Int,
                   improves: [Int],
@@ -406,6 +429,30 @@ extension ContentManagerMock {
                 }
                 
                 return Disposables.create()
+            }
+    }
+    
+    func removeDownload(bookId: Int) -> Single<Void> {
+        obtainDownloadBooks()
+            .flatMap { downloadedBooks -> Single<Void> in
+                Single<Void>
+                    .create { event in
+                        var result = downloadedBooks
+                        
+                        if let index = result.firstIndex(where: { $0.original.id == bookId }) {
+                            result.remove(at: index)
+                            
+                            if let data = try? JSONEncoder().encode(result) {
+                                UserDefaults.standard.set(data, forKey: Constants.downloadBooksKey)
+                                
+                                ContentMediator.shared.notifyAboutRemovedDownload(bookId: bookId)
+                            }
+                        }
+                        
+                        event(.success(Void()))
+                        
+                        return Disposables.create()
+                    }
             }
     }
 }
