@@ -15,6 +15,18 @@ final class LibraryViewController: UIViewController {
     
     private lazy var disposeBag = DisposeBag()
     
+    private let discoverBooksTapped: () -> Void
+    
+    private init(discoverBooksTapped: @escaping () -> Void) {
+        self.discoverBooksTapped = discoverBooksTapped
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func loadView() {
         view = mainView
     }
@@ -50,7 +62,7 @@ final class LibraryViewController: UIViewController {
         
         mainView.emptyView.button.rx.tap
             .bind(to: Binder(self) { base, void in
-                // TODO: open for you screen
+                base.discoverBooksTapped()
             })
             .disposed(by: disposeBag)
         
@@ -61,8 +73,8 @@ final class LibraryViewController: UIViewController {
 
 // MARK: Make
 extension LibraryViewController {
-    static func make() -> LibraryViewController {
-        let vc = LibraryViewController()
+    static func make(discoverBooksTapped: @escaping () -> Void) -> LibraryViewController {
+        let vc = LibraryViewController(discoverBooksTapped: discoverBooksTapped)
         vc.navigationItem.backButtonTitle = " "
         return vc
     }
