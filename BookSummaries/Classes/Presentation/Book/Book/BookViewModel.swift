@@ -17,7 +17,9 @@ final class BookViewModel {
     lazy var didTapRead = PublishRelay<Void>()
     lazy var didTapStartDownload = PublishRelay<Void>()
     lazy var didTapStopDownload = PublishRelay<Void>()
+    lazy var didTapListen = PublishRelay<Void>()
     
+    lazy var listen = makeListen()
     lazy var bookIsDownloading = makeBookIsDownloading()
     lazy var downloadState = makeDownloadState()
     lazy var reader = makeReader()
@@ -49,6 +51,21 @@ final class BookViewModel {
 
 // MARK: Private
 private extension BookViewModel {
+    func makeListen() -> Driver<(BookCover, URL)> {
+        didTapListen
+            .withLatestFrom(bookKit) { $1.book }
+            .withLatestFrom(downloadBooks) { book, downloadBooks -> (BookCover, URL) in
+                let cover = BookCover(book: book)
+                
+                if let downloadBook = downloadBooks.first(where: { $0.original.id == book.id }) {
+                    return (cover, downloadBook.local.audioUrl)
+                }
+                
+                return (cover, book.audioUrl)
+            }
+            .asDriver(onErrorDriveWith: .never())
+    }
+    
     func makeBookIsDownloading() -> Driver<Bool> {
         downloadState
             .map { state -> Bool in
@@ -63,7 +80,7 @@ private extension BookViewModel {
     
     func makeDownloadState() -> Driver<BookDownloadView.State> {
         let initial = Observable
-            .combineLatest(downloadBooks.asObservable(), bookId)
+            .combineLatest(downloadBooks.asObservable().take(1), bookId)
             .flatMap { [weak self] downloadBooks, bookId -> Observable<BookDownloadView.State> in
                 guard let self = self else {
                     return .never()
@@ -352,7 +369,7 @@ private extension BookViewModel {
     
     func makeBookKit() -> Driver<BookKit> {
         Observable
-            .combineLatest(bookId, currentBookFromCache.asObservable())
+            .combineLatest(bookId, currentBookFromCache.asObservable().take(1))
             .flatMapLatest { [weak self] bookId, currentBookFromCache -> Observable<BookKit> in
                 guard let self = self else {
                     return .never()
@@ -420,9 +437,22 @@ private extension BookViewModel {
     }
     
     func makeDownloadBooks() -> Driver<[LocalBook]> {
-        contentManager
+        let initial = contentManager
             .obtainDownloadBooks()
             .asDriver(onErrorJustReturn: [])
+        
+        return initial
+            .flatMapLatest { books -> Driver<[LocalBook]> in
+                ContentMediator.shared
+                    .bookDownloaded
+                    .scan(books) { books, book -> [LocalBook] in
+                        var copy = books
+                        copy.append(book)
+                        return copy
+                    }
+                    .startWith(books)
+                    .asDriver(onErrorDriveWith: .never())
+            }
     }
 }
 

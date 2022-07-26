@@ -54,6 +54,19 @@ final class BookViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        mainView.listenButton.rx.tap
+            .bind(to: viewModel.didTapListen)
+            .disposed(by: disposeBag)
+        
+        viewModel.listen
+            .drive(Binder(self) { base, args in
+                let (book, url) = args
+                
+                let vc = PlayerViewController.make(book: book, audioUrl: url)
+                base.present(vc, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
         viewModel.bookIsDownloading
             .drive(Binder(mainView) { base, isDownloading in
                 base.update(bookIsDownloading: isDownloading)

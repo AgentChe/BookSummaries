@@ -112,3 +112,6 @@
 "Library.Empty.Downloaded.Title" = "No downloaded books";
 "Library.Empty.Downloaded.SubTitle" = "Here will be book summaries\nthat you download";
 "Library.Empty.Button" = "Discover books";
+
+// MARK: Player
+"Player.Speed" = " speed %.1fx";

@@ -136,6 +136,13 @@
 		DE683342288AED9100FAEF96 /* LibraryBookMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE683341288AED9100FAEF96 /* LibraryBookMenuViewController.swift */; };
 		DE683344288AED9900FAEF96 /* LibraryBookMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE683343288AED9900FAEF96 /* LibraryBookMenuView.swift */; };
 		DE683348288AF1BD00FAEF96 /* LBMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE683347288AF1BD00FAEF96 /* LBMButton.swift */; };
+		DE68334C288FFB5100FAEF96 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68334B288FFB5100FAEF96 /* PlayerViewController.swift */; };
+		DE683350288FFB6100FAEF96 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68334F288FFB6100FAEF96 /* PlayerView.swift */; };
+		DE6833542890265000FAEF96 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833532890265000FAEF96 /* AudioPlayer.swift */; };
+		DE683356289026A200FAEF96 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE683355289026A200FAEF96 /* AudioPlayerManager.swift */; };
+		DE683359289028B800FAEF96 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE683358289028B800FAEF96 /* PlayPauseButton.swift */; };
+		DE68335B2890298600FAEF96 /* PlayerViewControllerMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68335A2890298600FAEF96 /* PlayerViewControllerMediator.swift */; };
+		DE68335D28902CD000FAEF96 /* PlayerPreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68335C28902CD000FAEF96 /* PlayerPreloaderView.swift */; };
 		DEBF9156287EEBED00F8DC0F /* RankingBooksGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */; };
 		DEBF9158288159B200F8DC0F /* BookReadingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */; };
 		DEBF915C2881777100F8DC0F /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF915B2881777100F8DC0F /* ReaderViewController.swift */; };
@@ -378,6 +385,13 @@
 		DE683341288AED9100FAEF96 /* LibraryBookMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBookMenuViewController.swift; sourceTree = "<group>"; };
 		DE683343288AED9900FAEF96 /* LibraryBookMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBookMenuView.swift; sourceTree = "<group>"; };
 		DE683347288AF1BD00FAEF96 /* LBMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBMButton.swift; sourceTree = "<group>"; };
+		DE68334B288FFB5100FAEF96 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		DE68334F288FFB6100FAEF96 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		DE6833532890265000FAEF96 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		DE683355289026A200FAEF96 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
+		DE683358289028B800FAEF96 /* PlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
+		DE68335A2890298600FAEF96 /* PlayerViewControllerMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewControllerMediator.swift; sourceTree = "<group>"; };
+		DE68335C28902CD000FAEF96 /* PlayerPreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPreloaderView.swift; sourceTree = "<group>"; };
 		DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingBooksGroup.swift; sourceTree = "<group>"; };
 		DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReadingProgress.swift; sourceTree = "<group>"; };
 		DEBF915B2881777100F8DC0F /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
@@ -1068,6 +1082,36 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DE683349288FFB3000FAEF96 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				DE683357289028B100FAEF96 /* Views */,
+				DE6833522890264200FAEF96 /* Utils */,
+				DE68334B288FFB5100FAEF96 /* PlayerViewController.swift */,
+				DE68334F288FFB6100FAEF96 /* PlayerView.swift */,
+				DE68335A2890298600FAEF96 /* PlayerViewControllerMediator.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		DE6833522890264200FAEF96 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DE6833532890265000FAEF96 /* AudioPlayer.swift */,
+				DE683355289026A200FAEF96 /* AudioPlayerManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DE683357289028B100FAEF96 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE683358289028B800FAEF96 /* PlayPauseButton.swift */,
+				DE68335C28902CD000FAEF96 /* PlayerPreloaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		DEBF91592881775A00F8DC0F /* Book */ = {
 			isa = PBXGroup;
 			children = (
@@ -1565,6 +1609,7 @@
 		DEFF623628747E4B00FE863E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE683349288FFB3000FAEF96 /* Player */,
 				DE683326288AAB4A00FAEF96 /* Library */,
 				DEBF91C42886B6C300F8DC0F /* Explore */,
 				DEBF91AB2885DF7B00F8DC0F /* Rankings */,
@@ -1714,6 +1759,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE68335B2890298600FAEF96 /* PlayerViewControllerMediator.swift in Sources */,
 				DE683325288AA35600FAEF96 /* SettingsGetAccessCell.swift in Sources */,
 				DE06C6C1287C0B5B009866FC /* BookChapter.swift in Sources */,
 				DEFF61D3287479A900FE863E /* NavigationControllerSettings.swift in Sources */,
@@ -1736,6 +1782,7 @@
 				DE683331288AAEC800FAEF96 /* LibraryTableView.swift in Sources */,
 				DE06C725287DD3EA009866FC /* SaveRemoveBookResponse.swift in Sources */,
 				DEBF919E2885A25600F8DC0F /* FeedbackTextView.swift in Sources */,
+				DE683350288FFB6100FAEF96 /* PlayerView.swift in Sources */,
 				DEBF918F28857F5400F8DC0F /* FeedbackTableBookCell.swift in Sources */,
 				DE06C66428769EDB009866FC /* MainViewCoordinator.swift in Sources */,
 				DEFF620F28747C2B00FE863E /* PushNotificationsManager.swift in Sources */,
@@ -1762,6 +1809,7 @@
 				DE06C6512874993E009866FC /* TryAgainViewController.swift in Sources */,
 				DEFF61D1287479A900FE863E /* PaginatedDataLoader.swift in Sources */,
 				DEFF620E28747C2B00FE863E /* RestAPITransport.swift in Sources */,
+				DE68334C288FFB5100FAEF96 /* PlayerViewController.swift in Sources */,
 				DE06C723287DD354009866FC /* RemoveSavedBookRequest.swift in Sources */,
 				DEBF91D72886F18D00F8DC0F /* ExploreCollectionSeparatorCell.swift in Sources */,
 				DEBF916A2881B80F00F8DC0F /* ChaptersView.swift in Sources */,
@@ -1855,6 +1903,7 @@
 				DE06C6D9287C260C009866FC /* BookProgressCell.swift in Sources */,
 				DEFF61BC2874798B00FE863E /* FirebaseManager.swift in Sources */,
 				DEFF61BF2874799A00FE863E /* Appearance.swift in Sources */,
+				DE68335D28902CD000FAEF96 /* PlayerPreloaderView.swift in Sources */,
 				DE06C69C2877149A009866FC /* ForYouChallengesCollectionCell.swift in Sources */,
 				DE06C6DD287C292A009866FC /* BookAuthorNameCell.swift in Sources */,
 				DE06C6B62879A989009866FC /* SettingsTableView.swift in Sources */,
@@ -1880,6 +1929,7 @@
 				DE06C6DB287C27BE009866FC /* BookNameCell.swift in Sources */,
 				DE06C69628771441009866FC /* Challenge.swift in Sources */,
 				DE06C6CA287C0D96009866FC /* BookView.swift in Sources */,
+				DE683356289026A200FAEF96 /* AudioPlayerManager.swift in Sources */,
 				DE06C6D0287C0DBF009866FC /* BookTableElement.swift in Sources */,
 				DE68331B2888082C00FAEF96 /* DownloadBooksQueue.swift in Sources */,
 				DE06C749287EA2D9009866FC /* ContentManagerMock.swift in Sources */,
@@ -1907,6 +1957,7 @@
 				DE06C66228769ED1009866FC /* MainViewController.swift in Sources */,
 				DE06C70A287DC6FF009866FC /* GetCategoriesRequest.swift in Sources */,
 				DEBF91B72886A7B100F8DC0F /* RankingsCollectionElement.swift in Sources */,
+				DE6833542890265000FAEF96 /* AudioPlayer.swift in Sources */,
 				DEFF621C28747C2B00FE863E /* Weak.swift in Sources */,
 				DE68332C288AAB6700FAEF96 /* LibraryView.swift in Sources */,
 				DEFF621028747C2B00FE863E /* PushNotificationsAuthorizationStatus.swift in Sources */,
@@ -1931,6 +1982,7 @@
 				DE06C6A228774C36009866FC /* ForYouSeparatorCell.swift in Sources */,
 				DE06C6C6287C0D81009866FC /* BookViewController.swift in Sources */,
 				DEFF621728747C2B00FE863E /* XOREncryption.swift in Sources */,
+				DE683359289028B800FAEF96 /* PlayPauseButton.swift in Sources */,
 				DE06C71C287DCFDD009866FC /* GetForYouRequest.swift in Sources */,
 				DEFF623528747E0B00FE863E /* SessionManager.swift in Sources */,
 				DEBF91842885792D00F8DC0F /* FeedbackViewModel.swift in Sources */,
