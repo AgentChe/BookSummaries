@@ -21,8 +21,6 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        addActionsToTabs()
         
         rx.methodInvoked(#selector(UIViewController.viewDidLayoutSubviews))
             .take(1)
@@ -30,6 +28,10 @@ final class MainViewController: UIViewController {
                 self?.update(selectedTab: .forYou)
             })
             .disposed(by: disposeBag)
+        
+        mainView.playerView.delegate = self
+        addActionsToTabs()
+        mainView.showPlayer(show: false)
     }
 }
 
@@ -37,8 +39,33 @@ final class MainViewController: UIViewController {
 extension MainViewController {
     static func make() -> MainViewController {
         let vc = MainViewController()
+        PlayerViewControllerMediator.shared.add(delegate: vc)
         vc.navigationItem.backButtonTitle = " "
         return vc
+    }
+}
+
+// MARK: PlayerViewControllerMediatorDelegate
+extension MainViewController: PlayerViewControllerMediatorDelegate {
+    func playerViewControllerDidAppear(with book: BookCover) {
+        mainView.showPlayer(show: false)
+        mainView.playerView.resignControlOnPlayer()
+        mainView.playerView.fill(book: book)
+    }
+    
+    func playerViewControllerDidDisappear() {
+        mainView.showPlayer(show: true)
+        mainView.playerView.becomeControlOnPlayer()
+    }
+}
+
+// MARK: TabPlayerViewDelegate
+extension MainViewController: TabPlayerViewDelegate {
+    func tabPlayerDidCloseTapped() {
+        mainView.showPlayer(show: false)
+        mainView.playerView.resignControlOnPlayer()
+        
+        AudioPlayerManager.shared.clear()
     }
 }
  

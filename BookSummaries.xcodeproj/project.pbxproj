@@ -143,6 +143,8 @@
 		DE683359289028B800FAEF96 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE683358289028B800FAEF96 /* PlayPauseButton.swift */; };
 		DE68335B2890298600FAEF96 /* PlayerViewControllerMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68335A2890298600FAEF96 /* PlayerViewControllerMediator.swift */; };
 		DE68335D28902CD000FAEF96 /* PlayerPreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68335C28902CD000FAEF96 /* PlayerPreloaderView.swift */; };
+		DE6833632891754400FAEF96 /* TabPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833622891754400FAEF96 /* TabPlayerView.swift */; };
+		DE6833652891755000FAEF96 /* TabPlayerPlayPauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833642891755000FAEF96 /* TabPlayerPlayPauseView.swift */; };
 		DEBF9156287EEBED00F8DC0F /* RankingBooksGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */; };
 		DEBF9158288159B200F8DC0F /* BookReadingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */; };
 		DEBF915C2881777100F8DC0F /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF915B2881777100F8DC0F /* ReaderViewController.swift */; };
@@ -392,6 +394,8 @@
 		DE683358289028B800FAEF96 /* PlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
 		DE68335A2890298600FAEF96 /* PlayerViewControllerMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewControllerMediator.swift; sourceTree = "<group>"; };
 		DE68335C28902CD000FAEF96 /* PlayerPreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPreloaderView.swift; sourceTree = "<group>"; };
+		DE6833622891754400FAEF96 /* TabPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPlayerView.swift; sourceTree = "<group>"; };
+		DE6833642891755000FAEF96 /* TabPlayerPlayPauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPlayerPlayPauseView.swift; sourceTree = "<group>"; };
 		DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingBooksGroup.swift; sourceTree = "<group>"; };
 		DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReadingProgress.swift; sourceTree = "<group>"; };
 		DEBF915B2881777100F8DC0F /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
@@ -625,8 +629,8 @@
 		DE06C66728769EE6009866FC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DE06C66828769EF2009866FC /* TabItemView.swift */,
-				DE06C66A28769EF9009866FC /* TabView.swift */,
+				DE683361289174D400FAEF96 /* Player */,
+				DE68336028916D1300FAEF96 /* TabView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1110,6 +1114,24 @@
 				DE68335C28902CD000FAEF96 /* PlayerPreloaderView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DE68336028916D1300FAEF96 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				DE06C66828769EF2009866FC /* TabItemView.swift */,
+				DE06C66A28769EF9009866FC /* TabView.swift */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		DE683361289174D400FAEF96 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				DE6833622891754400FAEF96 /* TabPlayerView.swift */,
+				DE6833642891755000FAEF96 /* TabPlayerPlayPauseView.swift */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 		DEBF91592881775A00F8DC0F /* Book */ = {
@@ -1876,6 +1898,7 @@
 				DEBF91B52886A78000F8DC0F /* RankingsCollectionView.swift in Sources */,
 				DEBF91AF2885DFA500F8DC0F /* RankingsViewModel.swift in Sources */,
 				DEFF622E28747E0B00FE863E /* PurchaseValidationObserver.swift in Sources */,
+				DE6833632891754400FAEF96 /* TabPlayerView.swift in Sources */,
 				DEBF91912885842700F8DC0F /* FeedbackTableRatingCell.swift in Sources */,
 				DEBF91A72885B15C00F8DC0F /* FeedbackResponse.swift in Sources */,
 				DEBF91C32886AEAF00F8DC0F /* RBooksTableSeparatorCell.swift in Sources */,
@@ -1888,6 +1911,7 @@
 				DEFF61DA287479A900FE863E /* CircleView.swift in Sources */,
 				DE06C718287DCEF7009866FC /* ForYouKit.swift in Sources */,
 				DE6833232889950400FAEF96 /* BookDownloadObserver.swift in Sources */,
+				DE6833652891755000FAEF96 /* TabPlayerPlayPauseView.swift in Sources */,
 				DEBF91B12885DFAA00F8DC0F /* RankingsView.swift in Sources */,
 				DEBF91CF2886BB5100F8DC0F /* PaddingTextField.swift in Sources */,
 				DEFF621828747C2B00FE863E /* Fonts.swift in Sources */,
