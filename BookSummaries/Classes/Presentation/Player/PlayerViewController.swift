@@ -73,8 +73,15 @@ final class PlayerViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        mainView.speedButton.rx.tap
+            .bind(to: Binder(self) { base, void in
+                base.changeSpeed()
+            })
+            .disposed(by: disposeBag)
+        
         audioPlayer.delegate = self
         mainView.fill(book: book)
+        mainView.setup(speed: audioPlayer.speed)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -133,5 +140,21 @@ private extension PlayerViewController {
     func audio(isDownloading: Bool) {
         mainView.playPauseButton.isHidden = isDownloading
         isDownloading ? mainView.preloaderView.start() : mainView.preloaderView.stop()
+    }
+    
+    func changeSpeed() {
+        let speed: Float
+        
+        switch audioPlayer.speed {
+        case 1:
+            speed = 1.5
+        case 1.5:
+            speed = 2
+        default:
+            speed = 1
+        }
+        
+        audioPlayer.speed = speed
+        mainView.setup(speed: speed)
     }
 }

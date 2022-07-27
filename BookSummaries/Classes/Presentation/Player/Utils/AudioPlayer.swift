@@ -28,6 +28,12 @@ final class AudioPlayer: NSObject {
         }
     }
     
+    var speed: Float = 1 {
+        didSet {
+            player.rate = speed
+        }
+    }
+    
     let audioUrl: URL
     
     private lazy var item = AVPlayerItem(url: audioUrl)
@@ -83,6 +89,7 @@ extension AudioPlayer {
     
     func play() {
         player.play()
+        player.rate = speed
     }
     
     func pause() {
@@ -103,7 +110,7 @@ extension AudioPlayer {
         let selectedTime = CMTimeMake(value: Int64(newTime * 1000 as Float64), timescale: 1000)
         
         player.seek(to: selectedTime) { [weak self] success in
-            self?.player.play()
+            self?.play()
         }
     }
     
@@ -124,7 +131,7 @@ extension AudioPlayer {
         let selectedTime = CMTimeMake(value: Int64(newTime * 1000 as Float64), timescale: 1000)
         
         player.seek(to: selectedTime) { [weak self] success in
-            self?.player.play()
+            self?.play()
         }
     }
     
@@ -133,7 +140,7 @@ extension AudioPlayer {
         let targetTime = CMTime(seconds: seconds, preferredTimescale: 1)
         
         player.seek(to: targetTime) { [weak self] success in
-            self?.player.play()
+            self?.play()
         }
     }
     
