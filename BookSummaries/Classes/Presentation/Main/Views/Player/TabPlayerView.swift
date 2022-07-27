@@ -110,12 +110,12 @@ private extension TabPlayerView {
         
         rx.tap
             .bind(to: Binder(self) { base, void in
-                guard let book = base.book else {
+                guard let book = base.book, let audioUrl = base.audioPlayer?.audioUrl else {
                     return
                 }
             
-//                let vc = PlayerViewController.make(book: book)
-//                UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true)
+                let vc = PlayerViewController.make(book: book, audioUrl: audioUrl)
+                UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.present(vc, animated: true)
             })
             .disposed(by: disposeBag)
     }
