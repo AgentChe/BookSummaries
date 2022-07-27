@@ -16,24 +16,24 @@ final class DownloadBookOperation: NSObject {
     weak var delegate: DownloadBookDelegate?
     
     private let book: Book
+    private let destinationComponents: AudioLocalURL
+    private let destinationUrl: URL
     
     private var completion: ((LocalBook?) -> Void)?
     
     private var imageCached: Bool?
-    private var audioCached: (Bool, URL?)?
+    private var audioCached: Bool?
     
     private var downloadTask: URLSessionDownloadTask?
-    
-    private var destinationUrl: URL? {
-        guard let directoryUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            return nil
-        }
-        
-        return directoryUrl.appendingPathComponent(book.audioUrl.lastPathComponent)
-    }
-    
+
     init(book: Book) {
         self.book = book
+        self.destinationComponents = AudioLocalURL(fileName: book.audioUrl.lastPathComponent,
+                                                   directory: .documentDirectory,
+                                                   domainMask: .userDomainMask)
+        self.destinationUrl = FileManager.default
+            .urls(for: destinationComponents.directory, in: destinationComponents.domainMask)[0]
+            .appendingPathComponent(destinationComponents.fileName)
     }
 }
 
@@ -67,14 +67,8 @@ private extension DownloadBookOperation {
     }
     
     func cacheBookAudio() {
-        guard let destinationUrl = destinationUrl else {
-            audioCached = (false, nil)
-            checkup()
-            return
-        }
-        
         guard !FileManager.default.fileExists(atPath: destinationUrl.path) else {
-            audioCached = (true, destinationUrl)
+            audioCached = true
             checkup()
             return
         }
@@ -92,8 +86,8 @@ private extension DownloadBookOperation {
             return
         }
         
-        if imageCached, audioCached.0, let audioUrl = audioCached.1 {
-            let localBook = LocalBook(original: book, localAudioURL: audioUrl)
+        if imageCached && audioCached {
+            let localBook = LocalBook(original: book, audioLocalURL: destinationComponents)
             completion?(localBook)
         } else {
             completion?(nil)
@@ -104,26 +98,20 @@ private extension DownloadBookOperation {
 // MARK: URLSessionDownloadDelegate
 extension DownloadBookOperation: URLSessionDownloadDelegate {
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        guard let destinationUrl = destinationUrl else {
-            audioCached = (false, nil)
-            checkup()
-            return
-        }
-        
         do {
             try FileManager.default.moveItem(at: location, to: destinationUrl)
             
-            audioCached = (true, destinationUrl)
+            audioCached = true
             checkup()
         } catch {
-            audioCached = (false, nil)
+            audioCached = false
             checkup()
         }
     }
     
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         if error != nil {
-            audioCached = (false, nil)
+            audioCached = false
             checkup()
         }
     }

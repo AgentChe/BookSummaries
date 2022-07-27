@@ -58,7 +58,7 @@ private extension BookViewModel {
                 let cover = BookCover(book: book)
                 
                 if let downloadBook = downloadBooks.first(where: { $0.original.id == book.id }) {
-                    return (cover, downloadBook.local.audioUrl)
+                    return (cover, downloadBook.combine().audioUrl)
                 }
                 
                 return (cover, book.audioUrl)
@@ -385,7 +385,7 @@ private extension BookViewModel {
                             }
                             
                             if let currentBookFromCache = currentBookFromCache {
-                                let local = BookKit(book: currentBookFromCache.local, similarBooks: [])
+                                let local = BookKit(book: currentBookFromCache.combine(), similarBooks: [])
                                 return .just(local)
                             }
                             

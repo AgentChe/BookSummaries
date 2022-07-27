@@ -161,7 +161,7 @@ private extension LibraryViewModel {
             .obtainDownloadBooks()
             .asDriver(onErrorJustReturn: [])
             .map { downloadedBooks -> [Book] in
-                downloadedBooks.map { $0.local }
+                downloadedBooks.map { $0.combine() }
             }
             .flatMapLatest { [weak self] downloadedBooks -> Driver<[Book]> in
                 guard let self = self else {
