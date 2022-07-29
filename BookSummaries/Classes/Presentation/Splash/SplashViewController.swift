@@ -58,11 +58,6 @@ final class SplashViewController: UIViewController {
                 self.viewModel.validationComplete.accept(Void())
             }
         }
-        
-        // TODO
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = MainViewController.make()
-        }
     }
 }
 
@@ -95,6 +90,8 @@ private extension SplashViewController {
 //            vc.delegate = self
 //            present(vc, animated: true)
 //        }
+        
+        UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = MainViewController.make()
     }
     
     func activity(state: SplashActivity) {

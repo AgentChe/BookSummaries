@@ -116,7 +116,6 @@
 		DE06C743287DD877009866FC /* GetRankingBooksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C742287DD877009866FC /* GetRankingBooksResponse.swift */; };
 		DE06C745287DDA38009866FC /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C744287DDA38009866FC /* ContentManager.swift */; };
 		DE06C747287DDF2C009866FC /* ContentMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C746287DDF2C009866FC /* ContentMediator.swift */; };
-		DE06C749287EA2D9009866FC /* ContentManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C748287EA2D9009866FC /* ContentManagerMock.swift */; };
 		DE6833162887FA9200FAEF96 /* DownloadBookOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833152887FA9200FAEF96 /* DownloadBookOperation.swift */; };
 		DE6833182887FDBB00FAEF96 /* LocalBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833172887FDBA00FAEF96 /* LocalBook.swift */; };
 		DE68331B2888082C00FAEF96 /* DownloadBooksQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68331A2888082C00FAEF96 /* DownloadBooksQueue.swift */; };
@@ -367,7 +366,6 @@
 		DE06C742287DD877009866FC /* GetRankingBooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRankingBooksResponse.swift; sourceTree = "<group>"; };
 		DE06C744287DDA38009866FC /* ContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
 		DE06C746287DDF2C009866FC /* ContentMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMediator.swift; sourceTree = "<group>"; };
-		DE06C748287EA2D9009866FC /* ContentManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManagerMock.swift; sourceTree = "<group>"; };
 		DE6833152887FA9200FAEF96 /* DownloadBookOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadBookOperation.swift; sourceTree = "<group>"; };
 		DE6833172887FDBA00FAEF96 /* LocalBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBook.swift; sourceTree = "<group>"; };
 		DE68331A2888082C00FAEF96 /* DownloadBooksQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadBooksQueue.swift; sourceTree = "<group>"; };
@@ -680,7 +678,6 @@
 				DE06C707287DC6E7009866FC /* Request */,
 				DE06C6812876DA82009866FC /* Models */,
 				DE06C744287DDA38009866FC /* ContentManager.swift */,
-				DE06C748287EA2D9009866FC /* ContentManagerMock.swift */,
 				DE06C746287DDF2C009866FC /* ContentMediator.swift */,
 			);
 			path = Content;
@@ -1956,7 +1953,6 @@
 				DE683356289026A200FAEF96 /* AudioPlayerManager.swift in Sources */,
 				DE06C6D0287C0DBF009866FC /* BookTableElement.swift in Sources */,
 				DE68331B2888082C00FAEF96 /* DownloadBooksQueue.swift in Sources */,
-				DE06C749287EA2D9009866FC /* ContentManagerMock.swift in Sources */,
 				DE06C6882876DB49009866FC /* ForYouFreeBookCell.swift in Sources */,
 				DE06C64C287498CD009866FC /* SplashActivity.swift in Sources */,
 				DEFF61E9287479AD00FE863E /* ObservableAndSingle+Extension.swift in Sources */,

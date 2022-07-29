@@ -36,7 +36,7 @@ final class BookViewModel {
     private lazy var currentBookFromCache = makeCurrentBookFromCache()
     private lazy var downloadBooks = makeDownloadBooks()
     
-    private lazy var contentManager = ContentManagerMock() // TODO
+    private lazy var contentManager = ContentManager()
     
     private lazy var bookDownloadObserver = BookDownloadObserver()
     

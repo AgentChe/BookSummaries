@@ -18,7 +18,7 @@ final class ForYouViewModel {
     private lazy var categories = makeCategories()
     private lazy var forYouKit = makeForYouKit()
     
-    private lazy var contentManager = ContentManagerMock() // TODO
+    private lazy var contentManager = ContentManager()
     
     private lazy var observableRetrySingle = ObservableRetrySingle()
 }

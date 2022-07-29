@@ -24,7 +24,7 @@ final class SplashViewModel {
     
     private lazy var sessionManager = SessionManager()
     private lazy var profileManager = ProfileManager()
-    private lazy var contentManager = ContentManagerMock() // TODO
+    private lazy var contentManager = ContentManager()
     
     private lazy var observableRetrySingle = ObservableRetrySingle()
 }

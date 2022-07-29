@@ -24,7 +24,7 @@ final class FeedbackViewModel {
     
     private lazy var collector = BehaviorRelay(value: FeedbackCollector())
     
-    private lazy var contentManager = ContentManagerMock() // TODO
+    private lazy var contentManager = ContentManager()
     
     private lazy var observableRetrySingle = ObservableRetrySingle()
     

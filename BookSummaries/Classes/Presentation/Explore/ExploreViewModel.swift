@@ -24,7 +24,7 @@ final class ExploreViewModel {
     private lazy var exploreKit = makeExploreKit()
     private lazy var categories = makeCategories()
     
-    private lazy var contentManager = ContentManagerMock() // TODO
+    private lazy var contentManager = ContentManager()
     
     private lazy var observableRetrySingle = ObservableRetrySingle()
 }

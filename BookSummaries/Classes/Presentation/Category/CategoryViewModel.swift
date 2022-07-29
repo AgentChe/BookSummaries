@@ -14,7 +14,7 @@ final class CategoryViewModel {
     lazy var elements = makeElements()
     lazy var activity = RxActivityIndicator()
     
-    private lazy var contentManager = ContentManagerMock() // TODO
+    private lazy var contentManager = ContentManager()
     
     private lazy var observableRetrySingle = ObservableRetrySingle()
     

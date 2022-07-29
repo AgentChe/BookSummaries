@@ -5,15 +5,16 @@
 //  Created by Andrey Chernyshev on 16.01.2021.
 //
 
+// TODO
 final class GlobalDefinitions {
-    static let domain = ""
-    static let apiKey = ""
+    static let domain = "https://books.korrekted.com"
+    static let apiKey = "BeV3sSdfVixSJQFP"
     
-    static let otterScaleHost = ""
-    static let otterScaleApiKey = ""
+    static let otterScaleHost = "https://api.korrekted.com"
+    static let otterScaleApiKey = "oCrVwRgejQISV560"
     
-    static let rushSDKHost = ""
-    static let rushSDKApiKey = ""
+    static let rushSDKHost = "https://analytics.korrekted.com"
+    static let rushSDKApiKey = "aQLwZhaOVVV9gyJM"
     
     static let appleAppID = ""
     

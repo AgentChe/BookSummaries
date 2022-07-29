@@ -22,7 +22,7 @@ final class ReaderViewModel {
     
     private lazy var textSizes = makeTextSizes()
     
-    private lazy var contentManager = ContentManagerMock() // TODO
+    private lazy var contentManager = ContentManager()
     private lazy var profileManager = ProfileManager()
     
     init(book: Book, startChapter: BookChapter) {

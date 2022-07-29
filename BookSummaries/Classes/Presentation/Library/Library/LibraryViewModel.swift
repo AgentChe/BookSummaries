@@ -24,7 +24,7 @@ final class LibraryViewModel {
     private lazy var downloadedBooksElements = makeDownloadedBooksElements()
     private lazy var readingBooks = makeReadingBooks()
     
-    private lazy var contentManager = ContentManagerMock() // TODO
+    private lazy var contentManager = ContentManager()
     
     private lazy var observableRetrySingle = ObservableRetrySingle()
 }

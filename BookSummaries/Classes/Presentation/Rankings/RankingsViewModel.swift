@@ -20,7 +20,7 @@ final class RankingsViewModel {
     private lazy var books = makeBooks()
     private lazy var rankings = makeRankings()
     
-    private lazy var contentManager = ContentManagerMock() // TODO
+    private lazy var contentManager = ContentManager()
     
     private lazy var observableRetrySingle = ObservableRetrySingle()
     
