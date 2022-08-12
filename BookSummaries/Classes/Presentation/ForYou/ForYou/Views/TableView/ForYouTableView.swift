@@ -9,7 +9,7 @@ import UIKit
 
 protocol ForYouTableDelegate: AnyObject {
     func forYouTableDidTapped(book: BookCover)
-    func forYouTableDidTapped(challenge: Challenge)
+    func forYouTableDidTapped(challenge: ChallengeCover)
     func forYouTableDidTapped(ranking: Ranking)
     func forYouTableDidTapped(category: Category)
 }

@@ -8,8 +8,8 @@
 import UIKit
 
 final class ForYouChallengesCollectionView: UICollectionView {
-    private lazy var elements = [Challenge]()
-    private var tapped: ((Challenge) -> Void)?
+    private lazy var elements = [ChallengeCover]()
+    private var tapped: ((ChallengeCover) -> Void)?
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -24,7 +24,7 @@ final class ForYouChallengesCollectionView: UICollectionView {
 
 // MARK: Public
 extension ForYouChallengesCollectionView {
-    func setup(elements: [Challenge], tapped: @escaping ((Challenge) -> Void)) {
+    func setup(elements: [ChallengeCover], tapped: @escaping ((ChallengeCover) -> Void)) {
         self.elements = elements
         self.tapped = tapped
         

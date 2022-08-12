@@ -12,7 +12,7 @@ enum ForYouTableElement {
     case freeBook(BookCover)
     case title(String)
     case books([BookCover])
-    case challenges([Challenge])
+    case challenges([ChallengeCover])
     case rankingTitle(Ranking)
     case rankingBook(ForYouRankingBookElement)
     case separator

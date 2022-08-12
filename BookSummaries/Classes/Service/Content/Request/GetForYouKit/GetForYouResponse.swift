@@ -24,7 +24,7 @@ final class GetForYouResponse {
         }
         
         let challengesArray = data["challenges"] as? [[String: Any]] ?? []
-        let challenges = challengesArray.compactMap { challengeJSON -> Challenge? in
+        let challenges = challengesArray.compactMap { challengeJSON -> ChallengeCover? in
             guard
                 let id = challengeJSON["id"] as? Int,
                 let name = challengeJSON["name"] as? String,
@@ -35,10 +35,10 @@ final class GetForYouResponse {
                 return nil
             }
             
-            return Challenge(id: id,
-                             name: name,
-                             title: title,
-                             imageUrl: imageUrl)
+            return ChallengeCover(id: id,
+                                  name: name,
+                                  title: title,
+                                  imageUrl: imageUrl)
         }
         
         let youMayLikeArray = data["you_may_like"] as? [[String: Any]] ?? []

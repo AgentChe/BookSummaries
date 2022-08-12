@@ -81,7 +81,7 @@ extension ForYouViewController: ForYouTableDelegate {
         present(vc, animated: true)
     }
     
-    func forYouTableDidTapped(challenge: Challenge) {
+    func forYouTableDidTapped(challenge: ChallengeCover) {
         
     }
     

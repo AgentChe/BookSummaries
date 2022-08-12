@@ -1,5 +1,5 @@
 //
-//  Challenge.swift
+//  ChallengeCover.swift
 //  BookSummaries
 //
 //  Created by Андрей Чернышев on 07.07.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Challenge: Codable, Hashable {
+struct ChallengeCover: Codable, Hashable {
     let id: Int
     let name: String
     let title: String

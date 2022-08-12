@@ -45,7 +45,7 @@
 		DE06C68D287709A3009866FC /* ForYouBooksCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C68C287709A3009866FC /* ForYouBooksCollectionView.swift */; };
 		DE06C68F287709B3009866FC /* ForYouBooksCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C68E287709B3009866FC /* ForYouBooksCollectionCell.swift */; };
 		DE06C692287709CA009866FC /* ForYouBooksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C691287709CA009866FC /* ForYouBooksCell.swift */; };
-		DE06C69628771441009866FC /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C69528771441009866FC /* Challenge.swift */; };
+		DE06C69628771441009866FC /* ChallengeCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C69528771441009866FC /* ChallengeCover.swift */; };
 		DE06C69A28771491009866FC /* ForYouChallengesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C69928771491009866FC /* ForYouChallengesCollectionView.swift */; };
 		DE06C69C2877149A009866FC /* ForYouChallengesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C69B2877149A009866FC /* ForYouChallengesCollectionCell.swift */; };
 		DE06C69E287714A4009866FC /* ForYouChallengesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C69D287714A4009866FC /* ForYouChallengesCell.swift */; };
@@ -295,7 +295,7 @@
 		DE06C68C287709A3009866FC /* ForYouBooksCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouBooksCollectionView.swift; sourceTree = "<group>"; };
 		DE06C68E287709B3009866FC /* ForYouBooksCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouBooksCollectionCell.swift; sourceTree = "<group>"; };
 		DE06C691287709CA009866FC /* ForYouBooksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouBooksCell.swift; sourceTree = "<group>"; };
-		DE06C69528771441009866FC /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		DE06C69528771441009866FC /* ChallengeCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCover.swift; sourceTree = "<group>"; };
 		DE06C69928771491009866FC /* ForYouChallengesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouChallengesCollectionView.swift; sourceTree = "<group>"; };
 		DE06C69B2877149A009866FC /* ForYouChallengesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouChallengesCollectionCell.swift; sourceTree = "<group>"; };
 		DE06C69D287714A4009866FC /* ForYouChallengesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouChallengesCell.swift; sourceTree = "<group>"; };
@@ -693,7 +693,7 @@
 				DE06C701287DC0EC009866FC /* Author.swift */,
 				DE06C703287DC12C009866FC /* Ranking.swift */,
 				DE06C705287DC4C3009866FC /* BookKit.swift */,
-				DE06C69528771441009866FC /* Challenge.swift */,
+				DE06C69528771441009866FC /* ChallengeCover.swift */,
 				DE06C717287DCEF7009866FC /* ForYouKit.swift */,
 				DE06C72E287DD67D009866FC /* ExploreKit.swift */,
 				DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */,
@@ -1948,7 +1948,7 @@
 				DEFF621628747C2B00FE863E /* ObservableRetrySingle.swift in Sources */,
 				DEBF919B288590FE00F8DC0F /* FeedbackImprovesView.swift in Sources */,
 				DE06C6DB287C27BE009866FC /* BookNameCell.swift in Sources */,
-				DE06C69628771441009866FC /* Challenge.swift in Sources */,
+				DE06C69628771441009866FC /* ChallengeCover.swift in Sources */,
 				DE06C6CA287C0D96009866FC /* BookView.swift in Sources */,
 				DE683356289026A200FAEF96 /* AudioPlayerManager.swift in Sources */,
 				DE06C6D0287C0DBF009866FC /* BookTableElement.swift in Sources */,

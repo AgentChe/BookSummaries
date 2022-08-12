@@ -24,7 +24,7 @@ final class ForYouChallengesCell: UITableViewCell {
 
 // MARK: Public
 extension ForYouChallengesCell {
-    func setup(elements: [Challenge], tapped: @escaping ((Challenge) -> Void)) {
+    func setup(elements: [ChallengeCover], tapped: @escaping ((ChallengeCover) -> Void)) {
         collectionView.setup(elements: elements, tapped: tapped)
     }
 }

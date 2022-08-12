@@ -8,7 +8,7 @@
 struct ForYouKit: Codable, Hashable {
     let freeBook: BookCover
     let todaysHotSummaries: [BookCover]
-    let challenges: [Challenge]
+    let challenges: [ChallengeCover]
     let youMayLike: [BookCover]
     let rankings: [RankingBooksGroup]
 }
