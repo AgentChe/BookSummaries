@@ -116,6 +116,25 @@
 		DE06C743287DD877009866FC /* GetRankingBooksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C742287DD877009866FC /* GetRankingBooksResponse.swift */; };
 		DE06C745287DDA38009866FC /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C744287DDA38009866FC /* ContentManager.swift */; };
 		DE06C747287DDF2C009866FC /* ContentMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C746287DDF2C009866FC /* ContentMediator.swift */; };
+		DE30478828A6604F00E0AEA4 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE30478728A6604F00E0AEA4 /* Challenge.swift */; };
+		DE30478B28A6621B00E0AEA4 /* GetChallengeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE30478A28A6621B00E0AEA4 /* GetChallengeRequest.swift */; };
+		DE30478D28A6625000E0AEA4 /* GetChallengeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE30478C28A6625000E0AEA4 /* GetChallengeResponse.swift */; };
+		DE30479028A6662F00E0AEA4 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE30478F28A6662F00E0AEA4 /* ChallengeViewController.swift */; };
+		DE30479228A6663900E0AEA4 /* ChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE30479128A6663900E0AEA4 /* ChallengeViewModel.swift */; };
+		DE30479428A6664000E0AEA4 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE30479328A6664000E0AEA4 /* ChallengeView.swift */; };
+		DE4E83D828ACF105001BE774 /* ChallengeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83D728ACF105001BE774 /* ChallengeTableView.swift */; };
+		DE4E83DA28ACF18F001BE774 /* ChallengeTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83D928ACF18F001BE774 /* ChallengeTableElement.swift */; };
+		DE4E83DD28AD1771001BE774 /* ChallengeProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83DC28AD1771001BE774 /* ChallengeProgressView.swift */; };
+		DE4E83DF28AD1C23001BE774 /* ChallengeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83DE28AD1C23001BE774 /* ChallengeHeaderCell.swift */; };
+		DE4E83E128AD25CE001BE774 /* ChallengeButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83E028AD25CE001BE774 /* ChallengeButtonsCell.swift */; };
+		DE4E83E428AD2807001BE774 /* ChallengeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83E328AD2807001BE774 /* ChallengeButton.swift */; };
+		DE4E83E728AD469C001BE774 /* ChallengeBooksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83E628AD469C001BE774 /* ChallengeBooksCell.swift */; };
+		DE4E83EA28AD4EFE001BE774 /* ChallengeBooksCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83E928AD4EFE001BE774 /* ChallengeBooksCollectionView.swift */; };
+		DE4E83EC28AD5002001BE774 /* ChallengeBooksCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83EB28AD5002001BE774 /* ChallengeBooksCollectionCell.swift */; };
+		DE4E83EF28AD6038001BE774 /* ChallengeBadgesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83EE28AD6038001BE774 /* ChallengeBadgesCell.swift */; };
+		DE4E83F128AD61F0001BE774 /* ChallengeBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83F028AD61F0001BE774 /* ChallengeBadgeView.swift */; };
+		DE4E83F328AD64A8001BE774 /* ChallengeBadgeProgressLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83F228AD64A8001BE774 /* ChallengeBadgeProgressLabel.swift */; };
+		DE4E83F528AE41C9001BE774 /* ChallengeBadgeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83F428AE41C9001BE774 /* ChallengeBadgeImageView.swift */; };
 		DE6833162887FA9200FAEF96 /* DownloadBookOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833152887FA9200FAEF96 /* DownloadBookOperation.swift */; };
 		DE6833182887FDBB00FAEF96 /* LocalBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833172887FDBA00FAEF96 /* LocalBook.swift */; };
 		DE68331B2888082C00FAEF96 /* DownloadBooksQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68331A2888082C00FAEF96 /* DownloadBooksQueue.swift */; };
@@ -366,6 +385,25 @@
 		DE06C742287DD877009866FC /* GetRankingBooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRankingBooksResponse.swift; sourceTree = "<group>"; };
 		DE06C744287DDA38009866FC /* ContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
 		DE06C746287DDF2C009866FC /* ContentMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMediator.swift; sourceTree = "<group>"; };
+		DE30478728A6604F00E0AEA4 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		DE30478A28A6621B00E0AEA4 /* GetChallengeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeRequest.swift; sourceTree = "<group>"; };
+		DE30478C28A6625000E0AEA4 /* GetChallengeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeResponse.swift; sourceTree = "<group>"; };
+		DE30478F28A6662F00E0AEA4 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		DE30479128A6663900E0AEA4 /* ChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewModel.swift; sourceTree = "<group>"; };
+		DE30479328A6664000E0AEA4 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
+		DE4E83D728ACF105001BE774 /* ChallengeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeTableView.swift; sourceTree = "<group>"; };
+		DE4E83D928ACF18F001BE774 /* ChallengeTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeTableElement.swift; sourceTree = "<group>"; };
+		DE4E83DC28AD1771001BE774 /* ChallengeProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeProgressView.swift; sourceTree = "<group>"; };
+		DE4E83DE28AD1C23001BE774 /* ChallengeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeHeaderCell.swift; sourceTree = "<group>"; };
+		DE4E83E028AD25CE001BE774 /* ChallengeButtonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeButtonsCell.swift; sourceTree = "<group>"; };
+		DE4E83E328AD2807001BE774 /* ChallengeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeButton.swift; sourceTree = "<group>"; };
+		DE4E83E628AD469C001BE774 /* ChallengeBooksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeBooksCell.swift; sourceTree = "<group>"; };
+		DE4E83E928AD4EFE001BE774 /* ChallengeBooksCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeBooksCollectionView.swift; sourceTree = "<group>"; };
+		DE4E83EB28AD5002001BE774 /* ChallengeBooksCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeBooksCollectionCell.swift; sourceTree = "<group>"; };
+		DE4E83EE28AD6038001BE774 /* ChallengeBadgesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeBadgesCell.swift; sourceTree = "<group>"; };
+		DE4E83F028AD61F0001BE774 /* ChallengeBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeBadgeView.swift; sourceTree = "<group>"; };
+		DE4E83F228AD64A8001BE774 /* ChallengeBadgeProgressLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeBadgeProgressLabel.swift; sourceTree = "<group>"; };
+		DE4E83F428AE41C9001BE774 /* ChallengeBadgeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeBadgeImageView.swift; sourceTree = "<group>"; };
 		DE6833152887FA9200FAEF96 /* DownloadBookOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadBookOperation.swift; sourceTree = "<group>"; };
 		DE6833172887FDBA00FAEF96 /* LocalBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBook.swift; sourceTree = "<group>"; };
 		DE68331A2888082C00FAEF96 /* DownloadBooksQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadBooksQueue.swift; sourceTree = "<group>"; };
@@ -699,6 +737,7 @@
 				DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */,
 				DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */,
 				DE6833172887FDBA00FAEF96 /* LocalBook.swift */,
+				DE30478728A6604F00E0AEA4 /* Challenge.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -884,6 +923,7 @@
 		DE06C707287DC6E7009866FC /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				DE30478928A6620900E0AEA4 /* GetChallenge */,
 				DEBF91A32885AFEA00F8DC0F /* Feedback */,
 				DE06C73F287DD85F009866FC /* GetRankingBooks */,
 				DE06C73A287DD7FA009866FC /* GetCategoryBooks */,
@@ -988,6 +1028,94 @@
 				DE06C742287DD877009866FC /* GetRankingBooksResponse.swift */,
 			);
 			path = GetRankingBooks;
+			sourceTree = "<group>";
+		};
+		DE30478928A6620900E0AEA4 /* GetChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				DE30478A28A6621B00E0AEA4 /* GetChallengeRequest.swift */,
+				DE30478C28A6625000E0AEA4 /* GetChallengeResponse.swift */,
+			);
+			path = GetChallenge;
+			sourceTree = "<group>";
+		};
+		DE30478E28A6662200E0AEA4 /* Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				DE4E83D528ACF0EE001BE774 /* Views */,
+				DE30478F28A6662F00E0AEA4 /* ChallengeViewController.swift */,
+				DE30479128A6663900E0AEA4 /* ChallengeViewModel.swift */,
+				DE30479328A6664000E0AEA4 /* ChallengeView.swift */,
+			);
+			path = Challenge;
+			sourceTree = "<group>";
+		};
+		DE4E83D528ACF0EE001BE774 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE4E83D628ACF0F2001BE774 /* TableView */,
+				DE4E83DC28AD1771001BE774 /* ChallengeProgressView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE4E83D628ACF0F2001BE774 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DE4E83DB28ACF194001BE774 /* Cells */,
+				DE4E83D728ACF105001BE774 /* ChallengeTableView.swift */,
+				DE4E83D928ACF18F001BE774 /* ChallengeTableElement.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DE4E83DB28ACF194001BE774 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DE4E83ED28AD6024001BE774 /* Badges */,
+				DE4E83E528AD4025001BE774 /* Books */,
+				DE4E83E228AD27F5001BE774 /* Atoms */,
+				DE4E83DE28AD1C23001BE774 /* ChallengeHeaderCell.swift */,
+				DE4E83E028AD25CE001BE774 /* ChallengeButtonsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DE4E83E228AD27F5001BE774 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				DE4E83E328AD2807001BE774 /* ChallengeButton.swift */,
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
+		DE4E83E528AD4025001BE774 /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				DE4E83E828AD4EED001BE774 /* CollectionView */,
+				DE4E83E628AD469C001BE774 /* ChallengeBooksCell.swift */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
+		DE4E83E828AD4EED001BE774 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				DE4E83E928AD4EFE001BE774 /* ChallengeBooksCollectionView.swift */,
+				DE4E83EB28AD5002001BE774 /* ChallengeBooksCollectionCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		DE4E83ED28AD6024001BE774 /* Badges */ = {
+			isa = PBXGroup;
+			children = (
+				DE4E83EE28AD6038001BE774 /* ChallengeBadgesCell.swift */,
+				DE4E83F028AD61F0001BE774 /* ChallengeBadgeView.swift */,
+				DE4E83F228AD64A8001BE774 /* ChallengeBadgeProgressLabel.swift */,
+				DE4E83F428AE41C9001BE774 /* ChallengeBadgeImageView.swift */,
+			);
+			path = Badges;
 			sourceTree = "<group>";
 		};
 		DE68331C28883C0C00FAEF96 /* DownloadBook */ = {
@@ -1628,6 +1756,7 @@
 		DEFF623628747E4B00FE863E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE30478E28A6662200E0AEA4 /* Challenge */,
 				DE683349288FFB3000FAEF96 /* Player */,
 				DE683326288AAB4A00FAEF96 /* Library */,
 				DEBF91C42886B6C300F8DC0F /* Explore */,
@@ -1781,6 +1910,7 @@
 				DE68335B2890298600FAEF96 /* PlayerViewControllerMediator.swift in Sources */,
 				DE683325288AA35600FAEF96 /* SettingsGetAccessCell.swift in Sources */,
 				DE06C6C1287C0B5B009866FC /* BookChapter.swift in Sources */,
+				DE4E83DA28ACF18F001BE774 /* ChallengeTableElement.swift in Sources */,
 				DEFF61D3287479A900FE863E /* NavigationControllerSettings.swift in Sources */,
 				DE06C6F0287C4FFF009866FC /* CategoryViewController.swift in Sources */,
 				DEBF91A02885A35900F8DC0F /* FeedbackTableWhatBetterCell.swift in Sources */,
@@ -1823,6 +1953,7 @@
 				DEBF91662881B7FD00F8DC0F /* ChaptersViewController.swift in Sources */,
 				DE06C702287DC0EC009866FC /* Author.swift in Sources */,
 				DE06C69A28771491009866FC /* ForYouChallengesCollectionView.swift in Sources */,
+				DE4E83F528AE41C9001BE774 /* ChallengeBadgeImageView.swift in Sources */,
 				DE06C68D287709A3009866FC /* ForYouBooksCollectionView.swift in Sources */,
 				DE68333F288AB9D200FAEF96 /* LibraryEmptyView.swift in Sources */,
 				DE06C6512874993E009866FC /* TryAgainViewController.swift in Sources */,
@@ -1839,17 +1970,21 @@
 				DEFF620928747C2B00FE863E /* RxActivityIndicator.swift in Sources */,
 				DE06C6BD2879A9D3009866FC /* SettingsSeparatorCell.swift in Sources */,
 				DE06C6D7287C2250009866FC /* BookImageCell.swift in Sources */,
+				DE4E83EF28AD6038001BE774 /* ChallengeBadgesCell.swift in Sources */,
 				DEBF91AD2885DF8800F8DC0F /* RankingsViewController.swift in Sources */,
 				DE6833182887FDBB00FAEF96 /* LocalBook.swift in Sources */,
 				DEBF917D2881F22800F8DC0F /* TextSize.swift in Sources */,
 				DE06C6FC287C50B9009866FC /* CategoryCollectionCell.swift in Sources */,
+				DE4E83F328AD64A8001BE774 /* ChallengeBadgeProgressLabel.swift in Sources */,
 				DE06C6ED287C3C75009866FC /* BookAuthorCell.swift in Sources */,
 				DEBF91A52885AFF800F8DC0F /* FeedbackRequest.swift in Sources */,
 				DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */,
+				DE30479428A6664000E0AEA4 /* ChallengeView.swift in Sources */,
 				DE683333288AAED300FAEF96 /* LibraryTableElement.swift in Sources */,
 				DEBF91BC2886AE7D00F8DC0F /* RBooksTableView.swift in Sources */,
 				DE06C6F8287C5028009866FC /* CategoryCollectionView.swift in Sources */,
 				DE06C6EB287C3BCB009866FC /* BookWhatAboutCell.swift in Sources */,
+				DE4E83EA28AD4EFE001BE774 /* ChallengeBooksCollectionView.swift in Sources */,
 				DEFF623228747E0B00FE863E /* IAPError.swift in Sources */,
 				DE68332A288AAB5F00FAEF96 /* LibraryViewModel.swift in Sources */,
 				DEFF620B28747C2B00FE863E /* DefaultRequestWrapper.swift in Sources */,
@@ -1867,6 +2002,7 @@
 				DE06C6D3287C10CE009866FC /* BookNavButton.swift in Sources */,
 				DEFF623B2874814D00FE863E /* SplashViewController.swift in Sources */,
 				DEBF91D42886E84E00F8DC0F /* ExploreCollectionElement.swift in Sources */,
+				DE30478D28A6625000E0AEA4 /* GetChallengeResponse.swift in Sources */,
 				DE06C6C8287C0D8C009866FC /* BookViewModel.swift in Sources */,
 				DE06C737287DD7BC009866FC /* SearchBooksRequest.swift in Sources */,
 				DE06C6B12879A973009866FC /* SettingsViewModel.swift in Sources */,
@@ -1880,6 +2016,7 @@
 				DEFF623D2874819B00FE863E /* SplashView.swift in Sources */,
 				DEFF61E8287479AD00FE863E /* UIDevice+Extension.swift in Sources */,
 				DE06C6832876DAC1009866FC /* Category.swift in Sources */,
+				DE4E83DD28AD1771001BE774 /* ChallengeProgressView.swift in Sources */,
 				DEFF621A28747C2B00FE863E /* NetworkError.swift in Sources */,
 				DE68333B288AB41A00FAEF96 /* LibraryFilterButton.swift in Sources */,
 				DE06C6F2287C5009009866FC /* CategoryViewModel.swift in Sources */,
@@ -1888,6 +2025,9 @@
 				DEBF91862885793500F8DC0F /* FeedbackView.swift in Sources */,
 				DEBF916328817DE500F8DC0F /* Collection+Extension.swift in Sources */,
 				DEFF61E5287479AD00FE863E /* UIColor+Extension.swift in Sources */,
+				DE4E83F128AD61F0001BE774 /* ChallengeBadgeView.swift in Sources */,
+				DE4E83E428AD2807001BE774 /* ChallengeButton.swift in Sources */,
+				DE4E83EC28AD5002001BE774 /* ChallengeBooksCollectionCell.swift in Sources */,
 				DEFF621228747C2B00FE863E /* Scalable.swift in Sources */,
 				DEBF91AA2885B30400F8DC0F /* FeedbackCollector.swift in Sources */,
 				DE06C64E287498D4009866FC /* SplashSDKInitialize.swift in Sources */,
@@ -1905,6 +2045,7 @@
 				DE06C745287DDA38009866FC /* ContentManager.swift in Sources */,
 				DE68333D288AB5BF00FAEF96 /* LibraryFilterView.swift in Sources */,
 				DEBF915C2881777100F8DC0F /* ReaderViewController.swift in Sources */,
+				DE4E83D828ACF105001BE774 /* ChallengeTableView.swift in Sources */,
 				DEFF61DA287479A900FE863E /* CircleView.swift in Sources */,
 				DE06C718287DCEF7009866FC /* ForYouKit.swift in Sources */,
 				DE6833232889950400FAEF96 /* BookDownloadObserver.swift in Sources */,
@@ -1919,6 +2060,7 @@
 				DEBF916E2881BC9200F8DC0F /* ChaptersTableView.swift in Sources */,
 				DE683348288AF1BD00FAEF96 /* LBMButton.swift in Sources */,
 				DE06C6BF287C09E5009866FC /* Book.swift in Sources */,
+				DE30478828A6604F00E0AEA4 /* Challenge.swift in Sources */,
 				DE06C70F287DC82D009866FC /* GetRankingRequest.swift in Sources */,
 				DE06C6E1287C316E009866FC /* BookTitleCell.swift in Sources */,
 				DE06C6D9287C260C009866FC /* BookProgressCell.swift in Sources */,
@@ -1937,6 +2079,7 @@
 				DEFF61ED287479B900FE863E /* GlobalDefinitions.swift in Sources */,
 				DEBF91C12886AEA400F8DC0F /* RBooksTableBookCell.swift in Sources */,
 				DE06C721287DD345009866FC /* SaveBookRequest.swift in Sources */,
+				DE4E83DF28AD1C23001BE774 /* ChallengeHeaderCell.swift in Sources */,
 				DE06C704287DC12C009866FC /* Ranking.swift in Sources */,
 				DE06C67D2876D6DB009866FC /* ForYouTableView.swift in Sources */,
 				DEFF623028747E0B00FE863E /* IAPActionResult.swift in Sources */,
@@ -1947,6 +2090,7 @@
 				DE06C6BB2879A9C8009866FC /* SettingsLinkCell.swift in Sources */,
 				DEFF621628747C2B00FE863E /* ObservableRetrySingle.swift in Sources */,
 				DEBF919B288590FE00F8DC0F /* FeedbackImprovesView.swift in Sources */,
+				DE30479028A6662F00E0AEA4 /* ChallengeViewController.swift in Sources */,
 				DE06C6DB287C27BE009866FC /* BookNameCell.swift in Sources */,
 				DE06C69628771441009866FC /* ChallengeCover.swift in Sources */,
 				DE06C6CA287C0D96009866FC /* BookView.swift in Sources */,
@@ -1961,6 +2105,7 @@
 				DEFF621B28747C2B00FE863E /* ContentError.swift in Sources */,
 				DEBF91682881B80800F8DC0F /* ChaptersViewModel.swift in Sources */,
 				DE06C6592874A116009866FC /* LoginRequest.swift in Sources */,
+				DE4E83E728AD469C001BE774 /* ChallengeBooksCell.swift in Sources */,
 				DEFF621928747C2B00FE863E /* SignError.swift in Sources */,
 				DE06C6E5287C3499009866FC /* BookChapterCell.swift in Sources */,
 				DEFF61D0287479A900FE863E /* ImagePicker.swift in Sources */,
@@ -1985,6 +2130,7 @@
 				DEFF622D28747E0B00FE863E /* IAPManager.swift in Sources */,
 				DE06C6852876DADF009866FC /* BookCover.swift in Sources */,
 				DE06C66B28769EF9009866FC /* TabView.swift in Sources */,
+				DE30479228A6663900E0AEA4 /* ChallengeViewModel.swift in Sources */,
 				DE06C711287DC87D009866FC /* GetRankingResponse.swift in Sources */,
 				DEFF623128747E0B00FE863E /* IAPProduct.swift in Sources */,
 				DE06C734287DD6E0009866FC /* GetExploreKitResponse.swift in Sources */,
@@ -2008,7 +2154,9 @@
 				DEBF91842885792D00F8DC0F /* FeedbackViewModel.swift in Sources */,
 				DE06C73C287DD809009866FC /* GetCategoryBooksRequest.swift in Sources */,
 				DEBF91A22885A65400F8DC0F /* FeedbackTabelWhatLearnCell.swift in Sources */,
+				DE4E83E128AD25CE001BE774 /* ChallengeButtonsCell.swift in Sources */,
 				DEBF91822885792500F8DC0F /* FeedbackViewController.swift in Sources */,
+				DE30478B28A6621B00E0AEA4 /* GetChallengeRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

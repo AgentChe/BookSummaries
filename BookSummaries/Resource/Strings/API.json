@@ -394,3 +394,39 @@
 <- {
     "success": true
 }
+
+/api/challenge - запрос на получение челенджа по id
+-> {
+    "challenge_id": 1
+}
+
+<- {
+    "id": 1,
+    "name": "40 day challenge",
+    "title": "Self-confidence",
+    "image": "full_url_to_image",
+    "text": "Are you tired of self-doubt, self-criticism, and holding back? Do you often feel like you're not good enough? Are you ready to change your life and reclaim your self-confidence?",
+    "books": [
+        {
+            "id": 6,
+            "name": "Unlimited Memory",
+            "author": {
+                "name": "Daniel Kahneman",
+                "photo_url": "full_url_to_image"
+            },
+            "image": "full_url_to_image",
+            "ranking_id": 1,
+            "link": "ссылка для шаринга",
+        },
+        {
+            "id": 7,
+            "name": "The Law of Success",
+            "author": {
+                "name": "Daniel Kahneman",
+                "photo_url": "full_url_to_image"
+            },
+            "image": "full_url_to_image",
+            "ranking_id": 1,
+            "link": "ссылка для шаринга",
+        }
+}

@@ -115,3 +115,12 @@
 
 // MARK: Player
 "Player.Speed" = " speed %.1fx";
+
+// MARK: Challenge
+"Challenge.Listen" = "Listen";
+"Challenge.Read" = "Read";
+"Challenge.Day" = "Day %i";
+"Challenge.Badges" = "Badges";
+"Challenge.Badges.GoodStart" = "Good start";
+"Challenge.Badges.CompleteDay3" = "Complete\nDay 3";
+"Challenge.Badges.CompleteChallenge" = "Complete\nchallenge";
