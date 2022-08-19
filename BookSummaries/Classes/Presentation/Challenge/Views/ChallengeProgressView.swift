@@ -16,8 +16,8 @@ final class ChallengeProgressView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        makeConstraints()
         createCircularPath()
+        makeConstraints()
     }
     
     required init?(coder: NSCoder) {

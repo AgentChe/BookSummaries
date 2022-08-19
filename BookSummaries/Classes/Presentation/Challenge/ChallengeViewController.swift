@@ -88,7 +88,8 @@ extension ChallengeViewController: ChallengeTableDelegate {
     }
     
     func challengeTableDidTapped(element: ChallengeBookElement) {
-        // TODO
+        let vc = BookViewController.make(bookId: element.book.id)
+        present(vc, animated: true)
     }
 }
 
