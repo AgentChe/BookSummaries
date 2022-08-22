@@ -64,6 +64,15 @@ final class ChallengeViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        viewModel.listen
+            .drive(Binder(self) { base, args in
+                let (book, url) = args
+                
+                let vc = PlayerViewController.make(book: book, audioUrl: url)
+                base.present(vc, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
         mainView.tableView.mainDelegate = self
     }
 }
@@ -79,12 +88,13 @@ extension ChallengeViewController {
 
 // MARK: ChallengeTableDelegate
 extension ChallengeViewController: ChallengeTableDelegate {
-    func challengeTableDidTappedListen() {
-        // TODO
+    func challengeTableDidTappedListen(bookId: Int) {
+        viewModel.listenTapped.accept(bookId)
     }
     
-    func challengeTableDidTappedRead() {
-        // TODO
+    func challengeTableDidTappedRead(bookId: Int) {
+        let vc = BookViewController.make(bookId: bookId)
+        present(vc, animated: true)
     }
     
     func challengeTableDidTapped(element: ChallengeBookElement) {

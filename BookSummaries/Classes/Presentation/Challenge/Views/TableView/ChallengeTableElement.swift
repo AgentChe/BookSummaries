@@ -10,7 +10,7 @@ import CoreGraphics
 enum ChallengeTableElement {
     case offset(CGFloat)
     case header(ChallengeHeaderElement)
-    case buttons
+    case buttons(ChallengeButtonsElement)
     case books([ChallengeBookElement])
     case badges(ChallengeBadgesElement)
 }
@@ -19,6 +19,10 @@ struct ChallengeHeaderElement {
     let name: String
     let title: String
     let text: String
+}
+
+struct ChallengeButtonsElement {
+    let currentDayBookId: Int
 }
 
 struct ChallengeBookElement {

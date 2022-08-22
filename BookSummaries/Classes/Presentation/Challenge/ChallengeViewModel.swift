@@ -11,8 +11,11 @@ import RxCocoa
 final class ChallengeViewModel {
     var tryAgain: ((Error) -> (Observable<Void>))?
     
+    lazy var listenTapped = PublishRelay<Int>()
+    
     lazy var progress = makeProgress()
     lazy var elements = makeElements()
+    lazy var listen = makeListen()
     lazy var activity = RxActivityIndicator()
     
     private lazy var challenge = makeChallenge()
@@ -76,15 +79,17 @@ private extension ChallengeViewModel {
                 
                 let isCompleteChallenge = self.isCompleteChallenge(readingBooks: readingBooksAtChallenge,
                                                                    challengeBooksCount: challenge.books.count)
-                if !isCompleteChallenge {
+                let readingDayBookId = self.readingDayBookId(readingBooks: readingBooks,
+                                                             challengeBooks: challenge.books)
+                if !isCompleteChallenge, let readingDayBookId = readingDayBookId {
+                    let element = ChallengeButtonsElement(currentDayBookId: readingDayBookId)
+                    
                     result.append(contentsOf: [
                         .offset(20.scale),
-                        .buttons
+                        .buttons(element)
                     ])
                 }
                 
-                let readingDayBookId = self.readingDayBookId(readingBooks: readingBooks,
-                                                             challengeBooks: challenge.books)
                 let books = challenge.books.enumerated().map { index, book -> ChallengeBookElement in
                     let completed = readingBooksAtChallenge.first(where: { $0.book.id == book.id })?.progress == 1
                     
@@ -167,6 +172,47 @@ private extension ChallengeViewModel {
             }
         
         return Driver.merge(initial, updated)
+    }
+    
+    func makeListen() -> Driver<(BookCover, URL)> {
+        listenTapped
+            .flatMapLatest { [weak self] bookId -> Observable<(BookCover, URL)> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                func source() -> Single<(BookCover, URL)> {
+                    self.contentManager
+                        .obtainBookKit(bookId: bookId)
+                        .flatMap { bookKit -> Single<(BookCover, URL)> in
+                            guard let bookKit = bookKit else {
+                                return .error(ContentError(.notContent))
+                            }
+                            
+                            let book = bookKit.book
+                            let bookCover = BookCover(id: book.id,
+                                                      name: book.name,
+                                                      author: book.author,
+                                                      imageUrl: book.imageUrl,
+                                                      rankingId: book.rankingId,
+                                                      shareLink: book.shareLink)
+                            return .just((bookCover, book.audioUrl))
+                        }
+                }
+                
+                func trigger(error: Error) -> Observable<Void> {
+                    guard let tryAgain = self.tryAgain?(error) else {
+                        return .empty()
+                    }
+                    
+                    return tryAgain
+                }
+
+                return self.observableRetrySingle
+                    .retry(source: { source() },
+                           trigger: { trigger(error: $0) })
+            }
+            .asDriver(onErrorDriveWith: .never())
     }
 }
 

@@ -13,6 +13,8 @@ final class ChallengeButtonsCell: UITableViewCell {
     lazy var listenButton = makeListenButton()
     lazy var readButton = makeReadButton()
     
+    private var element: ChallengeButtonsElement?
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -22,6 +24,13 @@ final class ChallengeButtonsCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+// MARK: Public
+extension ChallengeButtonsCell {
+    func setup(element: ChallengeButtonsElement) {
+        self.element = element
     }
 }
 
@@ -36,12 +45,21 @@ private extension ChallengeButtonsCell {
     
     @objc
     func listenTapped() {
-        delegate?.challengeTableDidTappedListen()
+        guard let bookId = element?.currentDayBookId else {
+            return
+        }
+        
+        delegate?.challengeTableDidTappedListen(bookId: bookId)
     }
+    
     
     @objc
     func readTapped() {
-        delegate?.challengeTableDidTappedRead()
+        guard let bookId = element?.currentDayBookId else {
+            return
+        }
+        
+        delegate?.challengeTableDidTappedRead(bookId: bookId)
     }
 }
 

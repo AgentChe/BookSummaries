@@ -8,8 +8,8 @@
 import UIKit
 
 protocol ChallengeTableDelegate: AnyObject {
-    func challengeTableDidTappedListen()
-    func challengeTableDidTappedRead()
+    func challengeTableDidTappedListen(bookId: Int)
+    func challengeTableDidTappedRead(bookId: Int)
     func challengeTableDidTapped(element: ChallengeBookElement)
 }
 
@@ -58,8 +58,9 @@ extension ChallengeTableView: UITableViewDataSource {
                        title: element.title,
                        text: element.text)
             return cell
-        case .buttons:
+        case .buttons(let element):
             let cell = dequeueReusableCell(withIdentifier: String(describing: ChallengeButtonsCell.self)) as! ChallengeButtonsCell
+            cell.setup(element: element)
             cell.delegate = mainDelegate
             return cell
         case .books(let elements):
