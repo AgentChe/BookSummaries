@@ -33,6 +33,13 @@
 "Onboarding.Welcome.Button" = "Start now";
 "Onboarding.Info.Title" = "Now let’s get to know\nyou.";
 "Onboarding.Info.SubTitle" = "We need some basic information to start\ncustomizing your plan.";
+"Onboarding.Goal.Title" = "How do you want to\nuse app?";
+"Onboarding.Goal.1.Title" = "Discover";
+"Onboarding.Goal.1.SubTitle" = "\ninteresting books";
+"Onboarding.Goal.2.Title" = "Review";
+"Onboarding.Goal.2.SubTitle" = "\nbooks you read previously";
+"Onboarding.Goal.3.Title" = "Develop";
+"Onboarding.Goal.3.SubTitle" = "\na reading habit quicker";
 
 // MARK: Main
 "Main.ForYou" = "For you";

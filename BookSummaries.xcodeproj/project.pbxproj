@@ -143,6 +143,8 @@
 		DE4E840728B4DCD0001BE774 /* OSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E840628B4DCD0001BE774 /* OSlideView.swift */; };
 		DE4E840A28B4DFE7001BE774 /* OWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E840928B4DFE7001BE774 /* OWelcomeView.swift */; };
 		DE4E840C28B4E5D8001BE774 /* OInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E840B28B4E5D8001BE774 /* OInfoView.swift */; };
+		DE4E840E28B506AB001BE774 /* OGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E840D28B506AB001BE774 /* OGoalView.swift */; };
+		DE4E841028B506BA001BE774 /* OGoalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E840F28B506BA001BE774 /* OGoalButton.swift */; };
 		DE6833162887FA9200FAEF96 /* DownloadBookOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833152887FA9200FAEF96 /* DownloadBookOperation.swift */; };
 		DE6833182887FDBB00FAEF96 /* LocalBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833172887FDBA00FAEF96 /* LocalBook.swift */; };
 		DE68331B2888082C00FAEF96 /* DownloadBooksQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68331A2888082C00FAEF96 /* DownloadBooksQueue.swift */; };
@@ -420,6 +422,8 @@
 		DE4E840628B4DCD0001BE774 /* OSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSlideView.swift; sourceTree = "<group>"; };
 		DE4E840928B4DFE7001BE774 /* OWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWelcomeView.swift; sourceTree = "<group>"; };
 		DE4E840B28B4E5D8001BE774 /* OInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OInfoView.swift; sourceTree = "<group>"; };
+		DE4E840D28B506AB001BE774 /* OGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OGoalView.swift; sourceTree = "<group>"; };
+		DE4E840F28B506BA001BE774 /* OGoalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OGoalButton.swift; sourceTree = "<group>"; };
 		DE6833152887FA9200FAEF96 /* DownloadBookOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadBookOperation.swift; sourceTree = "<group>"; };
 		DE6833172887FDBA00FAEF96 /* LocalBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBook.swift; sourceTree = "<group>"; };
 		DE68331A2888082C00FAEF96 /* DownloadBooksQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadBooksQueue.swift; sourceTree = "<group>"; };
@@ -1161,6 +1165,7 @@
 				DE4E840628B4DCD0001BE774 /* OSlideView.swift */,
 				DE4E840928B4DFE7001BE774 /* OWelcomeView.swift */,
 				DE4E840B28B4E5D8001BE774 /* OInfoView.swift */,
+				DE4E840D28B506AB001BE774 /* OGoalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1176,6 +1181,7 @@
 		DE4E840828B4DCE8001BE774 /* Atoms */ = {
 			isa = PBXGroup;
 			children = (
+				DE4E840F28B506BA001BE774 /* OGoalButton.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -2035,6 +2041,7 @@
 				DE06C6BD2879A9D3009866FC /* SettingsSeparatorCell.swift in Sources */,
 				DE06C6D7287C2250009866FC /* BookImageCell.swift in Sources */,
 				DE4E83EF28AD6038001BE774 /* ChallengeBadgesCell.swift in Sources */,
+				DE4E841028B506BA001BE774 /* OGoalButton.swift in Sources */,
 				DEBF91AD2885DF8800F8DC0F /* RankingsViewController.swift in Sources */,
 				DE6833182887FDBB00FAEF96 /* LocalBook.swift in Sources */,
 				DEBF917D2881F22800F8DC0F /* TextSize.swift in Sources */,
@@ -2215,6 +2222,7 @@
 				DE06C72A287DD4F9009866FC /* GetSavedBooksResponse.swift in Sources */,
 				DE06C732287DD6BD009866FC /* GetExploreKitRequest.swift in Sources */,
 				DEBF918A2885794A00F8DC0F /* FeedbackTableView.swift in Sources */,
+				DE4E840E28B506AB001BE774 /* OGoalView.swift in Sources */,
 				DE06C6E3287C3242009866FC /* BookIntroductionCell.swift in Sources */,
 				DE06C6A228774C36009866FC /* ForYouSeparatorCell.swift in Sources */,
 				DE06C6C6287C0D81009866FC /* BookViewController.swift in Sources */,

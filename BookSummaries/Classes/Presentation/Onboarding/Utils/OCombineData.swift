@@ -6,11 +6,26 @@
 //
 
 struct OCombineData {
-    
+    let goal: Int
 }
 
 final class OnboardingCombineData {
+    private var goal: OGoalButton.Goal?
+    
     func combineData() -> OCombineData? {
-        nil
+        guard
+            let goal = goal
+        else {
+            return nil
+        }
+
+        return OCombineData(goal: goal.code)
+    }
+}
+
+// MARK: OGoalViewDelegate
+extension OnboardingCombineData: OGoalViewDelegate {
+    func goalViewDidSelected(goal: OGoalButton.Goal) {
+        self.goal = goal
     }
 }
