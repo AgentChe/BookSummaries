@@ -9,18 +9,22 @@ import UIKit
 
 final class OnboardingView: UIView {
     enum Step: Int {
-        case welcome, info, goal
+        case welcome, info, goal, age, brief, categories
     }
     
     var didFinish: (() -> Void)?
     
     private lazy var goalView = OGoalView(step: .goal)
+    private lazy var categoriesView = OCategoriesView(step: .categories)
 
     private lazy var contentViews: [OSlideView] = {
         [
             OWelcomeView(step: .welcome),
             OInfoView(step: .info),
-            goalView
+            goalView,
+            OAgeView(step: .age),
+            OBriefView(step: .brief),
+            categoriesView
         ]
     }()
     
@@ -83,6 +87,7 @@ private extension OnboardingView {
             }
         
         goalView.goalDelegate = combineData
+        categoriesView.categoriesDelegate = combineData
     }
     
     func scroll(to newStep: Step) {

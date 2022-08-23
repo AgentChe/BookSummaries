@@ -109,7 +109,7 @@ private extension OGoalView {
             nextButton.widthAnchor.constraint(equalToConstant: 54.scale),
             nextButton.heightAnchor.constraint(equalToConstant: 54.scale),
             nextButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24.scale),
-            nextButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -60.scale : -30.scale)
+            nextButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -60.scale : -20.scale)
         ])
     }
 }

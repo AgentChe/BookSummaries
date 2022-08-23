@@ -56,7 +56,7 @@ private extension OInfoView {
             button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 35.scale),
             button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -35.scale),
             button.heightAnchor.constraint(equalToConstant: 53.scale),
-            button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -60.scale : -30.scale)
+            button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -60.scale : -20.scale)
         ])
     }
 }

@@ -40,6 +40,31 @@
 "Onboarding.Goal.2.SubTitle" = "\nbooks you read previously";
 "Onboarding.Goal.3.Title" = "Develop";
 "Onboarding.Goal.3.SubTitle" = "\na reading habit quicker";
+"Onboarding.Age.Title" = "What is your age?";
+"Onboarding.Age.1" = "18-24";
+"Onboarding.Age.2" = "25-34";
+"Onboarding.Age.3" = "35-44";
+"Onboarding.Age.4" = "45-60";
+"Onboarding.Age.5" = "60+";
+"Onboarding.Brief.Title" = "Read in brief - learn more";
+"Onboarding.Brief.SubTitle" = "Book summaries enables learners to\ndigest bite-sized pieces of information\nto improve their brain and enhance skills.";
+"Onboarding.Categories.Title" = "What would you like\nknow more about?";
+"Onboarding.Categories.Health" = "Health";
+"Onboarding.Categories.Learning & Developing" = "Learning & Developing";
+"Onboarding.Categories.Welness & Spiritual Growth" = "Welness & Spiritual Growth";
+"Onboarding.Categories.Leadership & Management" = "Leadership & Management";
+"Onboarding.Categories.Money & Wealth" = "Money & Wealth";
+"Onboarding.Categories.Psychology" = "Psychology";
+"Onboarding.Categories.Sales & Marketing" = "Sales & Marketing";
+"Onboarding.Categories.Finance" = "Finance";
+"Onboarding.Categories.Business & Entrepreneurship" = "Business & Entrepreneurship";
+"Onboarding.Categories.Business Strategy & Culture" = "Business Strategy & Culture";
+"Onboarding.Categories.Economics" = "Economics";
+"Onboarding.Categories.Sociology & General" = "Sociology & General";
+"Onboarding.Categories.Technology & Innovation" = "Technology & Innovation";
+"Onboarding.Categories.Personal Development & Success" = "Personal Development & Success";
+"Onboarding.Categories.Problem - Solving & Creativity" = "Problem - Solving & Creativity";
+"Onboarding.Categories.Parenting & Relationships" = "Parenting & Relationships";
 
 // MARK: Main
 "Main.ForYou" = "For you";
