@@ -181,6 +181,8 @@
 		DEBE97B128B5265D0065C5E1 /* OCategoriesCollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97B028B5265D0065C5E1 /* OCategoriesCollectionElement.swift */; };
 		DEBE97B328B52B120065C5E1 /* OCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97B228B52B120065C5E1 /* OCategoriesView.swift */; };
 		DEBE97B528B530A50065C5E1 /* OCategoriesCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97B428B530A50065C5E1 /* OCategoriesCollectionLayout.swift */; };
+		DEBE97B728B532510065C5E1 /* OQuantityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97B628B532510065C5E1 /* OQuantityButton.swift */; };
+		DEBE97B928B534490065C5E1 /* OQuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97B828B534490065C5E1 /* OQuantityView.swift */; };
 		DEBF9156287EEBED00F8DC0F /* RankingBooksGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */; };
 		DEBF9158288159B200F8DC0F /* BookReadingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */; };
 		DEBF915C2881777100F8DC0F /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF915B2881777100F8DC0F /* ReaderViewController.swift */; };
@@ -468,6 +470,8 @@
 		DEBE97B028B5265D0065C5E1 /* OCategoriesCollectionElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCategoriesCollectionElement.swift; sourceTree = "<group>"; };
 		DEBE97B228B52B120065C5E1 /* OCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCategoriesView.swift; sourceTree = "<group>"; };
 		DEBE97B428B530A50065C5E1 /* OCategoriesCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCategoriesCollectionLayout.swift; sourceTree = "<group>"; };
+		DEBE97B628B532510065C5E1 /* OQuantityButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OQuantityButton.swift; sourceTree = "<group>"; };
+		DEBE97B828B534490065C5E1 /* OQuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OQuantityView.swift; sourceTree = "<group>"; };
 		DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingBooksGroup.swift; sourceTree = "<group>"; };
 		DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReadingProgress.swift; sourceTree = "<group>"; };
 		DEBF915B2881777100F8DC0F /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
@@ -1185,6 +1189,7 @@
 				DEBE97A328B51AD40065C5E1 /* OAgeView.swift */,
 				DEBE97A928B523260065C5E1 /* OBriefView.swift */,
 				DEBE97B228B52B120065C5E1 /* OCategoriesView.swift */,
+				DEBE97B828B534490065C5E1 /* OQuantityView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1203,6 +1208,7 @@
 				DEBE97AB28B525E80065C5E1 /* Categories */,
 				DE4E840F28B506BA001BE774 /* OGoalButton.swift */,
 				DEBE97A728B51C5E0065C5E1 /* OAgeButton.swift */,
+				DEBE97B628B532510065C5E1 /* OQuantityButton.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -2042,6 +2048,7 @@
 				DE06C6E7287C3847009866FC /* BookSeparatorCell.swift in Sources */,
 				DE06C714287DC8E7009866FC /* GetBookKitRequest.swift in Sources */,
 				DE06C747287DDF2C009866FC /* ContentMediator.swift in Sources */,
+				DEBE97B728B532510065C5E1 /* OQuantityButton.swift in Sources */,
 				DEBF917F2881F66500F8DC0F /* TextSizeView.swift in Sources */,
 				DE06C66928769EF2009866FC /* TabItemView.swift in Sources */,
 				DE06C66628769EE2009866FC /* MainView.swift in Sources */,
@@ -2249,6 +2256,7 @@
 				DE4E840728B4DCD0001BE774 /* OSlideView.swift in Sources */,
 				DEFF623128747E0B00FE863E /* IAPProduct.swift in Sources */,
 				DE06C734287DD6E0009866FC /* GetExploreKitResponse.swift in Sources */,
+				DEBE97B928B534490065C5E1 /* OQuantityView.swift in Sources */,
 				DE06C706287DC4C3009866FC /* BookKit.swift in Sources */,
 				DE06C6B82879A9A3009866FC /* SettingsTableElement.swift in Sources */,
 				DE4E840428B4DBE2001BE774 /* OCombineData.swift in Sources */,

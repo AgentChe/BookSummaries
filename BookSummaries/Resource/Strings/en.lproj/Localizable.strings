@@ -65,6 +65,13 @@
 "Onboarding.Categories.Personal Development & Success" = "Personal Development & Success";
 "Onboarding.Categories.Problem - Solving & Creativity" = "Problem - Solving & Creativity";
 "Onboarding.Categories.Parenting & Relationships" = "Parenting & Relationships";
+"Onboarding.Quantity.Title" = "How much time are you\nready to spend on \nbooks daily?";
+"Onboarding.Quantity.Casual.Title" = "Casual";
+"Onboarding.Quantity.Casual.SubTitle" = "\n3 min a day • 5 books";
+"Onboarding.Quantity.Regular.Title" = "Regular";
+"Onboarding.Quantity.Regular.SubTitle" = "\n6 min a day • 10 books";
+"Onboarding.Quantity.Serious.Title" = "Serious";
+"Onboarding.Quantity.Serious.SubTitle" = "\n9 min a day • 15 books";
 
 // MARK: Main
 "Main.ForYou" = "For you";
