@@ -85,19 +85,18 @@ extension SplashViewController {
 // MARK: Private
 private extension SplashViewController {
     func goNext(at step: SplashViewModel.Step) {
-        // TODO
-//        switch step {
-//        case .onboarding:
-//            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = OnboardingViewController.make()
-//        case .main:
-//            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = MainViewController.make()
-//        case .paygate:
+        switch step {
+        case .onboarding:
+            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = OnboardingViewController.make()
+        case .main:
+            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = MainViewController.make()
+        case .paygate:
 //            let vc = PaygateViewController.make()
 //            vc.delegate = self
 //            present(vc, animated: true)
-//        }
-        
-        UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = MainViewController.make()
+            // TODO
+            break
+        }
     }
     
     func activity(state: SplashActivity) {

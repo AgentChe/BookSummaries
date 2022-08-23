@@ -136,6 +136,13 @@
 		DE4E83F328AD64A8001BE774 /* ChallengeBadgeProgressLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83F228AD64A8001BE774 /* ChallengeBadgeProgressLabel.swift */; };
 		DE4E83F528AE41C9001BE774 /* ChallengeBadgeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83F428AE41C9001BE774 /* ChallengeBadgeImageView.swift */; };
 		DE4E83F928B4C676001BE774 /* SplashAnimateLampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83F828B4C676001BE774 /* SplashAnimateLampView.swift */; };
+		DE4E83FC28B4DBA9001BE774 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83FB28B4DBA9001BE774 /* OnboardingViewController.swift */; };
+		DE4E83FE28B4DBBD001BE774 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83FD28B4DBBD001BE774 /* OnboardingViewModel.swift */; };
+		DE4E840028B4DBC6001BE774 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83FF28B4DBC6001BE774 /* OnboardingView.swift */; };
+		DE4E840428B4DBE2001BE774 /* OCombineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E840328B4DBE2001BE774 /* OCombineData.swift */; };
+		DE4E840728B4DCD0001BE774 /* OSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E840628B4DCD0001BE774 /* OSlideView.swift */; };
+		DE4E840A28B4DFE7001BE774 /* OWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E840928B4DFE7001BE774 /* OWelcomeView.swift */; };
+		DE4E840C28B4E5D8001BE774 /* OInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E840B28B4E5D8001BE774 /* OInfoView.swift */; };
 		DE6833162887FA9200FAEF96 /* DownloadBookOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833152887FA9200FAEF96 /* DownloadBookOperation.swift */; };
 		DE6833182887FDBB00FAEF96 /* LocalBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833172887FDBA00FAEF96 /* LocalBook.swift */; };
 		DE68331B2888082C00FAEF96 /* DownloadBooksQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68331A2888082C00FAEF96 /* DownloadBooksQueue.swift */; };
@@ -406,6 +413,13 @@
 		DE4E83F228AD64A8001BE774 /* ChallengeBadgeProgressLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeBadgeProgressLabel.swift; sourceTree = "<group>"; };
 		DE4E83F428AE41C9001BE774 /* ChallengeBadgeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeBadgeImageView.swift; sourceTree = "<group>"; };
 		DE4E83F828B4C676001BE774 /* SplashAnimateLampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAnimateLampView.swift; sourceTree = "<group>"; };
+		DE4E83FB28B4DBA9001BE774 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		DE4E83FD28B4DBBD001BE774 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		DE4E83FF28B4DBC6001BE774 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		DE4E840328B4DBE2001BE774 /* OCombineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCombineData.swift; sourceTree = "<group>"; };
+		DE4E840628B4DCD0001BE774 /* OSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSlideView.swift; sourceTree = "<group>"; };
+		DE4E840928B4DFE7001BE774 /* OWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWelcomeView.swift; sourceTree = "<group>"; };
+		DE4E840B28B4E5D8001BE774 /* OInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OInfoView.swift; sourceTree = "<group>"; };
 		DE6833152887FA9200FAEF96 /* DownloadBookOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadBookOperation.swift; sourceTree = "<group>"; };
 		DE6833172887FDBA00FAEF96 /* LocalBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBook.swift; sourceTree = "<group>"; };
 		DE68331A2888082C00FAEF96 /* DownloadBooksQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadBooksQueue.swift; sourceTree = "<group>"; };
@@ -1128,6 +1142,44 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DE4E83FA28B4D76A001BE774 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DE4E840228B4DBD4001BE774 /* Utils */,
+				DE4E840128B4DBCE001BE774 /* Views */,
+				DE4E83FB28B4DBA9001BE774 /* OnboardingViewController.swift */,
+				DE4E83FD28B4DBBD001BE774 /* OnboardingViewModel.swift */,
+				DE4E83FF28B4DBC6001BE774 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		DE4E840128B4DBCE001BE774 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE4E840828B4DCE8001BE774 /* Atoms */,
+				DE4E840628B4DCD0001BE774 /* OSlideView.swift */,
+				DE4E840928B4DFE7001BE774 /* OWelcomeView.swift */,
+				DE4E840B28B4E5D8001BE774 /* OInfoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE4E840228B4DBD4001BE774 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DE4E840328B4DBE2001BE774 /* OCombineData.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DE4E840828B4DCE8001BE774 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
 		DE68331C28883C0C00FAEF96 /* DownloadBook */ = {
 			isa = PBXGroup;
 			children = (
@@ -1766,6 +1818,7 @@
 		DEFF623628747E4B00FE863E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE4E83FA28B4D76A001BE774 /* Onboarding */,
 				DE30478E28A6662200E0AEA4 /* Challenge */,
 				DE683349288FFB3000FAEF96 /* Player */,
 				DE683326288AAB4A00FAEF96 /* Library */,
@@ -2047,9 +2100,11 @@
 				DEBF91AF2885DFA500F8DC0F /* RankingsViewModel.swift in Sources */,
 				DEFF622E28747E0B00FE863E /* PurchaseValidationObserver.swift in Sources */,
 				DE6833632891754400FAEF96 /* TabPlayerView.swift in Sources */,
+				DE4E83FE28B4DBBD001BE774 /* OnboardingViewModel.swift in Sources */,
 				DEBF91912885842700F8DC0F /* FeedbackTableRatingCell.swift in Sources */,
 				DEBF91A72885B15C00F8DC0F /* FeedbackResponse.swift in Sources */,
 				DEBF91C32886AEAF00F8DC0F /* RBooksTableSeparatorCell.swift in Sources */,
+				DE4E840028B4DBC6001BE774 /* OnboardingView.swift in Sources */,
 				DEFF61D5287479A900FE863E /* TapAreaButton.swift in Sources */,
 				DEFF623328747E0B00FE863E /* IAPErrorHelper.swift in Sources */,
 				DE06C73E287DD844009866FC /* GetCategoryBooksResponse.swift in Sources */,
@@ -2069,6 +2124,7 @@
 				DE06C65328749945009866FC /* TryAgainView.swift in Sources */,
 				DEBF91DB2886F28F00F8DC0F /* ExploreCollectionCategoriesCell.swift in Sources */,
 				DEBF916E2881BC9200F8DC0F /* ChaptersTableView.swift in Sources */,
+				DE4E83FC28B4DBA9001BE774 /* OnboardingViewController.swift in Sources */,
 				DE683348288AF1BD00FAEF96 /* LBMButton.swift in Sources */,
 				DE06C6BF287C09E5009866FC /* Book.swift in Sources */,
 				DE30478828A6604F00E0AEA4 /* Challenge.swift in Sources */,
@@ -2111,6 +2167,7 @@
 				DE06C6882876DB49009866FC /* ForYouFreeBookCell.swift in Sources */,
 				DE06C64C287498CD009866FC /* SplashActivity.swift in Sources */,
 				DEFF61E9287479AD00FE863E /* ObservableAndSingle+Extension.swift in Sources */,
+				DE4E840C28B4E5D8001BE774 /* OInfoView.swift in Sources */,
 				DEFF623F287481A400FE863E /* SplashViewModel.swift in Sources */,
 				DEFF620D28747C2B00FE863E /* APIRequestBody.swift in Sources */,
 				DEFF621B28747C2B00FE863E /* ContentError.swift in Sources */,
@@ -2144,10 +2201,12 @@
 				DE30479228A6663900E0AEA4 /* ChallengeViewModel.swift in Sources */,
 				DE06C711287DC87D009866FC /* GetRankingResponse.swift in Sources */,
 				DE4E83F928B4C676001BE774 /* SplashAnimateLampView.swift in Sources */,
+				DE4E840728B4DCD0001BE774 /* OSlideView.swift in Sources */,
 				DEFF623128747E0B00FE863E /* IAPProduct.swift in Sources */,
 				DE06C734287DD6E0009866FC /* GetExploreKitResponse.swift in Sources */,
 				DE06C706287DC4C3009866FC /* BookKit.swift in Sources */,
 				DE06C6B82879A9A3009866FC /* SettingsTableElement.swift in Sources */,
+				DE4E840428B4DBE2001BE774 /* OCombineData.swift in Sources */,
 				DEFF621328747C2B00FE863E /* NumberLaunches.swift in Sources */,
 				DEBF91B92886A7B800F8DC0F /* RankingsCollectionCell.swift in Sources */,
 				DEBF91D22886DE1100F8DC0F /* ExploreCollectionView.swift in Sources */,
@@ -2162,6 +2221,7 @@
 				DEFF621728747C2B00FE863E /* XOREncryption.swift in Sources */,
 				DE683359289028B800FAEF96 /* PlayPauseButton.swift in Sources */,
 				DE06C71C287DCFDD009866FC /* GetForYouRequest.swift in Sources */,
+				DE4E840A28B4DFE7001BE774 /* OWelcomeView.swift in Sources */,
 				DEFF623528747E0B00FE863E /* SessionManager.swift in Sources */,
 				DEBF91842885792D00F8DC0F /* FeedbackViewModel.swift in Sources */,
 				DE06C73C287DD809009866FC /* GetCategoryBooksRequest.swift in Sources */,

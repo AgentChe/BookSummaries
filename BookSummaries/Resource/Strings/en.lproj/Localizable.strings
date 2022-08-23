@@ -27,6 +27,13 @@
 "Splash.Preloader2" = "Syncing the question bank...";
 "Splash.Preloader3" = "Setting up your account...";
 
+// MARK: Onboarding
+"Onboarding.Welcome.Title" = "Book summaries\nat your fingertips";
+"Onboarding.Welcome.SubTitle" = "Don’t waste much time on books. Get a\nsummary of the books you are\ninterested in.";
+"Onboarding.Welcome.Button" = "Start now";
+"Onboarding.Info.Title" = "Now let’s get to know\nyou.";
+"Onboarding.Info.SubTitle" = "We need some basic information to start\ncustomizing your plan.";
+
 // MARK: Main
 "Main.ForYou" = "For you";
 "Main.Library" = "Library";
