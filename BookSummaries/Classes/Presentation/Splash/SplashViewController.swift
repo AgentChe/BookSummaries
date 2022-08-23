@@ -59,6 +59,12 @@ final class SplashViewController: UIViewController {
             }
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        mainView.animateView.start()
+    }
 }
 
 // MARK: Make
@@ -98,10 +104,10 @@ private extension SplashViewController {
         state == .none ? mainView.preloader.stopAnimating() : mainView.preloader.startAnimating()
         
         let attrs = TextAttributes()
-            .textColor(Appearance.black)
-            .font(Fonts.PlusJakartaSans.regular(size: 15.scale))
-            .lineHeight(22.5.scale)
-            .letterSpacing(-0.14.scale)
+            .textColor(Appearance.secondary5)
+            .font(Fonts.PlusJakartaSans.regular(size: 14.scale))
+            .lineHeight(19.6.scale)
+            .letterSpacing(-0.17.scale)
             .textAlignment(.center)
         mainView.preloaderLabel.attributedText = state.text.attributed(with: attrs)
     }
