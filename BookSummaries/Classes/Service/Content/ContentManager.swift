@@ -335,86 +335,16 @@ extension ContentManager {
             }
     }
     
-    // TODO
     func obtainChallenge(id: Int) -> Single<Challenge?> {
-//        guard let userToken = sessionManager.getSession()?.userToken else {
-//            return .error(SignError.tokenNotFound)
-//        }
-//
-//        let request = GetChallengeRequest(userToken: userToken, challengeId: id)
-//
-//        return defaultRequestWrapper
-//            .callServerApi(requestBody: request)
-//            .map { GetChallengeResponse.map(from: $0) }
-        
-        Single<Challenge?>.create { event in
-            let challenge = Challenge(id: 1,
-                                      name: "40 day challenge",
-                                      title: "Self-confidence",
-                                      text: "Are you tired of self-doubt, self-criticism, and holding back? Do you often feel like you're not good enough? Are you ready to change your life and reclaim your self-confidence?",
-                                      imageUrl: URL(string: "www.google.com")!,
-                                      books: [
-                                        .init(id: 6,
-                                              name: "Unlimited Memory",
-                                              author: Author(name: "Daniel Kahneman",
-                                                             photoUrl: URL(string: "https://books.korrekted.com/books/book2.png")!),
-                                              imageUrl: URL(string: "https://books.korrekted.com/books/book1.png")!,
-                                              rankingId: 1,
-                                              shareLink: URL(string: "https://books.korrekted.com")!),
-                                        .init(id: 7,
-                                              name: "Unlimited Memory",
-                                              author: Author(name: "Daniel Kahneman",
-                                                             photoUrl: URL(string: "https://books.korrekted.com/books/book2.png")!),
-                                              imageUrl: URL(string: "https://books.korrekted.com/books/book1.png")!,
-                                              rankingId: 1,
-                                              shareLink: URL(string: "https://books.korrekted.com")!),
-                                        .init(id: 8,
-                                              name: "Unlimited Memory",
-                                              author: Author(name: "Daniel Kahneman",
-                                                             photoUrl: URL(string: "https://books.korrekted.com/books/book2.png")!),
-                                              imageUrl: URL(string: "https://books.korrekted.com/books/book1.png")!,
-                                              rankingId: 1,
-                                              shareLink: URL(string: "https://books.korrekted.com")!),
-                                        .init(id: 9,
-                                              name: "Unlimited Memory",
-                                              author: Author(name: "Daniel Kahneman",
-                                                             photoUrl: URL(string: "https://books.korrekted.com/books/book2.png")!),
-                                              imageUrl: URL(string: "https://books.korrekted.com/books/book1.png")!,
-                                              rankingId: 1,
-                                              shareLink: URL(string: "https://books.korrekted.com")!),
-                                        .init(id: 10,
-                                              name: "Unlimited Memory",
-                                              author: Author(name: "Daniel Kahneman",
-                                                             photoUrl: URL(string: "https://books.korrekted.com/books/book2.png")!),
-                                              imageUrl: URL(string: "https://books.korrekted.com/books/book1.png")!,
-                                              rankingId: 1,
-                                              shareLink: URL(string: "https://books.korrekted.com")!),
-                                        .init(id: 3,
-                                              name: "Unlimited Memory",
-                                              author: Author(name: "Daniel Kahneman",
-                                                             photoUrl: URL(string: "https://books.korrekted.com/books/book2.png")!),
-                                              imageUrl: URL(string: "https://books.korrekted.com/books/book1.png")!,
-                                              rankingId: 1,
-                                              shareLink: URL(string: "https://books.korrekted.com")!),
-                                        .init(id: 1,
-                                              name: "Unlimited Memory",
-                                              author: Author(name: "Daniel Kahneman",
-                                                             photoUrl: URL(string: "https://books.korrekted.com/books/book2.png")!),
-                                              imageUrl: URL(string: "https://books.korrekted.com/books/book1.png")!,
-                                              rankingId: 1,
-                                              shareLink: URL(string: "https://books.korrekted.com")!),
-                                        .init(id: 2,
-                                              name: "Unlimited Memory",
-                                              author: Author(name: "Daniel Kahneman",
-                                                             photoUrl: URL(string: "https://books.korrekted.com/books/book2.png")!),
-                                              imageUrl: URL(string: "https://books.korrekted.com/books/book1.png")!,
-                                              rankingId: 1,
-                                              shareLink: URL(string: "https://books.korrekted.com")!),
-                                      ])
-            event(.success(challenge))
-            
-            return Disposables.create()
+        guard let userToken = sessionManager.getSession()?.userToken else {
+            return .error(SignError.tokenNotFound)
         }
+
+        let request = GetChallengeRequest(userToken: userToken, challengeId: id)
+
+        return defaultRequestWrapper
+            .callServerApi(requestBody: request)
+            .map { GetChallengeResponse.map(from: $0) }
     }
 }
 
