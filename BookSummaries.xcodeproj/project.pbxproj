@@ -185,6 +185,9 @@
 		DEBE97BB28B5F6EB0065C5E1 /* OPaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97BA28B5F6EB0065C5E1 /* OPaceView.swift */; };
 		DEBE97BD28B601370065C5E1 /* OTimeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97BC28B601370065C5E1 /* OTimeButton.swift */; };
 		DEBE97BF28B603A10065C5E1 /* OTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97BE28B603A10065C5E1 /* OTimeView.swift */; };
+		DEBE97C128B6156D0065C5E1 /* ONotificationsSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97C028B6156D0065C5E1 /* ONotificationsSwitch.swift */; };
+		DEBE97C328B617DA0065C5E1 /* ONotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97C228B617DA0065C5E1 /* ONotificationsView.swift */; };
+		DEBE97C628B624450065C5E1 /* OInfoLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97C528B624450065C5E1 /* OInfoLibraryView.swift */; };
 		DEBF9156287EEBED00F8DC0F /* RankingBooksGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */; };
 		DEBF9158288159B200F8DC0F /* BookReadingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */; };
 		DEBF915C2881777100F8DC0F /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF915B2881777100F8DC0F /* ReaderViewController.swift */; };
@@ -476,6 +479,10 @@
 		DEBE97BA28B5F6EB0065C5E1 /* OPaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPaceView.swift; sourceTree = "<group>"; };
 		DEBE97BC28B601370065C5E1 /* OTimeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTimeButton.swift; sourceTree = "<group>"; };
 		DEBE97BE28B603A10065C5E1 /* OTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTimeView.swift; sourceTree = "<group>"; };
+		DEBE97C028B6156D0065C5E1 /* ONotificationsSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ONotificationsSwitch.swift; sourceTree = "<group>"; };
+		DEBE97C228B617DA0065C5E1 /* ONotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ONotificationsView.swift; sourceTree = "<group>"; };
+		DEBE97C428B622B50065C5E1 /* BookSummaries.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BookSummaries.entitlements; sourceTree = "<group>"; };
+		DEBE97C528B624450065C5E1 /* OInfoLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OInfoLibraryView.swift; sourceTree = "<group>"; };
 		DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingBooksGroup.swift; sourceTree = "<group>"; };
 		DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReadingProgress.swift; sourceTree = "<group>"; };
 		DEBF915B2881777100F8DC0F /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
@@ -1195,6 +1202,8 @@
 				DEBE97B828B534490065C5E1 /* OQuantityView.swift */,
 				DEBE97BA28B5F6EB0065C5E1 /* OPaceView.swift */,
 				DEBE97BE28B603A10065C5E1 /* OTimeView.swift */,
+				DEBE97C228B617DA0065C5E1 /* ONotificationsView.swift */,
+				DEBE97C528B624450065C5E1 /* OInfoLibraryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1215,6 +1224,7 @@
 				DEBE97A728B51C5E0065C5E1 /* OAgeButton.swift */,
 				DEBE97B628B532510065C5E1 /* OQuantityButton.swift */,
 				DEBE97BC28B601370065C5E1 /* OTimeButton.swift */,
+				DEBE97C028B6156D0065C5E1 /* ONotificationsSwitch.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -1630,6 +1640,7 @@
 		DEFF6197287473F500FE863E /* BookSummaries */ = {
 			isa = PBXGroup;
 			children = (
+				DEBE97C428B622B50065C5E1 /* BookSummaries.entitlements */,
 				DEFF61AD287476F000FE863E /* Classes */,
 				DEFF61AC287476CA00FE863E /* Resource */,
 			);
@@ -2070,6 +2081,7 @@
 				DEBF91662881B7FD00F8DC0F /* ChaptersViewController.swift in Sources */,
 				DE06C702287DC0EC009866FC /* Author.swift in Sources */,
 				DE06C69A28771491009866FC /* ForYouChallengesCollectionView.swift in Sources */,
+				DEBE97C328B617DA0065C5E1 /* ONotificationsView.swift in Sources */,
 				DE4E83F528AE41C9001BE774 /* ChallengeBadgeImageView.swift in Sources */,
 				DE06C68D287709A3009866FC /* ForYouBooksCollectionView.swift in Sources */,
 				DE68333F288AB9D200FAEF96 /* LibraryEmptyView.swift in Sources */,
@@ -2224,8 +2236,10 @@
 				DE68331B2888082C00FAEF96 /* DownloadBooksQueue.swift in Sources */,
 				DE06C6882876DB49009866FC /* ForYouFreeBookCell.swift in Sources */,
 				DE06C64C287498CD009866FC /* SplashActivity.swift in Sources */,
+				DEBE97C128B6156D0065C5E1 /* ONotificationsSwitch.swift in Sources */,
 				DEFF61E9287479AD00FE863E /* ObservableAndSingle+Extension.swift in Sources */,
 				DE4E840C28B4E5D8001BE774 /* OInfoView.swift in Sources */,
+				DEBE97C628B624450065C5E1 /* OInfoLibraryView.swift in Sources */,
 				DEFF623F287481A400FE863E /* SplashViewModel.swift in Sources */,
 				DEFF620D28747C2B00FE863E /* APIRequestBody.swift in Sources */,
 				DEFF621B28747C2B00FE863E /* ContentError.swift in Sources */,
@@ -2440,6 +2454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BookSummaries/BookSummaries.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M73NH26C3Q;
@@ -2470,6 +2485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BookSummaries/BookSummaries.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M73NH26C3Q;

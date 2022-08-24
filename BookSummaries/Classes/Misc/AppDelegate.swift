@@ -28,6 +28,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         IAPManager.initialize()
         
         sdkProvider.application(application, didFinishLaunchingWithOptions: launchOptions)
+        SDKStorage.shared.pushNotificationsManager.application(didFinishLaunchingWithOptions: launchOptions)
         
         return true
     }

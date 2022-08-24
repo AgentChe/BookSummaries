@@ -11,6 +11,8 @@ struct OCombineData {
     let quantity: Int
     let pace: Int
     let time: Int
+    let pushToken: String?
+    let notificationsOptions: [Int]?
 }
 
 final class OnboardingCombineData {
@@ -19,6 +21,8 @@ final class OnboardingCombineData {
     private var quantity: OQuantityButton.Quantity?
     private var pace: Int?
     private var time: OTimeButton.Time?
+    private var pushToken: String?
+    private var notificationsOptions: [ONotificationsSwitch.Notification]?
     
     func combineData() -> OCombineData? {
         guard
@@ -36,7 +40,9 @@ final class OnboardingCombineData {
             categories: categories.map { $0.title },
             quantity: quantity.code,
             pace: pace,
-            time: time.code
+            time: time.code,
+            pushToken: pushToken,
+            notificationsOptions: notificationsOptions?.map { $0.code }
         )
     }
 }
@@ -73,5 +79,13 @@ extension OnboardingCombineData: OPaceViewDelegate {
 extension OnboardingCombineData: OTimeViewDelegate {
     func timeViewDidSelected(time: OTimeButton.Time) {
         self.time = time
+    }
+}
+
+// MARK: ONotificationsViewDelegate
+extension OnboardingCombineData: ONotificationsViewDelegate {
+    func notificationsViewDidRegistered(pushToken: String?, options: [ONotificationsSwitch.Notification]) {
+        self.pushToken = pushToken
+        self.notificationsOptions = options
     }
 }

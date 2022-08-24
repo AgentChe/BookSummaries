@@ -83,6 +83,16 @@
 "Onboarding.Time.Cell3" = "In the evening";
 "Onboarding.Time.Cell4" = "Before bedtime";
 "Onboarding.Time.Cell5" = "No particular preference";
+"Onboarding.Notifications.Title" = "Just one last thing, what\nwould you like us to keep\nyou up to date on?";
+"Onboarding.Notifications.Cell1.Title" = "Stay motivated";
+"Onboarding.Notifications.Cell1.SubTitle" = "\nSupport and reminders to keep\nyour reading going";
+"Onboarding.Notifications.Cell2.Title" = "Dive deeper";
+"Onboarding.Notifications.Cell2.SubTitle" = "\nStay tuned to finish a book or\ndiscover new";
+"Onboarding.Notifications.SaveButton" = "Save";
+"Onboarding.Notifications.SkipButton" = "Not now";
+"Onboarding.InfoLibrary.Title" = "Let’s create your\nperfect library";
+"Onboarding.InfoLibrary.SubTitle" = "Please pick books based on your interests\nand  then you can see them in your library";
+"Onboarding.InfoLibrary.Button" = "Got it";
 
 // MARK: Main
 "Main.ForYou" = "For you";
