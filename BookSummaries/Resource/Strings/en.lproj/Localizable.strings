@@ -72,6 +72,17 @@
 "Onboarding.Quantity.Regular.SubTitle" = "\n6 min a day • 10 books";
 "Onboarding.Quantity.Serious.Title" = "Serious";
 "Onboarding.Quantity.Serious.SubTitle" = "\n9 min a day • 15 books";
+"Onboarding.Pace.Title" = "What pace do you\nwant to read?";
+"Onboarding.Pace1" = "Slowly but\nsurely";
+"Onboarding.Pace2" = "In the middle";
+"Onboarding.Pace3" = "As fast as\npossible";
+"Onboarding.Pace.Button" = "Proceed";
+"Onboarding.Time.Title" = "When do you want to\nread?";
+"Onboarding.Time.Cell1" = "Early morning";
+"Onboarding.Time.Cell2" = "At noon";
+"Onboarding.Time.Cell3" = "In the evening";
+"Onboarding.Time.Cell4" = "Before bedtime";
+"Onboarding.Time.Cell5" = "No particular preference";
 
 // MARK: Main
 "Main.ForYou" = "For you";

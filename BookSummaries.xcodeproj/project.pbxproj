@@ -87,7 +87,6 @@
 		DE06C6F4287C5010009866FC /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6F3287C5010009866FC /* CategoryView.swift */; };
 		DE06C6F8287C5028009866FC /* CategoryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6F7287C5028009866FC /* CategoryCollectionView.swift */; };
 		DE06C6FC287C50B9009866FC /* CategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6FB287C50B9009866FC /* CategoryCollectionCell.swift */; };
-		DE06C700287D892B009866FC /* API.json in Resources */ = {isa = PBXBuildFile; fileRef = DE06C6FF287D892B009866FC /* API.json */; };
 		DE06C702287DC0EC009866FC /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C701287DC0EC009866FC /* Author.swift */; };
 		DE06C704287DC12C009866FC /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C703287DC12C009866FC /* Ranking.swift */; };
 		DE06C706287DC4C3009866FC /* BookKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C705287DC4C3009866FC /* BookKit.swift */; };
@@ -183,6 +182,9 @@
 		DEBE97B528B530A50065C5E1 /* OCategoriesCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97B428B530A50065C5E1 /* OCategoriesCollectionLayout.swift */; };
 		DEBE97B728B532510065C5E1 /* OQuantityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97B628B532510065C5E1 /* OQuantityButton.swift */; };
 		DEBE97B928B534490065C5E1 /* OQuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97B828B534490065C5E1 /* OQuantityView.swift */; };
+		DEBE97BB28B5F6EB0065C5E1 /* OPaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97BA28B5F6EB0065C5E1 /* OPaceView.swift */; };
+		DEBE97BD28B601370065C5E1 /* OTimeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97BC28B601370065C5E1 /* OTimeButton.swift */; };
+		DEBE97BF28B603A10065C5E1 /* OTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97BE28B603A10065C5E1 /* OTimeView.swift */; };
 		DEBF9156287EEBED00F8DC0F /* RankingBooksGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */; };
 		DEBF9158288159B200F8DC0F /* BookReadingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */; };
 		DEBF915C2881777100F8DC0F /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF915B2881777100F8DC0F /* ReaderViewController.swift */; };
@@ -376,7 +378,6 @@
 		DE06C6F3287C5010009866FC /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		DE06C6F7287C5028009866FC /* CategoryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionView.swift; sourceTree = "<group>"; };
 		DE06C6FB287C50B9009866FC /* CategoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionCell.swift; sourceTree = "<group>"; };
-		DE06C6FF287D892B009866FC /* API.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = API.json; sourceTree = "<group>"; };
 		DE06C701287DC0EC009866FC /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		DE06C703287DC12C009866FC /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
 		DE06C705287DC4C3009866FC /* BookKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookKit.swift; sourceTree = "<group>"; };
@@ -472,6 +473,9 @@
 		DEBE97B428B530A50065C5E1 /* OCategoriesCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCategoriesCollectionLayout.swift; sourceTree = "<group>"; };
 		DEBE97B628B532510065C5E1 /* OQuantityButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OQuantityButton.swift; sourceTree = "<group>"; };
 		DEBE97B828B534490065C5E1 /* OQuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OQuantityView.swift; sourceTree = "<group>"; };
+		DEBE97BA28B5F6EB0065C5E1 /* OPaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPaceView.swift; sourceTree = "<group>"; };
+		DEBE97BC28B601370065C5E1 /* OTimeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTimeButton.swift; sourceTree = "<group>"; };
+		DEBE97BE28B603A10065C5E1 /* OTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTimeView.swift; sourceTree = "<group>"; };
 		DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingBooksGroup.swift; sourceTree = "<group>"; };
 		DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReadingProgress.swift; sourceTree = "<group>"; };
 		DEBF915B2881777100F8DC0F /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
@@ -617,7 +621,6 @@
 			isa = PBXGroup;
 			children = (
 				DE06C634287484A4009866FC /* Localizable.strings */,
-				DE06C6FF287D892B009866FC /* API.json */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -1190,6 +1193,8 @@
 				DEBE97A928B523260065C5E1 /* OBriefView.swift */,
 				DEBE97B228B52B120065C5E1 /* OCategoriesView.swift */,
 				DEBE97B828B534490065C5E1 /* OQuantityView.swift */,
+				DEBE97BA28B5F6EB0065C5E1 /* OPaceView.swift */,
+				DEBE97BE28B603A10065C5E1 /* OTimeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1209,6 +1214,7 @@
 				DE4E840F28B506BA001BE774 /* OGoalButton.swift */,
 				DEBE97A728B51C5E0065C5E1 /* OAgeButton.swift */,
 				DEBE97B628B532510065C5E1 /* OQuantityButton.swift */,
+				DEBE97BC28B601370065C5E1 /* OTimeButton.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -1960,7 +1966,6 @@
 				DE06C6412874875D009866FC /* Merriweather-Bold.ttf in Resources */,
 				DE06C6422874875D009866FC /* Merriweather-Regular.ttf in Resources */,
 				DEFF61A5287473F600FE863E /* LaunchScreen.storyboard in Resources */,
-				DE06C700287D892B009866FC /* API.json in Resources */,
 				DE06C632287484A4009866FC /* Localizable.strings in Resources */,
 				DEFF61A2287473F600FE863E /* Assets.xcassets in Resources */,
 			);
@@ -2021,6 +2026,7 @@
 				DE4E83DA28ACF18F001BE774 /* ChallengeTableElement.swift in Sources */,
 				DEFF61D3287479A900FE863E /* NavigationControllerSettings.swift in Sources */,
 				DE06C6F0287C4FFF009866FC /* CategoryViewController.swift in Sources */,
+				DEBE97BD28B601370065C5E1 /* OTimeButton.swift in Sources */,
 				DEBF91A02885A35900F8DC0F /* FeedbackTableWhatBetterCell.swift in Sources */,
 				DEBF91782881BDBD00F8DC0F /* ChapterTableCell.swift in Sources */,
 				DEBF91BE2886AE8900F8DC0F /* RBooksTableElement.swift in Sources */,
@@ -2261,6 +2267,7 @@
 				DE06C6B82879A9A3009866FC /* SettingsTableElement.swift in Sources */,
 				DE4E840428B4DBE2001BE774 /* OCombineData.swift in Sources */,
 				DEFF621328747C2B00FE863E /* NumberLaunches.swift in Sources */,
+				DEBE97BB28B5F6EB0065C5E1 /* OPaceView.swift in Sources */,
 				DEBE97A428B51AD40065C5E1 /* OAgeView.swift in Sources */,
 				DEBF91B92886A7B800F8DC0F /* RankingsCollectionCell.swift in Sources */,
 				DEBF91D22886DE1100F8DC0F /* ExploreCollectionView.swift in Sources */,
@@ -2279,6 +2286,7 @@
 				DE06C71C287DCFDD009866FC /* GetForYouRequest.swift in Sources */,
 				DE4E840A28B4DFE7001BE774 /* OWelcomeView.swift in Sources */,
 				DEFF623528747E0B00FE863E /* SessionManager.swift in Sources */,
+				DEBE97BF28B603A10065C5E1 /* OTimeView.swift in Sources */,
 				DEBF91842885792D00F8DC0F /* FeedbackViewModel.swift in Sources */,
 				DE06C73C287DD809009866FC /* GetCategoryBooksRequest.swift in Sources */,
 				DEBF91A22885A65400F8DC0F /* FeedbackTabelWhatLearnCell.swift in Sources */,
