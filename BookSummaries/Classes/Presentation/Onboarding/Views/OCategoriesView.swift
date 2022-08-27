@@ -6,37 +6,23 @@
 //
 
 import UIKit
+import RxSwift
 
 protocol OCategoriesViewDelegate: AnyObject {
     func categoriesViewDidSelected(elements: [OCategoriesCollectionElement])
 }
 
 final class OCategoriesView: OSlideView {
-    weak var categoriesDelegate: OCategoriesViewDelegate?
-    
     lazy var titleLabel = makeTitleLabel()
     lazy var collectionView = makeCollectionView()
     lazy var backButton = makeBackButton()
     lazy var nextButton = makeNextButton()
     
-    private lazy var elements = [
-        OCategoriesCollectionElement(title: "Onboarding.Categories.Health".localized),
-        OCategoriesCollectionElement(title: "Onboarding.Categories.Learning & Developing".localized),
-        OCategoriesCollectionElement(title: "Onboarding.Categories.Welness & Spiritual Growth".localized),
-        OCategoriesCollectionElement(title: "Onboarding.Categories.Leadership & Management".localized),
-        OCategoriesCollectionElement(title: "Onboarding.Categories.Money & Wealth".localized),
-        OCategoriesCollectionElement(title: "Onboarding.Categories.Psychology".localized),
-        OCategoriesCollectionElement(title: "Onboarding.Categories.Sales & Marketing".localized),
-        OCategoriesCollectionElement(title: "Onboarding.Categories.Finance".localized),
-        OCategoriesCollectionElement(title: "Onboarding.Categories.Business & Entrepreneurship".localized),
-        OCategoriesCollectionElement(title: "Onboarding.Categories.Business Strategy & Culture".localized),
-        OCategoriesCollectionElement(title: "Onboarding.Categories.Economics".localized),
-        OCategoriesCollectionElement(title: "Onboarding.Categories.Sociology & General".localized),
-        OCategoriesCollectionElement(title: "Onboarding.Categories.Technology & Innovation".localized),
-        OCategoriesCollectionElement(title: "Onboarding.Categories.Personal Development & Success".localized),
-        OCategoriesCollectionElement(title: "Onboarding.Categories.Problem - Solving & Creativity".localized),
-        OCategoriesCollectionElement(title: "Onboarding.Categories.Parenting & Relationships".localized)
-    ]
+    private var categoriesDelegates = [Weak<OCategoriesViewDelegate>]()
+    
+    private lazy var contentManager = ContentManager()
+    
+    private lazy var disposeBag = DisposeBag()
     
     override init(step: OnboardingView.Step) {
         super.init(step: step)
@@ -51,6 +37,21 @@ final class OCategoriesView: OSlideView {
     }
 }
 
+// MARK: Public
+extension OCategoriesView {
+    func add(observer: OCategoriesViewDelegate) {
+        let weakly = observer as AnyObject
+        categoriesDelegates.append(Weak<OCategoriesViewDelegate>(weakly))
+        categoriesDelegates = categoriesDelegates.filter { $0.weak != nil }
+    }
+    
+    func remove(observer: OCategoriesViewDelegate) {
+        if let index = categoriesDelegates.firstIndex(where: { $0.weak === observer }) {
+            categoriesDelegates.remove(at: index)
+        }
+    }
+}
+
 // MARK: Private
 private extension OCategoriesView {
     func initialize() {
@@ -59,19 +60,29 @@ private extension OCategoriesView {
         collectionView.changeSelection = { [weak self] in
             self?.checkEnabled()
         }
-        collectionView.setup(elements: elements)
+        
+        contentManager
+            .obtainCategories(forceUpdate: false)
+            .asDriver(onErrorJustReturn: [])
+            .drive(Binder(collectionView) { base, categories in
+                let elements = categories.map { category -> OCategoriesCollectionElement in
+                    OCategoriesCollectionElement(title: category.name, id: category.id)
+                }
+                base.setup(elements: elements)
+            })
+            .disposed(by: disposeBag)
     }
     
     @objc
     func nextTapped() {
-        let selected = elements.filter { $0.selected }
-        categoriesDelegate?.categoriesViewDidSelected(elements: selected)
+        let selected = collectionView.elements.filter { $0.selected }
+        categoriesDelegates.forEach { $0.weak?.categoriesViewDidSelected(elements: selected) }
         
         onNext()
     }
     
     func checkEnabled() {
-        let marked = elements.contains(where: { $0.selected })
+        let marked = collectionView.elements.contains(where: { $0.selected })
         nextButton.isEnabled = marked
         nextButton.alpha = marked ? 1 : 0.4
     }

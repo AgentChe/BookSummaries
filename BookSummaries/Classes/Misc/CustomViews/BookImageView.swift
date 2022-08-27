@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class BookImageView: UIImageView {
+class BookImageView: UIImageView {
     lazy var line1View = makeLine1View()
     lazy var line2View = makeLine2View()
     lazy var line3View = makeLine3View()

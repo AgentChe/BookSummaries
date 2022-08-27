@@ -49,22 +49,6 @@
 "Onboarding.Brief.Title" = "Read in brief - learn more";
 "Onboarding.Brief.SubTitle" = "Book summaries enables learners to\ndigest bite-sized pieces of information\nto improve their brain and enhance skills.";
 "Onboarding.Categories.Title" = "What would you like\nknow more about?";
-"Onboarding.Categories.Health" = "Health";
-"Onboarding.Categories.Learning & Developing" = "Learning & Developing";
-"Onboarding.Categories.Welness & Spiritual Growth" = "Welness & Spiritual Growth";
-"Onboarding.Categories.Leadership & Management" = "Leadership & Management";
-"Onboarding.Categories.Money & Wealth" = "Money & Wealth";
-"Onboarding.Categories.Psychology" = "Psychology";
-"Onboarding.Categories.Sales & Marketing" = "Sales & Marketing";
-"Onboarding.Categories.Finance" = "Finance";
-"Onboarding.Categories.Business & Entrepreneurship" = "Business & Entrepreneurship";
-"Onboarding.Categories.Business Strategy & Culture" = "Business Strategy & Culture";
-"Onboarding.Categories.Economics" = "Economics";
-"Onboarding.Categories.Sociology & General" = "Sociology & General";
-"Onboarding.Categories.Technology & Innovation" = "Technology & Innovation";
-"Onboarding.Categories.Personal Development & Success" = "Personal Development & Success";
-"Onboarding.Categories.Problem - Solving & Creativity" = "Problem - Solving & Creativity";
-"Onboarding.Categories.Parenting & Relationships" = "Parenting & Relationships";
 "Onboarding.Quantity.Title" = "How much time are you\nready to spend on \nbooks daily?";
 "Onboarding.Quantity.Casual.Title" = "Casual";
 "Onboarding.Quantity.Casual.SubTitle" = "\n3 min a day • 5 books";
@@ -93,6 +77,13 @@
 "Onboarding.InfoLibrary.Title" = "Let’s create your\nperfect library";
 "Onboarding.InfoLibrary.SubTitle" = "Please pick books based on your interests\nand  then you can see them in your library";
 "Onboarding.InfoLibrary.Button" = "Got it";
+"Onboarding.Book.Title" = "Does this book interest\nyou?";
+"Onboarding.Progress.Title1" = "Analyzing your\nprofile...";
+"Onboarding.Progress.Title2" = "Identifying your\npreferences ...";
+"Onboarding.Progress.Title3" = "Creating your\npersonalized library...";
+"Onboarding.Progress.Bottom1" = "Your profile %i%%";
+"Onboarding.Progress.Bottom2" = "Book preferences %i%%";
+"Onboarding.Progress.Bottom3" = "Creating your plan %i%%";
 
 // MARK: Main
 "Main.ForYou" = "For you";

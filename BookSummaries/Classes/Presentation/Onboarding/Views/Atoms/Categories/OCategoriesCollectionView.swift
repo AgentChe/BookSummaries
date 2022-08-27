@@ -10,7 +10,7 @@ import UIKit
 final class OCategoriesCollectionView: UICollectionView {
     var changeSelection: (() -> Void)?
     
-    private lazy var elements = [OCategoriesCollectionElement]()
+    lazy var elements = [OCategoriesCollectionElement]()
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)

@@ -6,11 +6,13 @@
 //
 
 final class OCategoriesCollectionElement {
+    let id: Int
     let title: String
     var selected: Bool
     
-    init(title: String) {
+    init(title: String, id: Int) {
         self.title = title
+        self.id = id
         self.selected = false
     }
 }

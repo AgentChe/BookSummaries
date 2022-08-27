@@ -13,7 +13,7 @@ final class OnboardingViewController: UIViewController {
         static let wasViewedKey = "onboarding_view_controller_was_viewed_key"
     }
     
-    lazy var mainView = OnboardingView()
+    lazy var mainView = OnboardingView(vc: self)
     
     private lazy var disposeBag = DisposeBag()
     

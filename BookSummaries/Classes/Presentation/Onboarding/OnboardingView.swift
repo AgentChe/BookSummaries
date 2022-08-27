@@ -9,7 +9,7 @@ import UIKit
 
 final class OnboardingView: UIView {
     enum Step: Int {
-        case welcome, info, goal, age, brief, categories, quantity, pace, time, notifications, infoLibrary
+        case welcome, info, goal, age, brief, categories, quantity, pace, time, notifications, infoLibrary, books, progress
     }
     
     var didFinish: (() -> Void)?
@@ -20,6 +20,7 @@ final class OnboardingView: UIView {
     private lazy var paceView = OPaceView(step: .pace)
     private lazy var timeView = OTimeView(step: .time)
     private lazy var notificationsView = ONotificationsView(step: .notifications)
+    private lazy var booksView = OBooksView(step: .books)
 
     private lazy var contentViews: [OSlideView] = {
         [
@@ -33,7 +34,9 @@ final class OnboardingView: UIView {
             paceView,
             timeView,
             notificationsView,
-            OInfoLibraryView(step: .infoLibrary)
+            OInfoLibraryView(step: .infoLibrary),
+            booksView,
+            OProgressView(step: .progress)
         ]
     }()
     
@@ -41,8 +44,12 @@ final class OnboardingView: UIView {
     
     private lazy var combineData = OnboardingCombineData()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    private weak var vc: UIViewController?
+    
+    init(vc: UIViewController) {
+        self.vc = vc
+        
+        super.init(frame: .zero)
         
         initialize()
     }
@@ -96,11 +103,13 @@ private extension OnboardingView {
             }
         
         goalView.goalDelegate = combineData
-        categoriesView.categoriesDelegate = combineData
+        categoriesView.add(observer: combineData)
+        categoriesView.add(observer: booksView)
         quantityView.quantityDelegate = combineData
         paceView.paceDelegate = combineData
         timeView.timeDelegate = combineData
         notificationsView.notificationsDelegate = combineData
+        booksView.vc = vc
     }
     
     func scroll(to newStep: Step) {
