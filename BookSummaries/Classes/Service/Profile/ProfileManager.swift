@@ -8,6 +8,13 @@
 import RxSwift
 
 protocol ProfileManagerProtocol {
+    func set(goal: Int,
+             categories: [Int],
+             quantity: Int,
+             pace: Int,
+             time: Int,
+             pushToken: String?,
+             notificationsOptions: [Int]?) -> Single<Void>
     func syncTokens(oldToken: String, newToken: String) -> Single<Void>
     func login(userToken: String) -> Single<Void>
     func set(textSize: TextSize) -> Single<Void>
@@ -26,6 +33,30 @@ final class ProfileManager: ProfileManagerProtocol {
 
 // MARK: Public
 extension ProfileManager {
+    func set(goal: Int,
+             categories: [Int],
+             quantity: Int,
+             pace: Int,
+             time: Int,
+             pushToken: String?,
+             notificationsOptions: [Int]?) -> Single<Void> {
+        guard let userToken = sessionManager.getSession()?.userToken else {
+            return .error(SignError.tokenNotFound)
+        }
+        
+        let request = SetRequest(userToken: userToken,
+                                 goal: goal,
+                                 categories: categories,
+                                 quantity: quantity,
+                                 pace: pace,
+                                 time: time,
+                                 pushToken: pushToken,
+                                 notificationsOptions: notificationsOptions)
+        return defaultRequestWrapper
+            .callServerApi(requestBody: request)
+            .mapToVoid()
+    }
+    
     func syncTokens(oldToken: String, newToken: String) -> Single<Void> {
         let request = SyncTokensRequest(oldToken: oldToken,
                                         newToken: newToken)

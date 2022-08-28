@@ -21,6 +21,7 @@ final class OnboardingView: UIView {
     private lazy var timeView = OTimeView(step: .time)
     private lazy var notificationsView = ONotificationsView(step: .notifications)
     private lazy var booksView = OBooksView(step: .books)
+    private lazy var progressView = OProgressView(step: .progress, combineData: combineData)
 
     private lazy var contentViews: [OSlideView] = {
         [
@@ -36,7 +37,7 @@ final class OnboardingView: UIView {
             notificationsView,
             OInfoLibraryView(step: .infoLibrary),
             booksView,
-            OProgressView(step: .progress)
+            progressView
         ]
     }()
     
@@ -110,6 +111,7 @@ private extension OnboardingView {
         timeView.timeDelegate = combineData
         notificationsView.notificationsDelegate = combineData
         booksView.vc = vc
+        progressView.vc = vc
     }
     
     func scroll(to newStep: Step) {

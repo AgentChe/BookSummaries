@@ -7,7 +7,7 @@
 
 struct OCombineData {
     let goal: Int
-    let categories: [String]
+    let categories: [Int]
     let quantity: Int
     let pace: Int
     let time: Int
@@ -37,7 +37,7 @@ final class OnboardingCombineData {
 
         return OCombineData(
             goal: goal.code,
-            categories: categories.map { $0.title },
+            categories: categories.map { $0.id },
             quantity: quantity.code,
             pace: pace,
             time: time.code,

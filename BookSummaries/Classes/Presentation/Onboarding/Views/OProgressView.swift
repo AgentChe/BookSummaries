@@ -6,17 +6,33 @@
 //
 
 import UIKit
+import RxSwift
 
 final class OProgressView: OSlideView {
+    weak var vc: UIViewController?
+    
     lazy var titleLabel = makeLabel()
     lazy var progressView = makeProgressView()
     lazy var bottomView = makeBottomView()
     
     private lazy var titleAttrs = makeTitleAttrs()
     
+    private lazy var disposeBag = DisposeBag()
+    
+    private lazy var profileManager = ProfileManager()
+    
+    private lazy var observableRetrySingle = ObservableRetrySingle()
+    
+    private lazy var animationCompleted = false
+    private lazy var requestCompleted = false
+    
     private var timer: Timer?
     
-    override init(step: OnboardingView.Step) {
+    private let combineData: OnboardingCombineData
+    
+    init(step: OnboardingView.Step, combineData: OnboardingCombineData) {
+        self.combineData = combineData
+        
         super.init(step: step)
         
         makeConstraints()
@@ -31,6 +47,7 @@ final class OProgressView: OSlideView {
         super.moveToThis()
         
         calculatePercent()
+        request()
     }
 }
 
@@ -38,6 +55,37 @@ final class OProgressView: OSlideView {
 private extension OProgressView {
     func initialize() {
         backgroundColor = Appearance.primaryGreen
+    }
+    
+    func request() {
+        guard let data = combineData.combineData() else {
+            return
+        }
+        
+        func source() -> Single<Void> {
+            profileManager
+                .set(goal: data.goal,
+                     categories: data.categories,
+                     quantity: data.quantity,
+                     pace: data.pace,
+                     time: data.time,
+                     pushToken: data.pushToken,
+                     notificationsOptions: data.notificationsOptions)
+        }
+        
+        func error(err: Error) -> Observable<Void> {
+            openError()
+        }
+        
+        observableRetrySingle
+            .retry(source: { source() },
+                   trigger: { error(err: $0) })
+            .asDriver(onErrorDriveWith: .never())
+            .drive(Binder(self) { base, void in
+                base.requestCompleted = true
+                base.checkCompleted()
+            })
+            .disposed(by: disposeBag)
     }
     
     func calculatePercent() {
@@ -63,7 +111,7 @@ private extension OProgressView {
             if seconds >= duration {
                 timer.invalidate()
                 
-                self.finish()
+                self.calculatePercentFinish()
             }
         }
     }
@@ -80,12 +128,37 @@ private extension OProgressView {
         titleLabel.attributedText = string.attributed(with: titleAttrs)
     }
     
-    func finish() {
+    func calculatePercentFinish() {
         timer = nil
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) { [weak self] in
-            self?.onNext()
+            self?.animationCompleted = true
+            self?.checkCompleted()
         }
+    }
+    
+    func checkCompleted() {
+        guard animationCompleted && requestCompleted else {
+            return
+        }
+        
+        onNext()
+    }
+    
+    func openError() -> Observable<Void> {
+        Observable<Void>
+            .create { [weak self] observe in
+                guard let self = self else {
+                    return Disposables.create()
+                }
+                
+                let vc = TryAgainViewController.make {
+                    observe.onNext(())
+                }
+                self.vc?.present(vc, animated: true)
+                
+                return Disposables.create()
+            }
     }
 }
 

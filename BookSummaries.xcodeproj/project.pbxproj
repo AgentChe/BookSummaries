@@ -194,6 +194,7 @@
 		DEBE97D528B8A91A0065C5E1 /* OProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97D428B8A91A0065C5E1 /* OProgressView.swift */; };
 		DEBE97D728B8AEA40065C5E1 /* OCircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97D628B8AEA40065C5E1 /* OCircleProgressView.swift */; };
 		DEBE97D928B8C7AE0065C5E1 /* OBottomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97D828B8C7AE0065C5E1 /* OBottomProgressView.swift */; };
+		DEBE97E628BBE9400065C5E1 /* SetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97E528BBE9400065C5E1 /* SetRequest.swift */; };
 		DEBF9156287EEBED00F8DC0F /* RankingBooksGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */; };
 		DEBF9158288159B200F8DC0F /* BookReadingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */; };
 		DEBF915C2881777100F8DC0F /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF915B2881777100F8DC0F /* ReaderViewController.swift */; };
@@ -495,6 +496,7 @@
 		DEBE97D428B8A91A0065C5E1 /* OProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OProgressView.swift; sourceTree = "<group>"; };
 		DEBE97D628B8AEA40065C5E1 /* OCircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCircleProgressView.swift; sourceTree = "<group>"; };
 		DEBE97D828B8C7AE0065C5E1 /* OBottomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBottomProgressView.swift; sourceTree = "<group>"; };
+		DEBE97E528BBE9400065C5E1 /* SetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRequest.swift; sourceTree = "<group>"; };
 		DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingBooksGroup.swift; sourceTree = "<group>"; };
 		DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReadingProgress.swift; sourceTree = "<group>"; };
 		DEBF915B2881777100F8DC0F /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
@@ -709,6 +711,7 @@
 			children = (
 				DE06C6582874A116009866FC /* LoginRequest.swift */,
 				DE06C65A2874A152009866FC /* SyncTokensRequest.swift */,
+				DEBE97E528BBE9400065C5E1 /* SetRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -2061,6 +2064,7 @@
 				DEBF91BE2886AE8900F8DC0F /* RBooksTableElement.swift in Sources */,
 				DEBF919728858DAA00F8DC0F /* FeedbackTableImproveCell.swift in Sources */,
 				DEBF91D92886F27000F8DC0F /* ExploreCollectionTitleCell.swift in Sources */,
+				DEBE97E628BBE9400065C5E1 /* SetRequest.swift in Sources */,
 				DE06C6B32879A97A009866FC /* SettingsView.swift in Sources */,
 				DE683328288AAB5600FAEF96 /* LibraryViewController.swift in Sources */,
 				DE06C64A287498C5009866FC /* SplashReceiptValidationObserver.swift in Sources */,
