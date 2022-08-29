@@ -9,7 +9,6 @@ import UIKit
 import OtterScaleiOS
 import RushSDK
 
-// TODO: заменить GoogleService-Info.plist
 @main
 final class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var sdkProvider = SDKProvider()

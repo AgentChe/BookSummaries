@@ -26,7 +26,6 @@
 		DE06C6592874A116009866FC /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6582874A116009866FC /* LoginRequest.swift */; };
 		DE06C65B2874A152009866FC /* SyncTokensRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C65A2874A152009866FC /* SyncTokensRequest.swift */; };
 		DE06C65D2874A180009866FC /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C65C2874A180009866FC /* ProfileManager.swift */; };
-		DE06C65F28769D9F009866FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE06C65E28769D9F009866FC /* GoogleService-Info.plist */; };
 		DE06C66228769ED1009866FC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C66128769ED1009866FC /* MainViewController.swift */; };
 		DE06C66428769EDB009866FC /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C66328769EDB009866FC /* MainViewCoordinator.swift */; };
 		DE06C66628769EE2009866FC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C66528769EE2009866FC /* MainView.swift */; };
@@ -195,6 +194,7 @@
 		DEBE97D728B8AEA40065C5E1 /* OCircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97D628B8AEA40065C5E1 /* OCircleProgressView.swift */; };
 		DEBE97D928B8C7AE0065C5E1 /* OBottomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97D828B8C7AE0065C5E1 /* OBottomProgressView.swift */; };
 		DEBE97E628BBE9400065C5E1 /* SetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97E528BBE9400065C5E1 /* SetRequest.swift */; };
+		DEBE97E828BD3E2B0065C5E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEBE97E728BD3E2B0065C5E1 /* GoogleService-Info.plist */; };
 		DEBF9156287EEBED00F8DC0F /* RankingBooksGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */; };
 		DEBF9158288159B200F8DC0F /* BookReadingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */; };
 		DEBF915C2881777100F8DC0F /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF915B2881777100F8DC0F /* ReaderViewController.swift */; };
@@ -327,7 +327,6 @@
 		DE06C6582874A116009866FC /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		DE06C65A2874A152009866FC /* SyncTokensRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncTokensRequest.swift; sourceTree = "<group>"; };
 		DE06C65C2874A180009866FC /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
-		DE06C65E28769D9F009866FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE06C66128769ED1009866FC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DE06C66328769EDB009866FC /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
 		DE06C66528769EE2009866FC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -497,6 +496,7 @@
 		DEBE97D628B8AEA40065C5E1 /* OCircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCircleProgressView.swift; sourceTree = "<group>"; };
 		DEBE97D828B8C7AE0065C5E1 /* OBottomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBottomProgressView.swift; sourceTree = "<group>"; };
 		DEBE97E528BBE9400065C5E1 /* SetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRequest.swift; sourceTree = "<group>"; };
+		DEBE97E728BD3E2B0065C5E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DEBF9155287EEBED00F8DC0F /* RankingBooksGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingBooksGroup.swift; sourceTree = "<group>"; };
 		DEBF9157288159B200F8DC0F /* BookReadingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReadingProgress.swift; sourceTree = "<group>"; };
 		DEBF915B2881777100F8DC0F /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
@@ -1676,7 +1676,7 @@
 				DEFF61A1287473F600FE863E /* Assets.xcassets */,
 				DEFF61A3287473F600FE863E /* LaunchScreen.storyboard */,
 				DEFF61A6287473F600FE863E /* Info.plist */,
-				DE06C65E28769D9F009866FC /* GoogleService-Info.plist */,
+				DEBE97E728BD3E2B0065C5E1 /* GoogleService-Info.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1993,7 +1993,7 @@
 				DE06C64528748764009866FC /* PlusJakartaSans-Medium.ttf in Resources */,
 				DE06C64628748764009866FC /* PlusJakartaSans-SemiBold.ttf in Resources */,
 				DE06C64728748764009866FC /* PlusJakartaSans-Regular.ttf in Resources */,
-				DE06C65F28769D9F009866FC /* GoogleService-Info.plist in Resources */,
+				DEBE97E828BD3E2B0065C5E1 /* GoogleService-Info.plist in Resources */,
 				DE06C6402874875D009866FC /* Merriweather-Black.ttf in Resources */,
 				DE06C6412874875D009866FC /* Merriweather-Bold.ttf in Resources */,
 				DE06C6422874875D009866FC /* Merriweather-Regular.ttf in Resources */,
