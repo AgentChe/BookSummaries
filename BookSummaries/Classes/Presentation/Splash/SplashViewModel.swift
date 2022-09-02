@@ -132,19 +132,17 @@ private extension SplashViewModel {
     func makeStep() -> Single<Step> {
         Single<Step>
             .create { event in
-                // TODO
-//                let step: Step
-//
-//                if !OnboardingViewController.wasViewed() {
-//                    step = .onboarding
-//                } else if self.needPayment() {
-//                    step = .paygate
-//                } else {
-//                    step = .main
-//                }
-//
-//                event(.success(step))
-                event(.success(.onboarding))
+                let step: Step
+
+                if !OnboardingViewController.wasViewed() {
+                    step = .onboarding
+                } else if self.needPayment() {
+                    step = .paygate
+                } else {
+                    step = .main
+                }
+
+                event(.success(step))
                 
                 return Disposables.create()
             }

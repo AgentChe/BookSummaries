@@ -68,6 +68,7 @@ extension SettingsViewController: SettingsTableDelegate {
     }
     
     func settingsTableDidTappedGetAccess() {
-        // TODO: open paygate
+        let vc = PaygateViewController.make()
+        present(vc, animated: true)
     }
 }

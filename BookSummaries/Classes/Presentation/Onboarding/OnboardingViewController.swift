@@ -46,13 +46,12 @@ extension OnboardingViewController {
     }
 }
 
-// TODO
-//// MARK: PaygateViewControllerDelegate
-//extension OnboardingViewController: PaygateViewControllerDelegate {
-//    func paygateDidClosed(with result: PaygateViewControllerResult) {
-//        goToNext(at: .main)
-//    }
-//}
+// MARK: PaygateViewControllerDelegate
+extension OnboardingViewController: PaygateViewControllerDelegate {
+    func paygateDidClosed(with result: PaygateViewControllerResult) {
+        goToNext(at: .main)
+    }
+}
 
 // MARK: Public
 extension OnboardingViewController {
@@ -67,16 +66,14 @@ private extension OnboardingViewController {
         UserDefaults.standard.setValue(true, forKey: Constants.wasViewedKey)
     }
     
-    // TODO
     func goToNext(at step: OnboardingViewModel.Step) {
-//        switch step {
-//        case .main:
-//            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = MainViewController.make()
-//        case .paygate:
-//            let vc = PaygateViewController.make()
-//            vc.delegate = self
-//            present(vc, animated: true)
-//        }
-        UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = MainViewController.make()
+        switch step {
+        case .main:
+            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = MainViewController.make()
+        case .paygate:
+            let vc = PaygateViewController.make()
+            vc.delegate = self
+            present(vc, animated: true)
+        }
     }
 }

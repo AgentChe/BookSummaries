@@ -182,3 +182,23 @@
 "Challenge.Badges.GoodStart" = "Good start";
 "Challenge.Badges.CompleteDay3" = "Complete\nDay 3";
 "Challenge.Badges.CompleteChallenge" = "Complete\nchallenge";
+
+// MARK: Paygate
+"Paygate.Title" = "Unlock Premium Status";
+"Paygate.Cell1" = "200+ book summaries";
+"Paygate.Cell2" = "Offline reading";
+"Paygate.Cell3" = "Listen or read anytime & anywhere";
+"Paygate.Info" = "Secured by the App Store. Cancel anytime.";
+"Paygate.TermsOfUse" = "Terms of use";
+"Paygate.PrivacyPolicy" = "Privacy Policy";
+"Paygate.RestorePurchases" = "Restore Purchase";
+"Paygate.Failed" = "Failed to make purchase";
+"Paygate.Monthly.Name1" = "7 days for free";
+"Paygate.Monthly.Name2" = "Quick prep";
+"Paygate.Monthly.Bottom1" = "After 7-day trial";
+"Paygate.Monthly.Bottom2" = "Trial is over";
+"Paygate.Lifetime.Name" = "Lifetime";
+"Paygate.Lifetime.PriceDescription" = "\nIn terms of  1  year";
+"Paygate.Lifetime.BottomDescription" = "once";
+"Paygate.Discount" = "SAVE %i%%";
+"Paygate.Price.Period" = "month";

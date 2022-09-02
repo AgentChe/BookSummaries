@@ -74,13 +74,12 @@ extension SplashViewController {
     }
 }
 
-// TODO
-//// MARK: PaygateViewControllerDelegate
-//extension SplashViewController: PaygateViewControllerDelegate {
-//    func paygateDidClosed(with result: PaygateViewControllerResult) {
-//        goNext(at: .main)
-//    }
-//}
+// MARK: PaygateViewControllerDelegate
+extension SplashViewController: PaygateViewControllerDelegate {
+    func paygateDidClosed(with result: PaygateViewControllerResult) {
+        goNext(at: .main)
+    }
+}
 
 // MARK: Private
 private extension SplashViewController {
@@ -91,11 +90,9 @@ private extension SplashViewController {
         case .main:
             UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = MainViewController.make()
         case .paygate:
-//            let vc = PaygateViewController.make()
-//            vc.delegate = self
-//            present(vc, animated: true)
-            // TODO
-            break
+            let vc = PaygateViewController.make()
+            vc.delegate = self
+            present(vc, animated: true)
         }
     }
     

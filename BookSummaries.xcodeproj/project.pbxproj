@@ -114,6 +114,15 @@
 		DE06C743287DD877009866FC /* GetRankingBooksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C742287DD877009866FC /* GetRankingBooksResponse.swift */; };
 		DE06C745287DDA38009866FC /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C744287DDA38009866FC /* ContentManager.swift */; };
 		DE06C747287DDF2C009866FC /* ContentMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C746287DDF2C009866FC /* ContentMediator.swift */; };
+		DE0FEC4F28C2094B00BA7ABD /* PaygateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0FEC4E28C2094B00BA7ABD /* PaygateViewController.swift */; };
+		DE0FEC5128C2095600BA7ABD /* PaygateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0FEC5028C2095600BA7ABD /* PaygateViewModel.swift */; };
+		DE0FEC5328C2095F00BA7ABD /* PaygateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0FEC5228C2095F00BA7ABD /* PaygateView.swift */; };
+		DE0FEC5528C2096800BA7ABD /* PaygateViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0FEC5428C2096800BA7ABD /* PaygateViewControllerDelegate.swift */; };
+		DE0FEC5728C2097100BA7ABD /* PaygateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0FEC5628C2097100BA7ABD /* PaygateInteractor.swift */; };
+		DE0FEC5B28C2098600BA7ABD /* PaygateInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0FEC5A28C2098600BA7ABD /* PaygateInfoCell.swift */; };
+		DE0FEC5D28C2099100BA7ABD /* PaygateProductButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0FEC5C28C2099100BA7ABD /* PaygateProductButton.swift */; };
+		DE0FEC5F28C209A000BA7ABD /* PaygatePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0FEC5E28C209A000BA7ABD /* PaygatePrice.swift */; };
+		DE0FEC6128C209A700BA7ABD /* PaygateProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0FEC6028C209A700BA7ABD /* PaygateProductInfo.swift */; };
 		DE30478828A6604F00E0AEA4 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE30478728A6604F00E0AEA4 /* Challenge.swift */; };
 		DE30478B28A6621B00E0AEA4 /* GetChallengeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE30478A28A6621B00E0AEA4 /* GetChallengeRequest.swift */; };
 		DE30478D28A6625000E0AEA4 /* GetChallengeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE30478C28A6625000E0AEA4 /* GetChallengeResponse.swift */; };
@@ -415,6 +424,15 @@
 		DE06C742287DD877009866FC /* GetRankingBooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRankingBooksResponse.swift; sourceTree = "<group>"; };
 		DE06C744287DDA38009866FC /* ContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
 		DE06C746287DDF2C009866FC /* ContentMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMediator.swift; sourceTree = "<group>"; };
+		DE0FEC4E28C2094B00BA7ABD /* PaygateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateViewController.swift; sourceTree = "<group>"; };
+		DE0FEC5028C2095600BA7ABD /* PaygateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateViewModel.swift; sourceTree = "<group>"; };
+		DE0FEC5228C2095F00BA7ABD /* PaygateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateView.swift; sourceTree = "<group>"; };
+		DE0FEC5428C2096800BA7ABD /* PaygateViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateViewControllerDelegate.swift; sourceTree = "<group>"; };
+		DE0FEC5628C2097100BA7ABD /* PaygateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateInteractor.swift; sourceTree = "<group>"; };
+		DE0FEC5A28C2098600BA7ABD /* PaygateInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateInfoCell.swift; sourceTree = "<group>"; };
+		DE0FEC5C28C2099100BA7ABD /* PaygateProductButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateProductButton.swift; sourceTree = "<group>"; };
+		DE0FEC5E28C209A000BA7ABD /* PaygatePrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygatePrice.swift; sourceTree = "<group>"; };
+		DE0FEC6028C209A700BA7ABD /* PaygateProductInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateProductInfo.swift; sourceTree = "<group>"; };
 		DE30478728A6604F00E0AEA4 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		DE30478A28A6621B00E0AEA4 /* GetChallengeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeRequest.swift; sourceTree = "<group>"; };
 		DE30478C28A6625000E0AEA4 /* GetChallengeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeResponse.swift; sourceTree = "<group>"; };
@@ -1093,6 +1111,38 @@
 				DE06C742287DD877009866FC /* GetRankingBooksResponse.swift */,
 			);
 			path = GetRankingBooks;
+			sourceTree = "<group>";
+		};
+		DE0FEC4D28C2092F00BA7ABD /* Paygate */ = {
+			isa = PBXGroup;
+			children = (
+				DE0FEC5928C2097D00BA7ABD /* Views */,
+				DE0FEC5828C2097900BA7ABD /* Models */,
+				DE0FEC4E28C2094B00BA7ABD /* PaygateViewController.swift */,
+				DE0FEC5028C2095600BA7ABD /* PaygateViewModel.swift */,
+				DE0FEC5228C2095F00BA7ABD /* PaygateView.swift */,
+				DE0FEC5428C2096800BA7ABD /* PaygateViewControllerDelegate.swift */,
+				DE0FEC5628C2097100BA7ABD /* PaygateInteractor.swift */,
+			);
+			path = Paygate;
+			sourceTree = "<group>";
+		};
+		DE0FEC5828C2097900BA7ABD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE0FEC5E28C209A000BA7ABD /* PaygatePrice.swift */,
+				DE0FEC6028C209A700BA7ABD /* PaygateProductInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DE0FEC5928C2097D00BA7ABD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE0FEC5A28C2098600BA7ABD /* PaygateInfoCell.swift */,
+				DE0FEC5C28C2099100BA7ABD /* PaygateProductButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DE30478928A6620900E0AEA4 /* GetChallenge */ = {
@@ -1900,6 +1950,7 @@
 		DEFF623628747E4B00FE863E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE0FEC4D28C2092F00BA7ABD /* Paygate */,
 				DE4E83FA28B4D76A001BE774 /* Onboarding */,
 				DE30478E28A6662200E0AEA4 /* Challenge */,
 				DE683349288FFB3000FAEF96 /* Player */,
@@ -2132,6 +2183,7 @@
 				DE6833182887FDBB00FAEF96 /* LocalBook.swift in Sources */,
 				DEBF917D2881F22800F8DC0F /* TextSize.swift in Sources */,
 				DE06C6FC287C50B9009866FC /* CategoryCollectionCell.swift in Sources */,
+				DE0FEC4F28C2094B00BA7ABD /* PaygateViewController.swift in Sources */,
 				DE4E83F328AD64A8001BE774 /* ChallengeBadgeProgressLabel.swift in Sources */,
 				DE06C6ED287C3C75009866FC /* BookAuthorCell.swift in Sources */,
 				DEBF91A52885AFF800F8DC0F /* FeedbackRequest.swift in Sources */,
@@ -2185,6 +2237,7 @@
 				DEBF916328817DE500F8DC0F /* Collection+Extension.swift in Sources */,
 				DEFF61E5287479AD00FE863E /* UIColor+Extension.swift in Sources */,
 				DE4E83F128AD61F0001BE774 /* ChallengeBadgeView.swift in Sources */,
+				DE0FEC5528C2096800BA7ABD /* PaygateViewControllerDelegate.swift in Sources */,
 				DE4E83E428AD2807001BE774 /* ChallengeButton.swift in Sources */,
 				DE4E83EC28AD5002001BE774 /* ChallengeBooksCollectionCell.swift in Sources */,
 				DEFF621228747C2B00FE863E /* Scalable.swift in Sources */,
@@ -2196,6 +2249,7 @@
 				DEFF622E28747E0B00FE863E /* PurchaseValidationObserver.swift in Sources */,
 				DE6833632891754400FAEF96 /* TabPlayerView.swift in Sources */,
 				DE4E83FE28B4DBBD001BE774 /* OnboardingViewModel.swift in Sources */,
+				DE0FEC5F28C209A000BA7ABD /* PaygatePrice.swift in Sources */,
 				DEBF91912885842700F8DC0F /* FeedbackTableRatingCell.swift in Sources */,
 				DEBF91A72885B15C00F8DC0F /* FeedbackResponse.swift in Sources */,
 				DEBF91C32886AEAF00F8DC0F /* RBooksTableSeparatorCell.swift in Sources */,
@@ -2230,9 +2284,11 @@
 				DE06C6D9287C260C009866FC /* BookProgressCell.swift in Sources */,
 				DEBE97D528B8A91A0065C5E1 /* OProgressView.swift in Sources */,
 				DEFF61BC2874798B00FE863E /* FirebaseManager.swift in Sources */,
+				DE0FEC5128C2095600BA7ABD /* PaygateViewModel.swift in Sources */,
 				DEFF61BF2874799A00FE863E /* Appearance.swift in Sources */,
 				DE68335D28902CD000FAEF96 /* PlayerPreloaderView.swift in Sources */,
 				DE06C69C2877149A009866FC /* ForYouChallengesCollectionCell.swift in Sources */,
+				DE0FEC5728C2097100BA7ABD /* PaygateInteractor.swift in Sources */,
 				DE06C6DD287C292A009866FC /* BookAuthorNameCell.swift in Sources */,
 				DE06C6B62879A989009866FC /* SettingsTableView.swift in Sources */,
 				DEBF9194288584B700F8DC0F /* RatingView.swift in Sources */,
@@ -2253,11 +2309,13 @@
 				DEBF919928858F7600F8DC0F /* FeedbackImproveButton.swift in Sources */,
 				DEBF91CD2886B98500F8DC0F /* SearchView.swift in Sources */,
 				DE06C6BB2879A9C8009866FC /* SettingsLinkCell.swift in Sources */,
+				DE0FEC5B28C2098600BA7ABD /* PaygateInfoCell.swift in Sources */,
 				DEFF621628747C2B00FE863E /* ObservableRetrySingle.swift in Sources */,
 				DEBF919B288590FE00F8DC0F /* FeedbackImprovesView.swift in Sources */,
 				DE30479028A6662F00E0AEA4 /* ChallengeViewController.swift in Sources */,
 				DE06C6DB287C27BE009866FC /* BookNameCell.swift in Sources */,
 				DE06C69628771441009866FC /* ChallengeCover.swift in Sources */,
+				DE0FEC5328C2095F00BA7ABD /* PaygateView.swift in Sources */,
 				DE06C6CA287C0D96009866FC /* BookView.swift in Sources */,
 				DE683356289026A200FAEF96 /* AudioPlayerManager.swift in Sources */,
 				DE06C6D0287C0DBF009866FC /* BookTableElement.swift in Sources */,
@@ -2283,6 +2341,8 @@
 				DE06C6A52877536D009866FC /* ForYouCategoriesCell.swift in Sources */,
 				DE06C6A0287749AC009866FC /* ForYouRankingCell.swift in Sources */,
 				DE06C6CE287C0DB5009866FC /* BookTableView.swift in Sources */,
+				DE0FEC5D28C2099100BA7ABD /* PaygateProductButton.swift in Sources */,
+				DE0FEC6128C209A700BA7ABD /* PaygateProductInfo.swift in Sources */,
 				DE06C692287709CA009866FC /* ForYouBooksCell.swift in Sources */,
 				DEFF61BD2874798B00FE863E /* FacebookManager.swift in Sources */,
 				DE683336288AAEE800FAEF96 /* LibraryTableBookCell.swift in Sources */,
