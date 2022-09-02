@@ -195,7 +195,8 @@ private extension ChallengeViewModel {
                                                       author: book.author,
                                                       imageUrl: book.imageUrl,
                                                       rankingId: book.rankingId,
-                                                      shareLink: book.shareLink)
+                                                      shareLink: book.shareLink,
+                                                      paid: false)
                             return .just((bookCover, book.audioUrl))
                         }
                 }

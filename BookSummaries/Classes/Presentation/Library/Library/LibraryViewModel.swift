@@ -303,6 +303,7 @@ private extension BookCover {
         imageUrl = book.imageUrl
         rankingId = book.rankingId
         shareLink = book.shareLink
+        paid = false
     }
 }
 

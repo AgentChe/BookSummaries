@@ -77,12 +77,28 @@ extension ForYouViewController {
 // MARK: ForYouTableDelegate
 extension ForYouViewController: ForYouTableDelegate {
     func forYouTableDidTapped(book: BookCover) {
-        let vc = BookViewController.make(bookId: book.id)
+        let vc: UIViewController
+        
+        let needPayment = !SessionManager().hasActiveSubscriptions()
+        if needPayment && book.paid {
+            vc = PaygateViewController.make()
+        } else {
+            vc = BookViewController.make(bookId: book.id)
+        }
+        
         present(vc, animated: true)
     }
     
     func forYouTableDidTapped(challenge: ChallengeCover) {
-        let vc = ChallengeViewController.make(challengeId: challenge.id)
+        let vc: UIViewController
+        
+        let needPayment = !SessionManager().hasActiveSubscriptions()
+        if needPayment && challenge.paid {
+            vc = PaygateViewController.make()
+        } else {
+            vc = ChallengeViewController.make(challengeId: challenge.id)
+        }
+        
         present(vc, animated: true)
     }
     

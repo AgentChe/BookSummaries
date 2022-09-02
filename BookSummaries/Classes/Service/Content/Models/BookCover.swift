@@ -14,4 +14,5 @@ struct BookCover: Codable, Hashable {
     let imageUrl: URL
     let rankingId: Int
     let shareLink: URL
+    let paid: Bool
 }

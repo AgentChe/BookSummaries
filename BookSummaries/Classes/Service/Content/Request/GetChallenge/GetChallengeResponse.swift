@@ -40,7 +40,8 @@ final class GetChallengeResponse {
                 let imageUrl = URL(string: imagePath),
                 let rankingId = coverJSON["ranking_id"] as? Int,
                 let shareLinkPath = coverJSON["link"] as? String,
-                let shareLink = URL(string: shareLinkPath)
+                let shareLink = URL(string: shareLinkPath),
+                let paid = coverJSON["paid"] as? Bool
             else {
                 return nil
             }
@@ -53,7 +54,8 @@ final class GetChallengeResponse {
                              author: author,
                              imageUrl: imageUrl,
                              rankingId: rankingId,
-                             shareLink: shareLink)
+                             shareLink: shareLink,
+                             paid: paid)
         }
         
         return Challenge(id: id,

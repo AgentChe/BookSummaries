@@ -30,7 +30,8 @@ final class GetForYouResponse {
                 let name = challengeJSON["name"] as? String,
                 let title = challengeJSON["title"] as? String,
                 let imagePath = challengeJSON["image"] as? String,
-                let imageUrl = URL(string: imagePath)
+                let imageUrl = URL(string: imagePath),
+                let paid = challengeJSON["paid"] as? Bool
             else {
                 return nil
             }
@@ -38,7 +39,8 @@ final class GetForYouResponse {
             return ChallengeCover(id: id,
                                   name: name,
                                   title: title,
-                                  imageUrl: imageUrl)
+                                  imageUrl: imageUrl,
+                                  paid: paid)
         }
         
         let youMayLikeArray = data["you_may_like"] as? [[String: Any]] ?? []
@@ -84,7 +86,8 @@ private extension GetForYouResponse {
             let imageUrl = URL(string: imagePath),
             let rankingId = coverJSON["ranking_id"] as? Int,
             let shareLinkPath = coverJSON["link"] as? String,
-            let shareLink = URL(string: shareLinkPath)
+            let shareLink = URL(string: shareLinkPath),
+            let paid = coverJSON["paid"] as? Bool
         else {
             return nil
         }
@@ -97,6 +100,7 @@ private extension GetForYouResponse {
                          author: author,
                          imageUrl: imageUrl,
                          rankingId: rankingId,
-                         shareLink: shareLink)
+                         shareLink: shareLink,
+                         paid: paid)
     }
 }

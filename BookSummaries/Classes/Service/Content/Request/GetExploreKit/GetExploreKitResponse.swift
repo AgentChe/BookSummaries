@@ -29,7 +29,8 @@ final class GetExploreKitResponse {
                 let imageUrl = URL(string: imagePath),
                 let rankingId = coverJSON["ranking_id"] as? Int,
                 let shareLinkPath = coverJSON["link"] as? String,
-                let shareLink = URL(string: shareLinkPath)
+                let shareLink = URL(string: shareLinkPath),
+                let paid = coverJSON["paid"] as? Bool
             else {
                 return nil
             }
@@ -42,7 +43,8 @@ final class GetExploreKitResponse {
                              author: author,
                              imageUrl: imageUrl,
                              rankingId: rankingId,
-                             shareLink: shareLink)
+                             shareLink: shareLink,
+                             paid: paid)
         }
         
         let popularRequests = data["popular_requests"] as? [String] ?? []

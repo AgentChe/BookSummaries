@@ -98,7 +98,15 @@ extension ChallengeViewController: ChallengeTableDelegate {
     }
     
     func challengeTableDidTapped(element: ChallengeBookElement) {
-        let vc = BookViewController.make(bookId: element.book.id)
+        let vc: UIViewController
+        
+        let needPayment = !SessionManager().hasActiveSubscriptions()
+        if needPayment && element.book.paid {
+            vc = PaygateViewController.make()
+        } else {
+            vc = BookViewController.make(bookId: element.book.id)
+        }
+        
         present(vc, animated: true)
     }
 }

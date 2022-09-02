@@ -139,7 +139,15 @@ extension BookViewController: BookTableDelegate {
     }
     
     func bookTableDidTapped(book: BookCover) {
-        let vc = BookViewController.make(bookId: book.id)
+        let vc: UIViewController
+        
+        let needPayment = !SessionManager().hasActiveSubscriptions()
+        if needPayment && book.paid {
+            vc = PaygateViewController.make()
+        } else {
+            vc = BookViewController.make(bookId: book.id)
+        }
+        
         present(vc, animated: true)
     }
     

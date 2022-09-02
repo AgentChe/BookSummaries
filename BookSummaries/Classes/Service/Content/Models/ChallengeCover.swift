@@ -12,4 +12,5 @@ struct ChallengeCover: Codable, Hashable {
     let name: String
     let title: String
     let imageUrl: URL
+    let paid: Bool
 }
