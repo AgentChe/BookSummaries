@@ -2545,7 +2545,7 @@
 				CODE_SIGN_ENTITLEMENTS = BookSummaries/BookSummaries.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = AY43JM5PH6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BookSummaries/Info.plist;
@@ -2559,7 +2559,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = app.books;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "BookSummaries AppStore";
@@ -2578,7 +2578,7 @@
 				CODE_SIGN_ENTITLEMENTS = BookSummaries/BookSummaries.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = AY43JM5PH6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BookSummaries/Info.plist;
@@ -2592,7 +2592,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = app.books;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "BookSummaries AppStore";

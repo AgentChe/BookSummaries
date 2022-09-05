@@ -119,7 +119,7 @@ PODS:
   - GoogleUtilities/UserDefaults (7.7.0):
     - GoogleUtilities/Logger
   - Kingfisher (7.3.2)
-  - lottie-ios (3.4.2)
+  - lottie-ios (3.4.3)
   - MarqueeLabel (4.0.5)
   - nanopb (2.30909.0):
     - nanopb/decode (= 2.30909.0)
@@ -208,7 +208,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   OtterScaleiOS:
-    :commit: 4059d8ecdd71852e810bbcc518e197b1053c6a17
+    :commit: a4a7e626b775df11dccb8d3a68546252eb7335dd
     :git: https://github.com/AgentChe/OtterScaleiOS.git
   RushSDK:
     :commit: 687506667844921a08a5f34c8e7cc1446a75c232
@@ -234,7 +234,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 1c8145da7117bd68bbbed00cf304edb6a24de00f
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   Kingfisher: 0086ad83719761ba9b2cdaf6ef4d5b4878cbae23
-  lottie-ios: 6bbc53eef6957e4744a50321507015fba72d8ca6
+  lottie-ios: 9ae750cdc7820fecbd3c2f0cfc493038208fcdc4
   MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   NotificationBannerSwift: 49912a48b37e2f55d1cef4e8a38f15394f66a70a
@@ -249,4 +249,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: a69e0113da699fdf35a28ab9462eae69365bdc24
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.0
