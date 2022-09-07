@@ -89,7 +89,7 @@ private extension ExploreView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
+        layout.minimumInteritemSpacing = 16.scale
         layout.sectionInset = UIEdgeInsets(top: 30.scale, left: 16, bottom: 30.scale, right: 16)
         
         let view = ExploreCollectionView(frame: .zero, collectionViewLayout: layout)
