@@ -13,6 +13,8 @@ final class PlayerViewController: UIViewController {
     
     private lazy var disposeBag = DisposeBag()
     
+    private lazy var blockUpdateSlider = false
+    
     private let book: BookCover
     private let audioPlayer: AudioPlayer
     
@@ -40,6 +42,17 @@ final class PlayerViewController: UIViewController {
         mainView.closeButton.rx.tap
             .bind(to: Binder(self) { base, void in
                 base.dismiss(animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        Observable
+            .merge(
+                mainView.slider.rx.controlEvent(.valueChanged).map { true },
+                mainView.slider.rx.controlEvent(.touchUpInside).map { false }
+            )
+            .distinctUntilChanged()
+            .bind(to: Binder(self) { base, block in
+                base.blockUpdateSlider = block
             })
             .disposed(by: disposeBag)
         
@@ -116,6 +129,10 @@ extension PlayerViewController: AudioPlayerDelegate {
     }
     
     func audioPlayer(currentTime: Float64) {
+        guard !blockUpdateSlider else {
+            return
+        }
+        
         mainView.setup(currentTime: currentTime)
         
         if currentTime > 0 && audioPlayer.isPlaying() == true {
