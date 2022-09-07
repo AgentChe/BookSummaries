@@ -36,6 +36,9 @@ final class ONotificationsView: OSlideView {
         super.moveToThis()
         
         PushNotificationsManager.shared.add(observer: self)
+        
+        AmplitudeManager.shared
+            .logEvent(name: "Notifications Screen")
     }
 }
 

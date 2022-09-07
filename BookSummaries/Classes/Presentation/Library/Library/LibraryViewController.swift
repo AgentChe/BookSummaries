@@ -126,6 +126,7 @@ private extension LibraryViewController {
             .bind(to: Binder(self) { base, filter in
                 base.mainView.filterView.filter = filter
                 base.viewModel.filter.accept(filter)
+                base.analytics(filter: filter)
             })
             .disposed(by: disposeBag)
         
@@ -184,5 +185,19 @@ private extension LibraryViewController {
     func share(url: URL) {
         let vc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
         present(vc, animated: true)
+    }
+    
+    func analytics(filter: LibraryFilterView.Filter) {
+        switch filter {
+        case .saved:
+            AmplitudeManager.shared
+                .logEvent(name: "Saved Screen")
+        case .downloaded:
+            AmplitudeManager.shared
+                .logEvent(name: "Download Screen")
+        case .history:
+            AmplitudeManager.shared
+                .logEvent(name: "My History Screen")
+        }
     }
 }

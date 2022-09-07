@@ -32,6 +32,9 @@ final class ReaderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        AmplitudeManager.shared
+            .logEvent(name: "Read Screen")
+        
         mainView.closeButton.rx.tap
             .bind(to: Binder(self) { base, void in
                 base.dismiss(animated: true)

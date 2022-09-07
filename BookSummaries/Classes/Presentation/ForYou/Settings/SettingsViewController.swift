@@ -22,6 +22,9 @@ final class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        AmplitudeManager.shared
+            .logEvent(name: "Settings Screen")
+        
         viewModel.elements
             .drive(Binder(mainView.tableView) { base, elements in
                 base.setup(elements: elements)

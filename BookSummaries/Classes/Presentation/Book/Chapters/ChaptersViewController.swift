@@ -34,6 +34,9 @@ final class ChaptersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        AmplitudeManager.shared
+            .logEvent(name: "Chapters Screen")
+        
         mainView.backButton.rx.tap
             .bind(to: Binder(self) { base, void in
                 base.dismiss(animated: true)

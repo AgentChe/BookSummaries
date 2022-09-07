@@ -23,6 +23,13 @@ final class OWelcomeView: OSlideView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func moveToThis() {
+        super.moveToThis()
+        
+        AmplitudeManager.shared
+            .logEvent(name: "Welcome Screen")
+    }
 }
 
 // MARK: Private

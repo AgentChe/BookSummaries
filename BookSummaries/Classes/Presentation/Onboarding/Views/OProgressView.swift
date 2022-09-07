@@ -48,6 +48,9 @@ final class OProgressView: OSlideView {
         
         calculatePercent()
         request()
+        
+        AmplitudeManager.shared
+            .logEvent(name: "Progress Screen")
     }
 }
 

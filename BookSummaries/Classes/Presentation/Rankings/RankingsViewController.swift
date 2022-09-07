@@ -32,6 +32,9 @@ final class RankingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        AmplitudeManager.shared
+            .logEvent(name: "Ranking Screen")
+        
         viewModel.tryAgain = { [weak self] error -> Observable<Void> in
             guard let self = self else {
                 return .never()
