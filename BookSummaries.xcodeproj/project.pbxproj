@@ -123,6 +123,7 @@
 		DE0FEC5D28C2099100BA7ABD /* PaygateProductButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0FEC5C28C2099100BA7ABD /* PaygateProductButton.swift */; };
 		DE0FEC5F28C209A000BA7ABD /* PaygatePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0FEC5E28C209A000BA7ABD /* PaygatePrice.swift */; };
 		DE0FEC6128C209A700BA7ABD /* PaygateProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0FEC6028C209A700BA7ABD /* PaygateProductInfo.swift */; };
+		DE1D022028C9EFD2003AC1FD /* API.json in Resources */ = {isa = PBXBuildFile; fileRef = DE1D021F28C9EFD2003AC1FD /* API.json */; };
 		DE30478828A6604F00E0AEA4 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE30478728A6604F00E0AEA4 /* Challenge.swift */; };
 		DE30478B28A6621B00E0AEA4 /* GetChallengeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE30478A28A6621B00E0AEA4 /* GetChallengeRequest.swift */; };
 		DE30478D28A6625000E0AEA4 /* GetChallengeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE30478C28A6625000E0AEA4 /* GetChallengeResponse.swift */; };
@@ -433,6 +434,7 @@
 		DE0FEC5C28C2099100BA7ABD /* PaygateProductButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateProductButton.swift; sourceTree = "<group>"; };
 		DE0FEC5E28C209A000BA7ABD /* PaygatePrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygatePrice.swift; sourceTree = "<group>"; };
 		DE0FEC6028C209A700BA7ABD /* PaygateProductInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygateProductInfo.swift; sourceTree = "<group>"; };
+		DE1D021F28C9EFD2003AC1FD /* API.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = API.json; sourceTree = "<group>"; };
 		DE30478728A6604F00E0AEA4 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		DE30478A28A6621B00E0AEA4 /* GetChallengeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeRequest.swift; sourceTree = "<group>"; };
 		DE30478C28A6625000E0AEA4 /* GetChallengeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeResponse.swift; sourceTree = "<group>"; };
@@ -1727,6 +1729,7 @@
 				DEFF61A3287473F600FE863E /* LaunchScreen.storyboard */,
 				DEFF61A6287473F600FE863E /* Info.plist */,
 				DEBE97E728BD3E2B0065C5E1 /* GoogleService-Info.plist */,
+				DE1D021F28C9EFD2003AC1FD /* API.json */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -2043,6 +2046,7 @@
 				DE06C64428748764009866FC /* PlusJakartaSans-Bold.ttf in Resources */,
 				DE06C64528748764009866FC /* PlusJakartaSans-Medium.ttf in Resources */,
 				DE06C64628748764009866FC /* PlusJakartaSans-SemiBold.ttf in Resources */,
+				DE1D022028C9EFD2003AC1FD /* API.json in Resources */,
 				DE06C64728748764009866FC /* PlusJakartaSans-Regular.ttf in Resources */,
 				DEBE97E828BD3E2B0065C5E1 /* GoogleService-Info.plist in Resources */,
 				DE06C6402874875D009866FC /* Merriweather-Black.ttf in Resources */,
