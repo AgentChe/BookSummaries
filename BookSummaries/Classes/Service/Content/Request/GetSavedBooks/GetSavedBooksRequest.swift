@@ -6,7 +6,6 @@
 //
 
 import Alamofire
-import RushSDK
 
 struct GetSavedBooksRequest: APIRequestBody {
     let userToken: String

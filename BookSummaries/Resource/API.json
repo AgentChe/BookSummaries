@@ -12,18 +12,6 @@
     }
 ]
 
-/api/diets - список диет. Будет загружаться при запуске приложения и кешироваться.
-[
-    {
-        "id": 1,
-        "name": "Dairy-free"
-    },
-    {
-        "id": 2,
-        "name": "Gluten-free"
-    }
-]
-
 /api/ranking - список фильтров книг и экрана Ranking. Будет загружаться при запуске приложения и кешироваться.
 [
     {
@@ -44,8 +32,7 @@
     "pace": 2,
     "time": 10,
     "notification_key": "adadoasdosfvdjvnewve",
-    "notification_options": [1],
-    "diet_id": 1
+    "notification_options": [1]
 }
 
 <- {
@@ -60,8 +47,7 @@
     "pace": 2,
     "time": 10,
     "notification_key": "adadoasdosfvdjvnewve",
-    "notification_options": [1],
-    "diet_id": 1
+    "notification_options": [1]
 }
 
 /api/foryou - контент для экрана For you
@@ -76,8 +62,7 @@
         "image": "full_url_to_image",
         "ranking_id": 1,
         "link": "ссылка для шаринга",
-        "paid": true,
-        "time_min": 10
+        "paid": true
     },
     "todays_hot_summaries": [
         {
@@ -90,8 +75,7 @@
             "image": "full_url_to_image",
             "ranking_id": 1,
             "link": "ссылка для шаринга",,
-            "paid": true,
-            "time_min": 10
+            "paid": true
         },
         {
             "id": 3,
@@ -134,8 +118,7 @@
             "image": "full_url_to_image",
             "ranking_id": 1,
             "link": "ссылка для шаринга",,
-            "paid": true,
-            "time_min": 10
+            "paid": true
         },
         {
             "id": 5,
@@ -147,8 +130,7 @@
             "image": "full_url_to_image",
             "ranking_id": 1,
             "link": "ссылка для шаринга",,
-            "paid": true,
-            "time_min": 10
+            "paid": true
         }
     ],
     "ranking": [
@@ -165,8 +147,7 @@
                     "image": "full_url_to_image",
                     "ranking_id": 1,
                     "link": "ссылка для шаринга",,
-                    "paid": true,
-                    "time_min": 10
+                    "paid": true
                 },
                 {
                     "id": 9,
@@ -178,8 +159,7 @@
                     "image": "full_url_to_image",
                     "ranking_id": 1,
                     "link": "ссылка для шаринга",,
-                    "paid": true,
-                    "time_min": 10
+                    "paid": true
                 }
             ]
         },
@@ -196,8 +176,7 @@
                     "image": "full_url_to_image",
                     "ranking_id": 1,
                     "link": "ссылка для шаринга",,
-                    "paid": true,
-                    "time_min": 10
+                    "paid": true
                 },
                 {
                     "id": 9,
@@ -209,8 +188,7 @@
                     "image": "full_url_to_image",
                     "ranking_id": 1,
                     "link": "ссылка для шаринга",,
-                    "paid": true,
-                    "time_min": 10
+                    "paid": true
                 }
             ]
         }
@@ -258,8 +236,7 @@
             "image": "full_url_to_image",
             "ranking_id": 1,
             "link": "ссылка для шаринга",,
-            "paid": true,
-            "time_min": 10
+            "paid": true
         },
         {
             "id": 7,
@@ -271,8 +248,7 @@
             "image": "full_url_to_image",
             "ranking_id": 1,
             "link": "ссылка для шаринга",,
-            "paid": true,
-            "time_min": 10
+            "paid": true
         }
     ]
 }
@@ -307,8 +283,7 @@
         "image": "full_url_to_image",
         "ranking_id": 1,
         "link": "ссылка для шаринга",,
-        "paid": true,
-        "time_min": 10
+        "paid": true
     },
     {
         "id": 3,
@@ -320,8 +295,7 @@
         "image": "full_url_to_image",
         "ranking_id": 1,
         "link": "ссылка для шаринга",,
-        "paid": true,
-        "time_min": 10
+        "paid": true
     }
 ]
 
@@ -338,8 +312,7 @@
             "image": "full_url_to_image",
             "ranking_id": 1,
             "link": "ссылка для шаринга",,
-            "paid": true,
-            "time_min": 10
+            "paid": true
         },
         {
             "id": 3,
@@ -351,8 +324,7 @@
             "image": "full_url_to_image",
             "ranking_id": 1,
             "link": "ссылка для шаринга",,
-            "paid": true,
-            "time_min": 10
+            "paid": true
         }
     ],
     "popular_requests": [
@@ -380,8 +352,7 @@
         "image": "full_url_to_image",
         "ranking_id": 1,
         "link": "ссылка для шаринга",,
-        "paid": true,
-        "time_min": 10
+        "paid": true
     },
     {
         "id": 3,
@@ -393,8 +364,7 @@
         "image": "full_url_to_image",
         "ranking_id": 1,
         "link": "ссылка для шаринга",,
-        "paid": true,
-        "time_min": 10
+        "paid": true
     }
 ]
 
@@ -414,8 +384,7 @@
         "image": "full_url_to_image",
         "ranking_id": 1,
         "link": "ссылка для шаринга",,
-        "paid": true,
-        "time_min": 10
+        "paid": true
     },
     {
         "id": 3,
@@ -427,8 +396,7 @@
         "image": "full_url_to_image",
         "ranking_id": 1,
         "link": "ссылка для шаринга",,
-        "paid": true,
-        "time_min": 10
+        "paid": true
     }
 ]
 
@@ -448,8 +416,7 @@
         "image": "full_url_to_image",
         "ranking_id": 1,
         "link": "ссылка для шаринга",,
-        "paid": true,
-        "time_min": 10
+        "paid": true
     },
     {
         "id": 3,
@@ -461,8 +428,7 @@
         "image": "full_url_to_image",
         "ranking_id": 1,
         "link": "ссылка для шаринга",,
-        "paid": true,
-        "time_min": 10
+        "paid": true
     }
 ]
 
@@ -501,8 +467,7 @@
             "image": "full_url_to_image",
             "ranking_id": 1,
             "link": "ссылка для шаринга",,
-            "paid": true,
-            "time_min": 10
+            "paid": true
         },
         {
             "id": 7,
@@ -514,94 +479,6 @@
             "image": "full_url_to_image",
             "ranking_id": 1,
             "link": "ссылка для шаринга",,
-            "paid": true,
-            "time_min": 10
+            "paid": true
         }
-}
-
-
-/api/recipe - контент для экрана с детальной информацией о рецепте
--> {
-    "recipe_id": 7
-}
-
-<- {
-    "id": 7,
-    "name": "Japanese Omurice",
-    "image": "full_url_to_image",
-    "ranking_id": 1,
-    "category_id": 1,
-    "kcal": 345
-    "time_min": 13,
-    "link": "ссылка для шаринга",
-    "saved": true,
-    "chapters": [
-        {
-            "short": "Marinate the chicken in the soy sauce while you prepare all the other ingredients.",
-            "title": "Step 1",
-            "text": "Marinate the chicken in the soy sauce while you prepare all the other ingredients.",
-            "image": "full_url_to_image",
-        },
-        {
-            "short": "Marinate the chicken in the soy sauce while you prepare all the other ingredients.",
-            "title": "Enjoy your meal!",
-            "text": "We hope it looks good as it tastes",
-            "image": "full_url_to_image",
-        }
-    ],
-    "carbs": {
-        "g": 52,
-        "percent": 19
-    },
-    "protein": {
-        "g": 29,
-        "percent": 5
-    },
-    "fats": {
-        "g": 24,
-        "percent": 6
-    },
-    "ingredients": [
-        "title": "FOR CHICKEN RICE",
-        "ingredients": [
-            {
-                "id": 1,
-                "name": "Chicken breast",
-                "value": "150 grams"
-            },
-            {
-                "id": 2,
-                "name": "Soy sauce",
-                "value": "1 teaspoon"
-            }
-        ]
-    ]
-    "similar_books": [
-        {
-            "id": 6,
-            "name": "Unlimited Memory",
-            "author": {
-                "name": "Daniel Kahneman",
-                "photo_url": "full_url_to_image"
-            },
-            "image": "full_url_to_image",
-            "ranking_id": 1,
-            "link": "ссылка для шаринга",,
-            "paid": true,
-            "time_min": 10
-        },
-        {
-            "id": 7,
-            "name": "The Law of Success",
-            "author": {
-                "name": "Daniel Kahneman",
-                "photo_url": "full_url_to_image"
-            },
-            "image": "full_url_to_image",
-            "ranking_id": 1,
-            "link": "ссылка для шаринга",,
-            "paid": true,
-            "time_min": 10
-        }
-    ]
 }

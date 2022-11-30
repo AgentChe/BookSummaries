@@ -8,7 +8,6 @@
 import RxSwift
 import RxCocoa
 import OtterScaleiOS
-import RushSDK
 
 final class SplashViewModel {
     enum Step {
@@ -93,9 +92,6 @@ private extension SplashViewModel {
                 .flatMap { _ -> Single<Void> in
                     let session = Session(userToken: otterScaleID)
                     self.sessionManager.store(session: session)
-                    
-                    SDKStorage.shared.featureAppMediator.notifyAboutUpdate(userId: otterScaleID,
-                                                                           userToken: otterScaleID)
                     
                     return .deferred { .just(Void()) }
                 }

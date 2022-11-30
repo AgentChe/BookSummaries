@@ -6,7 +6,6 @@
 //
 
 import Alamofire
-import RushSDK
 
 struct GetCategoryBooksRequest: APIRequestBody {
     let userToken: String

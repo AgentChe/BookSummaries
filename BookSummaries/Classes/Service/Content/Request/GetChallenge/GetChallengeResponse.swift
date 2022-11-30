@@ -66,19 +66,3 @@ final class GetChallengeResponse {
                          books: books)
     }
 }
-
-// MARK: Private
-private extension GetBookKitResponse {
-    static func map(introductionJSON: [String: Any]) -> BookChapter? {
-        guard
-            let title = introductionJSON["title"] as? String,
-            let text = introductionJSON["text"] as? String
-        else {
-            return nil
-        }
-        
-        return BookChapter(shortDescription: "",
-                           title: title,
-                           text: text)
-    }
-}

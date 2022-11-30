@@ -15,7 +15,7 @@ final class SplashViewController: UIViewController {
     
     private lazy var disposeBag = DisposeBag()
     
-    private lazy var sdkInitialize = SplashSDKInitialize(vc: self)
+    private lazy var sdkInitialize = SplashSDKInitialize()
     
     override func loadView() {
         view = mainView

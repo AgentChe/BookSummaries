@@ -6,7 +6,6 @@
 //
 
 import Alamofire
-import RushSDK
 
 struct GetRankingBooksRequest: APIRequestBody {
     let userToken: String

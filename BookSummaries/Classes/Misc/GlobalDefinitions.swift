@@ -6,14 +6,11 @@
 //
 
 final class GlobalDefinitions {
-    static let domain = "https://books.korrekted.com"
+    static let domain = "https://books.thinkaboutapps.com"
     static let apiKey = "BeV3sSdfVixSJQFP"
     
     static let otterScaleHost = "https://api.korrekted.com"
     static let otterScaleApiKey = "nLcxrPTkFUCO8orL"
-    
-    static let rushSDKHost = "https://analytics.korrekted.com"
-    static let rushSDKApiKey = "EQHUB7YfpuzXzjOk"
     
     static let appleAppID = "1585629405"
     
