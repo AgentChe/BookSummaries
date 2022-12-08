@@ -15,9 +15,9 @@ final class GlobalDefinitions {
     static let appleAppID = "1585629405"
     
     static let applicationTag = "BOOK_SUMMARIES"
-    static let amplitudeApiKey = "b503251969f4b1d7901d2f7d1388d476"
+    static let amplitudeApiKey = "1336d08d429ceb343970fd360e3253f6"
     
-    static let termsOfServiceUrl = "https://books.thinkaboutapps.com/terms"
-    static let privacyPolicyUrl = "https://books.thinkaboutapps.com/policy"
-    static let contactUsUrl = "https://books.thinkaboutapps.com/contact"
+    static let termsOfServiceUrl = "https://thinkaboutapps.com/terms"
+    static let privacyPolicyUrl = "https://thinkaboutapps.com/policy"
+    static let contactUsUrl = "https://thinkaboutapps.com/contact"
 }
