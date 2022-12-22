@@ -246,13 +246,14 @@ private extension OBooksView {
     }
     
     func makeDislikeButton() -> OBookButton {
-        let view = OBookButton(imageName: "Onboarding.Book.Dislike")
-        view.backgroundColor = Appearance.white
+        let view = OBookButton(primaryImage: "Onboarding.Book.Primary.Dislike",
+                               highlitedImage: "Onboarding.Book.White.Dislike")
         view.layer.cornerRadius = 20.scale
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOpacity = 0.08
         view.layer.shadowOffset = .zero
         view.layer.shadowRadius = 6.scale
+        view.isHighlighted = false
         view.translatesAutoresizingMaskIntoConstraints = false
         view.addTarget(self, action: #selector(dislikeTapped), for: .touchUpInside)
         addSubview(view)
@@ -260,13 +261,14 @@ private extension OBooksView {
     }
     
     func makeLikeButton() -> OBookButton {
-        let view = OBookButton(imageName: "Onboarding.Book.Like")
-        view.backgroundColor = Appearance.white
+        let view = OBookButton(primaryImage: "Onboarding.Book.Primary.Like",
+                               highlitedImage: "Onboarding.Book.White.Like")
         view.layer.cornerRadius = 20.scale
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOpacity = 0.08
         view.layer.shadowOffset = .zero
         view.layer.shadowRadius = 6.scale
+        view.isHighlighted = false
         view.translatesAutoresizingMaskIntoConstraints = false
         view.addTarget(self, action: #selector(likeTapped), for: .touchUpInside)
         addSubview(view)
