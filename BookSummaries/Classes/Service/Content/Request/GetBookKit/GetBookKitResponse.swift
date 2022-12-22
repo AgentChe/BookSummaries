@@ -40,9 +40,6 @@ final class GetBookKitResponse {
         let author = Author(name: authorName,
                             photoUrl: authorImageUrl)
         
-        let introductionJSON = data["introduction"] as? [String: Any] ?? [:]
-        let introduction = map(introductionJSON: introductionJSON)
-        
         let chaptersArray = data["chapters"] as? [[String: Any]] ?? []
         let chapters = chaptersArray.compactMap { chapterJSON -> BookChapter? in
             guard
@@ -67,7 +64,6 @@ final class GetBookKitResponse {
                         audioUrl: audioUrl,
                         shareLink: shareLink,
                         isSaved: isSaved,
-                        introduction: introduction,
                         chapters: chapters,
                         whatAbout: whatAbout)
         
@@ -104,21 +100,5 @@ final class GetBookKitResponse {
         
         return BookKit(book: book,
                        similarBooks: similarBooks)
-    }
-}
-
-// MARK: Private
-private extension GetBookKitResponse {
-    static func map(introductionJSON: [String: Any]) -> BookChapter? {
-        guard
-            let title = introductionJSON["title"] as? String,
-            let text = introductionJSON["text"] as? String
-        else {
-            return nil
-        }
-        
-        return BookChapter(shortDescription: "",
-                           title: title,
-                           text: text)
     }
 }

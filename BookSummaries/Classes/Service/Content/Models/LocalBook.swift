@@ -31,7 +31,6 @@ struct LocalBook: Codable, Hashable {
                     audioUrl: fileUrl,
                     shareLink: original.shareLink,
                     isSaved: original.isSaved,
-                    introduction: original.introduction,
                     chapters: original.chapters,
                     whatAbout: original.whatAbout)
     }

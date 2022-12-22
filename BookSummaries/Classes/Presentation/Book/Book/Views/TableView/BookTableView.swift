@@ -77,8 +77,6 @@ extension BookTableView: UITableViewDataSource {
             let cell = dequeueReusableCell(withIdentifier: String(describing: BookTitleCell.self)) as! BookTitleCell
             cell.setup(element: element)
             return cell
-        case .introduction:
-            return dequeueReusableCell(withIdentifier: String(describing: BookIntroductionCell.self))!
         case .chapter(let element):
             let cell = dequeueReusableCell(withIdentifier: String(describing: BookChapterCell.self)) as! BookChapterCell
             cell.setup(element: element)
@@ -121,7 +119,7 @@ extension BookTableView: UITableViewDelegate {
             return 267.scale
         case .progress:
             return 16.scale
-        case .info, .introduction:
+        case .info:
             return 24.scale
         case .chapter:
             return 60.scale
@@ -142,8 +140,6 @@ extension BookTableView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch elements[indexPath.row] {
-        case .introduction(let element):
-            mainDelegate?.bookTableDidTapped(chapter: element)
         case .chapter(let element):
             mainDelegate?.bookTableDidTapped(chapter: element.chapter)
         case .seeAll:
@@ -164,7 +160,6 @@ private extension BookTableView {
         register(BookAuthorNameCell.self, forCellReuseIdentifier: String(describing: BookAuthorNameCell.self))
         register(BookInfoCell.self, forCellReuseIdentifier: String(describing: BookInfoCell.self))
         register(BookTitleCell.self, forCellReuseIdentifier: String(describing: BookTitleCell.self))
-        register(BookIntroductionCell.self, forCellReuseIdentifier: String(describing: BookIntroductionCell.self))
         register(BookChapterCell.self, forCellReuseIdentifier: String(describing: BookChapterCell.self))
         register(BookSeparatorCell.self, forCellReuseIdentifier: String(describing: BookSeparatorCell.self))
         register(BookSeeAllCell.self, forCellReuseIdentifier: String(describing: BookSeeAllCell.self))

@@ -17,7 +17,6 @@ struct Book: Codable, Hashable {
     let audioUrl: URL
     let shareLink: URL
     let isSaved: Bool
-    let introduction: BookChapter?
     let chapters: [BookChapter]
     let whatAbout: String
 }

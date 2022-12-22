@@ -75,7 +75,6 @@
 		DE06C6DD287C292A009866FC /* BookAuthorNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6DC287C292A009866FC /* BookAuthorNameCell.swift */; };
 		DE06C6DF287C2B30009866FC /* BookInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6DE287C2B30009866FC /* BookInfoCell.swift */; };
 		DE06C6E1287C316E009866FC /* BookTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6E0287C316E009866FC /* BookTitleCell.swift */; };
-		DE06C6E3287C3242009866FC /* BookIntroductionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6E2287C3242009866FC /* BookIntroductionCell.swift */; };
 		DE06C6E5287C3499009866FC /* BookChapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6E4287C3499009866FC /* BookChapterCell.swift */; };
 		DE06C6E7287C3847009866FC /* BookSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6E6287C3847009866FC /* BookSeparatorCell.swift */; };
 		DE06C6E9287C3A45009866FC /* BookSeeAllCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C6E8287C3A45009866FC /* BookSeeAllCell.swift */; };
@@ -386,7 +385,6 @@
 		DE06C6DC287C292A009866FC /* BookAuthorNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAuthorNameCell.swift; sourceTree = "<group>"; };
 		DE06C6DE287C2B30009866FC /* BookInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoCell.swift; sourceTree = "<group>"; };
 		DE06C6E0287C316E009866FC /* BookTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTitleCell.swift; sourceTree = "<group>"; };
-		DE06C6E2287C3242009866FC /* BookIntroductionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookIntroductionCell.swift; sourceTree = "<group>"; };
 		DE06C6E4287C3499009866FC /* BookChapterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookChapterCell.swift; sourceTree = "<group>"; };
 		DE06C6E6287C3847009866FC /* BookSeparatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSeparatorCell.swift; sourceTree = "<group>"; };
 		DE06C6E8287C3A45009866FC /* BookSeeAllCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSeeAllCell.swift; sourceTree = "<group>"; };
@@ -967,7 +965,6 @@
 				DE06C6DC287C292A009866FC /* BookAuthorNameCell.swift */,
 				DE06C6DE287C2B30009866FC /* BookInfoCell.swift */,
 				DE06C6E0287C316E009866FC /* BookTitleCell.swift */,
-				DE06C6E2287C3242009866FC /* BookIntroductionCell.swift */,
 				DE06C6E4287C3499009866FC /* BookChapterCell.swift */,
 				DE06C6E6287C3847009866FC /* BookSeparatorCell.swift */,
 				DE06C6E8287C3A45009866FC /* BookSeeAllCell.swift */,
@@ -2384,7 +2381,6 @@
 				DE06C732287DD6BD009866FC /* GetExploreKitRequest.swift in Sources */,
 				DEBF918A2885794A00F8DC0F /* FeedbackTableView.swift in Sources */,
 				DE4E840E28B506AB001BE774 /* OGoalView.swift in Sources */,
-				DE06C6E3287C3242009866FC /* BookIntroductionCell.swift in Sources */,
 				DE06C6A228774C36009866FC /* ForYouSeparatorCell.swift in Sources */,
 				DE06C6C6287C0D81009866FC /* BookViewController.swift in Sources */,
 				DEFF621728747C2B00FE863E /* XOREncryption.swift in Sources */,

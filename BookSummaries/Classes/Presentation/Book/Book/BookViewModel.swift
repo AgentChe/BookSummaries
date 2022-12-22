@@ -271,13 +271,6 @@ private extension BookViewModel {
                     .title("Book.Chapters".localized)
                 ])
                 
-                if let introduction = book.introduction {
-                    result.append(contentsOf: [
-                        .offset(34.scale),
-                        .introduction(introduction),
-                    ])
-                }
-                
                 let chapters = isShowingAll ? book.chapters : Array(book.chapters.prefix(5))
                 result.append(.offset(34.scale))
                 chapters.enumerated().forEach { index, chapter in

@@ -40,7 +40,7 @@ extension BookChapterCell {
             .lineHeight(24.scale)
             .letterSpacing(-0.17.scale)
             .lineBreakMode(.byTruncatingTail)
-        label.attributedText = element.chapter.shortDescription.attributed(with: attrs)
+        label.attributedText = element.chapter.title.attributed(with: attrs)
     }
 }
 

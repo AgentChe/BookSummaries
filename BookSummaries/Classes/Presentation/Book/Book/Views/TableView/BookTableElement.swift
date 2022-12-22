@@ -16,7 +16,6 @@ enum BookTableElement {
     case authorName(String)
     case info(BookInfoElement)
     case title(String)
-    case introduction(BookChapter)
     case chapter(BookChapterElement)
     case separator
     case seeAll

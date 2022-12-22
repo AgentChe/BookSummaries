@@ -319,7 +319,6 @@ private extension Book {
         audioUrl = URL(string: "www.google.com")!
         shareLink = URL(string: "www.google.com")!
         isSaved = false
-        introduction = nil
         chapters = []
         whatAbout = ""
     }
