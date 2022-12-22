@@ -29,7 +29,7 @@
 
 // MARK: Onboarding
 "Onboarding.Welcome.Title" = "Book summaries\nat your fingertips";
-"Onboarding.Welcome.SubTitle" = "You don’t have time to read all the books\nbooks you’d  want to. Get a consise\nsummary of each one of them instead!";
+"Onboarding.Welcome.SubTitle" = "You don’t have time to read all the books\nyou’d  want to. Get a concise summary\ninstead!";
 "Onboarding.Welcome.Button" = "Start now";
 "Onboarding.Info.Title" = "Now let’s get to know\nyou a bit";
 "Onboarding.Info.SubTitle" = "We need some information to build a\ncustom reading plan.";
@@ -58,7 +58,7 @@
 "Onboarding.Quantity.Serious.SubTitle" = "\n30 min a day • 15 books";
 "Onboarding.Pace.Title" = "At what pace do you\nlike to read?";
 "Onboarding.Pace1" = "Slowly but\nsurely";
-"Onboarding.Pace2" = "medium-paced";
+"Onboarding.Pace2" = "Medium-paced";
 "Onboarding.Pace3" = "As fast as\npossible";
 "Onboarding.Pace.Button" = "Proceed";
 "Onboarding.Time.Title" = "When do you want to\nread?";
@@ -77,7 +77,7 @@
 "Onboarding.InfoLibrary.Title" = "Let’s create your\nperfect library";
 "Onboarding.InfoLibrary.SubTitle" = "Please pick the books depending on your\npersonal interests";
 "Onboarding.InfoLibrary.Button" = "Got it";
-"Onboarding.Book.Title" = "Does this book interest\nyou?";
+"Onboarding.Book.Title" = "Would you like to read\nthis book?";
 "Onboarding.Progress.Title1" = "Analyzing your\nprofile...";
 "Onboarding.Progress.Title2" = "Identifying your\npreferences ...";
 "Onboarding.Progress.Title3" = "Creating your\npersonalized library...";
