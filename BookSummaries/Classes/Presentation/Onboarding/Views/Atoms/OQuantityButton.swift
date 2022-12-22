@@ -20,7 +20,8 @@ final class OQuantityButton: UIButton {
         }
     }
     
-    lazy var label = makeLabel()
+    lazy var mainLabel = makeTitleLabel()
+    lazy var secondLabel = makeSubTitleLabel()
     
     let quantity: Quantity
     
@@ -49,39 +50,44 @@ private extension OQuantityButton {
 private extension OQuantityButton {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            label.centerXAnchor.constraint(equalTo: centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: centerYAnchor)
+            mainLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            mainLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            secondLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            secondLabel.topAnchor.constraint(equalTo: topAnchor, constant: 42.scale)
         ])
     }
 }
 
 // MARK: Lazy initialization
 private extension OQuantityButton {
-    func makeLabel() -> UILabel {
-        let attrs1 = TextAttributes()
+    func makeTitleLabel() -> UILabel {
+        let attrs = TextAttributes()
             .textColor(Appearance.black)
             .font(Fonts.PlusJakartaSans.bold(size: 16.scale))
             .lineHeight(22.4.scale)
             .letterSpacing(-0.17.scale)
             .textAlignment(.center)
         
-        let attrs2 = TextAttributes()
+        let view = UILabel()
+        view.attributedText = quantity.title.attributed(with: attrs)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeSubTitleLabel() -> UILabel {
+        let attrs = TextAttributes()
             .textColor(Appearance.black)
             .font(Fonts.PlusJakartaSans.regular(size: 16.scale))
             .lineHeight(22.4.scale)
             .letterSpacing(-0.17.scale)
             .textAlignment(.center)
         
-        let string1 = quantity.title.attributed(with: attrs1)
-        let string2 = quantity.subTitle.attributed(with: attrs2)
-        
-        let result = NSMutableAttributedString()
-        result.append(string1)
-        result.append(string2)
-        
         let view = UILabel()
-        view.attributedText = result
-        view.numberOfLines = 0
+        view.attributedText = quantity.subTitle.attributed(with: attrs)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

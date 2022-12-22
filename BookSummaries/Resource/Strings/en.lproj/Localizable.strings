@@ -51,11 +51,11 @@
 "Onboarding.Categories.Title" = "What grabs your\nattention most?";
 "Onboarding.Quantity.Title" = "How much time are you\nready to spend on \nbooks daily?";
 "Onboarding.Quantity.Casual.Title" = "Casual";
-"Onboarding.Quantity.Casual.SubTitle" = "\n10 min a day • 5 books";
+"Onboarding.Quantity.Casual.SubTitle" = "10 min a day • 5 books";
 "Onboarding.Quantity.Regular.Title" = "Regular";
-"Onboarding.Quantity.Regular.SubTitle" = "\n20 min a day • 10 books";
+"Onboarding.Quantity.Regular.SubTitle" = "20 min a day • 10 books";
 "Onboarding.Quantity.Serious.Title" = "Serious";
-"Onboarding.Quantity.Serious.SubTitle" = "\n30 min a day • 15 books";
+"Onboarding.Quantity.Serious.SubTitle" = "30 min a day • 15 books";
 "Onboarding.Pace.Title" = "At what pace do you\nlike to read?";
 "Onboarding.Pace1" = "Slowly but\nsurely";
 "Onboarding.Pace2" = "Medium-paced";
