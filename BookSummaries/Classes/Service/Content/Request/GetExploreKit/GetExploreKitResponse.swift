@@ -8,16 +8,16 @@
 import Foundation
 
 final class GetExploreKitResponse {
-    static func map(from response: Any) -> ExploreKit? {
+    static func map(from response: Any) -> [BookCover] {
         guard
             let json = response as? [String: Any],
-            let data = json["_data"] as? [String: Any]
+            let data = json["_data"] as? [String: Any],
+            let trendingSearchesArray = data["trending_searches"] as? [[String: Any]]
         else {
-            return nil
+            return []
         }
         
-        let trendingSearchesArray = data["trending_searches"] as? [[String: Any]] ?? []
-        let trendingSearches = trendingSearchesArray.compactMap { coverJSON -> BookCover? in
+        return trendingSearchesArray.compactMap { coverJSON -> BookCover? in
             guard
                 let id = coverJSON["id"] as? Int,
                 let name = coverJSON["name"] as? String,
@@ -46,10 +46,5 @@ final class GetExploreKitResponse {
                              shareLink: shareLink,
                              paid: paid)
         }
-        
-        let popularRequests = data["popular_requests"] as? [String] ?? []
-        
-        return ExploreKit(trendingSearches: trendingSearches,
-                          popularRequests: popularRequests)
     }
 }

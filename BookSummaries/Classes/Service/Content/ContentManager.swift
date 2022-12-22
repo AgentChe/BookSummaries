@@ -16,7 +16,7 @@ protocol ContentManagerProtocol: AnyObject {
     func save(book: BookCover) -> Single<Bool>
     func removeSaved(book: BookCover) -> Single<Bool>
     func obtainSavedBooksCover() -> Single<[BookCover]>
-    func obtainExploreKit() -> Single<ExploreKit?>
+    func obtainExploreKit() -> Single<[BookCover]>
     func searchBooks(at: String) -> Single<[BookCover]>
     func obtainCategoryBooksCover(categoryId: Int) -> Single<[BookCover]>
     func obtainRankingBooksCover(rankingId: Int) -> Single<[BookCover]>
@@ -127,7 +127,7 @@ extension ContentManager {
             .map { GetSavedBooksResponse.map(from: $0) }
     }
     
-    func obtainExploreKit() -> Single<ExploreKit?> {
+    func obtainExploreKit() -> Single<[BookCover]> {
         guard let userToken = sessionManager.getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
