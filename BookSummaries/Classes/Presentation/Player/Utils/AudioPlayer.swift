@@ -50,6 +50,8 @@ final class AudioPlayer: NSObject {
         
         super.init()
         
+        try? AVAudioSession.sharedInstance().setCategory(.playback)
+        
         NotificationCenter.default
             .addObserver(self,
                          selector: #selector(didFinished),
