@@ -179,6 +179,7 @@
 		DE68335D28902CD000FAEF96 /* PlayerPreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68335C28902CD000FAEF96 /* PlayerPreloaderView.swift */; };
 		DE6833632891754400FAEF96 /* TabPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833622891754400FAEF96 /* TabPlayerView.swift */; };
 		DE6833652891755000FAEF96 /* TabPlayerPlayPauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833642891755000FAEF96 /* TabPlayerPlayPauseView.swift */; };
+		DE8A31F42954889900B2E228 /* RequestReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31F32954889900B2E228 /* RequestReview.swift */; };
 		DEBE97A428B51AD40065C5E1 /* OAgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97A328B51AD40065C5E1 /* OAgeView.swift */; };
 		DEBE97A828B51C5E0065C5E1 /* OAgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97A728B51C5E0065C5E1 /* OAgeButton.swift */; };
 		DEBE97AA28B523260065C5E1 /* OBriefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97A928B523260065C5E1 /* OBriefView.swift */; };
@@ -488,6 +489,7 @@
 		DE68335C28902CD000FAEF96 /* PlayerPreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPreloaderView.swift; sourceTree = "<group>"; };
 		DE6833622891754400FAEF96 /* TabPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPlayerView.swift; sourceTree = "<group>"; };
 		DE6833642891755000FAEF96 /* TabPlayerPlayPauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPlayerPlayPauseView.swift; sourceTree = "<group>"; };
+		DE8A31F32954889900B2E228 /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
 		DEBE97A328B51AD40065C5E1 /* OAgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAgeView.swift; sourceTree = "<group>"; };
 		DEBE97A728B51C5E0065C5E1 /* OAgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAgeButton.swift; sourceTree = "<group>"; };
 		DEBE97A928B523260065C5E1 /* OBriefView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBriefView.swift; sourceTree = "<group>"; };
@@ -1774,6 +1776,7 @@
 				DEFF61C2287479A900FE863E /* PaginatedDataLoader.swift */,
 				DEFF61C3287479A900FE863E /* Toast.swift */,
 				DEFF61EF28747C2B00FE863E /* RxActivityIndicator.swift */,
+				DE8A31F32954889900B2E228 /* RequestReview.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -2180,6 +2183,7 @@
 				DEBF91AD2885DF8800F8DC0F /* RankingsViewController.swift in Sources */,
 				DE6833182887FDBB00FAEF96 /* LocalBook.swift in Sources */,
 				DEBF917D2881F22800F8DC0F /* TextSize.swift in Sources */,
+				DE8A31F42954889900B2E228 /* RequestReview.swift in Sources */,
 				DE06C6FC287C50B9009866FC /* CategoryCollectionCell.swift in Sources */,
 				DE0FEC4F28C2094B00BA7ABD /* PaygateViewController.swift in Sources */,
 				DE4E83F328AD64A8001BE774 /* ChallengeBadgeProgressLabel.swift in Sources */,
