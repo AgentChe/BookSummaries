@@ -83,6 +83,9 @@ private extension OBooksView {
         
         liked
             .drive(Binder(self) { base, void in
+                // хак, чтобы не было мерцания с оставшимися книгами
+                base.imagesCollectionView.removeFromSuperview()
+                
                 base.onNext()
             })
             .disposed(by: disposeBag)
