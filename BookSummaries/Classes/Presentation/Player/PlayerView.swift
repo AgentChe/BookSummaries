@@ -196,7 +196,7 @@ private extension PlayerView {
     }
     
     func makeImageView() -> BookImageView {
-        let view = BookImageView()
+        let view = BookImageView(size: .large)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

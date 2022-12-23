@@ -187,7 +187,7 @@ private extension OBookImageCollectionView {
     }
     
     func makeImageView(book: BookCover) -> BookImageView {
-        let view = BookImageView()
+        let view = BookImageView(size: .large)
         view.kf.setImage(with: book.imageUrl)
         addSubview(view)
         imageViews[book] = view

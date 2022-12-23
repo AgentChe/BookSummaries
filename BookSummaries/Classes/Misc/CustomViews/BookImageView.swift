@@ -8,17 +8,25 @@
 import UIKit
 
 class BookImageView: UIImageView {
+    enum Size {
+        case small1
+        case small2
+        case small3
+        case medium
+        case large
+    }
+    
     lazy var line1View = makeLine1View()
     lazy var line2View = makeLine2View()
     lazy var line3View = makeLine3View()
     lazy var line4View = makeLine4View()
     
-    convenience init() {
-        self.init(frame: .zero)
-    }
+    private let size: Size
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(size: Size) {
+        self.size = size
+        
+        super.init(frame: .zero)
         
         makeConstraints()
         initialize()
@@ -36,6 +44,96 @@ private extension BookImageView {
         contentMode = .scaleAspectFill
         layer.cornerRadius = 10.scale
     }
+    
+    func line1Width() -> CGFloat {
+        switch size {
+        case .small1:
+            return 1.scale
+        case .small2:
+            return 1.scale
+        case .small3:
+            return 3.scale
+        case .medium:
+            return 3.scale
+        case .large:
+            return 5.06.scale
+        }
+    }
+    
+    func line2Width() -> CGFloat {
+        switch size {
+        case .small1:
+            return 1.scale
+        case .small2:
+            return 1.scale
+        case .small3:
+            return 2.scale
+        case .medium:
+            return 2.scale
+        case .large:
+            return 2.scale
+        }
+    }
+    
+    func line3Width() -> CGFloat {
+        switch size {
+        case .small1:
+            return 1.scale
+        case .small2:
+            return 2.scale
+        case .small3:
+            return 5.scale
+        case .medium:
+            return 5.scale
+        case .large:
+            return 5.scale
+        }
+    }
+    
+    func line4Width() -> CGFloat {
+        switch size {
+        case .small1:
+            return 0.56.scale
+        case .small2:
+            return 0.99.scale
+        case .small3:
+            return 2.scale
+        case .medium:
+            return 2.49.scale
+        case .large:
+            return 3.37.scale
+        }
+    }
+    
+    func line2Leading() -> CGFloat {
+        switch size {
+        case .small1:
+            return 1.scale
+        case .small2:
+            return 3.scale
+        case .small3:
+            return 5.scale
+        case .medium:
+            return 5.scale
+        case .large:
+            return 10.scale
+        }
+    }
+    
+    func line3Leading() -> CGFloat {
+        switch size {
+        case .small1:
+            return 2.scale
+        case .small2:
+            return 4.scale
+        case .small3:
+            return 7.scale
+        case .medium:
+            return 7.scale
+        case .large:
+            return 12.scale
+        }
+    }
 }
 
 // MARK: Make constraints
@@ -45,28 +143,28 @@ private extension BookImageView {
             line1View.leadingAnchor.constraint(equalTo: leadingAnchor),
             line1View.topAnchor.constraint(equalTo: topAnchor),
             line1View.bottomAnchor.constraint(equalTo: bottomAnchor),
-            line1View.widthAnchor.constraint(equalToConstant: 5.06.scale)
+            line1View.widthAnchor.constraint(equalToConstant: line1Width())
         ])
         
         NSLayoutConstraint.activate([
-            line2View.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10.scale),
+            line2View.leadingAnchor.constraint(equalTo: leadingAnchor, constant: line2Leading()),
             line2View.topAnchor.constraint(equalTo: topAnchor),
             line2View.bottomAnchor.constraint(equalTo: bottomAnchor),
-            line2View.widthAnchor.constraint(equalToConstant: 2.scale)
+            line2View.widthAnchor.constraint(equalToConstant: line2Width())
         ])
         
         NSLayoutConstraint.activate([
-            line3View.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 11.81.scale),
+            line3View.leadingAnchor.constraint(equalTo: leadingAnchor, constant: line3Leading()),
             line3View.topAnchor.constraint(equalTo: topAnchor),
             line3View.bottomAnchor.constraint(equalTo: bottomAnchor),
-            line3View.widthAnchor.constraint(equalToConstant: 8.44.scale)
+            line3View.widthAnchor.constraint(equalToConstant: line3Width())
         ])
         
         NSLayoutConstraint.activate([
             line4View.trailingAnchor.constraint(equalTo: trailingAnchor),
             line4View.topAnchor.constraint(equalTo: topAnchor),
             line4View.bottomAnchor.constraint(equalTo: bottomAnchor),
-            line4View.widthAnchor.constraint(equalToConstant: 3.37.scale)
+            line4View.widthAnchor.constraint(equalToConstant: line4Width())
         ])
     }
 }

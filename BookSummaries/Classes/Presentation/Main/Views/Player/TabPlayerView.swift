@@ -162,7 +162,7 @@ private extension TabPlayerView {
 // MARK: Lazy initialization
 private extension TabPlayerView {
     func makeImageView() -> BookImageView {
-        let view = BookImageView()
+        let view = BookImageView(size: .small1)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

@@ -159,7 +159,7 @@ private extension ChallengeBooksCollectionCell {
     }
     
     func makeBookImageView() -> BookImageView {
-        let view = BookImageView()
+        let view = BookImageView(size: .small3)
         view.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(view)
         return view

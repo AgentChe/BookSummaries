@@ -94,7 +94,7 @@ private extension CategoryCollectionCell {
 // MARK: Lazy initialization
 private extension CategoryCollectionCell {
     func makeImageView() -> BookImageView {
-        let view = BookImageView()
+        let view = BookImageView(size: .medium)
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

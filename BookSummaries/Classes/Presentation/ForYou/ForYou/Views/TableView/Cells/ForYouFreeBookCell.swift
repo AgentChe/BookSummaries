@@ -135,7 +135,7 @@ private extension ForYouFreeBookCell {
     }
     
     func makeImageView() -> BookImageView {
-        let view = BookImageView()
+        let view = BookImageView(size: .small3)
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view
