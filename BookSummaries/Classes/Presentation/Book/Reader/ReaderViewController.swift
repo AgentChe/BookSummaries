@@ -120,6 +120,8 @@ final class ReaderViewController: UIViewController {
                 base.bottomView(hidden: !isLastChapter)
             })
             .disposed(by: disposeBag)
+        
+        addSwipeActions()
     }
 }
 
@@ -134,6 +136,27 @@ extension ReaderViewController {
 
 // MARK: Private
 private extension ReaderViewController {
+    func addSwipeActions() {
+        let leftSwipe = UISwipeGestureRecognizer()
+        leftSwipe.direction = .left
+        
+        let rightSwipe = UISwipeGestureRecognizer()
+        rightSwipe.direction = .right
+        
+        leftSwipe.rx.event
+            .withLatestFrom(viewModel.currentChapter)
+            .bind(to: viewModel.didSwipeToNextChapter)
+            .disposed(by: disposeBag)
+        
+        rightSwipe.rx.event
+            .withLatestFrom(viewModel.currentChapter)
+            .bind(to: viewModel.didSwipeToPreviousChapter)
+            .disposed(by: disposeBag)
+        
+        mainView.scrollView.addGestureRecognizer(leftSwipe)
+        mainView.scrollView.addGestureRecognizer(rightSwipe)
+    }
+    
     func share(url: URL) {
         let vc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
         present(vc, animated: true)
@@ -141,7 +164,7 @@ private extension ReaderViewController {
     
     func open(chapters: [BookChapter], currentChapter: BookChapter) {
         let vc = ChaptersViewController.make(chapters: chapters, selectedChapter: currentChapter) { [weak self] chapter in
-            self?.viewModel.currentChapter.accept(chapter)
+            self?.viewModel.didSelectChapter.accept(chapter)
         }
         present(vc, animated: true)
     }

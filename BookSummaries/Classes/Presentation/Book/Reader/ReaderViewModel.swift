@@ -10,7 +10,9 @@ import RxCocoa
 
 final class ReaderViewModel {
     let book: BehaviorRelay<Book>
-    let currentChapter: BehaviorRelay<BookChapter>
+    lazy var didSelectChapter = PublishRelay<BookChapter>()
+    lazy var didSwipeToPreviousChapter = PublishRelay<BookChapter>()
+    lazy var didSwipeToNextChapter = PublishRelay<BookChapter>()
     lazy var didTapMinusTextSize = PublishRelay<Void>()
     lazy var didTapPlusTextSize = PublishRelay<Void>()
     
@@ -19,15 +21,18 @@ final class ReaderViewModel {
     lazy var progress = makeProgress()
     lazy var text = makeText()
     lazy var isLastChapter = makeIsLastChapter()
+    lazy var currentChapter = makeCurrentChapter()
     
     private lazy var textSizes = makeTextSizes()
+    
+    private let startChapter: BehaviorRelay<BookChapter>
     
     private lazy var contentManager = ContentManager()
     private lazy var profileManager = ProfileManager()
     
     init(book: Book, startChapter: BookChapter) {
         self.book = BehaviorRelay(value: book)
-        self.currentChapter = BehaviorRelay(value: startChapter)
+        self.startChapter = BehaviorRelay(value: startChapter)
     }
 }
 
@@ -59,7 +64,7 @@ private extension ReaderViewModel {
         Driver
             .combineLatest(
                 book.asDriver(),
-                currentChapter.asDriver()
+                currentChapter
             )
             .flatMapLatest { [weak self] book, chapter -> Driver<BookReadingProgress> in
                 guard let self = self else {
@@ -84,7 +89,7 @@ private extension ReaderViewModel {
     
     func makeText() -> Driver<NSAttributedString> {
         Driver
-            .combineLatest(currentChapter.asDriver(), textSize)
+            .combineLatest(currentChapter, textSize)
             .map { chapter, textSize -> NSAttributedString in
                 let title = chapter.title
                     .attributed(with: TextAttributes()
@@ -118,7 +123,7 @@ private extension ReaderViewModel {
         Driver
             .combineLatest(
                 book.asDriver(),
-                currentChapter.asDriver()
+                currentChapter
             )
             .map { book, chapter -> Bool in
                 guard let index = book.chapters.firstIndex(of: chapter) else {
@@ -172,5 +177,43 @@ private extension ReaderViewModel {
                 TextSize(percent: 120)
             ])
         }
+    }
+    
+    func makeCurrentChapter() -> Driver<BookChapter> {
+        let previous = didSwipeToPreviousChapter
+            .withLatestFrom(book) { ($0, $1) }
+            .compactMap { currentChapter, book -> BookChapter? in
+                let chapters = book.chapters
+                
+                guard let currentIndex = chapters.firstIndex(of: currentChapter) else {
+                    return nil
+                }
+                
+                let previousIndex = currentIndex - 1
+                
+                return chapters[safe: previousIndex]
+            }
+        
+        let next = didSwipeToNextChapter
+            .withLatestFrom(book) { ($0, $1) }
+            .compactMap { currentChapter, book -> BookChapter? in
+                let chapters = book.chapters
+                
+                guard let currentIndex = chapters.firstIndex(of: currentChapter) else {
+                    return nil
+                }
+                
+                let nextIndex = currentIndex + 1
+                
+                return chapters[safe: nextIndex]
+            }
+        
+        return Driver
+            .merge(
+                startChapter.asDriver(),
+                didSelectChapter.asDriver(onErrorDriveWith: .never()),
+                previous.asDriver(onErrorDriveWith: .never()),
+                next.asDriver(onErrorDriveWith: .never())
+            )
     }
 }
