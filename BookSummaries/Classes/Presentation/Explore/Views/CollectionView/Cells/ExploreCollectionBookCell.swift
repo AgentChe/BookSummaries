@@ -10,8 +10,8 @@ import Kingfisher
 
 final class ExploreCollectionBookCell: UICollectionViewCell {
     lazy var bookImageView = makeImageView()
-    lazy var nameLabel = makeLabel(numberOfLines: 2)
-    lazy var authorLabel = makeLabel(numberOfLines: 1)
+    lazy var nameLabel = makeLabel()
+    lazy var authorLabel = makeLabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -100,9 +100,8 @@ private extension ExploreCollectionBookCell {
         return view
     }
     
-    func makeLabel(numberOfLines: Int) -> UILabel {
+    func makeLabel() -> UILabel {
         let view = UILabel()
-        view.numberOfLines = numberOfLines
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

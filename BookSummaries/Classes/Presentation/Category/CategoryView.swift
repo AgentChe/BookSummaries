@@ -94,8 +94,8 @@ private extension CategoryView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 16.scale
-        layout.minimumInteritemSpacing = 0
-        layout.sectionInset = UIEdgeInsets(top: 35, left: 16.scale, bottom: 35, right: 16.scale)
+        layout.minimumInteritemSpacing = 16.scale
+        layout.sectionInset = UIEdgeInsets(top: 35.scale, left: 16.scale, bottom: 35.scale, right: 16.scale)
         
         let view = CategoryCollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = UIColor.clear

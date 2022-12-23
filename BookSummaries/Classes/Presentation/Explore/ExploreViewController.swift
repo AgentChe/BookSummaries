@@ -96,10 +96,6 @@ extension ExploreViewController: ExploreCollectionDelegate {
         
         present(vc, animated: true)
     }
-    
-    func exploreCollectionDidTapped(popularRequest: String) {
-        mainView.searchView.setup(popularRequest: popularRequest)
-    }
 }
 
 // MARK: Private
