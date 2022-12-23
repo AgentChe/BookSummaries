@@ -53,6 +53,9 @@ final class BookViewController: UIViewController {
         
         mainView.closeButton.rx.tap
             .bind(to: Binder(self) { base, void in
+                AmplitudeManager.shared
+                    .logEvent(name: "Book Tap", parameters: ["what": "back"])
+                
                 base.dismiss(animated: true)
             })
             .disposed(by: disposeBag)
@@ -64,6 +67,9 @@ final class BookViewController: UIViewController {
         viewModel.listen
             .drive(Binder(self) { base, args in
                 let (book, url) = args
+                
+                AmplitudeManager.shared
+                    .logEvent(name: "Book Tap", parameters: ["what": "listen"])
                 
                 let vc = PlayerViewController.make(book: book, audioUrl: url)
                 base.present(vc, animated: true)
@@ -88,6 +94,9 @@ final class BookViewController: UIViewController {
         
         viewModel.reader
             .drive(Binder(self) { base, reader in
+                AmplitudeManager.shared
+                    .logEvent(name: "Book Tap", parameters: ["what": "read"])
+                
                 let vc = ReaderViewController.make(book: reader.0, chapter: reader.1)
                 base.present(vc, animated: true)
             })
@@ -96,12 +105,19 @@ final class BookViewController: UIViewController {
         mainView.shareButton.rx.tap
             .withLatestFrom(viewModel.shareLink)
             .bind(to: Binder(self) { base, url in
+                AmplitudeManager.shared
+                    .logEvent(name: "Book Tap", parameters: ["what": "share"])
+                
                 base.share(url: url)
             })
             .disposed(by: disposeBag)
         
         mainView.favoriteButton.rx.tap
             .withLatestFrom(viewModel.isSavedBook)
+            .do(onNext: { saved in
+                AmplitudeManager.shared
+                    .logEvent(name: "Book Tap", parameters: ["what": "bookmark"])
+            })
             .bind(to: viewModel.didTapMark)
             .disposed(by: disposeBag)
         
@@ -163,6 +179,9 @@ extension BookViewController: BookTableDelegate {
 // MARK: BookDownloadViewDelegate
 extension BookViewController: BookDownloadViewDelegate {
     func bookDownloadViewDidDownloadTapped() {
+        AmplitudeManager.shared
+            .logEvent(name: "Book Tap", parameters: ["what": "download"])
+        
         viewModel.didTapStartDownload.accept(Void())
     }
     

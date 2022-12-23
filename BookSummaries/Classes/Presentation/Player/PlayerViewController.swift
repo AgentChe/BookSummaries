@@ -41,6 +41,9 @@ final class PlayerViewController: UIViewController {
         
         mainView.closeButton.rx.tap
             .bind(to: Binder(self) { base, void in
+                AmplitudeManager.shared
+                    .logEvent(name: "Player Tap", parameters: ["what": "close"])
+                
                 base.dismiss(animated: true)
             })
             .disposed(by: disposeBag)

@@ -37,6 +37,9 @@ final class ReaderViewController: UIViewController {
         
         mainView.closeButton.rx.tap
             .bind(to: Binder(self) { base, void in
+                AmplitudeManager.shared
+                    .logEvent(name: "Read Tap", parameters: ["what": "close"])
+                
                 base.dismiss(animated: true)
             })
             .disposed(by: disposeBag)
@@ -45,6 +48,9 @@ final class ReaderViewController: UIViewController {
             .withLatestFrom(viewModel.book)
             .withLatestFrom(viewModel.currentChapter) { ($0, $1) }
             .bind(to: Binder(self) { base, args in
+                AmplitudeManager.shared
+                    .logEvent(name: "Read Tap", parameters: ["what": "chapters"])
+                
                 base.open(chapters: args.0.chapters, currentChapter: args.1)
             })
             .disposed(by: disposeBag)
@@ -66,6 +72,9 @@ final class ReaderViewController: UIViewController {
         mainView.markFinishButton.rx.tap
             .withLatestFrom(viewModel.book)
             .bind(to: Binder(self) { base, book in
+                AmplitudeManager.shared
+                    .logEvent(name: "Read Tap", parameters: ["what": "mark as finished"])
+                
                 let vc = FeedbackViewController.make(book: book)
                 base.present(vc, animated: true)
             })
@@ -74,6 +83,9 @@ final class ReaderViewController: UIViewController {
         mainView.shareButton.rx.tap
             .withLatestFrom(viewModel.shareLink)
             .bind(to: Binder(self) { base, url in
+                AmplitudeManager.shared
+                    .logEvent(name: "Read Tap", parameters: ["what": "share"])
+                
                 base.share(url: url)
             })
             .disposed(by: disposeBag)
@@ -84,6 +96,9 @@ final class ReaderViewController: UIViewController {
             }
             .startWith(true)
             .bind(to: Binder(self) { base, hidden in
+                AmplitudeManager.shared
+                    .logEvent(name: "Read Tap", parameters: ["what": "font size"])
+                
                 base.textSize(hidden: hidden)
             })
             .disposed(by: disposeBag)

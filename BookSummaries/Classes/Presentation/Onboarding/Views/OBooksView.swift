@@ -47,7 +47,7 @@ final class OBooksView: OSlideView {
         super.moveToThis()
         
         AmplitudeManager.shared
-            .logEvent(name: "Onboarding Books Screen")
+            .logEvent(name: "Personalisation Screen")
     }
 }
 

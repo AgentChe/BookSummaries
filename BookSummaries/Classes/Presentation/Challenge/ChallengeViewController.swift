@@ -37,6 +37,9 @@ final class ChallengeViewController: UIViewController {
         
         mainView.closeButton.rx.tap
             .bind(to: Binder(self) { base, void in
+                AmplitudeManager.shared
+                    .logEvent(name: "Challenge Tap", parameters: ["what": "close"])
+                
                 base.dismiss(animated: true)
             })
             .disposed(by: disposeBag)
@@ -92,10 +95,16 @@ extension ChallengeViewController {
 // MARK: ChallengeTableDelegate
 extension ChallengeViewController: ChallengeTableDelegate {
     func challengeTableDidTappedListen(bookId: Int) {
+        AmplitudeManager.shared
+            .logEvent(name: "Challenge Tap", parameters: ["what": "listen"])
+        
         viewModel.listenTapped.accept(bookId)
     }
     
     func challengeTableDidTappedRead(bookId: Int) {
+        AmplitudeManager.shared
+            .logEvent(name: "Challenge Tap", parameters: ["what": "read"])
+        
         let vc = BookViewController.make(bookId: bookId)
         present(vc, animated: true)
     }
