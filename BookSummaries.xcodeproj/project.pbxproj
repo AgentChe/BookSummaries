@@ -141,7 +141,6 @@
 		DE4E83F128AD61F0001BE774 /* ChallengeBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83F028AD61F0001BE774 /* ChallengeBadgeView.swift */; };
 		DE4E83F328AD64A8001BE774 /* ChallengeBadgeProgressLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83F228AD64A8001BE774 /* ChallengeBadgeProgressLabel.swift */; };
 		DE4E83F528AE41C9001BE774 /* ChallengeBadgeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83F428AE41C9001BE774 /* ChallengeBadgeImageView.swift */; };
-		DE4E83F928B4C676001BE774 /* SplashAnimateLampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83F828B4C676001BE774 /* SplashAnimateLampView.swift */; };
 		DE4E83FC28B4DBA9001BE774 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83FB28B4DBA9001BE774 /* OnboardingViewController.swift */; };
 		DE4E83FE28B4DBBD001BE774 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83FD28B4DBBD001BE774 /* OnboardingViewModel.swift */; };
 		DE4E840028B4DBC6001BE774 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E83FF28B4DBC6001BE774 /* OnboardingView.swift */; };
@@ -257,6 +256,7 @@
 		DEBF91DB2886F28F00F8DC0F /* ExploreCollectionCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91DA2886F28F00F8DC0F /* ExploreCollectionCategoriesCell.swift */; };
 		DEBF91DD2886F29D00F8DC0F /* ExploreCollectionBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91DC2886F29D00F8DC0F /* ExploreCollectionBookCell.swift */; };
 		DEBF91DF2886F2B100F8DC0F /* ExploreCollectionPopularRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF91DE2886F2B100F8DC0F /* ExploreCollectionPopularRequestCell.swift */; };
+		DEC1F6EE2955CC2F00FBBA65 /* Splash.Lamp.json in Resources */ = {isa = PBXBuildFile; fileRef = DEC1F6ED2955CC2F00FBBA65 /* Splash.Lamp.json */; };
 		DEFF6199287473F500FE863E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF6198287473F500FE863E /* AppDelegate.swift */; };
 		DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF619A287473F500FE863E /* SceneDelegate.swift */; };
 		DEFF61A2287473F600FE863E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEFF61A1287473F600FE863E /* Assets.xcassets */; };
@@ -451,7 +451,6 @@
 		DE4E83F028AD61F0001BE774 /* ChallengeBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeBadgeView.swift; sourceTree = "<group>"; };
 		DE4E83F228AD64A8001BE774 /* ChallengeBadgeProgressLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeBadgeProgressLabel.swift; sourceTree = "<group>"; };
 		DE4E83F428AE41C9001BE774 /* ChallengeBadgeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeBadgeImageView.swift; sourceTree = "<group>"; };
-		DE4E83F828B4C676001BE774 /* SplashAnimateLampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAnimateLampView.swift; sourceTree = "<group>"; };
 		DE4E83FB28B4DBA9001BE774 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		DE4E83FD28B4DBBD001BE774 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		DE4E83FF28B4DBC6001BE774 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -568,6 +567,7 @@
 		DEBF91DA2886F28F00F8DC0F /* ExploreCollectionCategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionCategoriesCell.swift; sourceTree = "<group>"; };
 		DEBF91DC2886F29D00F8DC0F /* ExploreCollectionBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionBookCell.swift; sourceTree = "<group>"; };
 		DEBF91DE2886F2B100F8DC0F /* ExploreCollectionPopularRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionPopularRequestCell.swift; sourceTree = "<group>"; };
+		DEC1F6ED2955CC2F00FBBA65 /* Splash.Lamp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Splash.Lamp.json; sourceTree = "<group>"; };
 		DEFF6195287473F500FE863E /* BookSummaries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSummaries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFF6198287473F500FE863E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEFF619A287473F500FE863E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1231,14 +1231,6 @@
 			path = Badges;
 			sourceTree = "<group>";
 		};
-		DE4E83F728B4C669001BE774 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				DE4E83F828B4C676001BE774 /* SplashAnimateLampView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		DE4E83FA28B4D76A001BE774 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -1688,6 +1680,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		DEC1F6E82955C10600FBBA65 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DEC1F6ED2955CC2F00FBBA65 /* Splash.Lamp.json */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		DEFF618C287473F500FE863E = {
 			isa = PBXGroup;
 			children = (
@@ -1970,7 +1970,7 @@
 		DEFF62372874813800FE863E /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				DE4E83F728B4C669001BE774 /* Views */,
+				DEC1F6E82955C10600FBBA65 /* Source */,
 				DE06C648287498B6009866FC /* Utils */,
 				DEFF623A2874814D00FE863E /* SplashViewController.swift */,
 				DEFF623E287481A400FE863E /* SplashViewModel.swift */,
@@ -2050,6 +2050,7 @@
 				DE06C6412874875D009866FC /* Merriweather-Bold.ttf in Resources */,
 				DE06C6422874875D009866FC /* Merriweather-Regular.ttf in Resources */,
 				DEFF61A5287473F600FE863E /* LaunchScreen.storyboard in Resources */,
+				DEC1F6EE2955CC2F00FBBA65 /* Splash.Lamp.json in Resources */,
 				DE06C632287484A4009866FC /* Localizable.strings in Resources */,
 				DEFF61A2287473F600FE863E /* Assets.xcassets in Resources */,
 			);
@@ -2361,7 +2362,6 @@
 				DE06C66B28769EF9009866FC /* TabView.swift in Sources */,
 				DE30479228A6663900E0AEA4 /* ChallengeViewModel.swift in Sources */,
 				DE06C711287DC87D009866FC /* GetRankingResponse.swift in Sources */,
-				DE4E83F928B4C676001BE774 /* SplashAnimateLampView.swift in Sources */,
 				DE4E840728B4DCD0001BE774 /* OSlideView.swift in Sources */,
 				DEFF623128747E0B00FE863E /* IAPProduct.swift in Sources */,
 				DE06C734287DD6E0009866FC /* GetExploreKitResponse.swift in Sources */,

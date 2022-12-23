@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 final class SplashView: UIView {
     lazy var animateView = makeAnimateView()
@@ -36,7 +37,9 @@ private extension SplashView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
             animateView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            animateView.topAnchor.constraint(equalTo: topAnchor)
+            animateView.topAnchor.constraint(equalTo: topAnchor),
+            animateView.widthAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 157.scale : 129.scale),
+            animateView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 519.scale : 409.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -54,8 +57,9 @@ private extension SplashView {
 
 // MARK: Lazy initialization
 private extension SplashView {
-    func makeAnimateView() -> SplashAnimateLampView {
-        let view = SplashAnimateLampView()
+    func makeAnimateView() -> LottieAnimationView {
+        let view = LottieAnimationView(name: "Splash.Lamp")
+        view.contentMode = .scaleAspectFit
         view.backgroundColor = UIColor.clear
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

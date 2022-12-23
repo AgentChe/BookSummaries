@@ -47,7 +47,7 @@ final class SplashViewController: UIViewController {
             guard let self = self else {
                 return
             }
-            
+
             switch progress {
             case .error:
                 self.activity(state: .none)
@@ -63,7 +63,7 @@ final class SplashViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        mainView.animateView.start()
+        mainView.animateView.play()
     }
 }
 
