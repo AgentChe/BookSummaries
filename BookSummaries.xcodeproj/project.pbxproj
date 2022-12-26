@@ -282,7 +282,6 @@
 		DEFF620928747C2B00FE863E /* RxActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61EF28747C2B00FE863E /* RxActivityIndicator.swift */; };
 		DEFF620A28747C2B00FE863E /* UIViewRxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61F028747C2B00FE863E /* UIViewRxExtension.swift */; };
 		DEFF620B28747C2B00FE863E /* DefaultRequestWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61F328747C2B00FE863E /* DefaultRequestWrapper.swift */; };
-		DEFF620C28747C2B00FE863E /* XORRequestWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61F428747C2B00FE863E /* XORRequestWrapper.swift */; };
 		DEFF620D28747C2B00FE863E /* APIRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61F528747C2B00FE863E /* APIRequestBody.swift */; };
 		DEFF620E28747C2B00FE863E /* RestAPITransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61F628747C2B00FE863E /* RestAPITransport.swift */; };
 		DEFF620F28747C2B00FE863E /* PushNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61F828747C2B00FE863E /* PushNotificationsManager.swift */; };
@@ -594,7 +593,6 @@
 		DEFF61EF28747C2B00FE863E /* RxActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxActivityIndicator.swift; sourceTree = "<group>"; };
 		DEFF61F028747C2B00FE863E /* UIViewRxExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewRxExtension.swift; sourceTree = "<group>"; };
 		DEFF61F328747C2B00FE863E /* DefaultRequestWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultRequestWrapper.swift; sourceTree = "<group>"; };
-		DEFF61F428747C2B00FE863E /* XORRequestWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XORRequestWrapper.swift; sourceTree = "<group>"; };
 		DEFF61F528747C2B00FE863E /* APIRequestBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestBody.swift; sourceTree = "<group>"; };
 		DEFF61F628747C2B00FE863E /* RestAPITransport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestAPITransport.swift; sourceTree = "<group>"; };
 		DEFF61F828747C2B00FE863E /* PushNotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationsManager.swift; sourceTree = "<group>"; };
@@ -1829,7 +1827,6 @@
 			isa = PBXGroup;
 			children = (
 				DEFF61F328747C2B00FE863E /* DefaultRequestWrapper.swift */,
-				DEFF61F428747C2B00FE863E /* XORRequestWrapper.swift */,
 			);
 			path = Wrapper;
 			sourceTree = "<group>";
@@ -2344,7 +2341,6 @@
 				DE06C692287709CA009866FC /* ForYouBooksCell.swift in Sources */,
 				DEFF61BD2874798B00FE863E /* FacebookManager.swift in Sources */,
 				DE683336288AAEE800FAEF96 /* LibraryTableBookCell.swift in Sources */,
-				DEFF620C28747C2B00FE863E /* XORRequestWrapper.swift in Sources */,
 				DE06C66228769ED1009866FC /* MainViewController.swift in Sources */,
 				DE06C70A287DC6FF009866FC /* GetCategoriesRequest.swift in Sources */,
 				DEBF91B72886A7B100F8DC0F /* RankingsCollectionElement.swift in Sources */,

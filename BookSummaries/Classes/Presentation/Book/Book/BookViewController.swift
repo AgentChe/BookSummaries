@@ -42,7 +42,7 @@ final class BookViewController: UIViewController {
                 return .never()
             }
             
-            return self.openError()
+            return self.open(error: error)
         }
         
         viewModel.activity
@@ -197,14 +197,14 @@ private extension BookViewController {
         mainView.favoriteButton.setImage(image, for: .normal)
     }
     
-    func openError() -> Observable<Void> {
+    func open(error: Error) -> Observable<Void> {
         Observable<Void>
             .create { [weak self] observe in
                 guard let self = self else {
                     return Disposables.create()
                 }
                 
-                let vc = TryAgainViewController.make {
+                let vc = TryAgainViewController.make(error: error) {
                     observe.onNext(())
                 }
                 self.present(vc, animated: true)
