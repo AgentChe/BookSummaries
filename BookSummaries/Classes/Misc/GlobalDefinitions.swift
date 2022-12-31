@@ -10,7 +10,7 @@ final class GlobalDefinitions {
     static let apiKey = "BeV3sSdfVixSJQFP"
     
     static let otterScaleHost = "https://api.korrekted.com"
-    static let otterScaleApiKey = "nLcxrPTkFUCO8orL"
+    static let otterScaleApiKey = "zrZ6NRwQsl789uWVkM3g"
     
     static let appleAppID = "1585629405"
     
