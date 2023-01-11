@@ -179,6 +179,7 @@
 		DE6833632891754400FAEF96 /* TabPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833622891754400FAEF96 /* TabPlayerView.swift */; };
 		DE6833652891755000FAEF96 /* TabPlayerPlayPauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833642891755000FAEF96 /* TabPlayerPlayPauseView.swift */; };
 		DE8A31F42954889900B2E228 /* RequestReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31F32954889900B2E228 /* RequestReview.swift */; };
+		DEAD8FFF296F00A10093658A /* AppsFlyerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD8FFE296F00A10093658A /* AppsFlyerManager.swift */; };
 		DEBE97A428B51AD40065C5E1 /* OAgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97A328B51AD40065C5E1 /* OAgeView.swift */; };
 		DEBE97A828B51C5E0065C5E1 /* OAgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97A728B51C5E0065C5E1 /* OAgeButton.swift */; };
 		DEBE97AA28B523260065C5E1 /* OBriefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97A928B523260065C5E1 /* OBriefView.swift */; };
@@ -487,6 +488,7 @@
 		DE6833622891754400FAEF96 /* TabPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPlayerView.swift; sourceTree = "<group>"; };
 		DE6833642891755000FAEF96 /* TabPlayerPlayPauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPlayerPlayPauseView.swift; sourceTree = "<group>"; };
 		DE8A31F32954889900B2E228 /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
+		DEAD8FFE296F00A10093658A /* AppsFlyerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsFlyerManager.swift; sourceTree = "<group>"; };
 		DEBE97A328B51AD40065C5E1 /* OAgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAgeView.swift; sourceTree = "<group>"; };
 		DEBE97A728B51C5E0065C5E1 /* OAgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAgeButton.swift; sourceTree = "<group>"; };
 		DEBE97A928B523260065C5E1 /* OBriefView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBriefView.swift; sourceTree = "<group>"; };
@@ -1760,6 +1762,7 @@
 				DEFF61B32874798B00FE863E /* AmplitudeManager.swift */,
 				DEFF61B52874798B00FE863E /* FirebaseManager.swift */,
 				DEFF61B62874798B00FE863E /* FacebookManager.swift */,
+				DEAD8FFE296F00A10093658A /* AppsFlyerManager.swift */,
 			);
 			path = Analytics;
 			sourceTree = "<group>";
@@ -2352,6 +2355,7 @@
 				DEFF622D28747E0B00FE863E /* IAPManager.swift in Sources */,
 				DE06C6852876DADF009866FC /* BookCover.swift in Sources */,
 				DE06C66B28769EF9009866FC /* TabView.swift in Sources */,
+				DEAD8FFF296F00A10093658A /* AppsFlyerManager.swift in Sources */,
 				DE30479228A6663900E0AEA4 /* ChallengeViewModel.swift in Sources */,
 				DE06C711287DC87D009866FC /* GetRankingResponse.swift in Sources */,
 				DE4E840728B4DCD0001BE774 /* OSlideView.swift in Sources */,
@@ -2537,7 +2541,7 @@
 				CODE_SIGN_ENTITLEMENTS = BookSummaries/BookSummaries.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = AY43JM5PH6;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2552,7 +2556,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.1;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.books;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "BookSummaries Dev";
@@ -2571,7 +2575,7 @@
 				CODE_SIGN_ENTITLEMENTS = BookSummaries/BookSummaries.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = AY43JM5PH6;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2586,7 +2590,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.1;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.books;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "BookSummaries AppStore";
