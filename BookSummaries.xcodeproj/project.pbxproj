@@ -178,6 +178,10 @@
 		DE68335D28902CD000FAEF96 /* PlayerPreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE68335C28902CD000FAEF96 /* PlayerPreloaderView.swift */; };
 		DE6833632891754400FAEF96 /* TabPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833622891754400FAEF96 /* TabPlayerView.swift */; };
 		DE6833652891755000FAEF96 /* TabPlayerPlayPauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833642891755000FAEF96 /* TabPlayerPlayPauseView.swift */; };
+		DE80299229800F7500537FA6 /* Paygate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE80298C29800F7500537FA6 /* Paygate.swift */; };
+		DE80299329800F7500537FA6 /* GetPaygateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE80298F29800F7500537FA6 /* GetPaygateResponse.swift */; };
+		DE80299429800F7500537FA6 /* GetPaygateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE80299029800F7500537FA6 /* GetPaygateRequest.swift */; };
+		DE80299529800F7500537FA6 /* PaygateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE80299129800F7500537FA6 /* PaygateManager.swift */; };
 		DE8A31F42954889900B2E228 /* RequestReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31F32954889900B2E228 /* RequestReview.swift */; };
 		DEAD8FFF296F00A10093658A /* AppsFlyerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD8FFE296F00A10093658A /* AppsFlyerManager.swift */; };
 		DEBE97A428B51AD40065C5E1 /* OAgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97A328B51AD40065C5E1 /* OAgeView.swift */; };
@@ -487,6 +491,10 @@
 		DE68335C28902CD000FAEF96 /* PlayerPreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPreloaderView.swift; sourceTree = "<group>"; };
 		DE6833622891754400FAEF96 /* TabPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPlayerView.swift; sourceTree = "<group>"; };
 		DE6833642891755000FAEF96 /* TabPlayerPlayPauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPlayerPlayPauseView.swift; sourceTree = "<group>"; };
+		DE80298C29800F7500537FA6 /* Paygate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paygate.swift; sourceTree = "<group>"; };
+		DE80298F29800F7500537FA6 /* GetPaygateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPaygateResponse.swift; sourceTree = "<group>"; };
+		DE80299029800F7500537FA6 /* GetPaygateRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPaygateRequest.swift; sourceTree = "<group>"; };
+		DE80299129800F7500537FA6 /* PaygateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaygateManager.swift; sourceTree = "<group>"; };
 		DE8A31F32954889900B2E228 /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
 		DEAD8FFE296F00A10093658A /* AppsFlyerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsFlyerManager.swift; sourceTree = "<group>"; };
 		DEBE97A328B51AD40065C5E1 /* OAgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAgeView.swift; sourceTree = "<group>"; };
@@ -1429,6 +1437,41 @@
 			path = Player;
 			sourceTree = "<group>";
 		};
+		DE80298A29800F7500537FA6 /* Paygate */ = {
+			isa = PBXGroup;
+			children = (
+				DE80298B29800F7500537FA6 /* Model */,
+				DE80298D29800F7500537FA6 /* Request */,
+				DE80299129800F7500537FA6 /* PaygateManager.swift */,
+			);
+			path = Paygate;
+			sourceTree = "<group>";
+		};
+		DE80298B29800F7500537FA6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE80298C29800F7500537FA6 /* Paygate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE80298D29800F7500537FA6 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DE80298E29800F7500537FA6 /* GetPaygate */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DE80298E29800F7500537FA6 /* GetPaygate */ = {
+			isa = PBXGroup;
+			children = (
+				DE80298F29800F7500537FA6 /* GetPaygateResponse.swift */,
+				DE80299029800F7500537FA6 /* GetPaygateRequest.swift */,
+			);
+			path = GetPaygate;
+			sourceTree = "<group>";
+		};
 		DEBE97AB28B525E80065C5E1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -1881,6 +1924,7 @@
 		DEFF621D28747DA000FE863E /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DE80298A29800F7500537FA6 /* Paygate */,
 				DE06C6802876DA68009866FC /* Content */,
 				DE06C6562874A0F6009866FC /* Profile */,
 				DEFF621E28747E0B00FE863E /* Purchase */,
@@ -2115,6 +2159,7 @@
 				DEBF919728858DAA00F8DC0F /* FeedbackTableImproveCell.swift in Sources */,
 				DEBF91D92886F27000F8DC0F /* ExploreCollectionTitleCell.swift in Sources */,
 				DEBE97E628BBE9400065C5E1 /* SetRequest.swift in Sources */,
+				DE80299529800F7500537FA6 /* PaygateManager.swift in Sources */,
 				DE06C6B32879A97A009866FC /* SettingsView.swift in Sources */,
 				DE683328288AAB5600FAEF96 /* LibraryViewController.swift in Sources */,
 				DE06C64A287498C5009866FC /* SplashReceiptValidationObserver.swift in Sources */,
@@ -2208,6 +2253,7 @@
 				DE06C65B2874A152009866FC /* SyncTokensRequest.swift in Sources */,
 				DE06C71E287DD086009866FC /* GetForYouResponse.swift in Sources */,
 				DE06C6D3287C10CE009866FC /* BookNavButton.swift in Sources */,
+				DE80299429800F7500537FA6 /* GetPaygateRequest.swift in Sources */,
 				DEFF623B2874814D00FE863E /* SplashViewController.swift in Sources */,
 				DEBF91D42886E84E00F8DC0F /* ExploreCollectionElement.swift in Sources */,
 				DEBE97B328B52B120065C5E1 /* OCategoriesView.swift in Sources */,
@@ -2332,6 +2378,7 @@
 				DE4E83E728AD469C001BE774 /* ChallengeBooksCell.swift in Sources */,
 				DEFF621928747C2B00FE863E /* SignError.swift in Sources */,
 				DE06C6E5287C3499009866FC /* BookChapterCell.swift in Sources */,
+				DE80299329800F7500537FA6 /* GetPaygateResponse.swift in Sources */,
 				DEFF61D0287479A900FE863E /* ImagePicker.swift in Sources */,
 				DE06C65D2874A180009866FC /* ProfileManager.swift in Sources */,
 				DE06C6A828775386009866FC /* ForYouCategoriesCollectionCell.swift in Sources */,
@@ -2377,6 +2424,7 @@
 				DE06C732287DD6BD009866FC /* GetExploreKitRequest.swift in Sources */,
 				DEBF918A2885794A00F8DC0F /* FeedbackTableView.swift in Sources */,
 				DE4E840E28B506AB001BE774 /* OGoalView.swift in Sources */,
+				DE80299229800F7500537FA6 /* Paygate.swift in Sources */,
 				DE06C6A228774C36009866FC /* ForYouSeparatorCell.swift in Sources */,
 				DE06C6C6287C0D81009866FC /* BookViewController.swift in Sources */,
 				DEFF621728747C2B00FE863E /* XOREncryption.swift in Sources */,

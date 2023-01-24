@@ -24,6 +24,7 @@ final class SplashViewModel {
     private lazy var sessionManager = SessionManager()
     private lazy var profileManager = ProfileManager()
     private lazy var contentManager = ContentManager()
+    private lazy var paygateManager = PaygateManager()
     
     private lazy var observableRetrySingle = ObservableRetrySingle()
 }
@@ -106,8 +107,11 @@ private extension SplashViewModel {
             let ranking = contentManager
                 .obtainRankings(forceUpdate: true)
             
+            let paygate = paygateManager
+                .obtainPaygate(forceUpdate: true)
+            
             return Single
-                .zip(categories, ranking)
+                .zip(categories, ranking, paygate)
                 .mapToVoid()
         }
         
