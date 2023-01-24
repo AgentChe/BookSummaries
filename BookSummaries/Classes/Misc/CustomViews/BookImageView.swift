@@ -40,17 +40,33 @@ class BookImageView: UIImageView {
 // MARK: Private
 private extension BookImageView {
     func initialize() {
+        backgroundColor = UIColor(integralRed: 243, green: 239, blue: 232)
+        
         clipsToBounds = true
         contentMode = .scaleAspectFill
-        layer.cornerRadius = 10.scale
+        
+        layer.cornerRadius = cornerRadius()
+    }
+    
+    func cornerRadius() -> CGFloat {
+        switch size {
+        case .small1:
+            return 2.scale
+        case .small2:
+            return 4.scale
+        case .small3:
+            return 6.scale
+        case .medium:
+            return 8.scale
+        case .large:
+            return 10.scale
+        }
     }
     
     func line1Width() -> CGFloat {
         switch size {
-        case .small1:
-            return 1.scale
-        case .small2:
-            return 1.scale
+        case .small1, .small2:
+            return 0
         case .small3:
             return 3.scale
         case .medium:
@@ -62,10 +78,8 @@ private extension BookImageView {
     
     func line2Width() -> CGFloat {
         switch size {
-        case .small1:
-            return 1.scale
-        case .small2:
-            return 1.scale
+        case .small1, .small2:
+            return 0
         case .small3:
             return 2.scale
         case .medium:
@@ -77,10 +91,8 @@ private extension BookImageView {
     
     func line3Width() -> CGFloat {
         switch size {
-        case .small1:
-            return 1.scale
-        case .small2:
-            return 2.scale
+        case .small1, .small2:
+            return 0
         case .small3:
             return 5.scale
         case .medium:
@@ -92,10 +104,8 @@ private extension BookImageView {
     
     func line4Width() -> CGFloat {
         switch size {
-        case .small1:
-            return 0.56.scale
-        case .small2:
-            return 0.99.scale
+        case .small1, .small2:
+            return 0
         case .small3:
             return 2.scale
         case .medium:
