@@ -62,7 +62,7 @@ private extension ChapterTableCell {
 private extension ChapterTableCell {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            numberLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 37.scale),
+            numberLabel.trailingAnchor.constraint(equalTo: label.leadingAnchor, constant: -18.scale),
             numberLabel.centerYAnchor.constraint(equalTo: label.centerYAnchor)
         ])
         

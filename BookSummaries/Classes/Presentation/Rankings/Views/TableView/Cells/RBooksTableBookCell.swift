@@ -77,7 +77,7 @@ private extension RBooksTableBookCell {
 private extension RBooksTableBookCell {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            numberLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24.scale),
+            numberLabel.trailingAnchor.constraint(equalTo: bookImageView.leadingAnchor, constant: -18.scale),
             numberLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
         

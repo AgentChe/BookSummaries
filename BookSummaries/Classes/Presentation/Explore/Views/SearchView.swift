@@ -33,6 +33,7 @@ final class SearchView: UIView {
         makeConstraints()
         initialize()
         textEditing()
+        changed(state: state.value, animated: false)
     }
     
     required init?(coder: NSCoder) {
@@ -42,11 +43,6 @@ final class SearchView: UIView {
 
 // MARK: Public
 extension SearchView {
-    func setup(popularRequest: String) {
-        textField.text = popularRequest
-        textEditing()
-    }
-    
     var changedState: Signal<State> {
         state.asSignal(onErrorSignalWith: .never())
     }
@@ -73,6 +69,7 @@ extension SearchView: UITextFieldDelegate {
 private extension SearchView {
     func initialize() {
         changedState
+            .skip(1)
             .emit(to: Binder(self) { base, state in
                 base.changed(state: state, animated: true)
             })

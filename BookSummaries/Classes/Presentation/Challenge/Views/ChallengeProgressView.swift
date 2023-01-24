@@ -66,6 +66,7 @@ private extension ChallengeProgressView {
         trackLayer.lineWidth = 4.scale
         trackLayer.strokeColor = Appearance.primaryGreen.cgColor
         trackLayer.strokeStart = 0
+        trackLayer.strokeEnd = 0
         
         layer.addSublayer(totalLayer)
         layer.addSublayer(trackLayer)

@@ -114,7 +114,7 @@ private extension OBottomProgressView {
             stageTotalProgress = 33
             stageCurrentProgress = totalPercent
         case .bookPreferences:
-            stageTotalProgress = 33
+            stageTotalProgress = 66
             stageCurrentProgress = totalPercent - 33
         case .plan:
             stageTotalProgress = 34
