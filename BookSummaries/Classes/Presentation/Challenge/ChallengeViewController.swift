@@ -105,7 +105,7 @@ extension ChallengeViewController: ChallengeTableDelegate {
         AmplitudeManager.shared
             .logEvent(name: "Challenge Tap", parameters: ["what": "read"])
         
-        let vc = BookViewController.make(bookId: bookId)
+        let vc = BookViewController.make(bookId: bookId, isFree: false)
         present(vc, animated: true)
     }
     
@@ -116,7 +116,7 @@ extension ChallengeViewController: ChallengeTableDelegate {
         if needPayment && element.book.paid {
             vc = PaygateViewController.make()
         } else {
-            vc = BookViewController.make(bookId: element.book.id)
+            vc = BookViewController.make(bookId: element.book.id, isFree: false)
         }
         
         present(vc, animated: true)

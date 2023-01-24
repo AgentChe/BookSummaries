@@ -13,12 +13,14 @@ final class BookViewController: UIViewController {
     
     private lazy var disposeBag = DisposeBag()
     
-    private lazy var viewModel = BookViewModel(bookId: bookId)
+    private lazy var viewModel = BookViewModel(bookId: bookId, isFree: isFree)
     
     private let bookId: Int
+    private let isFree: Bool
     
-    private init(bookId: Int) {
+    private init(bookId: Int, isFree: Bool) {
         self.bookId = bookId
+        self.isFree = isFree
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -140,8 +142,8 @@ final class BookViewController: UIViewController {
 
 // MARK: Make
 extension BookViewController {
-    static func make(bookId: Int) -> BookViewController {
-        let vc = BookViewController(bookId: bookId)
+    static func make(bookId: Int, isFree: Bool) -> BookViewController {
+        let vc = BookViewController(bookId: bookId, isFree: isFree)
         vc.modalPresentationStyle = .fullScreen
         return vc
     }
@@ -164,7 +166,7 @@ extension BookViewController: BookTableDelegate {
         if needPayment && book.paid {
             vc = PaygateViewController.make()
         } else {
-            vc = BookViewController.make(bookId: book.id)
+            vc = BookViewController.make(bookId: book.id, isFree: false)
         }
         
         present(vc, animated: true)

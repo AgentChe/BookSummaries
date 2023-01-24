@@ -14,6 +14,7 @@ struct Book: Codable, Hashable {
     let author: Author
     let rankingId: Int
     let time: Int
+    let paid: Bool
     let audioUrl: URL
     let shareLink: URL
     let isSaved: Bool

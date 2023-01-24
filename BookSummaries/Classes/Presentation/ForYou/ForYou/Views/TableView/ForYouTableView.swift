@@ -8,6 +8,7 @@
 import UIKit
 
 protocol ForYouTableDelegate: AnyObject {
+    func forYouTableDidTapped(freeBook: BookCover)
     func forYouTableDidTapped(book: BookCover)
     func forYouTableDidTapped(challenge: ChallengeCover)
     func forYouTableDidTapped(ranking: Ranking)
@@ -119,7 +120,7 @@ extension ForYouTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch elements[indexPath.row] {
         case .freeBook(let element):
-            mainDelegate?.forYouTableDidTapped(book: element)
+            mainDelegate?.forYouTableDidTapped(freeBook: element)
         case .rankingBook(let element):
             mainDelegate?.forYouTableDidTapped(book: element.book)
         case .rankingTitle(let element):

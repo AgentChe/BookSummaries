@@ -183,7 +183,7 @@ private extension ChallengeViewModel {
                 
                 func source() -> Single<(BookCover, URL)> {
                     self.contentManager
-                        .obtainBookKit(bookId: bookId)
+                        .obtainBookKit(bookId: bookId, isFree: false)
                         .flatMap { bookKit -> Single<(BookCover, URL)> in
                             guard let bookKit = bookKit else {
                                 return .error(ContentError(.notContent))

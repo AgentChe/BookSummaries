@@ -316,6 +316,7 @@ private extension Book {
         author = Author(name: "", photoUrl: URL(string: "www.google.com")!)
         rankingId = 0
         time = 0
+        paid = false
         audioUrl = URL(string: "www.google.com")!
         shareLink = URL(string: "www.google.com")!
         isSaved = false

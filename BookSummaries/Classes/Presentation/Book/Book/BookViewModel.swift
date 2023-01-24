@@ -44,8 +44,11 @@ final class BookViewModel {
     
     private let bookId: BehaviorRelay<Int>
     
-    init(bookId: Int) {
+    private let isFree: Bool
+    
+    init(bookId: Int, isFree: Bool) {
         self.bookId = BehaviorRelay(value: bookId)
+        self.isFree = isFree
     }
 }
 
@@ -370,7 +373,7 @@ private extension BookViewModel {
                 
                 func source() -> Single<BookKit> {
                     self.contentManager
-                        .obtainBookKit(bookId: bookId)
+                        .obtainBookKit(bookId: bookId, isFree: self.isFree)
                         .catchAndReturn(nil)
                         .flatMap { kit -> Single<BookKit> in
                             if let kit = kit {
@@ -458,6 +461,6 @@ private extension BookCover {
         imageUrl = book.imageUrl
         rankingId = book.rankingId
         shareLink = book.shareLink
-        paid = false
+        paid = book.paid
     }
 }

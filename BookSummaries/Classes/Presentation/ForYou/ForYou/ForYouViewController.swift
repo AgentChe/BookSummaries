@@ -79,6 +79,11 @@ extension ForYouViewController {
 
 // MARK: ForYouTableDelegate
 extension ForYouViewController: ForYouTableDelegate {
+    func forYouTableDidTapped(freeBook: BookCover) {
+        let vc = BookViewController.make(bookId: freeBook.id, isFree: false)
+        present(vc, animated: true)
+    }
+    
     func forYouTableDidTapped(book: BookCover) {
         let vc: UIViewController
         
@@ -86,7 +91,7 @@ extension ForYouViewController: ForYouTableDelegate {
         if needPayment && book.paid {
             vc = PaygateViewController.make()
         } else {
-            vc = BookViewController.make(bookId: book.id)
+            vc = BookViewController.make(bookId: book.id, isFree: false)
         }
         
         present(vc, animated: true)

@@ -85,7 +85,7 @@ extension CategoryViewController: CategoryCollectionDelegate {
         if needPayment && book.paid {
             vc = PaygateViewController.make()
         } else {
-            vc = BookViewController.make(bookId: book.id)
+            vc = BookViewController.make(bookId: book.id, isFree: false)
         }
         
         present(vc, animated: true)

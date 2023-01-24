@@ -10,6 +10,7 @@ import Alamofire
 struct GetBookKitRequest: APIRequestBody {
     let userToken: String
     let bookId: Int
+    let isFree: Bool
     
     var url: String {
         GlobalDefinitions.domain + "/api/book"
@@ -23,7 +24,8 @@ struct GetBookKitRequest: APIRequestBody {
         [
             "_api_key": GlobalDefinitions.apiKey,
             "_user_token": userToken,
-            "book_id": bookId
+            "book_id": bookId,
+            "free": isFree
         ]
     }
 }

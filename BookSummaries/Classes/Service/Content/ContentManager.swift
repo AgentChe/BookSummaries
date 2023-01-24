@@ -11,7 +11,7 @@ import Foundation
 protocol ContentManagerProtocol: AnyObject {
     func obtainCategories(forceUpdate: Bool) -> Single<[Category]>
     func obtainRankings(forceUpdate: Bool) -> Single<[Ranking]>
-    func obtainBookKit(bookId: Int) -> Single<BookKit?>
+    func obtainBookKit(bookId: Int, isFree: Bool) -> Single<BookKit?>
     func obtainForYouKit() -> Single<ForYouKit?>
     func save(book: BookCover) -> Single<Bool>
     func removeSaved(book: BookCover) -> Single<Bool>
@@ -57,12 +57,14 @@ extension ContentManager {
         forceUpdate ? loadRankings() : cachedRankings()
     }
     
-    func obtainBookKit(bookId: Int) -> Single<BookKit?> {
+    func obtainBookKit(bookId: Int, isFree: Bool) -> Single<BookKit?> {
         guard let userToken = sessionManager.getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
         
-        let request = GetBookKitRequest(userToken: userToken, bookId: bookId)
+        let request = GetBookKitRequest(userToken: userToken,
+                                        bookId: bookId,
+                                        isFree: isFree)
         
         return defaultRequestWrapper
             .callServerApi(requestBody: request)

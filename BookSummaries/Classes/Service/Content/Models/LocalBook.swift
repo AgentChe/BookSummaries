@@ -28,6 +28,7 @@ struct LocalBook: Codable, Hashable {
                     author: original.author,
                     rankingId: original.rankingId,
                     time: original.time,
+                    paid: original.paid,
                     audioUrl: fileUrl,
                     shareLink: original.shareLink,
                     isSaved: original.isSaved,
