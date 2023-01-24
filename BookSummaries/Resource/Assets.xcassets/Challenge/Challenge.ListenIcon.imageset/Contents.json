@@ -1,19 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "Outline.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "Outline@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "Outline@3x.png",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "listen.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {

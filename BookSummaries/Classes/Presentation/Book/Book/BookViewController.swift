@@ -194,7 +194,7 @@ extension BookViewController: BookDownloadViewDelegate {
 private extension BookViewController {
     func update(favorite: Bool) {
         let image = UIImage(named: favorite ? "Book.Mark.Check" : "Book.Mark.Uncheck")
-        mainView.favoriteButton.setImage(image, for: .normal)
+        mainView.favoriteButton.iconView.image = image
     }
     
     func open(error: Error) -> Observable<Void> {

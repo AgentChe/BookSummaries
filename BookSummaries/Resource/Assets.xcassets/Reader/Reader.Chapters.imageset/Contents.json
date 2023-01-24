@@ -1,19 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "fi_list.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "fi_list@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "fi_list@3x.png",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "list.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {
