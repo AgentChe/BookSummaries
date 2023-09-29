@@ -1,6 +1,6 @@
 //
 //  PaygateViewControllerDelegate.swift
-//  BookSummaries
+//  Soccer
 //
 //  Created by Андрей Чернышев on 02.09.2022.
 //

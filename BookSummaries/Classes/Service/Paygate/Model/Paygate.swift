@@ -1,11 +1,11 @@
 //
 //  Paygate.swift
-//  BookSummaries
+//  Soccer
 //
-//  Created by Андрей Чернышев on 27.12.2022.
+//  Created by Андрей Чернышев on 08.02.2023.
 //
 
 struct Paygate: Codable, Hashable {
-    let monthly: String
-    let lifetime: String
+    let leftOptionConfig: PaygateOptionConfig
+    let rightOptionConfig: PaygateOptionConfig
 }

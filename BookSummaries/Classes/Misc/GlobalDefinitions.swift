@@ -21,4 +21,9 @@ final class GlobalDefinitions {
     static let termsOfServiceUrl = "https://thinkaboutapps.com/terms"
     static let privacyPolicyUrl = "https://thinkaboutapps.com/policy"
     static let contactUsUrl = "https://thinkaboutapps.com/contact"
+    
+    enum Paygate {
+        static let defaultLifetime = "app.books.forever"
+        static let defaultMonthly = "app.books.month15"
+    }
 }

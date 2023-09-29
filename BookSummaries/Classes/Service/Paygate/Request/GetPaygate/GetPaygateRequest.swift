@@ -1,6 +1,6 @@
 //
 //  GetPaygateRequest.swift
-//  BookSummaries
+//  Soccer
 //
 //  Created by Андрей Чернышев on 27.12.2022.
 //
@@ -11,7 +11,7 @@ struct GetPaygateRequest: APIRequestBody {
     let userToken: String
 
     var url: String {
-        GlobalDefinitions.domain + "/api/payments/paygate"
+        GlobalDefinitions.domain + "/api/payments/paygate_new"
     }
     
     var method: HTTPMethod {
