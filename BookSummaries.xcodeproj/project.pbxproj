@@ -170,7 +170,6 @@
 		DE6833632891754400FAEF96 /* TabPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833622891754400FAEF96 /* TabPlayerView.swift */; };
 		DE6833652891755000FAEF96 /* TabPlayerPlayPauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6833642891755000FAEF96 /* TabPlayerPlayPauseView.swift */; };
 		DE8A31F42954889900B2E228 /* RequestReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31F32954889900B2E228 /* RequestReview.swift */; };
-		DEAD8FFF296F00A10093658A /* AppsFlyerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD8FFE296F00A10093658A /* AppsFlyerManager.swift */; };
 		DEBE97A428B51AD40065C5E1 /* OAgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97A328B51AD40065C5E1 /* OAgeView.swift */; };
 		DEBE97A828B51C5E0065C5E1 /* OAgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97A728B51C5E0065C5E1 /* OAgeButton.swift */; };
 		DEBE97AA28B523260065C5E1 /* OBriefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE97A928B523260065C5E1 /* OBriefView.swift */; };
@@ -267,7 +266,6 @@
 		DEFF619B287473F500FE863E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF619A287473F500FE863E /* SceneDelegate.swift */; };
 		DEFF61A2287473F600FE863E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEFF61A1287473F600FE863E /* Assets.xcassets */; };
 		DEFF61A5287473F600FE863E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEFF61A3287473F600FE863E /* LaunchScreen.storyboard */; };
-		DEFF61B92874798B00FE863E /* BranchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61B22874798B00FE863E /* BranchManager.swift */; };
 		DEFF61BA2874798B00FE863E /* AmplitudeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61B32874798B00FE863E /* AmplitudeManager.swift */; };
 		DEFF61BC2874798B00FE863E /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61B52874798B00FE863E /* FirebaseManager.swift */; };
 		DEFF61BD2874798B00FE863E /* FacebookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF61B62874798B00FE863E /* FacebookManager.swift */; };
@@ -485,7 +483,6 @@
 		DE6833622891754400FAEF96 /* TabPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPlayerView.swift; sourceTree = "<group>"; };
 		DE6833642891755000FAEF96 /* TabPlayerPlayPauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPlayerPlayPauseView.swift; sourceTree = "<group>"; };
 		DE8A31F32954889900B2E228 /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
-		DEAD8FFE296F00A10093658A /* AppsFlyerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsFlyerManager.swift; sourceTree = "<group>"; };
 		DEBE97A328B51AD40065C5E1 /* OAgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAgeView.swift; sourceTree = "<group>"; };
 		DEBE97A728B51C5E0065C5E1 /* OAgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAgeButton.swift; sourceTree = "<group>"; };
 		DEBE97A928B523260065C5E1 /* OBriefView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBriefView.swift; sourceTree = "<group>"; };
@@ -585,7 +582,6 @@
 		DEFF61A1287473F600FE863E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEFF61A4287473F600FE863E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEFF61A6287473F600FE863E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DEFF61B22874798B00FE863E /* BranchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchManager.swift; sourceTree = "<group>"; };
 		DEFF61B32874798B00FE863E /* AmplitudeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmplitudeManager.swift; sourceTree = "<group>"; };
 		DEFF61B52874798B00FE863E /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		DEFF61B62874798B00FE863E /* FacebookManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookManager.swift; sourceTree = "<group>"; };
@@ -1807,11 +1803,9 @@
 		DEFF61AF2874798B00FE863E /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				DEFF61B22874798B00FE863E /* BranchManager.swift */,
 				DEFF61B32874798B00FE863E /* AmplitudeManager.swift */,
 				DEFF61B52874798B00FE863E /* FirebaseManager.swift */,
 				DEFF61B62874798B00FE863E /* FacebookManager.swift */,
-				DEAD8FFE296F00A10093658A /* AppsFlyerManager.swift */,
 			);
 			path = Analytics;
 			sourceTree = "<group>";
@@ -2410,7 +2404,6 @@
 				DEFF622D28747E0B00FE863E /* IAPManager.swift in Sources */,
 				DE06C6852876DADF009866FC /* BookCover.swift in Sources */,
 				DE06C66B28769EF9009866FC /* TabView.swift in Sources */,
-				DEAD8FFF296F00A10093658A /* AppsFlyerManager.swift in Sources */,
 				DE30479228A6663900E0AEA4 /* ChallengeViewModel.swift in Sources */,
 				DE06C711287DC87D009866FC /* GetRankingResponse.swift in Sources */,
 				DE4E840728B4DCD0001BE774 /* OSlideView.swift in Sources */,
@@ -2427,7 +2420,6 @@
 				DEBF91B92886A7B800F8DC0F /* RankingsCollectionCell.swift in Sources */,
 				DEBF91D22886DE1100F8DC0F /* ExploreCollectionView.swift in Sources */,
 				DEBE97AF28B5264E0065C5E1 /* OCategoriesCollectionCell.swift in Sources */,
-				DEFF61B92874798B00FE863E /* BranchManager.swift in Sources */,
 				DE06C6F4287C5010009866FC /* CategoryView.swift in Sources */,
 				DE06C72A287DD4F9009866FC /* GetSavedBooksResponse.swift in Sources */,
 				DE06C732287DD6BD009866FC /* GetExploreKitRequest.swift in Sources */,
@@ -2597,7 +2589,7 @@
 				CODE_SIGN_ENTITLEMENTS = BookSummaries/BookSummaries.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = AY43JM5PH6;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = AY43JM5PH6;
 				ENABLE_BITCODE = NO;
@@ -2612,7 +2604,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = app.books;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "BookSummaries Dev";
@@ -2632,7 +2624,7 @@
 				CODE_SIGN_ENTITLEMENTS = BookSummaries/BookSummaries.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = AY43JM5PH6;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = AY43JM5PH6;
 				ENABLE_BITCODE = NO;
@@ -2647,7 +2639,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = app.books;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "BookSummaries AppStore";
